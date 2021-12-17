@@ -1,0 +1,45 @@
+{
+    "answers": {
+        "bet10": {
+            "availableHook": "has10",
+            "hook": "bet10",
+            "state": "intro",
+            "text": "bet10"
+        },
+        "bet100": {
+            "availableHook": "has100",
+            "hook": "bet100",
+            "state": "intro",
+            "text": "bet100"
+        },
+        "bet20": {
+            "availableHook": "has20",
+            "hook": "bet20",
+            "state": "intro",
+            "text": "bet20"
+        },
+        "bet50": {
+            "availableHook": "has50",
+            "hook": "bet50",
+            "state": "intro",
+            "text": "bet50"
+        },
+        "leave": {
+            "text": "leave"
+        }
+    },
+    "entryPoint": "intro",
+    "states": {
+        "intro": {
+            "answers": [
+                "bet10",
+                "bet20",
+                "bet50",
+                "bet100",
+                "leave"
+            ],
+            "hook": "onIntro",
+            "text": "intro"
+        }
+    }
+}
