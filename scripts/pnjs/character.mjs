@@ -4,8 +4,12 @@ import {awarenessHint} from "../cmap/perks/awareness.mjs";
 export class CharacterBehaviour extends SceneActorComponent {
   constructor(model) {
     super(model);
-    this.xpValue = 25;
+    this.xpBaseValue = 25;
     this.canPush = true;
+  }
+
+  get xpValue() {
+    return this.xpBaseValue * this.model.statistics.level;
   }
 
   getHint() {
