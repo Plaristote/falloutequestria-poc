@@ -11,6 +11,20 @@
   "Drop": "Drop",
   "Inspect": "Inspect",
   "no-path": "You can't go there.",
+  "controls-dialog": "Contrôles",
+  "controls": {
+    "hint": "Press F1 to check out the controls.",
+    "help": "Open the controls view",
+    "centerCamera": "Center the camera on the player",
+    "cmap": "Open the character sheet",
+    "useMode1": "Activate item in slot 1",
+    "useMode2": "Activate item in slot 2",
+    "passTurn": "Pass your turn in combat",
+    "inventory": "Open the inventory",
+    "openSkilldex": "Open the skill panel",
+    "pipboy": "Open the PipBuck",
+    "debugConsole": "Open the debug console"
+  },
   "worldmap": {
     "title": "wasteland",
     "places": {
@@ -227,64 +241,9 @@
       "arrest": "Hands up ! No sudden movements, or I'll shoot to kill.<br/>You've broken the law one too many times pal. You've got some jailtime ahead of you. Follow me nicely and quietly.",
       "fight": "[Fight]",
       "surrender": "[Surrender]"
-    },
-        "town-trader": {
-            "": "[Leave]",
-            "after-trade": "Great, come back soon !",
-            "ask-quest": "I'm a bit disappointed. I was expecting to find some sweets. Don't you bake any ?",
-            "butter-quest-accept": "I might be able to help you with that. Let me see what I can do.",
-            "butter-quest-completed": "Why, you're such a sweetheart ! I'll make a batch of croissants right away ! Just stay still and you'll get to taste those right out o the oven !<br/><i>[he disappears in the backroom]</i>",
-            "butter-quest-not-interested": "That's too bad. Well, I'll get going then.",
-            "butter-quest-offer": "[sighs heavily] I would love to bake sweeter things. I have some ideas, but ingredients are hard to come by, and the hostel's kitchen hoards pretty much all the available goods around here... if I could get my hands on a good deal of butter, I would be a made pony.",
-            "croissant-done": "I wasn't too long I hope ? Here, take these <i>[hands you a handful of croissants]</i><br/>Come back anytime, buddy !",
-            "give-butter": "Here, I found some butter for you ! Can you make some delicacies out of it ?",
-            "leave": "[Give up and go away]",
-            "trade-reject": "I don't need anything right now. Goodbye !",
-            "trade-show": "Here's what I have in store for you.",
-            "trade-start": "Show me what you're selling.",
-            "trade-trigger": "Welcome, estimed customer ! What are we trading today ?",
-            "wait": "[You wait for him]"
-        },
-    "tutoCharIntro": {
-      "start": "Wow ! You've arrived ! At long last ! We need to find a way out of this hole !",
-      "what-happened": "Wait a moment, what's going on ?",
-      "who-are-you": "Do we know each other ?",
-      "scram": "Can't you see I'm busy ? Leave me alone",
-      "what-happened-response": "I don't know dude ! I woke up in this place, it was dark, moist, and riddled with friggin rats !<br/>I have a strong intuition that we must leave this place though... it's just as if some kind of omniscient puppeteer sent us here, but didn't bother to write us a backstory...",
-      "who-are-you-response": "Come to think of it... I don't really remember. My name is Helpful Copain, but I conveniently forgot everything else, so I won't bother you with a poorly written backstory.",
-      "scram-response": "Ooh, sorry big guy, seems like we have a tough one over here !",
-      "provoke-further": "You better watch your mouth, or else...",
-      "provoke-further-response": "Or else what ? You gonna kick my ass, is that it ? Hah ! I'd like to see you try !",
-      "provoke-further-attack": "Prepare to meet your maker. [Fight]",
-      "provoke-leave": "You're not worth it. [Leave]",
-      "scram-excuses": "Sorry, I didn't mean to be rude. I'd just rather do this on my own.",
-      "scram-excuses-response": "Alright, I get it... sorry I got carried away myself. Well, if you don't want my help, it can't be helped. Carry on then.",
-      "scram-leave": "Look, I don't have time for this... see you around, I guess. [Leave]",
-      "ask-situation": "So, what am I supposed to do ?",
-      "aggressively-ask-situation": "I don't actually care. Just tell me how to get out of this place.",
-      "explain-situation": "We need to leave this place. There are two potential ways I know of: on the eastern side, you have the regular entrance for the stable. It's locked though. There are other tunnels on the western side, but they're full of mutated rats. It might lead outside, but I wouldn't know... it's too dangerous to go alone.",
-      "enough-details": "I think I've got a good enough grasp of the situation. I'll be on my way then. [Leave]",
-      "ask-help": "You know, I might need some help leaving this cave. Do you mind coming with me ?",
-      "provoke-details": "So you didn't even try to explore any further ? You're so damn useless, I could slap you.",
-      "accept-to-help": "Sure, we'll be stronger if we stick together.",
-      "decline-to-help": "I don't know... you don't look like you can survive out there... I guess I'll just stay here and wait for someone stronger to show up."
-    },
-        "parley": {
-            "change-color": "You're lacking in colors. Perhaps we could change that ?",
-            "changed-color": "Is that colorful enough ?",
-            "freaking-face": "I've got a freaking face and all ! Isn't that cool enough ?!",
-            "greetings": "Hi there ! Gosh, it's been a while ! What's happening ?",
-            "greetings-alt": "Hi again. Is there something else ?",
-            "no-mane": "Looks like I was too lazy to give you a mane...",
-            "oh-fancy": "Oh. Fancy.",
-            "rep1": "You're damn right, \"it's been a while\" ! It's about time we get to work, isn't it ?",
-            "rep2": "Well, I've been pretty busy... but lately, I had an illumination of sorts, and I decided to see this thing to the end.",
-            "rep3": "Let's cut to the chase. Show me something cool",
-            "top-hatted": "Quite.",
-            "walk-away": "[Walk away]"
-        }
-    },
-    "inspection": {
+    }
+  },
+  "inspection": {
         "character": "You see {{target}}.",
         "character-male": "You see {{target}}.",
         "character-female": "You see {{target}}.",
