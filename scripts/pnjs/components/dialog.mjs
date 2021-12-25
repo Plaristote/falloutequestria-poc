@@ -7,7 +7,7 @@ function isInAutoTalkRange(character) {
 }
 
 function canAutoTalk(character) {
-  return !level.combat && isInAutoTalkRange(character)
+  return !level.combat && !character.unconscious && isInAutoTalkRange(character)
 }
 
 export class DialogComponent extends MetabolismComponent {
