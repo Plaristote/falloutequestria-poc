@@ -1,12 +1,49 @@
 import {WeaponBehaviour} from "./weapon.mjs";
 
+function newGunshotAnimation(user, target) {
+  const shotWidth = 95;
+  const margin = 15;
+  var   anchorX = user.spritePosition.x;
+  var   anchorY = user.spritePosition.y;
+
+  user.lookAt(target);
+  switch (user.orientation) {
+  case "left":
+    anchorX = anchorX - shotWidth + margin;
+    anchorY = anchorY + user.clippedRect.height / 2 - 45;
+    break ;
+  case "right":
+    anchorX = anchorX + user.clippedRect.width - margin;
+    anchorY = anchorY + user.clippedRect.height / 2 - 45;
+    break ;
+  }
+  return [
+    {
+      type: "Sprite",
+      name: "effects",
+      animation: `gunshot-${user.orientation}`,
+      fromX: anchorX, fromY: anchorY
+    },
+    {
+      type: "Sprite",
+      name: "effects",
+      animation: "bullet",
+      speed: 800,
+      fromX: user.spritePosition.x,
+      fromY: user.spritePosition.y,
+      toX: target.spritePosition.x,
+      toY: target.spritePosition.y
+    }
+  ];
+}
+
 class MouthGun extends WeaponBehaviour {
   constructor(model) {
     super(model);
     this.useModes = ["shoot", "reload"];
     this.skill = "smallGuns";
     this.model.maxAmmo = 6;
-    this.fireSound = "gunshot";
+    this.fireAnimationSound = "gunshot";
   }
   
   get triggersCombat() {
@@ -34,7 +71,8 @@ class MouthGun extends WeaponBehaviour {
   getAnimationSteps(target) {
     return [
       { type: "Animation", animation: "use", object: this.user },
-      { type: "Sprite", name: "effects", animation: "explosion", fromX: this.user.spritePosition.x, fromY: this.user.spritePosition.y, toX: target.spritePosition.x, toY: target.spritePosition.y }
+      { type: "Sound", sound: this.fireAnimationSound, object: this.user },
+      newGunshotAnimation(this.user, target)
     ]
   }
 

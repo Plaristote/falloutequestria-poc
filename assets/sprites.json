@@ -754,6 +754,16 @@
         "defaultSource": "characters/diamond-dog-gray.png"
     },
     "effects": {
+        "bullet": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 1,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "bullet.png",
+            "width": 3
+        },
         "explosion": {
             "frameCount": 35,
             "frameInterval": 5,
@@ -773,6 +783,26 @@
             "repeat": true,
             "source": "items/grenade.png",
             "width": 17
+        },
+        "gunshot-left": {
+            "frameCount": 5,
+            "frameInterval": 85,
+            "height": 90,
+            "offsetX": 544,
+            "offsetY": 25,
+            "repeat": false,
+            "source": "gunshot.png",
+            "width": 95
+        },
+        "gunshot-right": {
+            "frameCount": 5,
+            "frameInterval": 85,
+            "height": 90,
+            "offsetX": 31,
+            "offsetY": 25,
+            "repeat": false,
+            "source": "gunshot.png",
+            "width": 95
         }
     },
     "gator-pony": {
