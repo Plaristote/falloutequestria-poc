@@ -13,7 +13,7 @@ function getEquippedLockpickToolsFor(character) {
 
 export class LockedComponent {
   constructor(parent, options = {}) {
-    this.lockpickLevel = options.lockpickLevel || 1;
+    this.lockpickLevel = options.lockpickLevel !== undefined ? options.lockpickLevel : 1;
     this.breakable = options.breakable || true;
     this.model = parent.model;
     this.onSuccess = options.onSuccess;
@@ -33,14 +33,12 @@ export class LockedComponent {
 
   onUseLockpick(user) {
     if (!this.isBroken()) {
-      const difficultyMalus = this.lockpickLevel * 25;
-      const item            = getEquippedLockpickToolsFor(user);
-      const lockpick        = user.statistics.lockpick + (item ? item.scriptCall("getLockpickBonus") : 0);
-      const roll            = getValueFromRange(0, 100);
-      const success         = lockpick - difficultyMalus >= roll;
+      const item  = getEquippedLockpickToolsFor(user);
+      const bonus = item ? item.scriptCall("getLockpickBonus") : 0;
 
+      console.log("Target=", 65, '+', this.lockpickLevel, '*', 25, '-', bonus);
       return skillCheck(user, 'lockpick', {
-        target: 65 + this.lockpickLevel * 25,
+        target: 65 + this.lockpickLevel * 25 - bonus,
         success: this.onLockpickSuccess.bind(this, user),
         failure: this.onLockpickFailure.bind(this, user),
         criticalFailure: this.onLockpickCriticalFailure.bind(this, user)
