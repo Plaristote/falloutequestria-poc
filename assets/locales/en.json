@@ -273,7 +273,8 @@
     },
     "medicine-skill": {
         "in-combat": "You can't use medicine during combat",
-        "used-on": "{{user}} used medicine on {{target}} and healed it for {{hp}} hit points."
+        "used-on": "{{user}} used medicine on {{target}} and healed it for {{hp}} hit points.",
+        "max-use-reached": "{{target}}'s wounds have already received treatment and can't be healed anymore right now."
     },
     "cmap": {
       "buffs": {
