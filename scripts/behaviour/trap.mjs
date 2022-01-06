@@ -62,7 +62,7 @@ export class Trap {
     return true;
   }
 
-  onZoneExited() {
+  onZoneEntered(object) {
     if (this.model.getVariable("disarmed") != true)
       this.triggered();
   }
