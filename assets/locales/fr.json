@@ -347,6 +347,8 @@
         "read-long-book": "Ce livre te passionne ! Tu perds la notion du temps et le dévore pendant des heures.",
         "read-old-book": "Tu as déjà lu ce livre. Tu le survole sans trop d'intérêt.",
         "read-skillbook": "Tu apprends de nouvelles choses à propos de {{skillName}} et gagne {{points}} poins de compétence.",
+	"read-spellbook": "Tu lis un grimoire et apprend le sort {{spell}}.",
+	"spell-already-known": "Tu connais déjà ce sort.",
         "slot-machine-in-use": "Quelqu'un utilise déjà cette machine à sou.",
         "trap-critical-failure": "Tu echoue lamentablement et declenche le piege !",
         "trap-detected": "Tu as detecte un piege !",

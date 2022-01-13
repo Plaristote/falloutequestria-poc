@@ -152,7 +152,9 @@
     "read-long-book": "You get really absorbed into this book. You lost track of time, but damn was it worth it !",
     "read-old-book": "You skim through this book you're already familiar with.",
     "collected-ore": "You mined some ore.",
-    "collected-ore-failure": "There's nothing left to mine."
+    "collected-ore-failure": "There's nothing left to mine.",
+    "read-spellbook": "You read a spellbook and learn {{spell}}.",
+    "spell-already-known": "You already know that spell."
   },
   "objects": {
     "stool": "a stool",
