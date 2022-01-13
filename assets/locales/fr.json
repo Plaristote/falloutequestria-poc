@@ -81,7 +81,14 @@
         "steal-warning-3": "Dernier avertissement ! Remet ça où tu l'a trouvé !",
         "steal-warning-4": "Gardes ! Au voleur !"
     },
+    "spells": {
+	"title": "Sorts",
+	"empty-spellbook": "Tu n'as pas encore appris de sorts",
+	"teleport": "Teleportation",
+	"sleep": "Torpeur"
+    },
     "cmap": {
+        "skills": "Compétences",
         "abysmal": "Nul",
         "actionPoints": "Points d'action",
         "agility": "Agilité",

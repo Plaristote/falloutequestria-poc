@@ -1,6 +1,18 @@
 import {Consumable} from "./consumable.mjs";
 import {increaseBookCount} from "../cmap/perks/bookworm.mjs";
 
+function afterRead(skill, target, base) {
+  const stats  = target.statistics;
+  const points = stats[this.skill];
+
+  stats[skill] = points + base;
+  game.appendToConsole(i18n.t("messages.read-skillbook", {
+    skillName: i18n.t("cmap." + skill),
+    points:    base
+  }));
+  increaseBookCount(target);
+}
+
 class Skillbook extends Consumable {
   constructor(model) {
     super(model);
@@ -29,14 +41,7 @@ class Skillbook extends Consumable {
     base += Math.max(0, Math.floor((stats.intelligence - 2) / (points < 80 ? 1 : 2)));
     if (stats.perks.indexOf("bookworm") >= 0)
       base += 2;
-    game.asyncAdvanceTime(180, () => {
-      stats[this.skill] = points + base;
-      game.appendToConsole(i18n.t("messages.read-skillbook", {
-        skillName: i18n.t("cmap." + this.skill),
-        points:    base
-      }));
-      increaseBookCount(target);
-    });
+    game.asyncAdvanceTime(180, afterRead.bind(null, this.skill, target, base));
   }
 }
 

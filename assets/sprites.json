@@ -1476,6 +1476,26 @@
         }
     },
     "items": {
+        "book": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 36,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "items/book.png",
+            "width": 72
+        },
+        "bottle": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 36,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "items/bottle.png",
+            "width": 72
+        },
         "defaultSource": "",
         "dynamite": {
             "frameCount": 1,

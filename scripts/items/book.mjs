@@ -74,7 +74,7 @@ class Book extends Item {
       }        
     }
   }
-  
+
   getReadItemStack() {
     for (var i = 0 ; i < this.user.inventory.items.length ; ++i) {
       const item = this.user.inventory.items[i];
