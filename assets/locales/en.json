@@ -109,6 +109,9 @@
       "dodge": "{{target}} dodged an attack from {{user}}.",
       "critical-failure": "{{user}} critically failed to use {{item}}."
     },
+    "spellcast-exhausted": "You've casted more spells than you could handle. You need a rest.",
+    "spellcast-success": "{{character}} used the spell {{spell}}.",
+    "spellcast-fail": "{{character}} failed to cast a spell and took {{damage}} damage.",
     "killed": "You killed {{victimName}} and earned {{xp}} experience points.",
     "ko": "You passed out.",
     "drunk": "You are now drunk.",

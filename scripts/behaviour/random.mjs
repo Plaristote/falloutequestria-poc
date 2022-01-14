@@ -2,7 +2,7 @@ export function getValueFromRange(from, to) {
   return from + Math.floor(Math.random() * (to + 1));
 }
 
-function isJinxed(character) {
+export function isJinxed(character) {
   return character.statistics.traits.indexOf("jinxed") >= 0;
 }
 

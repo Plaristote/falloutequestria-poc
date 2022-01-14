@@ -1,4 +1,4 @@
-import {getValueFromRange} from "../../behaviour/random.mjs";
+import {getValueFromRange, isJinxed} from "../../behaviour/random.mjs";
 
 export function skillContest(attacker, defender, skills, diceType = 100) {
   var skill1, skill2, roll1, roll2;
@@ -31,6 +31,7 @@ export function skillCheck(user, skill, options = {}) {
   const target     = options.target ? options.target : 100;
   const roll       = getValueFromRange(0, dice);
   const critical   = modifiedSkillValue(user, "criticalChance");
+  const criticalFail = isJinxed(game.player) ? 15 : 5;
   var callback;
   var success = false;
 
@@ -41,7 +42,7 @@ export function skillCheck(user, skill, options = {}) {
   } else if (roll + skillValue >= target) {
     callback = options.success;
     success = true;
-  } else if (roll <= Math.ceil(dice / 100 * 5))
+  } else if (roll <= Math.ceil(dice / 100 * criticalFail))
     callback = options.criticalFailure || options.failure;
   else
     callback = options.failure;

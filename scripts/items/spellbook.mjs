@@ -24,7 +24,7 @@ class Spellbook extends Consumable {
   }
 
   isValidTarget(object) {
-    return object === game.player;
+    return object === game.player && game.player.statistics.race === "unicorn";
   }
 
   consumedBy(target) {

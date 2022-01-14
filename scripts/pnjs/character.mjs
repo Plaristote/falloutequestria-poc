@@ -12,6 +12,22 @@ export class CharacterBehaviour extends SceneActorComponent {
     return this.xpBaseValue * this.model.statistics.level;
   }
 
+  get castCount() {
+    return this.model.hasVariable("spell-casted") ? this.model.getVariable("spell-casted") : 0;
+  }
+
+  set castCount(value) {
+    if (value > 0)
+      this.model.setVariable("spell-casted", value);
+    else
+      this.model.removeVariable("spell-casted");
+  }
+
+  reduceSpellExhaustion() {
+    if (this.castCount > 0)
+      this.castCount--;
+  }
+
   getHint() {
     if (game.player.statistics.perks.indexOf("awareness") >= 0)
       return awarenessHint(this.model);
