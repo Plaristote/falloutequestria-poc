@@ -85,7 +85,8 @@
 	"title": "Sorts",
 	"empty-spellbook": "Tu n'as pas encore appris de sorts",
 	"teleport": "Teleportation",
-	"sleep": "Torpeur"
+	"sleep": "Torpeur",
+	"purification": "Purification"
     },
     "cmap": {
         "skills": "Compétences",
@@ -309,9 +310,12 @@
         "used-on": "{{user}} a utilise medecine sur {{target}} et l'a soigne pour {{hp}} points de vie"
     },
     "messages": {
-        "spellcast-exhausted": "Tu as lancé trop de sort. Tu as besoin de repos.",
+        "spellcast-exhausted": "Tu as lancé trop de sorts. Tu as besoin de repos.",
 	"spellcast-success": "{{character}} a utilisé le sort {{spell}}.",
         "spellcast-fail": "{{character}} n'a pas réussi a lancer un sort et subit {{damage}} points de dommage.",
+        "spellcast-critical-success": "{{character}} invoque le sort {{spell}} avec une parfaite précision.",
+        "spellcast-critical-failure": "{{character}} échoue horriblement à invoquer un sort.",
+        "buff-wear-off": "{{character}} n'est plus sous l'effet de {{buff}}.",
         "cannot-sneak": "Tu ne peux pas te cacher.",
         "cannot-use-in-combat": "Ne peux pas être uilisé pendant un combat.",
         "collected-ore": "Tu as extrait du minerai.",

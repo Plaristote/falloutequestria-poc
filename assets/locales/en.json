@@ -112,6 +112,9 @@
     "spellcast-exhausted": "You've casted more spells than you could handle. You need a rest.",
     "spellcast-success": "{{character}} used the spell {{spell}}.",
     "spellcast-fail": "{{character}} failed to cast a spell and took {{damage}} damage.",
+    "spellcast-critical-success": "{{character}} masterfully casted {{spell}}.",
+    "spellcast-critical-failure": "{{character}} horribly failed to cast a spell.",
+    "buff-wear-off": "{{character}} is no longer {{buff}}.",
     "killed": "You killed {{victimName}} and earned {{xp}} experience points.",
     "ko": "You passed out.",
     "drunk": "You are now drunk.",
@@ -285,7 +288,8 @@
       "title": "Spells",
       "empty-spellbook": "You haven't learned any spells yet.",
       "teleport": "Teleport",
-      "sleep": "Sleep"
+      "sleep": "Sleep",
+      "purification": "Purification"
     },
     "cmap": {
       "buffs": {

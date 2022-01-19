@@ -33,6 +33,7 @@ export function spellCast(difficulty, character, callbacks) {
   const malus = exhaustion(character);
   var callback;
 
+  console.log("spellCast attempt by", character.statistics.name, "difficulty", difficulty, "malus", malus);
   if (typeof callbacks == "function")
     callbacks = { success: callbacks };
   if (!callbacks.failure)
