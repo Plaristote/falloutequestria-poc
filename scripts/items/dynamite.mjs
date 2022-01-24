@@ -2,12 +2,18 @@
 import {ThrowableBehaviour} from "./throwable.mjs";
 import {getValueFromRange} from "../behaviour/random.mjs";
 import {Explosion} from "../behaviour/explosion.mjs";
-import {disarmAttempt} from "../behaviour/trap.mjs";
+import {TrappedComponent} from "../behaviour/trapped.mjs";
 
 class Dynamite extends ThrowableBehaviour {
   constructor(model) {
     super(model);
     this.useModes = ["use", "throw"];
+    this.trappedComponent = new TrappedComponent(this);
+  }
+
+  initialize() {
+    this.trappedComponent.xpReward = 0;
+    this.trappedComponent.disarmed = true;
   }
 
   getActionPointCost() {
@@ -76,19 +82,7 @@ class Dynamite extends ThrowableBehaviour {
   }
 
   onUseExplosives(user) {
-    const result = disarmAttempt(user, 2);
-
-    if (result == -1) {
-      game.appendToConsole(i18n.t("messages.trap-critical-failure"));
-      this.triggered();
-    }
-    else if (result == 0)
-      game.appendToConsole(i18n.t("messages.trap-disarm-failed"));
-    else {
-      game.appendToConsole(i18n.t("messages.trap-disarmed"));
-      this.model.tasks.removeTask("beforeTriggered");
-      this.model.tasks.removeTask("triggered");
-    }
+    this.trappedComponent.onUseExplosives(user);
     return true;
   }
 

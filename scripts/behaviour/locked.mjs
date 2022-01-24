@@ -19,8 +19,16 @@ export class LockedComponent {
     this.onSuccess = options.onSuccess;
     this.onFailure = options.onFailure;
     this.onCriticalFailure = options.onCriticalFailure;
-    if (!this.model.hasVariable("xp"))
-      this.model.setVariable("xp", options.xp || 25);
+    if (!this.model.hasVariable("lock-xp"))
+      this.xpReward = options.xp || (25 + this.lockpickLevel * 75);
+  }
+
+  get xpReward() {
+    return this.model.getVariable("lock-xp");
+  }
+
+  set xpReward(value) {
+    this.model.setVariable("lock-xp", value);
   }
   
   toggleLocked() {
@@ -50,17 +58,13 @@ export class LockedComponent {
   }
 
   onLockpickSuccess(user) {
-    const xp = this.model.getVariable("xp");
-
     this.toggleLocked();
-    if (user === level.player) {
-      this.onSuccess(user);
-      if (xp > 0)
-        game.appendToConsole(i18n.t("messages.xp-gain", {xp: xp}));
-    }
-    if (xp > 0) {
-      this.model.setVariable("xp", 0);
-      user.statistics.addExperience(xp);
+    this.onSuccess(user);
+    if (user === level.player && this.xpReward > 0)
+      game.appendToConsole(i18n.t("messages.xp-gain", {xp: this.xpReward}));
+    if (this.xpReward > 0) {
+      user.statistics.addExperience(this.xpReward);
+      this.xpReward = 0;
     }
   }
 
