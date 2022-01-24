@@ -27,6 +27,14 @@ export class SceneManager {
     this.model.setVariable(this.storageScope, value);
   }
 
+  get saveLocked() {
+    return this._saveLocked;
+  }
+
+  set saveLocked(value) {
+    game.saveLock = this._saveLocked = value;
+  }
+
   get actors() {
     return [];
   }
@@ -34,6 +42,7 @@ export class SceneManager {
   initialize() {
     this.state = 0;
     this.prepare();
+    this.registerSceneManager();
   }
 
   prepare() {
@@ -46,10 +55,27 @@ export class SceneManager {
   }
 
   finalize() {
+    if (this.saveLocked)
+      this.saveLocked = false;
     this.actors.forEach(actor => {
       toggleRoutine(actor, true);
     });
     this.model.unsetVariable(this.storageScope);
+    this.unregisterSceneManager();
+  }
+
+  registerSceneManager() {
+    const script = level.getScriptObject();
+
+    if (script && script.removeSceneManager)
+      script.appendSceneManager(this);
+  }
+  
+  unregisterSceneManager() {
+    const script = level.getScriptObject();
+
+    if (script && script.removeSceneManager)
+      script.removeSceneManager(this);
   }
 
   triggerNextStep(continuing = true) {
