@@ -47,12 +47,14 @@ export class AlarmComponent {
   alarmTask() {
     if (this.model.actionQueue.isEmpty())
       this.goToAlarmSignal();
+    else if (this.isTargetFound())
+      this.onTargetFound();
   }
   
   receiveAlarmSignal(x, y, z, target, alarmLevel) {
     console.log("Guard", this.model, "received alarm signal", x, y, z, alarmLevel);
     this.configureAlarmLevel(target, alarmLevel);
-    if (!this.model.fieldOfView.isDetected(target))
+    if (!this.isTargetFound())
     {
       this.model.movementMode = "running";
       this.alarmPosition = { x: x, y: y, z: z };
@@ -80,6 +82,12 @@ export class AlarmComponent {
       console.log(this.model, "going toward alarm", target.x, target.y, target.z);
     else
       console.log(this.model, "goToAlarmSignal failed", this.model.path, "to", target.x, target.y, target.z);
+  }
+
+  isTargetFound() {
+    const target = this.target;
+
+    return this.model.fieldOfView.isDetected(target) && this.model.hasLineOfSight(target);
   }
   
   isAlarmSignalReached() {
