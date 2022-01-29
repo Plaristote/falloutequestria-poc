@@ -5,6 +5,7 @@ import {getValueFromRange} from "../behaviour/random.mjs";
 export class Trap {
   constructor(model) {
     this.model = model;
+    this.sneak = 68;
     if (this.model.blocksPath)
       this.model.blocksPath = false;
     this.trappedComponent = new TrappedComponent(this, {

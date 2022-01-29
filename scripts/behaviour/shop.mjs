@@ -31,6 +31,7 @@ function displayRandomTextBubble(character, options) {
 export class Shop {
   constructor(model, routine) {
     this.model = model;
+    this.isShop = true;
     this.maxShopliftAttempts = 3;
     this.routineComponent =  new RoutineComponent(this, routine || defaultRoutine);
   }
@@ -78,7 +79,7 @@ export class Shop {
   }
   
   chaseCustomers() {
-    const occupants = this.model.getControlZoneOccupants();
+    const occupants = this.shopOccupants();
     
     for (var i = 0 ; i < occupants.length ; ++i) {
       if (occupants[i].getObjectType() == "Character" && this.shopOwner.fieldOfView.isDetected(occupants[i])) {
@@ -87,6 +88,10 @@ export class Shop {
           level.cameraFocusRequired(level.player);
       }
     }
+  }
+
+  shopOccupants() {
+    return this.model.getControlZoneOccupants();
   }
 
   isUnderSurveillance() {

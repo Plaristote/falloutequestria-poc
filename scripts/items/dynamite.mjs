@@ -16,6 +16,10 @@ class Dynamite extends ThrowableBehaviour {
     this.trappedComponent.disarmed = true;
   }
 
+  get defaultUseMode() {
+    return this.trappedComponent.disarmed ? "use" : "throw";
+  }
+
   getActionPointCost() {
     switch (this.model.useMode) {
     case "throw":
@@ -77,20 +81,14 @@ class Dynamite extends ThrowableBehaviour {
   }
 
   scheduleTrigger(timeout) {
-    this.model.tasks.addTask("beforeTriggered", (timeout - 3) * 1000, 1);
+    this.trappedComponent.disarmed = false;
     this.model.tasks.addTask("triggered", timeout * 1000, 1);
+    this.model.useMode = this.defaultUseMode;
   }
 
   onUseExplosives(user) {
     this.trappedComponent.onUseExplosives(user);
     return true;
-  }
-
-  beforeTriggered() {
-    const wearer = this.model.getOwner();
-
-    if (wearer)
-      level.addTextBubble(wearer, "Where's that ticking sound coming from ?", 3000, "white");
   }
 
   triggered() {

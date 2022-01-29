@@ -38,7 +38,7 @@ class Book extends Item {
 
   onRead(character) {
     const alreadyRead = this.model.hasVariable("read");
-    const time = Math.floor(60 + (Math.random() * (alreadyRead ? 600 : 6)));
+    const time = Math.floor(60 + (Math.random() * (alreadyRead ? 6 : 600)));
 
     game.asyncAdvanceTime(time);
     if (!alreadyRead) {

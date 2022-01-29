@@ -6,7 +6,11 @@ export class ShopShelf {
   }
   
   get shopScript() {
-    return this.model.parent.getScriptObject();
+    var parent = this.model.parent;
+
+    while (parent && !parent.getScriptObject().isShop)
+      parent = parent.parent;
+    return parent.getScriptObject();
   }
 
   get shopOwner() {

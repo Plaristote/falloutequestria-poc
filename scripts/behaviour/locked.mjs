@@ -39,10 +39,11 @@ export class LockedComponent {
     return this.model.hasVariable("broken") ? this.model.getVariable("broken") : false;
   }
 
-  onUseLockpick(user) {
+  onUseLockpick(user, defaultBonus = 0) {
     if (!this.isBroken()) {
       const item  = getEquippedLockpickToolsFor(user);
-      const bonus = item ? item.scriptCall("getLockpickBonus") : 0;
+      const itemBonus = item ? item.scriptCall("getLockpickBonus") : 0;
+      const bonus = Math.max(itemBonus, defaultBonus);
 
       console.log("Target=", 65, '+', this.lockpickLevel, '*', 25, '-', bonus);
       return skillCheck(user, 'lockpick', {

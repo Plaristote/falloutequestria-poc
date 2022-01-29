@@ -53,6 +53,9 @@ export class Explosion {
     case "Doorway":
       this.applyDamageOnDoorway(object);
       break ;
+    case "InventoryItem":
+      this.applyDamageOnDestructible(object);
+      break ;
     }
   }
 
@@ -92,6 +95,11 @@ export class Explosion {
   applyDamageOnDoorway(object) {
     if (object.destructible)
       object.bustOpen(this.damage);
+  }
+
+  applyDamageOnDestructible(object) {
+    if (object.destructible)
+      level.deleteObject(object);
   }
 }
 

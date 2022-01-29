@@ -3,7 +3,7 @@ import {increaseBookCount} from "../cmap/perks/bookworm.mjs";
 
 function afterRead(skill, target, base) {
   const stats  = target.statistics;
-  const points = stats[this.skill];
+  const points = stats[skill];
 
   stats[skill] = points + base;
   game.appendToConsole(i18n.t("messages.read-skillbook", {

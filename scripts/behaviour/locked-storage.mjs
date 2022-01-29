@@ -4,7 +4,6 @@ class LockedStorage {
   constructor(model) {
     this.model = model;
     this.lockedComponent = new LockedComponent(this, {
-      xp: 25,
       lockpickLevel: 2,
       breakable: true,
       onSuccess: this.onLockpickSuccess.bind(this),

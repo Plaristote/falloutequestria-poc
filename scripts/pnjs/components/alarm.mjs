@@ -5,12 +5,12 @@ export const AlarmLevel = {
 
 export function callGuards(guards, target, alarmLevel) {
   console.log("Calling guards", guards, guards.objects.length,
-    "to position", target.position.x, target.position.y, target);
+    "to position", target.position.x, target.position.y, target.floor, target);
   for (var i = 0 ; i < guards.groups.length ; ++i)
     callGuards(guards.groups[i], target, alarmLevel);
   for (var i = 0 ; i < guards.objects.length ; ++i) {
     guards.objects[i].getScriptObject().receiveAlarmSignal(
-      target.position.x, target.position.y, target, alarmLevel
+      target.position.x, target.position.y, target.floor, target, alarmLevel
     );
   }
 }
@@ -23,15 +23,19 @@ export class AlarmComponent {
   }
 
   get model() { return this.parent.model; }
+
   get alarmPosition() {
     return {
       x: this.model.getVariable("alarmAtX"),
-      y: this.model.getVariable("alarmAtY")
+      y: this.model.getVariable("alarmAtY"),
+      z: this.model.getVariable("alarmAtZ")
     };
   }
+
   set alarmPosition(value) {
     this.model.setVariable("alarmAtX", value.x);
     this.model.setVariable("alarmAtY", value.y);
+    this.model.setVariable("alarmAtZ", value.z);
   }
   get alarmLevel() { return this.model.getVariable("alarmLevel"); }
   set alarmLevel(value) { return this.model.setVariable("alarmLevel", value); }
@@ -45,13 +49,13 @@ export class AlarmComponent {
       this.goToAlarmSignal();
   }
   
-  receiveAlarmSignal(x, y, target, alarmLevel) {
-    console.log("Guard", this.model, "received alarm signal", x, y, alarmLevel);
+  receiveAlarmSignal(x, y, z, target, alarmLevel) {
+    console.log("Guard", this.model, "received alarm signal", x, y, z, alarmLevel);
     this.configureAlarmLevel(target, alarmLevel);
     if (!this.model.fieldOfView.isDetected(target))
     {
       this.model.movementMode = "running";
-      this.alarmPosition = { x: x, y: y };
+      this.alarmPosition = { x: x, y: y, z: z };
       this.goToAlarmSignal();
       this.model.tasks.addTask("alarmTask", 1500, 0);
     }
@@ -71,11 +75,11 @@ export class AlarmComponent {
     const target = this.alarmPosition;
 
     this.model.actionQueue.reset();
-    this.model.actionQueue.pushReachNear(target.x, target.y, 2);
+    this.model.actionQueue.pushReachNear(target.x, target.y, target.z, 2);
     if (this.model.actionQueue.start())
-      console.log(this.model, "going toward alarm", target.x, target.y);
+      console.log(this.model, "going toward alarm", target.x, target.y, target.z);
     else
-      console.log(this.model, "goToArlamSignal failed");
+      console.log(this.model, "goToAlarmSignal failed", this.model.path, "to", target.x, target.y, target.z);
   }
   
   isAlarmSignalReached() {
