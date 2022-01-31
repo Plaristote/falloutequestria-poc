@@ -53,6 +53,8 @@ export class Explosion {
     case "Doorway":
       this.applyDamageOnDoorway(object);
       break ;
+    case "DynamicObject":
+    case "StorageObject":
     case "InventoryItem":
       this.applyDamageOnDestructible(object);
       break ;

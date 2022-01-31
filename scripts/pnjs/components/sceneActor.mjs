@@ -12,4 +12,10 @@ export class SceneActorComponent extends CombatComponent {
     if (this.sceneManager && this.sceneManager.active)
       this.sceneManager.onDamageTaken(this.model, dealer);
   }
+
+  onActionQueueCompleted() {
+    if (this.sceneManager && this.sceneManager.active)
+      this.sceneManager.onActionQueueCompleted(this.model);
+    super.onActionQueueCompleted();
+  }
 }

@@ -67,7 +67,7 @@ export class SceneManager {
   registerSceneManager() {
     const script = level.getScriptObject();
 
-    if (script && script.removeSceneManager)
+    if (script && script.appendSceneManager)
       script.appendSceneManager(this);
   }
   
@@ -86,9 +86,15 @@ export class SceneManager {
   }
 
   triggerCurrentStep(continuing = true) {
-    this.states[this.state](continuing);
+    if (this.states.length < this.state)
+      this.states[this.state](continuing);
+    else
+      this.finalize();
   }
 
   onCombatTurn(character) {
+  }
+  
+  onActionQueueCompleted(character) {
   }
 }

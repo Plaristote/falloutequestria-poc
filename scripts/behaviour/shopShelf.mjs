@@ -8,17 +8,17 @@ export class ShopShelf {
   get shopScript() {
     var parent = this.model.parent;
 
-    while (parent && !parent.getScriptObject().isShop)
+    while (parent && parent.getScriptObject() && !parent.getScriptObject().isShop)
       parent = parent.parent;
     return parent.getScriptObject();
   }
 
   get shopOwner() {
-    return this.shopScript.shopOwner;
+    return this.shopScript ? this.shopScript.shopOwner : null;
   }
   
   get shopOwnerScript() {
-    return this.shopOwner.getScriptObject();
+    return this.shopOwner ? this.shopOwner.getScriptObject() : null;
   }
 
   isUnderSurveillance() {
@@ -39,7 +39,7 @@ export class ShopShelf {
   onTakeItem(user, item, quantity) {
     const shopOwner = this.shopOwner;
 
-    if (this.isUnderSurveillance()) {
+    if (shopOwner && this.isUnderSurveillance()) {
       return stealCheck(user, shopOwner, item, quantity, {
         failure:         this.onStealFailure.bind(this, user, false, item),
         criticalFailure: this.onStealFailure.bind(this, user, true, item)
