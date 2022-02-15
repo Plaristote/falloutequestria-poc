@@ -1,0 +1,14 @@
+{ "columns":4,
+ "image":"vault-tiles.png",
+ "imageheight":444,
+ "imagewidth":292,
+ "margin":0,
+ "name":"Vault Tiles",
+ "spacing":1,
+ "tilecount":52,
+ "tiledversion":"1.8.0",
+ "tileheight":36,
+ "tilewidth":72,
+ "type":"tileset",
+ "version":"1.8"
+}

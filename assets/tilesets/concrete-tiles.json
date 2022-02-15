@@ -1,0 +1,14 @@
+{ "columns":8,
+ "image":"concrete-tiles.png",
+ "imageheight":555,
+ "imagewidth":584,
+ "margin":0,
+ "name":"Concrete Tiles",
+ "spacing":1,
+ "tilecount":128,
+ "tiledversion":"1.8.0",
+ "tileheight":36,
+ "tilewidth":72,
+ "type":"tileset",
+ "version":"1.8"
+}

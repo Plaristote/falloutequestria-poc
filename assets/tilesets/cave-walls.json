@@ -1,0 +1,14 @@
+{ "columns":8,
+ "image":"cave-walls.png",
+ "imageheight":327,
+ "imagewidth":584,
+ "margin":0,
+ "name":"Cave Walls",
+ "spacing":1,
+ "tilecount":24,
+ "tiledversion":"1.8.0",
+ "tileheight":108,
+ "tilewidth":72,
+ "type":"tileset",
+ "version":"1.8"
+}

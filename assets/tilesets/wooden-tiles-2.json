@@ -1,0 +1,14 @@
+{ "columns":8,
+ "image":"wooden-ground.png",
+ "imageheight":111,
+ "imagewidth":584,
+ "margin":0,
+ "name":"Wooden Tiles",
+ "spacing":1,
+ "tilecount":24,
+ "tiledversion":"1.8.0",
+ "tileheight":36,
+ "tilewidth":72,
+ "type":"tileset",
+ "version":"1.8"
+}

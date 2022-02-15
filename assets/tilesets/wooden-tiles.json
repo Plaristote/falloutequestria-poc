@@ -1,0 +1,14 @@
+{ "columns":7,
+ "image":"..\/tilesets\/wooden-tiles.png",
+ "imageheight":222,
+ "imagewidth":511,
+ "margin":0,
+ "name":"Wooden Roofs",
+ "spacing":1,
+ "tilecount":42,
+ "tiledversion":"1.8.0",
+ "tileheight":36,
+ "tilewidth":72,
+ "type":"tileset",
+ "version":"1.8"
+}

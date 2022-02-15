@@ -1,0 +1,14 @@
+{ "columns":8,
+ "image":"tribal-walls.png",
+ "imageheight":218,
+ "imagewidth":584,
+ "margin":0,
+ "name":"Tribal Walls",
+ "spacing":1,
+ "tilecount":16,
+ "tiledversion":"1.8.0",
+ "tileheight":108,
+ "tilewidth":72,
+ "type":"tileset",
+ "version":"1.8"
+}
