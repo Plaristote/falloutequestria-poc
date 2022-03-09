@@ -37,12 +37,6 @@ export class CombatComponent extends SkillTargetComponent {
   onTurnStart() {
     console.log("on turn start", this.model, this.combatTarget);
     this.findCombatTarget();
-    if (!this.combatTarget || !this.combatTarget.isAlive()) {
-      const enemies = this.model.fieldOfView.getEnemies();
-
-      console.log("Detected enemies:", enemies, enemies.length, enemies[0]);
-      this.combatTarget = enemies[0];
-    }
     if (this.combatTarget) {
       const result = this.model.morale > 0 ? this.fightCombatTarget() : this.runAwayFromCombatTarget();
 
@@ -73,7 +67,7 @@ export class CombatComponent extends SkillTargetComponent {
         actions.pushReach(this.combatTarget, weapon.getRange(),
           evaluatePathfindingOption.bind(this, this.combatTarget));
       }
-      while (ap > itemAp) {
+      while (ap >= itemAp) {
         actions.pushItemUse(this.combatTarget, "use-1");
         ap -= itemAp;
       }
@@ -102,10 +96,7 @@ export class CombatComponent extends SkillTargetComponent {
   }
 
   onCombatActionQueueCompleted() {
-    console.log("passing turn, action completed");
-    if (this.combatTarget && this.model.morale <= 0)
-      this.runAwayFromCombatTarget();
-    else
-      level.passTurn(this.model);
+    console.log("triggering turn again, action completed");
+    this.onTurnStart();
   }
 }
