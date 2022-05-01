@@ -39,7 +39,7 @@
             "reputation": false
         }
     },
-    "level": "stable",
+    "level": "stable-entrance",
     "levels": {
         "city-sample": {
             "ambientColor": [
@@ -11809,6 +11809,12 @@
             "useDaylight": false
         },
         "stable-cavern": {
+            "ambientColor": [
+                0,
+                0,
+                0,
+                0
+            ],
             "currentFloor": 0,
             "groups": [
             ],
@@ -11848,7 +11854,6 @@
                     "quantity": 1,
                     "rx": 72,
                     "ry": 864,
-                    "script": "dynamite.mjs",
                     "spriteName": "items",
                     "type": "InventoryItem",
                     "useMode": "",
@@ -11873,7 +11878,6 @@
                                 "quantity": 2,
                                 "rx": 0,
                                 "ry": 0,
-                                "script": "health-potion.mjs",
                                 "spriteName": "items",
                                 "useMode": "",
                                 "x": -1,
@@ -11914,7 +11918,6 @@
                                 "quantity": 3,
                                 "rx": 0,
                                 "ry": 0,
-                                "script": "health-potion.mjs",
                                 "spriteName": "items",
                                 "useMode": "",
                                 "x": -1,
@@ -11955,7 +11958,6 @@
                                 "quantity": 2,
                                 "rx": 0,
                                 "ry": 0,
-                                "script": "health-potion.mjs",
                                 "spriteName": "items",
                                 "useMode": "",
                                 "x": -1,
@@ -11974,7 +11976,6 @@
                                 "quantity": 6,
                                 "rx": 0,
                                 "ry": 0,
-                                "script": "grenade.mjs",
                                 "spriteName": "items",
                                 "useMode": "",
                                 "x": -1,
@@ -12086,7 +12087,7 @@
                     "rx": 828,
                     "ry": 657,
                     "script": "tutoChar.mjs",
-                    "spriteName": "pony-1309ca-pip-580404-static-pony-eyes-overlay-blank-armor-blank-equip-blank",
+                    "spriteName": "pony-1309ca80-pip-58040480-static-pony-eyes-overlay-blank-armor-blank-equip-blank",
                     "type": "Character",
                     "uniq": false,
                     "x": 30,
@@ -12157,7 +12158,7 @@
                     "y": 78
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12170,19 +12171,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -12204,7 +12193,7 @@
                     "y": 29
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12217,19 +12206,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -12251,7 +12228,7 @@
                     "y": 33
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12264,19 +12241,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -12298,7 +12263,7 @@
                     "y": 37
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12311,19 +12276,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -12345,7 +12298,7 @@
                     "y": 30
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12358,19 +12311,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -12392,7 +12333,7 @@
                     "y": 20
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12405,19 +12346,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -12439,7 +12368,7 @@
                     "y": 93
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12452,19 +12381,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -12486,7 +12403,7 @@
                     "y": 91
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12499,19 +12416,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -12533,7 +12438,7 @@
                     "y": 96
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12546,19 +12451,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -12580,7 +12473,7 @@
                     "y": 26
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12593,19 +12486,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -12835,7 +12716,7 @@
                     "zoneBlocked": false
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12851,10 +12732,6 @@
                             "armor": {
                                 "hasItem": false,
                                 "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
                             },
                             "use-1": {
                                 "hasItem": false,
@@ -12882,7 +12759,7 @@
                     "y": 88
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12895,19 +12772,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -12929,7 +12794,7 @@
                     "y": 31
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12942,19 +12807,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -12976,7 +12829,7 @@
                     "y": 28
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -12989,19 +12842,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -13023,7 +12864,7 @@
                     "y": 43
                 },
                 {
-                    "animation": "idle",
+                    "animation": "idle-down",
                     "ap": 0,
                     "buffs": [
                     ],
@@ -13036,19 +12877,7 @@
                         "items": [
                         ],
                         "slots": {
-                            "armor": {
-                                "hasItem": false,
-                                "slotType": "armor"
-                            },
-                            "saddle": {
-                                "hasItem": false,
-                                "slotType": "saddle"
-                            },
                             "use-1": {
-                                "hasItem": false,
-                                "slotType": "any"
-                            },
-                            "use-2": {
                                 "hasItem": false,
                                 "slotType": "any"
                             }
@@ -13128,7 +12957,305 @@
             "ox": 0,
             "oy": 0,
             "tasks": {
-            }
+            },
+            "useAmbientLight": false,
+            "useDaylight": false
+        },
+        "stable-entrance": {
+            "ambientColor": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "currentFloor": 0,
+            "groups": [
+                {
+                    "groups": [
+                    ],
+                    "name": "rat-group#1",
+                    "objects": [
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "mutatedRat",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -1080,
+                            "mty": 891,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "rat#1",
+                            "rx": -1080,
+                            "ry": 891,
+                            "script": "",
+                            "spriteName": "rat",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 10,
+                            "y": 40
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "mutatedRat",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -720,
+                            "mty": 711,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "rat#2",
+                            "rx": -720,
+                            "ry": 711,
+                            "script": "",
+                            "spriteName": "rat",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 10,
+                            "y": 30
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "mutatedRat",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -576,
+                            "mty": 927,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "rat#3",
+                            "rx": -576,
+                            "ry": 927,
+                            "script": "",
+                            "spriteName": "rat",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 18,
+                            "y": 34
+                        }
+                    ],
+                    "ox": 0,
+                    "oy": 0,
+                    "script": "",
+                    "tasks": {
+                    }
+                },
+                {
+                    "groups": [
+                    ],
+                    "name": "rat-group#2",
+                    "objects": [
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "mutatedRat",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": 324,
+                            "mty": 981,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "rat#1",
+                            "rx": 324,
+                            "ry": 981,
+                            "script": "",
+                            "spriteName": "rat",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 32,
+                            "y": 23
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "mutatedRat",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -144,
+                            "mty": 1107,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "rat#2",
+                            "rx": -144,
+                            "ry": 1107,
+                            "script": "",
+                            "spriteName": "rat",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 29,
+                            "y": 33
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "mutatedRat",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": 540,
+                            "mty": 1161,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "rat#3",
+                            "rx": 540,
+                            "ry": 1161,
+                            "script": "",
+                            "spriteName": "rat",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 40,
+                            "y": 25
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "mutatedRat",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -144,
+                            "mty": 639,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "rat#4",
+                            "rx": -144,
+                            "ry": 639,
+                            "script": "",
+                            "spriteName": "rat",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 16,
+                            "y": 20
+                        }
+                    ],
+                    "ox": 0,
+                    "oy": 0,
+                    "script": "",
+                    "tasks": {
+                    }
+                }
+            ],
+            "init": true,
+            "objects": [
+            ],
+            "ox": 0,
+            "oy": 0,
+            "tasks": {
+            },
+            "useAmbientLight": false,
+            "useDaylight": false
         },
         "tutorial": {
             "ambientColor": [
@@ -14224,12 +14351,12 @@
                 "y": 230
             }
         ],
-        "height": 500,
+        "height": 2316,
         "playerX": 300,
         "playerY": 184,
         "visible": [
         ],
-        "width": 950,
+        "width": 3088,
         "zones": [
             {
                 "cases": [
