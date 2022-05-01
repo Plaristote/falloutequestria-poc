@@ -2498,6 +2498,153 @@
         },
         "defaultSource": "junk/junk-barricades.png"
     },
+    "junk-walls": {
+        "A-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 258,
+            "offsetX": 188,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 187
+        },
+        "A-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 258,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 187
+        },
+        "B-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 258,
+            "offsetX": 386,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 195
+        },
+        "B-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 258,
+            "offsetX": 589,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 187
+        },
+        "C-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 253,
+            "offsetX": 578,
+            "offsetY": 262,
+            "repeat": false,
+            "width": 192
+        },
+        "C-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 253,
+            "offsetX": 0,
+            "offsetY": 262,
+            "repeat": false,
+            "width": 192
+        },
+        "D-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 253,
+            "offsetX": 578,
+            "offsetY": 262,
+            "repeat": false,
+            "width": 192
+        },
+        "D-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 253,
+            "offsetX": 0,
+            "offsetY": 262,
+            "repeat": false,
+            "width": 192
+        },
+        "E-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 257,
+            "offsetX": 188,
+            "offsetY": 536,
+            "repeat": false,
+            "width": 185
+        },
+        "E-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 257,
+            "offsetX": 0,
+            "offsetY": 536,
+            "repeat": false,
+            "width": 186
+        },
+        "F-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 280,
+            "offsetX": 373,
+            "offsetY": 515,
+            "repeat": false,
+            "width": 186
+        },
+        "F-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 280,
+            "offsetX": 559,
+            "offsetY": 515,
+            "repeat": false,
+            "width": 186
+        },
+        "G-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 255,
+            "offsetX": 182,
+            "offsetY": 799,
+            "repeat": false,
+            "width": 181
+        },
+        "G-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 255,
+            "offsetX": 0,
+            "offsetY": 799,
+            "repeat": false,
+            "width": 181
+        },
+        "H-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 255,
+            "offsetX": 368,
+            "offsetY": 799,
+            "repeat": false,
+            "width": 181
+        },
+        "H-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 255,
+            "offsetX": 557,
+            "offsetY": 799,
+            "repeat": false,
+            "width": 181
+        },
+        "defaultSource": "junk/car-walls.png"
+    },
     "kitchen": {
         "defaultSource": "furnitures/kitchen.png",
         "fireplace-left": {
@@ -4148,6 +4295,237 @@
             "frameInterval": 70,
             "height": 85,
             "offsetY": 409,
+            "repeat": true,
+            "width": 50
+        }
+    },
+    "rat-griant": {
+        "damaged-down": {
+            "frameCount": 6,
+            "frameInterval": 70,
+            "height": 84,
+            "offsetY": 1389,
+            "width": 50
+        },
+        "damaged-left": {
+            "frameCount": 6,
+            "frameInterval": 70,
+            "height": 62,
+            "offsetY": 1473,
+            "width": 109
+        },
+        "damaged-right": {
+            "frameCount": 6,
+            "frameInterval": 70,
+            "height": 61,
+            "offsetY": 1244,
+            "width": 110
+        },
+        "damaged-up": {
+            "frameCount": 6,
+            "frameInterval": 70,
+            "height": 84,
+            "offsetY": 1305,
+            "width": 50
+        },
+        "dead-down": {
+            "height": 100,
+            "offsetX": 756,
+            "offsetY": 482,
+            "width": 84
+        },
+        "dead-left": {
+            "height": 72,
+            "offsetX": 1170,
+            "offsetY": 582,
+            "width": 130
+        },
+        "dead-right": {
+            "height": 66,
+            "offsetX": 1152,
+            "offsetY": 320,
+            "width": 128
+        },
+        "dead-up": {
+            "height": 96,
+            "offsetX": 720,
+            "offsetY": 386,
+            "width": 80
+        },
+        "defaultSource": "characters/rat-griant.png",
+        "fall-down-down": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 100,
+            "offsetY": 482,
+            "width": 84
+        },
+        "fall-down-left": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 72,
+            "offsetY": 582,
+            "width": 130
+        },
+        "fall-down-right": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 66,
+            "offsetY": 320,
+            "width": 128
+        },
+        "fall-down-up": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 96,
+            "offsetY": 386,
+            "width": 80
+        },
+        "get-up-down": {
+            "frameCount": 9,
+            "frameInterval": 70,
+            "height": 93,
+            "offsetY": 1687,
+            "width": 78
+        },
+        "get-up-left": {
+            "frameCount": 9,
+            "frameInterval": 70,
+            "height": 70,
+            "offsetY": 1780,
+            "width": 121
+        },
+        "get-up-right": {
+            "frameCount": 9,
+            "frameInterval": 70,
+            "height": 69,
+            "offsetY": 1534,
+            "width": 120
+        },
+        "get-up-up": {
+            "frameCount": 9,
+            "frameInterval": 70,
+            "height": 84,
+            "offsetY": 1603,
+            "width": 74
+        },
+        "melee-alt-down": {
+            "frameCount": 13,
+            "frameInterval": 70,
+            "height": 94,
+            "offsetY": 2048,
+            "width": 52
+        },
+        "melee-alt-left": {
+            "frameCount": 13,
+            "frameInterval": 70,
+            "height": 79,
+            "offsetY": 2142,
+            "width": 128
+        },
+        "melee-alt-right": {
+            "frameCount": 13,
+            "frameInterval": 70,
+            "height": 80,
+            "offsetY": 1849,
+            "width": 128
+        },
+        "melee-alt-up": {
+            "frameCount": 13,
+            "frameInterval": 70,
+            "height": 119,
+            "offsetY": 1929,
+            "width": 50
+        },
+        "melee-down": {
+            "frameCount": 11,
+            "frameInterval": 70,
+            "height": 91,
+            "offsetY": 167,
+            "width": 70
+        },
+        "melee-left": {
+            "frameCount": 11,
+            "frameInterval": 70,
+            "height": 63,
+            "offsetY": 258,
+            "width": 128
+        },
+        "melee-right": {
+            "frameCount": 11,
+            "frameInterval": 70,
+            "height": 68,
+            "offsetY": -2,
+            "width": 129
+        },
+        "melee-up": {
+            "frameCount": 11,
+            "frameInterval": 70,
+            "height": 101,
+            "offsetY": 66,
+            "width": 65
+        },
+        "running-down": {
+            "frameCount": 8,
+            "frameInterval": 70,
+            "height": 83,
+            "offsetY": 1098,
+            "repeat": true,
+            "width": 52
+        },
+        "running-left": {
+            "frameCount": 8,
+            "frameInterval": 70,
+            "height": 64,
+            "offsetY": 1181,
+            "repeat": true,
+            "width": 126
+        },
+        "running-right": {
+            "frameCount": 8,
+            "frameInterval": 70,
+            "height": 63,
+            "offsetY": 940,
+            "repeat": true,
+            "width": 125
+        },
+        "running-up": {
+            "frameCount": 8,
+            "frameInterval": 70,
+            "height": 95,
+            "offsetY": 1003,
+            "repeat": true,
+            "width": 52
+        },
+        "walking-down": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 82,
+            "offsetY": 798,
+            "repeat": true,
+            "width": 49
+        },
+        "walking-left": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 61,
+            "offsetY": 880,
+            "repeat": true,
+            "width": 109
+        },
+        "walking-right": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 60,
+            "offsetY": 653,
+            "repeat": true,
+            "width": 108
+        },
+        "walking-up": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 85,
+            "offsetY": 713,
             "repeat": true,
             "width": 50
         }
