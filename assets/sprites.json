@@ -2750,6 +2750,352 @@
         "cloneOf": "wolf",
         "defaultSource": "critters/timberwolf.png"
     },
+    "vault-bed": {
+        "alt-bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 84,
+            "offsetX": 0,
+            "offsetY": 76,
+            "repeat": false,
+            "width": 143
+        },
+        "alt-bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 84,
+            "offsetX": 144,
+            "offsetY": 76,
+            "repeat": false,
+            "width": 143
+        },
+        "alt-top-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 84,
+            "offsetX": 288,
+            "offsetY": 76,
+            "repeat": false,
+            "width": 143
+        },
+        "alt-top-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 84,
+            "offsetX": 432,
+            "offsetY": 76,
+            "repeat": false,
+            "width": 143
+        },
+        "bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 74,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 114
+        },
+        "bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 74,
+            "offsetX": 116,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 114
+        },
+        "defaultSource": "vault-furnitures.png",
+        "top-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 74,
+            "offsetX": 232,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 114
+        },
+        "top-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 74,
+            "offsetX": 348,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 114
+        }
+    },
+    "vault-chairs": {
+        "alt-bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 67,
+            "offsetX": 377,
+            "offsetY": 234,
+            "repeat": false,
+            "width": 37
+        },
+        "alt-bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 67,
+            "offsetX": 339,
+            "offsetY": 234,
+            "repeat": false,
+            "width": 37
+        },
+        "alt-top-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 67,
+            "offsetX": 301,
+            "offsetY": 234,
+            "repeat": false,
+            "width": 37
+        },
+        "alt-top-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 67,
+            "offsetX": 263,
+            "offsetY": 234,
+            "repeat": false,
+            "width": 37
+        },
+        "bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 79,
+            "offsetX": 198,
+            "offsetY": 222,
+            "repeat": false,
+            "width": 65
+        },
+        "bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 79,
+            "offsetX": 132,
+            "offsetY": 222,
+            "repeat": false,
+            "width": 65
+        },
+        "defaultSource": "vault-furnitures.png",
+        "top-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 79,
+            "offsetX": 66,
+            "offsetY": 222,
+            "repeat": false,
+            "width": 65
+        },
+        "top-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 79,
+            "offsetX": 0,
+            "offsetY": 222,
+            "repeat": false,
+            "width": 65
+        }
+    },
+    "vault-computer": {
+        "alt-monitor-left-off": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 49,
+            "offsetX": 444,
+            "offsetY": 481,
+            "repeat": false,
+            "width": 70
+        },
+        "alt-monitor-left-on": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 49,
+            "offsetX": 299,
+            "offsetY": 481,
+            "repeat": false,
+            "width": 70
+        },
+        "alt-monitor-right-off": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 49,
+            "offsetX": 373,
+            "offsetY": 481,
+            "repeat": false,
+            "width": 70
+        },
+        "alt-monitor-right-on": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 49,
+            "offsetX": 228,
+            "offsetY": 481,
+            "repeat": false,
+            "width": 70
+        },
+        "defaultSource": "vault-furnitures.png",
+        "monitor-left-off": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 85,
+            "offsetX": 385,
+            "offsetY": 396,
+            "repeat": false,
+            "width": 50
+        },
+        "monitor-left-on": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 85,
+            "offsetX": 281,
+            "offsetY": 396,
+            "repeat": false,
+            "width": 50
+        },
+        "monitor-right-off": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 79,
+            "offsetX": 332,
+            "offsetY": 396,
+            "repeat": false,
+            "width": 50
+        },
+        "monitor-right-on": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 79,
+            "offsetX": 228,
+            "offsetY": 396,
+            "repeat": false,
+            "width": 50
+        },
+        "wall-terminal-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 84,
+            "offsetX": 49,
+            "offsetY": 302,
+            "repeat": false,
+            "width": 48
+        },
+        "wall-terminal-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 84,
+            "offsetX": 0,
+            "offsetY": 302,
+            "repeat": false,
+            "width": 48
+        }
+    },
+    "vault-desk": {
+        "bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 350,
+            "offsetY": 161,
+            "repeat": false,
+            "width": 85
+        },
+        "bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 523,
+            "offsetY": 161,
+            "repeat": false,
+            "width": 85
+        },
+        "defaultSource": "vault-furnitures.png",
+        "top-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 264,
+            "offsetY": 161,
+            "repeat": false,
+            "width": 85
+        },
+        "top-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 436,
+            "offsetY": 161,
+            "repeat": false,
+            "width": 85
+        }
+    },
+    "vault-stairs": {
+        "cloneOf": "wooden-stairs",
+        "defaultSource": "stairs/vault.png"
+    },
+    "vault-table": {
+        "defaultSource": "vault-furnitures.png",
+        "empty": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 91,
+            "offsetX": 99,
+            "offsetY": 302,
+            "repeat": false,
+            "width": 112
+        },
+        "empty-alt": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 92,
+            "offsetX": 214,
+            "offsetY": 302,
+            "repeat": false,
+            "width": 113
+        }
+    },
+    "vault-vent": {
+        "air-conditionning-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 38,
+            "offsetX": 478,
+            "offsetY": 396,
+            "repeat": false,
+            "width": 41
+        },
+        "air-conditionning-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 38,
+            "offsetX": 436,
+            "offsetY": 396,
+            "repeat": false,
+            "width": 41
+        },
+        "defaultSource": "vault-furnitures.png",
+        "vent-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 32,
+            "offsetX": 465,
+            "offsetY": 435,
+            "repeat": false,
+            "width": 28
+        },
+        "vent-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 32,
+            "offsetX": 436,
+            "offsetY": 435,
+            "repeat": false,
+            "width": 28
+        }
+    },
     "wolf": {
         "damaged-down": {
             "frameCount": 2,
@@ -3328,10 +3674,6 @@
             "repeat": false,
             "width": 56
         }
-    },
-    "vault-stairs": {
-        "cloneOf": "wooden-stairs",
-        "defaultSource": "stairs/vault.png"
     },
     "wooden-stairs": {
         "A-down": {
