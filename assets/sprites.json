@@ -4797,6 +4797,265 @@
         "cloneOf": "wolf",
         "defaultSource": "critters/timberwolf.png"
     },
+    "turret": {
+        "dead-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 83,
+            "offsetX": 2002,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 143
+        },
+        "dead-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 83,
+            "offsetX": 2002,
+            "offsetY": 84,
+            "repeat": false,
+            "width": 143
+        },
+        "dead-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 83,
+            "offsetX": 2002,
+            "offsetY": 251,
+            "repeat": false,
+            "width": 143
+        },
+        "dead-up": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 83,
+            "offsetX": 2002,
+            "offsetY": 168,
+            "repeat": false,
+            "width": 143
+        },
+        "death-down": {
+            "frameCount": 15,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 143
+        },
+        "death-left": {
+            "frameCount": 15,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 84,
+            "repeat": false,
+            "width": 143
+        },
+        "death-right": {
+            "frameCount": 15,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 251,
+            "repeat": false,
+            "width": 143
+        },
+        "death-up": {
+            "frameCount": 15,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 168,
+            "repeat": false,
+            "width": 143
+        },
+        "defaultSource": "turret.png",
+        "fall-down-down": {
+            "frameCount": 11,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 334,
+            "repeat": false,
+            "reverse": true,
+            "width": 79
+        },
+        "fall-down-left": {
+            "frameCount": 11,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 418,
+            "repeat": false,
+            "reverse": true,
+            "width": 79
+        },
+        "fall-down-right": {
+            "frameCount": 11,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 586,
+            "repeat": false,
+            "reverse": true,
+            "width": 79
+        },
+        "fall-down-up": {
+            "frameCount": 11,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 502,
+            "repeat": false,
+            "reverse": true,
+            "width": 79
+        },
+        "fire-down": {
+            "frameCount": 12,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 870,
+            "offsetY": 334,
+            "repeat": false,
+            "width": 91
+        },
+        "fire-left": {
+            "frameCount": 12,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 870,
+            "offsetY": 418,
+            "repeat": false,
+            "width": 91
+        },
+        "fire-right": {
+            "frameCount": 12,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 870,
+            "offsetY": 586,
+            "repeat": false,
+            "width": 91
+        },
+        "fire-up": {
+            "frameCount": 12,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 870,
+            "offsetY": 502,
+            "repeat": false,
+            "width": 91
+        },
+        "get-up-down": {
+            "frameCount": 11,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 334,
+            "repeat": false,
+            "width": 79
+        },
+        "get-up-left": {
+            "frameCount": 11,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 418,
+            "repeat": false,
+            "width": 79
+        },
+        "get-up-right": {
+            "frameCount": 11,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 586,
+            "repeat": false,
+            "width": 79
+        },
+        "get-up-up": {
+            "frameCount": 11,
+            "frameInterval": 75,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 502,
+            "repeat": false,
+            "width": 79
+        },
+        "idle-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 83,
+            "offsetX": 870,
+            "offsetY": 334,
+            "repeat": false,
+            "width": 91
+        },
+        "idle-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 83,
+            "offsetX": 870,
+            "offsetY": 418,
+            "repeat": false,
+            "width": 91
+        },
+        "idle-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 83,
+            "offsetX": 870,
+            "offsetY": 586,
+            "repeat": false,
+            "width": 91
+        },
+        "idle-up": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 83,
+            "offsetX": 870,
+            "offsetY": 502,
+            "repeat": false,
+            "width": 91
+        },
+        "sleep-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 334,
+            "repeat": false,
+            "width": 79
+        },
+        "sleep-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 418,
+            "repeat": false,
+            "width": 79
+        },
+        "sleep-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 586,
+            "repeat": false,
+            "width": 79
+        },
+        "sleep-up": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 83,
+            "offsetX": 0,
+            "offsetY": 502,
+            "repeat": false,
+            "width": 79
+        }
+    },
     "vault-bed": {
         "alt-bottom-left": {
             "frameCount": 1,
@@ -5079,6 +5338,101 @@
             "width": 85
         }
     },
+    "vault-door": {
+        "close-down": {
+            "frameCount": 6,
+            "frameInterval": 100,
+            "height": 108,
+            "offsetX": 1,
+            "offsetY": 1,
+            "repeat": false,
+            "reverse": true,
+            "width": 72
+        },
+        "close-right": {
+            "frameCount": 6,
+            "frameInterval": 100,
+            "height": 108,
+            "offsetX": 1,
+            "offsetY": 110,
+            "repeat": false,
+            "reverse": true,
+            "width": 72
+        },
+        "defaultSource": "vault-door.png",
+        "destroyed-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 108,
+            "offsetX": 74,
+            "offsetY": 219,
+            "repeat": false,
+            "width": 72
+        },
+        "destroyed-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 108,
+            "offsetX": 0,
+            "offsetY": 219,
+            "repeat": false,
+            "width": 72
+        },
+        "idle-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 108,
+            "offsetX": 1,
+            "offsetY": 1,
+            "repeat": false,
+            "width": 72
+        },
+        "idle-open-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 108,
+            "offsetX": 362,
+            "offsetY": 1,
+            "repeat": false,
+            "width": 72
+        },
+        "idle-open-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 108,
+            "offsetX": 362,
+            "offsetY": 109,
+            "repeat": false,
+            "width": 72
+        },
+        "idle-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 108,
+            "offsetX": 1,
+            "offsetY": 109,
+            "repeat": false,
+            "width": 72
+        },
+        "open-down": {
+            "frameCount": 6,
+            "frameInterval": 100,
+            "height": 108,
+            "offsetX": 1,
+            "offsetY": 1,
+            "repeat": false,
+            "width": 72
+        },
+        "open-right": {
+            "frameCount": 6,
+            "frameInterval": 100,
+            "height": 108,
+            "offsetX": 1,
+            "offsetY": 110,
+            "repeat": false,
+            "width": 72
+        }
+    },
     "vault-stairs": {
         "cloneOf": "wooden-stairs",
         "defaultSource": "stairs/vault.png"
@@ -5142,269 +5496,6 @@
             "repeat": false,
             "width": 28
         }
-    },
-    "turret": {
-        "dead-down": {
-            "frameCount": 1,
-            "frameInterval": 0,
-            "height": 83,
-            "offsetX": 2002,
-            "offsetY": 0,
-            "repeat": false,
-            "width": 143
-        },
-        "dead-left": {
-            "frameCount": 1,
-            "frameInterval": 0,
-            "height": 83,
-            "offsetX": 2002,
-            "offsetY": 84,
-            "repeat": false,
-            "width": 143
-        },
-        "dead-right": {
-            "frameCount": 1,
-            "frameInterval": 0,
-            "height": 83,
-            "offsetX": 2002,
-            "offsetY": 251,
-            "repeat": false,
-            "width": 143
-        },
-        "dead-up": {
-            "frameCount": 1,
-            "frameInterval": 0,
-            "height": 83,
-            "offsetX": 2002,
-            "offsetY": 168,
-            "repeat": false,
-            "width": 143
-        },
-        "death-down": {
-            "frameCount": 15,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 0,
-            "repeat": false,
-            "width": 143
-        },
-        "death-left": {
-            "frameCount": 15,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 84,
-            "repeat": false,
-            "width": 143
-        },
-        "death-right": {
-            "frameCount": 15,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 251,
-            "repeat": false,
-            "width": 143
-        },
-        "death-up": {
-            "frameCount": 15,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 168,
-            "repeat": false,
-            "width": 143
-        },
-        "defaultSource": "turret.png",
-        "fall-down-down": {
-            "frameCount": 11,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 334,
-            "repeat": false,
-            "reverse": true,
-            "width": 79
-        },
-        "fall-down-left": {
-            "frameCount": 11,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 418,
-            "repeat": false,
-            "reverse": true,
-            "width": 79
-        },
-        "fall-down-right": {
-            "frameCount": 11,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 586,
-            "repeat": false,
-            "reverse": true,
-            "width": 79
-        },
-        "fall-down-up": {
-            "frameCount": 11,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 502,
-            "repeat": false,
-            "reverse": true,
-            "width": 79
-        },
-        "fire-down": {
-            "frameCount": 12,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 870,
-            "offsetY": 334,
-            "repeat": false,
-            "width": 91
-        },
-        "fire-left": {
-            "frameCount": 12,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 870,
-            "offsetY": 418,
-            "repeat": false,
-            "width": 91
-        },
-        "fire-right": {
-            "frameCount": 12,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 870,
-            "offsetY": 586,
-            "repeat": false,
-            "width": 91
-        },
-        "fire-up": {
-            "frameCount": 12,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 870,
-            "offsetY": 502,
-            "repeat": false,
-            "width": 91
-        },
-        "get-up-down": {
-            "frameCount": 11,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 334,
-            "repeat": false,
-            "width": 79
-        },
-        "get-up-left": {
-            "frameCount": 11,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 418,
-            "repeat": false,
-            "width": 79
-        },
-        "get-up-right": {
-            "frameCount": 11,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 586,
-            "repeat": false,
-            "width": 79
-        },
-        "get-up-up": {
-            "frameCount": 11,
-            "frameInterval": 75,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 502,
-            "repeat": false,
-            "width": 79
-        },
-        "idle-down": {
-            "frameCount": 1,
-            "frameInterval": 0,
-            "height": 83,
-            "offsetX": 870,
-            "offsetY": 334,
-            "repeat": false,
-            "width": 91
-        },
-        "idle-left": {
-            "frameCount": 1,
-            "frameInterval": 0,
-            "height": 83,
-            "offsetX": 870,
-            "offsetY": 418,
-            "repeat": false,
-            "width": 91
-        },
-        "idle-right": {
-            "frameCount": 1,
-            "frameInterval": 0,
-            "height": 83,
-            "offsetX": 870,
-            "offsetY": 586,
-            "repeat": false,
-            "width": 91
-        },
-        "idle-up": {
-            "frameCount": 1,
-            "frameInterval": 0,
-            "height": 83,
-            "offsetX": 870,
-            "offsetY": 502,
-            "repeat": false,
-            "width": 91
-        },
-        "sleep-down": {
-            "frameCount": 1,
-            "frameInterval": 0,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 334,
-            "repeat": false,
-            "width": 79
-        },
-        "sleep-left": {
-            "frameCount": 1,
-            "frameInterval": 0,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 418,
-            "repeat": false,
-            "width": 79
-        },
-        "sleep-right": {
-            "frameCount": 1,
-            "frameInterval": 0,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 586,
-            "repeat": false,
-            "width": 79
-        },
-        "sleep-up": {
-            "frameCount": 1,
-            "frameInterval": 0,
-            "height": 83,
-            "offsetX": 0,
-            "offsetY": 502,
-            "repeat": false,
-            "width": 79
-        }
-    },
-    "vault-stairs": {
-        "cloneOf": "wooden-stairs",
-        "defaultSource": "stairs/vault.png"
     },
     "wasp": {
         "damaged-down": {
