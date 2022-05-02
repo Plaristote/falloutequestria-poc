@@ -969,6 +969,117 @@
         "cloneOf": "diamond-dog",
         "defaultSource": "characters/diamond-dog-gray.png"
     },
+    "dumpsters": {
+        "defaultSource": "junk/dumpsters.png",
+        "normal-bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 106,
+            "offsetX": 395,
+            "offsetY": 208,
+            "repeat": false,
+            "width": 131
+        },
+        "normal-bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 106,
+            "offsetX": 264,
+            "offsetY": 208,
+            "repeat": false,
+            "width": 131
+        },
+        "normal-top-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 106,
+            "offsetX": 131,
+            "offsetY": 208,
+            "repeat": false,
+            "width": 131
+        },
+        "normal-top-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 106,
+            "offsetX": 0,
+            "offsetY": 208,
+            "repeat": false,
+            "width": 131
+        },
+        "wrecked-alt-bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 103,
+            "offsetX": 400,
+            "offsetY": 104,
+            "repeat": false,
+            "width": 128
+        },
+        "wrecked-alt-bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 103,
+            "offsetX": 265,
+            "offsetY": 104,
+            "repeat": false,
+            "width": 135
+        },
+        "wrecked-alt-top-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 103,
+            "offsetX": 128,
+            "offsetY": 104,
+            "repeat": false,
+            "width": 137
+        },
+        "wrecked-alt-top-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 103,
+            "offsetX": 0,
+            "offsetY": 105,
+            "repeat": false,
+            "width": 128
+        },
+        "wrecked-bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 103,
+            "offsetX": 403,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 128
+        },
+        "wrecked-bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 103,
+            "offsetX": 267,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 135
+        },
+        "wrecked-top-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 103,
+            "offsetX": 128,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 137
+        },
+        "wrecked-top-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 103,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 128
+        }
+    },
     "effects": {
         "bullet": {
             "frameCount": 1,
@@ -2110,11 +2221,11 @@
         "washing-machine-bottom-right": {
             "frameCount": 1,
             "frameInterval": 0,
-            "height": 0,
-            "offsetX": 0,
-            "offsetY": 0,
+            "height": 53,
+            "offsetX": 88,
+            "offsetY": 207,
             "repeat": false,
-            "width": 0
+            "width": 45
         },
         "washing-machine-top-left": {
             "frameCount": 1,
@@ -2497,6 +2608,228 @@
             "width": 177
         },
         "defaultSource": "junk/junk-barricades.png"
+    },
+    "junk-sheds": {
+        "defaultSource": "junk/vats-and-sheds.png",
+        "shed-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 151,
+            "offsetX": 921,
+            "offsetY": 762,
+            "repeat": false,
+            "width": 152
+        },
+        "shed-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 151,
+            "offsetX": 1227,
+            "offsetY": 762,
+            "repeat": false,
+            "width": 152
+        },
+        "shed-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 151,
+            "offsetX": 1074,
+            "offsetY": 762,
+            "repeat": false,
+            "width": 152
+        },
+        "shed-top": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 151,
+            "offsetX": 768,
+            "offsetY": 762,
+            "repeat": false,
+            "width": 152
+        },
+        "storage-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 117,
+            "offsetX": 580,
+            "offsetY": 932,
+            "repeat": false,
+            "width": 96
+        },
+        "storage-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 117,
+            "offsetX": 773,
+            "offsetY": 932,
+            "repeat": false,
+            "width": 96
+        },
+        "storage-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 117,
+            "offsetX": 676,
+            "offsetY": 932,
+            "repeat": false,
+            "width": 96
+        },
+        "storage-top": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 117,
+            "offsetX": 482,
+            "offsetY": 932,
+            "repeat": false,
+            "width": 96
+        },
+        "wrecked-shed-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 170,
+            "offsetX": 194,
+            "offsetY": 762,
+            "repeat": false,
+            "width": 192
+        },
+        "wrecked-shed-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 160,
+            "offsetX": 576,
+            "offsetY": 762,
+            "repeat": false,
+            "width": 192
+        },
+        "wrecked-shed-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 160,
+            "offsetX": 385,
+            "offsetY": 762,
+            "repeat": false,
+            "width": 192
+        },
+        "wrecked-shed-top": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 160,
+            "offsetX": 0,
+            "offsetY": 762,
+            "repeat": false,
+            "width": 192
+        }
+    },
+    "junk-vats": {
+        "defaultSource": "junk/vats-and-sheds.png",
+        "long-alt-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 259,
+            "offsetX": 1069,
+            "offsetY": 259,
+            "repeat": false,
+            "width": 357
+        },
+        "long-alt-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 246,
+            "offsetX": 711,
+            "offsetY": 259,
+            "repeat": false,
+            "width": 350
+        },
+        "long-alt-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 246,
+            "offsetX": 0,
+            "offsetY": 260,
+            "repeat": false,
+            "width": 358
+        },
+        "long-alt-top": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 246,
+            "offsetX": 356,
+            "offsetY": 260,
+            "repeat": false,
+            "width": 357
+        },
+        "long-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 259,
+            "offsetX": 1055,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 357
+        },
+        "long-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 246,
+            "offsetX": 701,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 343
+        },
+        "long-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 246,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 343
+        },
+        "long-top": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 246,
+            "offsetX": 344,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 357
+        },
+        "vat-down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 240,
+            "offsetX": 544,
+            "offsetY": 520,
+            "repeat": false,
+            "width": 272
+        },
+        "vat-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 240,
+            "offsetX": 272,
+            "offsetY": 520,
+            "repeat": false,
+            "width": 272
+        },
+        "vat-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 240,
+            "offsetX": 816,
+            "offsetY": 520,
+            "repeat": false,
+            "width": 272
+        },
+        "vat-top": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 240,
+            "offsetX": 0,
+            "offsetY": 520,
+            "repeat": false,
+            "width": 272
+        }
     },
     "junk-walls": {
         "A-left": {
