@@ -185,6 +185,414 @@
             "width": 72
         }
     },
+    "car-wreck#0": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "frameCount": 1,
+            "frameInterval": 100,
+            "height": 169,
+            "offsetX": 520,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 265
+        },
+        "left": {
+            "frameCount": 1,
+            "frameInterval": 100,
+            "height": 195,
+            "offsetX": 788,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 250
+        },
+        "right": {
+            "height": 169,
+            "offsetX": 0,
+            "offsetY": 0,
+            "width": 250
+        },
+        "top": {
+            "frameCount": 1,
+            "frameInterval": 100,
+            "height": 169,
+            "offsetX": 251,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 265
+        }
+    },
+    "car-wreck#1": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "height": 91,
+            "offsetX": 0,
+            "offsetY": 170,
+            "width": 132
+        },
+        "left": {
+            "height": 91,
+            "offsetX": 399,
+            "offsetY": 170,
+            "width": 132
+        },
+        "right": {
+            "height": 91,
+            "offsetX": 266,
+            "offsetY": 170,
+            "width": 132
+        },
+        "top": {
+            "height": 91,
+            "offsetX": 133,
+            "offsetY": 170,
+            "width": 132
+        }
+    },
+    "car-wreck#2": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "height": 113,
+            "offsetX": 0,
+            "offsetY": 264,
+            "width": 177
+        },
+        "left": {
+            "height": 113,
+            "offsetX": 532,
+            "offsetY": 264,
+            "width": 177
+        },
+        "right": {
+            "height": 113,
+            "offsetX": 355,
+            "offsetY": 264,
+            "width": 177
+        },
+        "top": {
+            "height": 113,
+            "offsetX": 178,
+            "offsetY": 264,
+            "width": 177
+        }
+    },
+    "car-wreck#3": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "height": 124,
+            "offsetX": 0,
+            "offsetY": 378,
+            "width": 206
+        },
+        "left": {
+            "height": 124,
+            "offsetX": 591,
+            "offsetY": 378,
+            "width": 206
+        },
+        "right": {
+            "frameCount": 1,
+            "frameInterval": 100,
+            "height": 124,
+            "offsetX": 399,
+            "offsetY": 378,
+            "repeat": false,
+            "width": 189
+        },
+        "top": {
+            "frameCount": 1,
+            "frameInterval": 100,
+            "height": 124,
+            "offsetX": 208,
+            "offsetY": 378,
+            "repeat": false,
+            "width": 189
+        }
+    },
+    "car-wreck#4": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "height": 111,
+            "offsetX": 0,
+            "offsetY": 502,
+            "width": 174
+        },
+        "left": {
+            "height": 111,
+            "offsetX": 566,
+            "offsetY": 502,
+            "width": 174
+        },
+        "right": {
+            "height": 111,
+            "offsetX": 371,
+            "offsetY": 502,
+            "width": 192
+        },
+        "top": {
+            "frameCount": 1,
+            "frameInterval": 100,
+            "height": 111,
+            "offsetX": 175,
+            "offsetY": 502,
+            "repeat": false,
+            "width": 192
+        }
+    },
+    "car-wreck#5": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "height": 126,
+            "offsetX": 0,
+            "offsetY": 624,
+            "width": 194
+        },
+        "left": {
+            "height": 126,
+            "offsetX": 589,
+            "offsetY": 624,
+            "width": 194
+        },
+        "right": {
+            "height": 126,
+            "offsetX": 393,
+            "offsetY": 624,
+            "width": 194
+        },
+        "top": {
+            "height": 126,
+            "offsetX": 196,
+            "offsetY": 624,
+            "width": 194
+        }
+    },
+    "car-wreck#6": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "height": 145,
+            "offsetX": 0,
+            "offsetY": 751,
+            "width": 130
+        },
+        "left": {
+            "height": 145,
+            "offsetX": 490,
+            "offsetY": 751,
+            "width": 130
+        },
+        "right": {
+            "height": 145,
+            "offsetX": 310,
+            "offsetY": 751,
+            "width": 177
+        },
+        "top": {
+            "height": 145,
+            "offsetX": 132,
+            "offsetY": 751,
+            "width": 177
+        }
+    },
+    "car-wreck#7": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "height": 96,
+            "offsetX": 0,
+            "offsetY": 1075,
+            "width": 139
+        },
+        "left": {
+            "height": 96,
+            "offsetX": 418,
+            "offsetY": 1075,
+            "width": 139
+        },
+        "right": {
+            "height": 96,
+            "offsetX": 278,
+            "offsetY": 1075,
+            "width": 139
+        },
+        "top": {
+            "height": 96,
+            "offsetX": 141,
+            "offsetY": 1075,
+            "width": 139
+        }
+    },
+    "car-wreck#8": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "height": 102,
+            "offsetX": 0,
+            "offsetY": 1172,
+            "width": 169
+        },
+        "left": {
+            "frameCount": 1,
+            "frameInterval": 100,
+            "height": 102,
+            "offsetX": 491,
+            "offsetY": 1172,
+            "repeat": false,
+            "width": 169
+        },
+        "right": {
+            "frameCount": 1,
+            "frameInterval": 100,
+            "height": 102,
+            "offsetX": 331,
+            "offsetY": 1172,
+            "repeat": false,
+            "width": 160
+        },
+        "top": {
+            "height": 102,
+            "offsetX": 171,
+            "offsetY": 1172,
+            "width": 160
+        }
+    },
+    "car-wreck#9": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "height": 107,
+            "offsetX": 0,
+            "offsetY": 1275,
+            "width": 125
+        },
+        "left": {
+            "height": 107,
+            "offsetX": 364,
+            "offsetY": 1275,
+            "width": 125
+        },
+        "right": {
+            "frameCount": 1,
+            "frameInterval": 100,
+            "height": 107,
+            "offsetX": 245,
+            "offsetY": 1275,
+            "repeat": false,
+            "width": 119
+        },
+        "top": {
+            "frameCount": 1,
+            "frameInterval": 100,
+            "height": 107,
+            "offsetX": 126,
+            "offsetY": 1275,
+            "repeat": false,
+            "width": 119
+        }
+    },
+    "car-wreck#caravan": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "height": 156,
+            "offsetX": 0,
+            "offsetY": 1383,
+            "width": 193
+        },
+        "left": {
+            "height": 156,
+            "offsetX": 556,
+            "offsetY": 1383,
+            "width": 193
+        },
+        "right": {
+            "height": 156,
+            "offsetX": 376,
+            "offsetY": 1383,
+            "width": 178
+        },
+        "top": {
+            "height": 156,
+            "offsetX": 196,
+            "offsetY": 1383,
+            "width": 178
+        }
+    },
+    "car-wreck#truck1": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "height": 174,
+            "offsetX": 0,
+            "offsetY": 897,
+            "width": 227
+        },
+        "left": {
+            "height": 174,
+            "offsetX": 697,
+            "offsetY": 897,
+            "width": 227
+        },
+        "right": {
+            "height": 174,
+            "offsetX": 463,
+            "offsetY": 897,
+            "width": 227
+        },
+        "top": {
+            "height": 174,
+            "offsetX": 228,
+            "offsetY": 897,
+            "width": 227
+        }
+    },
+    "car-wreck#truck2": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "height": 175,
+            "offsetX": 0,
+            "offsetY": 1544,
+            "width": 200
+        },
+        "left": {
+            "height": 175,
+            "offsetX": 200,
+            "offsetY": 1544,
+            "width": 200
+        },
+        "right": {
+            "height": 175,
+            "offsetX": 601,
+            "offsetY": 1544,
+            "width": 200
+        },
+        "top": {
+            "height": 175,
+            "offsetX": 401,
+            "offsetY": 1544,
+            "width": 200
+        }
+    },
+    "car-wreck#truck3": {
+        "defaultSource": "junk/car-wrecks.png",
+        "down": {
+            "height": 176,
+            "offsetX": 647,
+            "offsetY": 1722,
+            "width": 199
+        },
+        "left": {
+            "height": 176,
+            "offsetX": 200,
+            "offsetY": 1722,
+            "width": 221
+        },
+        "right": {
+            "height": 176,
+            "offsetX": 423,
+            "offsetY": 1722,
+            "width": 221
+        },
+        "top": {
+            "height": 176,
+            "offsetX": 0,
+            "offsetY": 1722,
+            "width": 199
+        }
+    },
     "caravans": {
         "1": {
             "frameCount": 1,
