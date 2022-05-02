@@ -2246,6 +2246,255 @@
             "width": 45
         }
     },
+    "junk-barrel-group": {
+        "defaultSource": "junk/barrels.png",
+        "down": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 59,
+            "offsetX": 185,
+            "offsetY": 121,
+            "repeat": false,
+            "width": 60
+        },
+        "left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 59,
+            "offsetX": 0,
+            "offsetY": 121,
+            "repeat": false,
+            "width": 63
+        },
+        "right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 59,
+            "offsetX": 64,
+            "offsetY": 121,
+            "repeat": false,
+            "width": 59
+        },
+        "top": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 59,
+            "offsetX": 123,
+            "offsetY": 121,
+            "repeat": false,
+            "width": 60
+        }
+    },
+    "junk-barrels": {
+        "A": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 41,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 27
+        },
+        "B": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 41,
+            "offsetX": 29,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 27
+        },
+        "C": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 41,
+            "offsetX": 58,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 27
+        },
+        "D": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 41,
+            "offsetX": 85,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 27
+        },
+        "E": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 41,
+            "offsetX": 112,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 27
+        },
+        "F": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 41,
+            "offsetX": 140,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 27
+        },
+        "G": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 41,
+            "offsetX": 168,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 27
+        },
+        "H": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 41,
+            "offsetX": 196,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 27
+        },
+        "I": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 41,
+            "offsetX": 224,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 27
+        },
+        "J": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 41,
+            "offsetX": 252,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 27
+        },
+        "K": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 41,
+            "offsetX": 280,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 27
+        },
+        "L": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 38,
+            "offsetX": 0,
+            "offsetY": 82,
+            "repeat": false,
+            "width": 24
+        },
+        "M": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 38,
+            "offsetX": 25,
+            "offsetY": 82,
+            "repeat": false,
+            "width": 24
+        },
+        "N": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 38,
+            "offsetX": 48,
+            "offsetY": 82,
+            "repeat": false,
+            "width": 24
+        },
+        "O": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 38,
+            "offsetX": 72,
+            "offsetY": 82,
+            "repeat": false,
+            "width": 24
+        },
+        "P": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 38,
+            "offsetX": 96,
+            "offsetY": 82,
+            "repeat": false,
+            "width": 24
+        },
+        "Q": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 38,
+            "offsetX": 120,
+            "offsetY": 82,
+            "repeat": false,
+            "width": 24
+        },
+        "R": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 38,
+            "offsetX": 144,
+            "offsetY": 82,
+            "repeat": false,
+            "width": 24
+        },
+        "S": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 38,
+            "offsetX": 168,
+            "offsetY": 82,
+            "repeat": false,
+            "width": 24
+        },
+        "T": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 39,
+            "offsetX": 186,
+            "offsetY": 42,
+            "repeat": false,
+            "width": 26
+        },
+        "U": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 39,
+            "offsetX": 213,
+            "offsetY": 42,
+            "repeat": false,
+            "width": 22
+        },
+        "V": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 39,
+            "offsetX": 236,
+            "offsetY": 42,
+            "repeat": false,
+            "width": 22
+        },
+        "W": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 39,
+            "offsetX": 260,
+            "offsetY": 42,
+            "repeat": false,
+            "width": 25
+        },
+        "defaultSource": "junk/barrels.png"
+    },
     "junk-barricades": {
         "A-bottom-left": {
             "frameCount": 1,
