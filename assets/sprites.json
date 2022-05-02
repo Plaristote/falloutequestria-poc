@@ -2518,6 +2518,16 @@
             "repeat": false,
             "width": 17
         },
+        "robot": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 146,
+            "offsetX": 566,
+            "offsetY": 158,
+            "repeat": false,
+            "source": "junk/junk-barricades.png",
+            "width": 222
+        },
         "tv-bottom-left": {
             "frameCount": 1,
             "frameInterval": 0,
