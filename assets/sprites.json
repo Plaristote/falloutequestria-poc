@@ -3276,6 +3276,303 @@
         },
         "defaultSource": "junk/junk-barricades.png"
     },
+    "junk-bed": {
+        "alt-bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 0,
+            "offsetY": 74,
+            "repeat": false,
+            "width": 83
+        },
+        "alt-bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 84,
+            "offsetY": 74,
+            "repeat": false,
+            "width": 83
+        },
+        "alt-top-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 171,
+            "offsetY": 74,
+            "repeat": false,
+            "width": 83
+        },
+        "alt-top-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 69,
+            "offsetX": 258,
+            "offsetY": 74,
+            "repeat": false,
+            "width": 83
+        },
+        "bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 72,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 82
+        },
+        "bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 72,
+            "offsetX": 83,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 82
+        },
+        "defaultSource": "furnitures/beds.png",
+        "top-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 72,
+            "offsetX": 166,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 82
+        },
+        "top-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 72,
+            "offsetX": 249,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 82
+        }
+    },
+    "junk-cupboards": {
+        "A-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 87,
+            "offsetX": 428,
+            "offsetY": 619,
+            "repeat": false,
+            "width": 43
+        },
+        "A-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 87,
+            "offsetX": 384,
+            "offsetY": 619,
+            "repeat": false,
+            "width": 43
+        },
+        "B-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 106,
+            "offsetX": 188,
+            "offsetY": 183,
+            "repeat": false,
+            "width": 62
+        },
+        "B-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 106,
+            "offsetX": 125,
+            "offsetY": 183,
+            "repeat": false,
+            "width": 62
+        },
+        "C-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 85,
+            "offsetX": 403,
+            "offsetY": 204,
+            "repeat": false,
+            "width": 49
+        },
+        "C-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 85,
+            "offsetX": 351,
+            "offsetY": 204,
+            "repeat": false,
+            "width": 49
+        },
+        "D-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 81,
+            "offsetX": 149,
+            "offsetY": 300,
+            "repeat": false,
+            "width": 44
+        },
+        "D-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 81,
+            "offsetX": 97,
+            "offsetY": 300,
+            "repeat": false,
+            "width": 51
+        },
+        "E-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 81,
+            "offsetX": 416,
+            "offsetY": 9,
+            "repeat": false,
+            "width": 41
+        },
+        "E-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 81,
+            "offsetX": 375,
+            "offsetY": 9,
+            "repeat": false,
+            "width": 41
+        },
+        "defaultSource": "furnitures/cupboards.png",
+        "wardrobe-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 90,
+            "offsetX": 381,
+            "offsetY": 290,
+            "repeat": false,
+            "width": 64
+        },
+        "wardrobe-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 90,
+            "offsetX": 320,
+            "offsetY": 290,
+            "repeat": false,
+            "width": 60
+        }
+    },
+    "junk-mattress": {
+        "A-bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 106,
+            "offsetX": 0,
+            "offsetY": 527,
+            "repeat": false,
+            "width": 70
+        },
+        "A-bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 106,
+            "offsetX": 71,
+            "offsetY": 527,
+            "repeat": false,
+            "width": 70
+        },
+        "A-top-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 106,
+            "offsetX": 144,
+            "offsetY": 527,
+            "repeat": false,
+            "width": 70
+        },
+        "A-top-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 106,
+            "offsetX": 215,
+            "offsetY": 527,
+            "repeat": false,
+            "width": 70
+        },
+        "B-bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 97,
+            "offsetX": 0,
+            "offsetY": 428,
+            "repeat": false,
+            "width": 130
+        },
+        "B-bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 97,
+            "offsetX": 132,
+            "offsetY": 428,
+            "repeat": false,
+            "width": 130
+        },
+        "B-top-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 97,
+            "offsetX": 263,
+            "offsetY": 428,
+            "repeat": false,
+            "width": 130
+        },
+        "B-top-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 97,
+            "offsetX": 395,
+            "offsetY": 428,
+            "repeat": false,
+            "width": 130
+        },
+        "C-bottom-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 79,
+            "offsetX": 0,
+            "offsetY": 246,
+            "repeat": false,
+            "width": 108
+        },
+        "C-bottom-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 79,
+            "offsetX": 108,
+            "offsetY": 246,
+            "repeat": false,
+            "width": 108
+        },
+        "C-top-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 79,
+            "offsetX": 216,
+            "offsetY": 246,
+            "repeat": false,
+            "width": 108
+        },
+        "C-top-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 79,
+            "offsetX": 323,
+            "offsetY": 246,
+            "repeat": false,
+            "width": 108
+        },
+        "defaultSource": "furnitures/beds.png"
+    },
     "junk-sheds": {
         "defaultSource": "junk/vats-and-sheds.png",
         "shed-down": {
