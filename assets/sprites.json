@@ -4059,16 +4059,115 @@
         }
     },
     "library": {
-        "idle": {
+        "A-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 104,
+            "offsetX": 244,
+            "offsetY": 105,
+            "repeat": false,
+            "width": 78
+        },
+        "A-right": {
             "frameCount": 1,
             "frameInterval": 100,
-            "height": 131,
-            "offsetX": 0,
-            "offsetY": 0,
+            "height": 104,
+            "offsetX": 164,
+            "offsetY": 105,
             "repeat": false,
-            "source": "library.png",
-            "width": 129
-        }
+            "width": 78
+        },
+        "B-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 100,
+            "offsetX": 325,
+            "offsetY": 109,
+            "repeat": false,
+            "width": 79
+        },
+        "B-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 100,
+            "offsetX": 406,
+            "offsetY": 109,
+            "repeat": false,
+            "width": 79
+        },
+        "C-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 100,
+            "offsetX": 569,
+            "offsetY": 109,
+            "repeat": false,
+            "width": 79
+        },
+        "C-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 100,
+            "offsetX": 487,
+            "offsetY": 109,
+            "repeat": false,
+            "width": 79
+        },
+        "D-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 94,
+            "offsetX": 458,
+            "offsetY": 313,
+            "repeat": false,
+            "width": 55
+        },
+        "D-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 94,
+            "offsetX": 515,
+            "offsetY": 313,
+            "repeat": false,
+            "width": 55
+        },
+        "E-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 94,
+            "offsetX": 572,
+            "offsetY": 313,
+            "repeat": false,
+            "width": 55
+        },
+        "E-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 94,
+            "offsetX": 628,
+            "offsetY": 313,
+            "repeat": false,
+            "width": 55
+        },
+        "F-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 80,
+            "offsetX": 417,
+            "offsetY": 408,
+            "repeat": false,
+            "width": 57
+        },
+        "F-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 80,
+            "offsetX": 357,
+            "offsetY": 408,
+            "repeat": false,
+            "width": 57
+        },
+        "defaultSource": "furnitures/shelfs.png"
     },
     "locker": {
         "close": {
@@ -6842,6 +6941,231 @@
             "repeat": false,
             "width": 72
         }
+    },
+    "shelf-junk": {
+        "A-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 86,
+            "offsetX": 0,
+            "offsetY": 489,
+            "repeat": false,
+            "width": 54
+        },
+        "A-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 86,
+            "offsetX": 55,
+            "offsetY": 489,
+            "repeat": false,
+            "width": 54
+        },
+        "B-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 100,
+            "offsetX": 324,
+            "offsetY": 4,
+            "repeat": false,
+            "width": 84
+        },
+        "B-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 100,
+            "offsetX": 499,
+            "offsetY": 4,
+            "repeat": false,
+            "width": 84
+        },
+        "C-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 105,
+            "offsetX": 587,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 87
+        },
+        "C-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 105,
+            "offsetX": 410,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 87
+        },
+        "D-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 78,
+            "offsetX": 175,
+            "offsetY": 885,
+            "repeat": false,
+            "width": 55
+        },
+        "D-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 78,
+            "offsetX": 117,
+            "offsetY": 885,
+            "repeat": false,
+            "width": 55
+        },
+        "defaultSource": "furnitures/shelfs.png"
+    },
+    "shelf-metal": {
+        "A-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 99,
+            "offsetX": 0,
+            "offsetY": 576,
+            "repeat": false,
+            "width": 79
+        },
+        "A-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 99,
+            "offsetX": 81,
+            "offsetY": 576,
+            "repeat": false,
+            "width": 79
+        },
+        "B-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 99,
+            "offsetX": 241,
+            "offsetY": 577,
+            "repeat": false,
+            "width": 79
+        },
+        "B-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 99,
+            "offsetX": 162,
+            "offsetY": 576,
+            "repeat": false,
+            "width": 79
+        },
+        "C-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 99,
+            "offsetX": 323,
+            "offsetY": 576,
+            "repeat": false,
+            "width": 79
+        },
+        "C-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 99,
+            "offsetX": 405,
+            "offsetY": 576,
+            "repeat": false,
+            "width": 79
+        },
+        "D-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 99,
+            "offsetX": 569,
+            "offsetY": 576,
+            "repeat": false,
+            "width": 79
+        },
+        "D-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 99,
+            "offsetX": 487,
+            "offsetY": 576,
+            "repeat": false,
+            "width": 79
+        },
+        "defaultSource": "furnitures/shelfs.png"
+    },
+    "shelf-wood": {
+        "A-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 84,
+            "offsetX": 225,
+            "offsetY": 491,
+            "repeat": false,
+            "width": 53
+        },
+        "A-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 84,
+            "offsetX": 281,
+            "offsetY": 491,
+            "repeat": false,
+            "width": 53
+        },
+        "B-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 100,
+            "offsetX": 333,
+            "offsetY": 677,
+            "repeat": false,
+            "width": 79
+        },
+        "B-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 100,
+            "offsetX": 414,
+            "offsetY": 677,
+            "repeat": false,
+            "width": 79
+        },
+        "C-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 100,
+            "offsetX": 496,
+            "offsetY": 677,
+            "repeat": false,
+            "width": 79
+        },
+        "C-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 100,
+            "offsetX": 576,
+            "offsetY": 677,
+            "repeat": false,
+            "width": 79
+        },
+        "D-left": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 79,
+            "offsetX": 639,
+            "offsetY": 884,
+            "repeat": false,
+            "width": 56
+        },
+        "D-right": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 79,
+            "offsetX": 580,
+            "offsetY": 884,
+            "repeat": false,
+            "width": 56
+        },
+        "defaultSource": "furnitures/shelfs.png"
     },
     "stable-door-west": {
         "close": {
