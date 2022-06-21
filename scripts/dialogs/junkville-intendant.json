@@ -1,0 +1,114 @@
+{
+    "answers": {
+        "": {
+            "hook": "",
+            "state": ""
+        },
+        "I need supplies. Show me what you're selling.": {
+            "text": "I need supplies. Show me what you're selling."
+        },
+        "ask-celestial-device": {
+            "state": "about-celestial-device",
+            "text": "ask-celestial-device"
+        },
+        "ask-leader": {
+            "state": "about-leader",
+            "text": "ask-leader"
+        },
+        "ask-safety": {
+            "state": "about-safety",
+            "text": "ask-safety"
+        },
+        "ask-something-else": {
+            "state": "about-town",
+            "text": "ask-something-else"
+        },
+        "ask-town": {
+            "hook": "",
+            "state": "about-town",
+            "text": "ask-town"
+        },
+        "end-ask": {
+            "state": "entry",
+            "text": "end-ask"
+        },
+        "introduce-player": {
+            "hook": "learnPlayerName",
+            "state": "about-celestial-device",
+            "text": "introduce-player"
+        },
+        "nothing-needed": {
+            "hook": "",
+            "state": "",
+            "text": "nothing-needed"
+        },
+        "open-trade": {
+            "hook": "",
+            "state": "trade",
+            "text": "open-trade"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-celestial-device": {
+            "answers": [
+                "ask-town",
+                "open-trade",
+                "end-ask"
+            ],
+            "hook": "",
+            "text": "about-celestial-device"
+        },
+        "about-leader": {
+            "answers": [
+                "ask-something-else",
+                "end-ask"
+            ],
+            "hook": "learnAboutLeader",
+            "text": "about-leader"
+        },
+        "about-safety": {
+            "answers": [
+                "ask-something-else",
+                "end-ask"
+            ],
+            "hook": "",
+            "text": "about-safety"
+        },
+        "about-town": {
+            "answers": [
+                "ask-leader",
+                "ask-safety",
+                "end-ask"
+            ],
+            "hook": "",
+            "text": "about-town"
+        },
+        "entry": {
+            "answers": [
+                "open-trade",
+                "ask-town",
+                "ask-celestial-device",
+                "nothing-needed"
+            ],
+            "hook": "entry",
+            "text": "entry"
+        },
+        "introduction": {
+            "answers": [
+                "introduce-player",
+                "open-trade",
+                "ask-town",
+                "nothing-needed"
+            ],
+            "hook": "",
+            "text": "introduction"
+        },
+        "trade": {
+            "answers": [
+            ],
+            "hook": "barter",
+            "text": "trade"
+        }
+    }
+}

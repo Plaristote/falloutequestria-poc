@@ -1,0 +1,114 @@
+{
+    "answers": {
+        "": {
+            "state": ""
+        },
+        "accept-help": {
+            "state": "device-answer",
+            "text": "accept-help"
+        },
+        "backpedal-help": {
+            "state": "accompany",
+            "text": "backpedal-help"
+        },
+        "come-later": {
+            "state": "exit-come-later",
+            "text": "come-later"
+        },
+        "come-with": {
+            "state": "exit-come-with",
+            "text": "come-with"
+        },
+        "join-party": {
+            "state": "exit-join-party",
+            "text": "join-party"
+        },
+        "leave-me-alone": {
+            "state": "exit-come-later",
+            "text": "leave-me-alone"
+        },
+        "player-intro-with-details": {
+            "state": "stable-answer",
+            "text": "player-intro-with-details"
+        },
+        "player-introduction": {
+            "state": "accompany",
+            "text": "player-introduction"
+        },
+        "player-not-trusting": {
+            "state": "untrust-answer",
+            "text": "player-not-trusting"
+        },
+        "player-wondering": {
+            "text": "player-wondering"
+        },
+        "reject-help": {
+            "state": "accompany",
+            "text": "reject-help"
+        }
+    },
+    "entryPoint": "introduction",
+    "states": {
+        "accompany": {
+            "answers": [
+                "come-with",
+                "join-party",
+                "come-later",
+                "leave-me-alone"
+            ],
+            "hook": "accompany",
+            "text": "accompany-again"
+        },
+        "device-answer": {
+            "answers": [
+                "come-with",
+                "join-party",
+                "come-later"
+            ],
+            "hook": "onTalkedAboutDevice",
+            "text": "device-answer"
+        },
+        "exit-come-later": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "exit-come-later"
+        },
+        "exit-come-with": {
+            "answers": [
+            ],
+            "hook": "onComeWith",
+            "text": "exit-come-with"
+        },
+        "exit-join-party": {
+            "answers": [
+            ],
+            "hook": "onJoinParty",
+            "text": "exit-join-party"
+        },
+        "introduction": {
+            "answers": [
+                "player-introduction",
+                "player-intro-with-details",
+                "player-not-trusting"
+            ],
+            "text": "introduction"
+        },
+        "stable-answer": {
+            "answers": [
+                "accept-help",
+                "reject-help",
+                "backpedal-help"
+            ],
+            "hook": "",
+            "text": "stable-answer"
+        },
+        "untrust-answer": {
+            "answers": [
+                "player-introduction",
+                "player-intro-with-details"
+            ],
+            "text": "untrust-answer"
+        }
+    }
+}

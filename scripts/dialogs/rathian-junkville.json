@@ -1,0 +1,68 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "state": "",
+            "textHook": ""
+        },
+        "ask-about-celestial-device": {
+            "availableHook": "isDeviceQuestAvailable",
+            "state": "about-celestial-device-intro",
+            "text": "ask-about-celestial-device",
+            "textHook": "askCelestialDeviceText"
+        },
+        "ask-about-celestial-device-alt": {
+            "availableHook": "canInquireAboutDevice",
+            "state": "about-celestial-device-intro",
+            "text": "ask-about-celestial-device-alt",
+            "textHook": ""
+        },
+        "ask-nothing": {
+            "availableHook": "",
+            "text": "ask-nothing"
+        },
+        "ask-something-else": {
+            "state": "entry",
+            "text": "ask-something-else"
+        },
+        "ask-steel-ranger": {
+            "availableHook": "",
+            "state": "about-steel-rangers",
+            "text": "ask-steel-ranger"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-celestial-device-intro": {
+            "answers": [
+            ],
+            "hook": "askedAboutCelestialDevice",
+            "text": "about-celestial-device-intro"
+        },
+        "about-steel-rangers": {
+            "answers": [
+                "ask-something-else"
+            ],
+            "hook": "",
+            "text": "about-steel-rangers"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-celestial-device",
+                "ask-steel-ranger",
+                "ask-nothing"
+            ],
+            "hook": "entry",
+            "text": "entry"
+        },
+        "entry-first-meeting": {
+            "answers": [
+                "ask-about-celestial-device",
+                "ask-steel-ranger",
+                "ask-nothing"
+            ],
+            "hook": "",
+            "text": "entry-first-meeting"
+        }
+    }
+}

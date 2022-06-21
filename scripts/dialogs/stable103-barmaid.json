@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "hook": "",
+            "state": ""
+        },
+        "I'll have an apple cider.": {
+            "hook": "",
+            "state": "",
+            "text": "I'll have an apple cider."
+        },
+        "drink-cider": {
+            "availableHook": "",
+            "hook": "drankCider",
+            "state": "entryPoint",
+            "text": "drink-cider"
+        },
+        "drink-juice": {
+            "hook": "drankAppleJuice",
+            "state": "entryPoint",
+            "text": "drink-juice"
+        },
+        "drink-nothing": {
+            "hook": "",
+            "state": "",
+            "text": "drink-nothing"
+        },
+        "partyPlanAccepted": {
+            "availableHook": "",
+            "hook": "startPartyQuest",
+            "state": "",
+            "text": "partyPlanAccepted"
+        },
+        "partyPlanAlreadyHasBottles": {
+            "availableHook": "hasPartyBottles",
+            "hook": "startPartyQuest",
+            "state": "partyPlanStart",
+            "text": "partyPlanAlreadyHasBottles"
+        },
+        "partyPlanBottlesReady": {
+            "availableHook": "canGivePartyBottles",
+            "state": "partyPlanStart",
+            "text": "partyPlanBottlesReady"
+        },
+        "partyPlanPassing": {
+            "text": "partyPlanPassing"
+        },
+        "partyPlanReject": {
+            "availableHook": "",
+            "state": "",
+            "text": "partyPlanReject"
+        },
+        "partyPlanSuggest": {
+            "state": "partyPlanAccept",
+            "text": "partyPlanSuggest"
+        }
+    },
+    "entryPoint": "entryPoint",
+    "states": {
+        "entryPoint": {
+            "answers": [
+                "partyPlanBottlesReady",
+                "drink-cider",
+                "drink-juice",
+                "drink-nothing"
+            ],
+            "hook": "entryPoint",
+            "text": "entryPoint"
+        },
+        "partyPlanAccept": {
+            "answers": [
+                "partyPlanAlreadyHasBottles",
+                "partyPlanAccepted",
+                "partyPlanReject"
+            ],
+            "text": "partyPlanAccept"
+        },
+        "partyPlanIntro": {
+            "answers": [
+                "partyPlanSuggest",
+                "partyPlanPassing"
+            ],
+            "text": "partyPlanIntro"
+        },
+        "partyPlanStart": {
+            "answers": [
+            ],
+            "text": "partyPlanStart"
+        }
+    }
+}

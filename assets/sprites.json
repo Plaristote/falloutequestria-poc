@@ -2365,6 +2365,16 @@
             "source": "items/stable-suit.png",
             "width": 49
         },
+        "steel-ranger-scribe": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 33,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "items/metal-armor.png",
+            "width": 49
+        },
         "surgeon-coat": {
             "frameCount": 1,
             "frameInterval": 0,
@@ -7768,7 +7778,7 @@
             "frameCount": 1,
             "frameInterval": 0,
             "height": 108,
-            "offsetX": 0,
+            "offsetX": 1,
             "offsetY": 219,
             "repeat": false,
             "width": 72
@@ -7796,7 +7806,7 @@
             "frameInterval": 0,
             "height": 108,
             "offsetX": 362,
-            "offsetY": 109,
+            "offsetY": 110,
             "repeat": false,
             "width": 72
         },
@@ -7805,7 +7815,7 @@
             "frameInterval": 0,
             "height": 108,
             "offsetX": 1,
-            "offsetY": 109,
+            "offsetY": 110,
             "repeat": false,
             "width": 72
         },

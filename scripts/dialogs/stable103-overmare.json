@@ -1,0 +1,42 @@
+{
+    "answers": {
+        "": {
+            "hook": "",
+            "state": ""
+        },
+        "Nothing yet.": {
+            "text": "Nothing yet."
+        },
+        "nothing-to-report": {
+            "state": "wasteTime",
+            "text": "nothing-to-report"
+        },
+        "reportJunkvilleTrail": {
+            "availableHook": "canReportJunkvilleTrail",
+            "hook": "",
+            "state": "reportedJunkvilleTrail",
+            "text": "reportJunkvilleTrail"
+        }
+    },
+    "entryPoint": "entryPoint",
+    "states": {
+        "entryPoint": {
+            "answers": [
+                "reportJunkvilleTrail",
+                "nothing-to-report"
+            ],
+            "text": "entryPoint"
+        },
+        "reportedJunkvilleTrail": {
+            "answers": [
+            ],
+            "hook": "reportJunkville",
+            "text": "reportedJunkvilleTrail"
+        },
+        "wasteTime": {
+            "answers": [
+            ],
+            "text": "wasteTime"
+        }
+    }
+}

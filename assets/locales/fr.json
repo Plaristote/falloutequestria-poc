@@ -501,7 +501,10 @@
         },
         "disarmed": "C'est desarme.",
         "item": "Tu vois {{item}}.",
-        "trap": "Tu vois un piege."
+        "trap": "Tu vois un piege.",
+	"stable-103": {
+          "terminal-disabled": "C'est éteint... curieux. On dirait qu'ils ne veulent pas que tu recule tout de suite."
+	}
     },
     "item-descriptions": {
         "dynamite": "Un explosif dangereux ! Il peut etre utile pour passer au travers d'obstacles, ou pour eparpiller tes ennemis facon puzzle.",
@@ -566,6 +569,7 @@
         "used-on": "{{user}} a utilise medecine sur {{target}} et l'a soigne pour {{hp}} points de vie"
     },
     "messages": {
+        "use-skill-does-nothing": "Tu utilise {{skillName}} sur {{target}}. Ça ne fait rien.",
         "spellcast-exhausted": "Tu as lancé trop de sorts. Tu as besoin de repos.",
 	"spellcast-success": "{{character}} a utilisé le sort {{spell}}.",
         "spellcast-fail": "{{character}} n'a pas réussi a lancer un sort et subit {{damage}} points de dommage.",

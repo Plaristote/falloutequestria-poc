@@ -1,0 +1,22 @@
+{
+    "answers": {
+    },
+    "entryPoint": "arrival",
+    "states": {
+        "arrival": {
+            "answers": [
+            ],
+            "text": "arrival"
+        },
+        "arrival-at-stable": {
+            "answers": [
+            ],
+            "text": "arrival-at-stable"
+        },
+        "arrival-elsewhere": {
+            "answers": [
+            ],
+            "text": "arrival-elsewhere"
+        }
+    }
+}

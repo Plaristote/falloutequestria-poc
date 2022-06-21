@@ -1,0 +1,87 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "hook": "",
+            "state": ""
+        },
+        "I'm not feeling so good, doc... can you take care of me ?": {
+            "text": "I'm not feeling so good, doc... can you take care of me ?"
+        },
+        "ask-healing": {
+            "hook": "heal",
+            "text": "ask-healing"
+        },
+        "ask-nothing": {
+            "text": "ask-nothing"
+        },
+        "ask-wellbeing": {
+            "hook": "",
+            "text": "ask-wellbeing"
+        },
+        "main-quest-done": {
+            "availableHook": "hasCelestialDevice",
+            "hook": "onMainQuestDone",
+            "state": "introductionQuestDone",
+            "text": "main-quest-done"
+        },
+        "main-quest-not-done": {
+            "availableHook": "",
+            "hook": "onMainQuestNotDone",
+            "state": "entryPoint",
+            "text": "main-quest-not-done"
+        },
+        "quest-done-reassuring": {
+            "text": "quest-done-reassuring"
+        },
+        "quest-done-worrying": {
+            "hook": "onQuestDoneWorrying",
+            "text": "quest-done-worrying"
+        }
+    },
+    "entryPoint": "entryPoint",
+    "states": {
+        "aboutWellbeing": {
+            "answers": [
+            ],
+            "hook": "onAngry",
+            "text": "aboutWellbeing"
+        },
+        "entryPoint": {
+            "answers": [
+                "ask-healing",
+                "ask-wellbeing",
+                "ask-nothing"
+            ],
+            "hook": "entryPoint",
+            "text": "entryPoint"
+        },
+        "healedWounds": {
+            "answers": [
+            ],
+            "text": "healedWounds"
+        },
+        "introductionQuestDone": {
+            "answers": [
+                "quest-done-reassuring",
+                "quest-done-worrying"
+            ],
+            "hook": "",
+            "text": "introductionQuestDone"
+        },
+        "mainQuest": {
+            "answers": [
+                "main-quest-done",
+                "main-quest-not-done"
+            ],
+            "hook": "mainQuestQuestion",
+            "text": "mainQuest"
+        },
+        "nothingToHeal": {
+            "answers": [
+            ],
+            "hook": "onAngry",
+            "text": "nothingToHeal"
+        }
+    }
+}

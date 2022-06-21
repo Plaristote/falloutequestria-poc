@@ -1,0 +1,118 @@
+{
+    "answers": {
+        "": {
+            "state": ""
+        },
+        "ask-about-leader": {
+            "state": "town-leader",
+            "text": "ask-about-leader"
+        },
+        "ask-about-leader-contest": {
+            "availableHook": "intendantToldAboutLeader",
+            "state": "town-leader-midnight-hint",
+            "text": "ask-about-leader-contest"
+        },
+        "ask-about-leader-insist": {
+            "state": "town-leader-more",
+            "text": "ask-about-leader-insist"
+        },
+        "ask-meal": {
+            "state": "menu",
+            "text": "ask-meal"
+        },
+        "ask-something-else": {
+            "state": "town-index",
+            "text": "ask-something-else"
+        },
+        "ask-story": {
+            "state": "town-story",
+            "text": "ask-story"
+        },
+        "ask-town": {
+            "state": "town-index",
+            "text": "ask-town"
+        },
+        "done-asking": {
+            "text": "done-asking"
+        },
+        "exit": {
+            "state": "",
+            "text": "exit"
+        },
+        "just-passing-by": {
+            "state": "",
+            "text": "just-passing-by"
+        },
+        "meal-reject": {
+            "text": "meal-reject"
+        },
+        "take-meal": {
+            "text": "take-meal"
+        },
+        "take-meal-moss-salad": {
+            "text": "take-meal-moss-salad"
+        },
+        "take-meal-stew": {
+            "text": "take-meal-stew"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "ask-meal",
+                "ask-town",
+                "just-passing-by"
+            ],
+            "hook": "introduction",
+            "text": "entry"
+        },
+        "menu": {
+            "answers": [
+                "take-meal",
+                "take-meal-stew",
+                "take-meal-moss-salad",
+                "meal-reject"
+            ],
+            "hook": "",
+            "text": "menu"
+        },
+        "town-index": {
+            "answers": [
+                "ask-story",
+                "ask-about-leader",
+                "done-asking"
+            ],
+            "hook": "",
+            "text": "town-index"
+        },
+        "town-leader": {
+            "answers": [
+                "ask-about-leader-insist",
+                "ask-about-leader-contest",
+                "ask-something-else"
+            ],
+            "text": "town-leader"
+        },
+        "town-leader-midnight-hint": {
+            "answers": [
+                "ask-something-else"
+            ],
+            "hook": "",
+            "text": "town-leader-midnight-hint"
+        },
+        "town-leader-more": {
+            "answers": [
+                "ask-about-leader-contest",
+                "ask-something-else"
+            ],
+            "text": "town-leader-more"
+        },
+        "town-story": {
+            "answers": [
+                "ask-something-else"
+            ],
+            "text": "town-story"
+        }
+    }
+}

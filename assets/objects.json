@@ -131,6 +131,15 @@
         "value": 600,
         "weight": 5
     },
+    "laser-gun": {
+        "icon": "laser-gun.png",
+        "isGroupable": false,
+        "scriptName": "lasergun.mjs",
+        "sprite": "misc",
+        "type": "weapon",
+        "value": 600,
+        "weight": 5
+    },
     "melee-bite": {
         "scriptName": "melee-bite.mjs",
         "type": "weapon",
@@ -195,6 +204,15 @@
         "type": "armor",
         "value": 9000,
         "weight": 50
+    },
+    "scribe-armor": {
+        "icon": "steel-ranger-scribe.png",
+        "isGroupable": true,
+        "scriptName": "scribeArmor.mjs",
+        "sprite": "steel-ranger-scribe",
+        "type": "armor",
+        "value": 670,
+        "weight": 10
     },
     "skill-book-medicine": {
         "icon": "firstaid-book.png",
