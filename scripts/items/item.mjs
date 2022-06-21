@@ -67,7 +67,8 @@ export class ItemBehaviour {
       else
         return this.attemptToUseActionPointsOn(target);
     }
-    this.logFailure(i18n.t("messages.invalid-target"));
+    else
+      this.logFailure(i18n.t("messages.invalid-target"));
     return false;
   }
 

@@ -19,6 +19,4 @@ export class ArmorBehaviour extends ItemBehaviour {
   }
 }
 
-export function create(model) {
-  return new ArmorBehaviour(model);
-}
+export const Armor = ArmorBehaviour;

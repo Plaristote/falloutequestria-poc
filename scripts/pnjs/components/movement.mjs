@@ -9,17 +9,18 @@ export class MovementComponent {
   }
 
   followCharacter(character, distance = 3) {
-    if (!level.combat) {
+    if (typeof level !== "undefined" && !level.combat) {
       const actions = this.model.actionQueue;
 
       this.model.movementMode = "running";
       actions.reset();
-      actions.pushReach(level.player, distance);
+      actions.pushReach(character, distance);
       actions.start();
     }
   }
 
   followPlayer(distance = 3) {
-    this.followCharacter(level.player, distance);
+    if (typeof level !== "undefined")
+      this.followCharacter(level.player, distance);
   }
 }

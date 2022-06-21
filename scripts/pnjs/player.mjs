@@ -15,6 +15,10 @@ class Player extends CharacterBehaviour {
 
   onActionQueueCompleted() {
   }
+
+  insertedIntoZone() {
+    level.cameraFocusRequired(this.model);
+  }
 }
 
 export function create(model) {

@@ -8,17 +8,23 @@ export const textBubbles = [
 ];
 
 export class PasserbyBehaviour extends CharacterBehaviour {
-  constructor(model, locations) {
+  constructor(model, locations, intervals = {min: 10, max: 25}) {
     super(model);
     this.passerbyLocations = locations;
-    this.scheduleNextTravel();
     this.textBubbles = textBubbles;
+    this.passerbyMinInterval = intervals.min;
+    this.passerbyMaxInterval = intervals.max;
+    this.scheduleNextTravel();
+  }
+  
+  isPasserbyBehaviourEnabled() {
+    return true;
   }
 
   goToNextLocation() {
-    var travelStarted = false;    
-    
-    if (!level.combat) {
+    var travelStarted = false;
+
+    if (!level.combat && this.isPasserbyBehaviourEnabled()) {
       const locationIt = Math.floor(Math.random() * 100) % this.passerbyLocations.length;
       const location = this.passerbyLocations[locationIt];
       var position = {x: 0, y: 0 };
@@ -27,7 +33,10 @@ export class PasserbyBehaviour extends CharacterBehaviour {
         position = getRandomCaseInZone(level.findGroup(location).controlZone);
       else
         position = location;
-      this.model.actionQueue.pushReachNear(position.x, position.y, 3);
+      if (position.z !== undefined)
+        this.model.actionQueue.pushReachNear(position.x, position.y, position.z, 3);
+      else
+        this.model.actionQueue.pushReachNear(position.x, position.y, 3);
       travelStarted = this.model.actionQueue.start();
     }
     if (!travelStarted)
@@ -35,14 +44,11 @@ export class PasserbyBehaviour extends CharacterBehaviour {
   }
   
   scheduleNextTravel() {
-    const interval = Math.ceil(Math.random() * 15) + 10;
-  
-    if (this.model.tasks.hasTask("goToNextLocation"))
-      this.model.tasks.removeTask("goToNextLocation");
-    console.log("Next trigger in", interval);
-    this.model.tasks.addTask("goToNextLocation", interval * 1000, 1);
+    const interval = this.passerbyMinInterval + Math.ceil(Math.random() * (this.passerbyMaxInterval - this.passerbyMinInterval));
+
+    this.model.tasks.addUniqueTask("goToNextLocation", interval * 1000, 1);
   }
-  
+
   onActionQueueCompleted() {
     super.onActionQueueCompleted();
     this.scheduleNextTravel();

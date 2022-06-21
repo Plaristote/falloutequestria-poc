@@ -2,6 +2,11 @@ import {Drink} from "./drink.mjs";
 import {randomCheck} from "../behaviour/random.mjs";
 
 class Alcohol extends Drink {
+  constructor(model) {
+    super(model);
+    this.alcoholic = true;
+  }
+  
   consumedBy(target) {
     const drunk = target.getBuff("drunk");
 

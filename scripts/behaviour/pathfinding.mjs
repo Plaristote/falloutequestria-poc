@@ -38,8 +38,9 @@ export function getDistance(pos1, pos2) {
 export function getRandomCaseInZone(zone) {
   if (zone && zone.getPositionCount() > 0) {
     const positionIt = Math.floor(Math.random() * 100) % zone.getPositionCount();
-
-    return zone.getPositionAt(positionIt);
+    const position = zone.getPositionAt(positionIt);
+    
+    return {x: position.x, y: position.y, z: zone.floor};
   }
-  return {x: 0, y: 0};
+  return {x: 0, y: 0, z: 0};
 }

@@ -26,4 +26,8 @@ export class DialogHelper {
       this.dialog.npc.setVariable("mood", mood);
     this.updateMood();
   }
+  
+  barter() {
+    this.dialog.tryToBarter();
+  }
 }

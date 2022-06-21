@@ -14,7 +14,8 @@ export class SceneManager {
   }
 
   get active() {
-    return this.state !== null;
+    const current = this.state;
+    return current !== null && this.states.length > current;
   }
 
   get state() {
@@ -37,6 +38,10 @@ export class SceneManager {
 
   get actors() {
     return [];
+  }
+
+  line(name, options = {}) {
+    return i18n.t(`scenes.${this.id}.${name}`, options);
   }
 
   initialize() {
@@ -62,6 +67,7 @@ export class SceneManager {
     });
     this.model.unsetVariable(this.storageScope);
     this.unregisterSceneManager();
+    this.state = null;
   }
 
   registerSceneManager() {
@@ -86,7 +92,7 @@ export class SceneManager {
   }
 
   triggerCurrentStep(continuing = true) {
-    if (this.states.length < this.state)
+    if (this.states.length > this.state)
       this.states[this.state](continuing);
     else
       this.finalize();

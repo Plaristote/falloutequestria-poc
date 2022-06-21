@@ -9,7 +9,19 @@ const RandomEncounterChart = {
 };
 
 export class RandomEncounterComponent {
-  outdoorsTick() {
+  constructor() {
+    this.outdoorElapsedTime = 0;
+  }
+	
+  outdoorsTick(minutes) {
+    this.outdoorElapsedTime += minutes;
+    if (this.outdoorElapsedTime >= 30) {
+      this.randomEncounterTrigger();
+      this.outdoorElapsedTime = 0;
+    }
+  }
+
+  randomEncounterTrigger() {
     if (!game.worldmap.getCurrentCity()) {
       switch (this.randomEncounterCheck()) {
       case RandomEncounterChart.Friendly:
@@ -29,16 +41,16 @@ export class RandomEncounterComponent {
   }
 
   randomEncounterCheck() {
-    const roll = getValueFromRange(0, 10000);
+    const roll = getValueFromRange(0, 15000);
 
     console.log("encounter roll", roll);
     if (roll == 42)
       return RandomEncounterChart.Special;
     else if (roll >= 100 && roll <= 115)
-      return RandomEncounterChart.Special;
+      return RandomEncounterChart.Dungeon;
     else if (roll >= 3200 && roll <= 3350)
       return RandomEncounterChart.Hostile;
-    else if (roll >= 9900)
+    else if (roll >= 14900)
       return RandomEncounterChart.Friendly;
     return RandomEncounterChart.None;
   }

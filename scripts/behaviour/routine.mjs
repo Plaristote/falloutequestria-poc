@@ -10,7 +10,7 @@ function toRoutine(object) {
     if (object.constructor === RoutineComponent)
       return object;
     else if (object.getScriptObject)
-      object = object.getScriptObject();
+      return toRoutine(object.getScriptObject());
     return object.routineComponent || object.routine;
   }
   return null;

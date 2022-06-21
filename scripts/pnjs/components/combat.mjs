@@ -1,7 +1,8 @@
 import {SkillTargetComponent} from "./skillTarget.mjs";
 
 function evaluatePathfindingOption(target, x, y) {
-  return level.getVisionQuality(target.position.x, target.position.y, x, y) - 1;
+  const value = level.getVisionQuality(target.position.x, target.position.y, x, y);
+  return value - 1;
 }
 
 export class CombatComponent extends SkillTargetComponent {
@@ -23,9 +24,17 @@ export class CombatComponent extends SkillTargetComponent {
     console.log("on damage taken", amount, dealer);
     this.combatTarget = dealer;
   }
+
+  hasCombatTarget() {
+    try {
+      return this.combatTarget && this.combatTarget.isAlive();
+    } catch (err) {
+      return false;
+    }
+  }
   
   findCombatTarget() {
-    if (!this.combatTarget || !this.combatTarget.isAlive()) {
+    if (!this.hasCombatTarget()) {
       const enemies = this.model.fieldOfView.getEnemies();
 
       console.log("Detected enemies:", enemies, enemies.length, enemies[0]);
@@ -43,14 +52,15 @@ export class CombatComponent extends SkillTargetComponent {
       if (result != null)
         return result;
     }
+    console.log("- pass turn", this.model);
     level.passTurn(this.model);
   }
 
   fightCombatTarget() {
+    const pathEval = evaluatePathfindingOption.bind(this, this.combatTarget);
     const actions  = this.model.actionQueue;
     const weapon   = this.model.inventory.getEquippedItem("use-1");
-    const movement = actions.getReachApCost(this.combatTarget, weapon.getRange(),
-      evaluatePathfindingOption.bind(this, this.combatTarget));
+    const movement = actions.getReachApCost(this.combatTarget, weapon.getRange(), pathEval);
     const itemAp   = Math.max(1, actions.getItemUseApCost(this.combatTarget, "use-1"));
     var   ap       = this.model.actionPoints;
 
@@ -63,9 +73,8 @@ export class CombatComponent extends SkillTargetComponent {
         actions.pushItemUse(null, "use-1");
       }
       if (movement > 0) {
-        ap -= movement;
-        actions.pushReach(this.combatTarget, weapon.getRange(),
-          evaluatePathfindingOption.bind(this, this.combatTarget));
+        ap -= Math.min(movement, ap);
+        actions.pushReach(this.combatTarget, weapon.getRange(), pathEval);
       }
       while (ap >= itemAp) {
         actions.pushItemUse(this.combatTarget, "use-1");
@@ -97,6 +106,6 @@ export class CombatComponent extends SkillTargetComponent {
 
   onCombatActionQueueCompleted() {
     console.log("triggering turn again, action completed");
-    this.onTurnStart();
+    if (level.isCharacterTurn(this.model)) this.onTurnStart();
   }
 }

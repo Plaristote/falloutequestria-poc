@@ -10,7 +10,7 @@ export class LevelBase {
   removeSceneManager(sceneManager) {
     this.scenes.splice(this.scenes.indexOf(sceneManager));
   }
-	
+
   onExit() {
     this.scenes.forEach(sceneManager => {
       sceneManager.finalize();

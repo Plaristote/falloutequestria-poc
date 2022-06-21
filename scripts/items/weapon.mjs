@@ -23,7 +23,7 @@ export class WeaponBehaviour extends ItemBehaviour {
 
   isInRange(target) {
     if (this.isRangedWeapon())
-      return this.user.getDistance(target) < this.model.getRange();
+      return null; // uses the engine default isInRange
     return areInContact(this.user.position, target.position);
   }
 
@@ -88,7 +88,7 @@ export class WeaponBehaviour extends ItemBehaviour {
     game.appendToConsole(
       i18n.t("messages.weapons.use", {
         user: this.user.statistics.name,
-        item: this.model.objectName,
+        item: this.model.displayName,
         target: target.statistics.name,
         damage: damage
       })
