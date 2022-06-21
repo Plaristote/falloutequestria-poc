@@ -11,7 +11,7 @@ class PowerArmor extends ArmorBehaviour  {
       user.statistics.strength += 2;
     else
       user.statistics.strength -= 2;
-    this.onEquipped(user, on);
+    super.onEquipped(user, on);
   }
 }
 

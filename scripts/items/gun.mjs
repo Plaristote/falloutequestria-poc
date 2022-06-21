@@ -36,7 +36,11 @@ export class Gun extends Weapon {
   }
 
   onReloaded() {
+<<<<<<< HEAD
     const availableAmmo = this.availableAmmo;
+=======
+    const availableAmmo = this.user.inventory.count(this.ammoType);
+>>>>>>> 1f5d635 (updates and fixes)
 
     if (availableAmmo > 0) {
       const requiredAmmo = this.model.maxAmmo - this.model.ammo;
