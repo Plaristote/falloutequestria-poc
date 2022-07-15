@@ -1,7 +1,16 @@
 {
     "answers": {
         "": {
-            "state": ""
+            "availableHook": "",
+            "hook": "",
+            "state": "",
+            "textHook": ""
+        },
+        "accept-haunting-heap": {
+            "availableHook": "availableHauntedDumpQuest",
+            "hook": "acceptHauntedHeapQuest",
+            "state": "job-haunted-heap-details",
+            "text": "accept-haunting-heap"
         },
         "ask-about-leader": {
             "state": "town-leader",
@@ -16,9 +25,18 @@
             "state": "town-leader-more",
             "text": "ask-about-leader-insist"
         },
+        "ask-job": {
+            "availableHook": "",
+            "state": "jobs",
+            "text": "ask-job"
+        },
         "ask-meal": {
+            "availableHook": "",
             "state": "menu",
             "text": "ask-meal"
+        },
+        "ask-payment": {
+            "text": "ask-payment"
         },
         "ask-something-else": {
             "state": "town-index",
@@ -32,19 +50,135 @@
             "state": "town-index",
             "text": "ask-town"
         },
+        "dogs-battle-join-gladly": {
+            "hook": "startBattle",
+            "state": "",
+            "text": "dogs-battle-join-gladly"
+        },
+        "dogs-battle-join-money": {
+            "hook": "",
+            "state": "",
+            "text": "dogs-battle-join-money"
+        },
+        "dogs-battle-peace": {
+            "hook": "",
+            "state": "dogs-battle-peacemaking",
+            "text": "dogs-battle-peace"
+        },
+        "dogs-battle-peacemaking-come": {
+            "hook": "startBattle",
+            "state": "",
+            "text": "dogs-battle-peacemaking-come",
+            "textHook": ""
+        },
+        "dogs-battle-peacemaking-convince": {
+            "hook": "onDogsBattlePeacemakingAppease",
+            "state": "dogs-battle-peacemaking-not-appeased",
+            "text": "dogs-battle-peacemaking-convince-success",
+            "textHook": "dogsBattlePeacemakingLine"
+        },
+        "dogs-battle-peacemaking-exit": {
+            "text": "dogs-battle-peacemaking-exit"
+        },
+        "dogs-battle-reject": {
+            "hook": "startBattleWithoutPlayer",
+            "state": "",
+            "text": "dogs-battle-reject"
+        },
+        "dogs-battle-reject-alt": {
+            "hook": "startBattleWithoutPlayer",
+            "state": "",
+            "text": "dogs-battle-reject-alt"
+        },
+        "dogs-mediate-trade": {
+            "availableHook": "hasDogTradeRoute",
+            "hook": "onMediationProposal",
+            "state": "",
+            "text": "dogs-mediate-trade"
+        },
+        "dogs-mediate-war": {
+            "availableHook": "",
+            "hook": "",
+            "state": "dogs-warpath",
+            "text": "dogs-mediate-war"
+        },
+        "dogs-mediate-zone": {
+            "availableHook": "hasDogZoneRoute",
+            "hook": "onMediationProposal",
+            "state": "",
+            "text": "dogs-mediate-zone"
+        },
+        "dogs-mediation-start": {
+            "availableHook": "hasDogMediationQuest",
+            "state": "dogs-mediation-entry",
+            "text": "dogs-mediation-start"
+        },
+        "dogs-negociation-trigger-ask-hostage-release": {
+            "hook": "onDogsMediationMustRelease",
+            "text": "dogs-negociation-trigger-ask-hostage-release"
+        },
+        "dogs-warpath-trigger": {
+            "availableHook": "",
+            "hook": "",
+            "state": "dogs-battle-start",
+            "text": "dogs-warpath-trigger"
+        },
+        "dogs-warpath-trigger-no-involvment": {
+            "text": "dogs-warpath-trigger-no-involvment"
+        },
         "done-asking": {
+            "availableHook": "",
+            "hook": "",
+            "state": "",
             "text": "done-asking"
         },
         "exit": {
             "state": "",
             "text": "exit"
         },
+        "job-haunted-heap-accept-reward": {
+            "hook": "hauntedHeapTakeReward",
+            "text": "job-haunted-heap-accept-reward"
+        },
+        "job-haunted-heap-reject-reward": {
+            "hook": "hauntedHeapLeaveReward",
+            "text": "job-haunted-heap-reject-reward"
+        },
+        "job-haunted-heap-report-trigger": {
+            "availableHook": "hasHauntedDumpQuest",
+            "state": "job-haunted-heap-report",
+            "text": "job-haunted-heap-report-trigger"
+        },
+        "job-haunted-heap-tell-about-dogs": {
+            "availableHook": "hauntedDumpDisappearedFound",
+            "state": "job-haunted-heap-reporting-dogs",
+            "text": "job-haunted-heap-tell-about-dogs"
+        },
+        "job-haunted-heap-tell-about-saved": {
+            "availableHook": "hauntedDumpDisappearedDone",
+            "state": "job-haunted-heap-on-report",
+            "text": "job-haunted-heap-tell-about-saved"
+        },
         "just-passing-by": {
+            "availableHook": "",
             "state": "",
             "text": "just-passing-by"
         },
         "meal-reject": {
             "text": "meal-reject"
+        },
+        "nothing-new": {
+            "availableHook": "",
+            "state": "",
+            "text": "nothing-new"
+        },
+        "report-dog-captives": {
+            "state": "dogs-warpath",
+            "text": "report-dog-captives"
+        },
+        "report-dog-hostages": {
+            "state": "dogs-warpath",
+            "text": "report-dog-hostages"
         },
         "take-meal": {
             "text": "take-meal"
@@ -58,14 +192,138 @@
     },
     "entryPoint": "entry",
     "states": {
+        "dogs-battle-peacemaking": {
+            "answers": [
+                "dogs-battle-peacemaking-convince",
+                "dogs-battle-peacemaking-come",
+                "dogs-battle-peacemaking-exit"
+            ],
+            "text": "dogs-battle-peacemaking"
+        },
+        "dogs-battle-peacemaking-appeased": {
+            "answers": [
+            ],
+            "text": "dogs-battle-peacemaking-appeased"
+        },
+        "dogs-battle-peacemaking-not-appeased": {
+            "answers": [
+                "dogs-warpath-trigger"
+            ],
+            "hook": "",
+            "text": "dogs-battle-peacemaking-not-appeased"
+        },
+        "dogs-battle-start": {
+            "answers": [
+                "dogs-battle-join-gladly",
+                "dogs-battle-join-money",
+                "dogs-battle-reject",
+                "dogs-battle-peace",
+                "dogs-battle-reject-alt"
+            ],
+            "text": "dogs-battle-start"
+        },
+        "dogs-mediation-entry": {
+            "answers": [
+                "dogs-mediate-trade",
+                "dogs-mediate-zone",
+                "dogs-mediate-war"
+            ],
+            "hook": "onDogMediationEntry",
+            "text": "dogs-mediation-reentry"
+        },
+        "dogs-negociation-accept": {
+            "answers": [
+            ],
+            "hook": "mediationAccepted",
+            "text": "dogs-negociation-accept-trade"
+        },
+        "dogs-negociation-disappeared": {
+            "answers": [
+                "dogs-negociation-trigger-ask-hostage-release"
+            ],
+            "hook": "",
+            "text": "dogs-negociation-disappeared"
+        },
+        "dogs-negociation-failed": {
+            "answers": [
+                "dogs-warpath-trigger"
+            ],
+            "text": "dogs-negociation-failed"
+        },
+        "dogs-negociation-hostages": {
+            "answers": [
+                "dogs-negociation-trigger-ask-hostage-release"
+            ],
+            "hook": "",
+            "text": "dogs-negociation-hostages"
+        },
+        "dogs-negociation-killed": {
+            "answers": [
+                "dogs-warpath-trigger"
+            ],
+            "text": "dogs-negociation-killed"
+        },
+        "dogs-warpath": {
+            "answers": [
+                "dogs-warpath-trigger",
+                "dogs-mediate-trade",
+                "dogs-mediate-zone"
+            ],
+            "hook": "",
+            "text": "dogs-warpath"
+        },
         "entry": {
             "answers": [
                 "ask-meal",
                 "ask-town",
+                "ask-job",
+                "job-haunted-heap-report-trigger",
+                "dogs-mediation-start",
                 "just-passing-by"
             ],
             "hook": "introduction",
             "text": "entry"
+        },
+        "job-haunted-heap-details": {
+            "answers": [
+                "ask-payment",
+                "done-asking"
+            ],
+            "hook": "",
+            "text": "job-haunted-heap-details"
+        },
+        "job-haunted-heap-on-report": {
+            "answers": [
+                "job-haunted-heap-accept-reward",
+                "job-haunted-heap-reject-reward"
+            ],
+            "hook": "hauntedDumpOnReport",
+            "text": "job-haunted-heap-on-report"
+        },
+        "job-haunted-heap-report": {
+            "answers": [
+                "job-haunted-heap-tell-about-dogs",
+                "job-haunted-heap-tell-about-saved",
+                "nothing-new"
+            ],
+            "hook": "",
+            "text": "job-haunted-heap-report"
+        },
+        "job-haunted-heap-reporting-dogs": {
+            "answers": [
+                "report-dog-hostages",
+                "report-dog-captives"
+            ],
+            "hook": "reportDisappearedLocation",
+            "text": "job-haunted-heap-reporting-dogs"
+        },
+        "jobs": {
+            "answers": [
+                "accept-haunting-heap",
+                "done-asking"
+            ],
+            "hook": "jobs",
+            "text": "job-haunted-heap"
         },
         "menu": {
             "answers": [
@@ -112,6 +370,7 @@
             "answers": [
                 "ask-something-else"
             ],
+            "hook": "",
             "text": "town-story"
         }
     }

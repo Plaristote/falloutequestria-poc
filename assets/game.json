@@ -54,7 +54,7 @@
             "reputation": true
         }
     },
-    "level": "junkville",
+    "level": "junkville-underground",
     "levels": {
         "city-sample": {
             "ambientColor": [
@@ -11428,7 +11428,7 @@
                             "script": "junkville/cook.mjs",
                             "spriteName": "pony-450b0bc1-derpy-f31818c1-static-pony-eyes-overlay-blank-armor-blank-equip-blank",
                             "type": "Character",
-                            "uniq": false,
+                            "uniq": true,
                             "x": 32,
                             "y": 6
                         }
@@ -12064,6 +12064,166 @@
                                 ]
                             ],
                             "zoneBlocked": true
+                        },
+                        {
+                            ">": 4,
+                            "animation": "idle-right",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-copain-mom",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "saddle": {
+                                        "hasItem": false,
+                                        "slotType": "saddle"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -108,
+                            "mty": 297,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "copain-mom",
+                            "rx": -108,
+                            "ry": 297,
+                            "script": "",
+                            "spriteName": "pony-bbe534a9-derpy-cd5d54a9-static-pony-eyes-overlay-unicorn-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 7,
+                            "y": 10
+                        },
+                        {
+                            ">": 2,
+                            "animation": "idle-left",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-copain-dad",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "saddle": {
+                                        "hasItem": false,
+                                        "slotType": "saddle"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -36,
+                            "mty": 297,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "copain-dad",
+                            "rx": -36,
+                            "ry": 297,
+                            "script": "",
+                            "spriteName": "pony-df9f78a0-pip-2a1a1aa0-static-pony-eyes-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 8,
+                            "y": 9
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "helpful-copain",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "animation": "stable-suit",
+                                        "blocksPath": false,
+                                        "float": false,
+                                        "hasItem": true,
+                                        "itemType": "stable-suit",
+                                        "mtx": 0,
+                                        "mty": 0,
+                                        "nextX": 0,
+                                        "nextY": 0,
+                                        "objectName": "stable-suit",
+                                        "quantity": 1,
+                                        "rx": 0,
+                                        "ry": 0,
+                                        "slotType": "armor",
+                                        "spriteName": "items",
+                                        "useMode": "use",
+                                        "x": -1,
+                                        "y": -1
+                                    },
+                                    "saddle": {
+                                        "hasItem": false,
+                                        "slotType": "saddle"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -216,
+                            "mty": 387,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "copain",
+                            "rx": -216,
+                            "ry": 387,
+                            "script": "",
+                            "spriteName": "pony-df9f78b0-pip-cd5d54b0-static-pony-eyes-overlay-blank-armor-stable-suit-equip-blank",
+                            "type": "Character",
+                            "uniq": true,
+                            "x": 8,
+                            "y": 14
                         }
                     ],
                     "ox": 7,
@@ -15335,6 +15495,114 @@
                                     "type": "DynamicObject",
                                     "x": 49,
                                     "y": 166
+                                },
+                                {
+                                    "animation": "right",
+                                    "cover": 50,
+                                    "float": false,
+                                    "interactive": false,
+                                    "mtx": -4716,
+                                    "mty": 3978,
+                                    "nextX": 0,
+                                    "nextY": 0,
+                                    "objectName": "barrel#22",
+                                    "rx": -4716,
+                                    "ry": 3978,
+                                    "script": "",
+                                    "spriteName": "junk-barrel-group",
+                                    "type": "DynamicObject",
+                                    "x": 45,
+                                    "y": 176
+                                },
+                                {
+                                    "animation": "right",
+                                    "cover": 50,
+                                    "float": false,
+                                    "interactive": false,
+                                    "mtx": -4680,
+                                    "mty": 3960,
+                                    "nextX": 0,
+                                    "nextY": 0,
+                                    "objectName": "barrel#23",
+                                    "rx": -4680,
+                                    "ry": 3960,
+                                    "script": "",
+                                    "spriteName": "junk-barrel-group",
+                                    "type": "DynamicObject",
+                                    "x": 45,
+                                    "y": 175
+                                },
+                                {
+                                    "animation": "W",
+                                    "cover": 30,
+                                    "float": false,
+                                    "interactive": false,
+                                    "mtx": -4644,
+                                    "mty": 4014,
+                                    "nextX": 0,
+                                    "nextY": 0,
+                                    "objectName": "barrel#24",
+                                    "rx": -4644,
+                                    "ry": 4014,
+                                    "script": "",
+                                    "spriteName": "junk-barrels",
+                                    "type": "DynamicObject",
+                                    "x": 47,
+                                    "y": 176
+                                },
+                                {
+                                    "animation": "P",
+                                    "cover": 30,
+                                    "float": false,
+                                    "interactive": false,
+                                    "mtx": -4644,
+                                    "mty": 3942,
+                                    "nextX": 0,
+                                    "nextY": 0,
+                                    "objectName": "barrel#25",
+                                    "rx": -4644,
+                                    "ry": 3942,
+                                    "script": "",
+                                    "spriteName": "junk-barrels",
+                                    "type": "DynamicObject",
+                                    "x": 45,
+                                    "y": 174
+                                },
+                                {
+                                    "animation": "left",
+                                    "cover": 50,
+                                    "float": false,
+                                    "interactive": false,
+                                    "mtx": -4680,
+                                    "mty": 4032,
+                                    "nextX": 0,
+                                    "nextY": 0,
+                                    "objectName": "barrel#26",
+                                    "rx": -4680,
+                                    "ry": 4032,
+                                    "script": "",
+                                    "spriteName": "junk-barrel-group",
+                                    "type": "DynamicObject",
+                                    "x": 47,
+                                    "y": 177
+                                },
+                                {
+                                    "animation": "top",
+                                    "cover": 50,
+                                    "float": false,
+                                    "interactive": false,
+                                    "mtx": -4752,
+                                    "mty": 3996,
+                                    "nextX": 0,
+                                    "nextY": 0,
+                                    "objectName": "barrel#27",
+                                    "rx": -4752,
+                                    "ry": 3996,
+                                    "script": "",
+                                    "spriteName": "junk-barrel-group",
+                                    "type": "DynamicObject",
+                                    "x": 45,
+                                    "y": 177
                                 }
                             ],
                             "ox": 0,
@@ -15768,12 +16036,349 @@
                             ],
                             "name": "ddogs-corner",
                             "objects": [
+                                {
+                                    "animation": "hole-big-2",
+                                    "blocksPath": false,
+                                    "cover": 0,
+                                    "float": true,
+                                    "interactive": false,
+                                    "mtx": -3690,
+                                    "mty": 3284,
+                                    "nextX": 0,
+                                    "nextY": 0,
+                                    "objectName": "underground-hole",
+                                    "rx": -3690,
+                                    "ry": 3284,
+                                    "script": "junkville/underground-trap.mjs",
+                                    "spriteName": "graveyard",
+                                    "type": "DynamicObject",
+                                    "x": 40,
+                                    "y": 142,
+                                    "zone": [
+                                        [
+                                            0,
+                                            1
+                                        ],
+                                        [
+                                            0,
+                                            0
+                                        ],
+                                        [
+                                            2,
+                                            0
+                                        ],
+                                        [
+                                            1,
+                                            0
+                                        ],
+                                        [
+                                            1,
+                                            1
+                                        ],
+                                        [
+                                            2,
+                                            1
+                                        ]
+                                    ],
+                                    "zoneBlocked": false
+                                }
                             ],
                             "ox": 37,
                             "oy": 139,
-                            "script": "",
+                            "script": "junkville/underground-trap-zone.mjs",
                             "tasks": {
-                            }
+                            },
+                            "zone": [
+                                [
+                                    1,
+                                    5
+                                ],
+                                [
+                                    1,
+                                    6
+                                ],
+                                [
+                                    0,
+                                    5
+                                ],
+                                [
+                                    0,
+                                    6
+                                ],
+                                [
+                                    0,
+                                    7
+                                ],
+                                [
+                                    2,
+                                    7
+                                ],
+                                [
+                                    1,
+                                    7
+                                ],
+                                [
+                                    2,
+                                    6
+                                ],
+                                [
+                                    3,
+                                    7
+                                ],
+                                [
+                                    3,
+                                    6
+                                ],
+                                [
+                                    5,
+                                    7
+                                ],
+                                [
+                                    4,
+                                    7
+                                ],
+                                [
+                                    4,
+                                    6
+                                ],
+                                [
+                                    5,
+                                    6
+                                ],
+                                [
+                                    6,
+                                    7
+                                ],
+                                [
+                                    6,
+                                    6
+                                ],
+                                [
+                                    7,
+                                    7
+                                ],
+                                [
+                                    7,
+                                    6
+                                ],
+                                [
+                                    0,
+                                    4
+                                ],
+                                [
+                                    -1,
+                                    4
+                                ],
+                                [
+                                    -2,
+                                    4
+                                ],
+                                [
+                                    -2,
+                                    3
+                                ],
+                                [
+                                    -1,
+                                    3
+                                ],
+                                [
+                                    -1,
+                                    2
+                                ],
+                                [
+                                    -2,
+                                    2
+                                ],
+                                [
+                                    -2,
+                                    1
+                                ],
+                                [
+                                    -1,
+                                    1
+                                ],
+                                [
+                                    -1,
+                                    0
+                                ],
+                                [
+                                    -2,
+                                    0
+                                ],
+                                [
+                                    -2,
+                                    -1
+                                ],
+                                [
+                                    -1,
+                                    -1
+                                ],
+                                [
+                                    -1,
+                                    -2
+                                ],
+                                [
+                                    -2,
+                                    -2
+                                ],
+                                [
+                                    -2,
+                                    -3
+                                ],
+                                [
+                                    -1,
+                                    -3
+                                ],
+                                [
+                                    -1,
+                                    -4
+                                ],
+                                [
+                                    -2,
+                                    -4
+                                ],
+                                [
+                                    -2,
+                                    -5
+                                ],
+                                [
+                                    -1,
+                                    -5
+                                ],
+                                [
+                                    0,
+                                    -6
+                                ],
+                                [
+                                    0,
+                                    -7
+                                ],
+                                [
+                                    1,
+                                    -7
+                                ],
+                                [
+                                    1,
+                                    -6
+                                ],
+                                [
+                                    2,
+                                    -7
+                                ],
+                                [
+                                    2,
+                                    -6
+                                ],
+                                [
+                                    3,
+                                    -6
+                                ],
+                                [
+                                    3,
+                                    -7
+                                ],
+                                [
+                                    4,
+                                    -7
+                                ],
+                                [
+                                    4,
+                                    -6
+                                ],
+                                [
+                                    5,
+                                    -6
+                                ],
+                                [
+                                    5,
+                                    -7
+                                ],
+                                [
+                                    6,
+                                    -7
+                                ],
+                                [
+                                    6,
+                                    -6
+                                ],
+                                [
+                                    7,
+                                    -6
+                                ],
+                                [
+                                    8,
+                                    -6
+                                ],
+                                [
+                                    8,
+                                    -7
+                                ],
+                                [
+                                    9,
+                                    -5
+                                ],
+                                [
+                                    9,
+                                    -4
+                                ],
+                                [
+                                    9,
+                                    -3
+                                ],
+                                [
+                                    9,
+                                    -1
+                                ],
+                                [
+                                    9,
+                                    0
+                                ],
+                                [
+                                    9,
+                                    1
+                                ],
+                                [
+                                    9,
+                                    2
+                                ],
+                                [
+                                    9,
+                                    -2
+                                ],
+                                [
+                                    10,
+                                    -5
+                                ],
+                                [
+                                    10,
+                                    -4
+                                ],
+                                [
+                                    10,
+                                    -3
+                                ],
+                                [
+                                    10,
+                                    -2
+                                ],
+                                [
+                                    10,
+                                    -1
+                                ],
+                                [
+                                    10,
+                                    0
+                                ],
+                                [
+                                    10,
+                                    1
+                                ],
+                                [
+                                    10,
+                                    2
+                                ]
+                            ],
+                            "zoneBlocked": false
                         },
                         {
                             "groups": [
@@ -15874,6 +16479,7 @@
                                     "animation": "right",
                                     "cover": 70,
                                     "float": true,
+                                    "interactive": false,
                                     "mtx": -4032,
                                     "mty": 3180,
                                     "nextX": 0,
@@ -18210,6 +18816,42 @@
                                     "type": "DynamicObject",
                                     "x": 12,
                                     "y": 122
+                                },
+                                {
+                                    "animation": "fridge-left",
+                                    "cover": 70,
+                                    "float": false,
+                                    "interactive": false,
+                                    "mtx": -4608,
+                                    "mty": 3960,
+                                    "nextX": 0,
+                                    "nextY": 0,
+                                    "objectName": "appliance#31",
+                                    "rx": -4608,
+                                    "ry": 3960,
+                                    "script": "",
+                                    "spriteName": "junk-appliances",
+                                    "type": "DynamicObject",
+                                    "x": 46,
+                                    "y": 174
+                                },
+                                {
+                                    "animation": "freezer-bottom-left",
+                                    "cover": 70,
+                                    "float": false,
+                                    "interactive": false,
+                                    "mtx": -4716,
+                                    "mty": 4014,
+                                    "nextX": 0,
+                                    "nextY": 0,
+                                    "objectName": "appliance#32",
+                                    "rx": -4716,
+                                    "ry": 4014,
+                                    "script": "",
+                                    "spriteName": "junk-appliances",
+                                    "type": "DynamicObject",
+                                    "x": 46,
+                                    "y": 177
                                 }
                             ],
                             "ox": 0,
@@ -18229,8 +18871,884 @@
                     }
                 }
             ],
-            "init": true,
             "objects": [
+                {
+                    "animation": "idle",
+                    "cover": 0,
+                    "float": false,
+                    "mtx": -4680,
+                    "mty": 3996,
+                    "nextX": 0,
+                    "nextY": 0,
+                    "objectName": "underground-hatchway",
+                    "rx": -4680,
+                    "ry": 3996,
+                    "script": "junkville/underground-hatchway.mjs",
+                    "spriteName": "wooden-hatchway",
+                    "type": "DynamicObject",
+                    "x": 46,
+                    "y": 176
+                }
+            ],
+            "ox": 0,
+            "oy": 0,
+            "tasks": {
+            },
+            "useAmbientLight": false,
+            "useDaylight": false
+        },
+        "junkville-underground": {
+            "ambientColor": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "currentFloor": 0,
+            "groups": [
+                {
+                    "groups": [
+                    ],
+                    "name": "pack",
+                    "objects": [
+                        {
+                            ">": 2,
+                            "animation": "idle-left",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-dog-1",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -900,
+                            "mty": 765,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "pack-member",
+                            "rx": -900,
+                            "ry": 765,
+                            "script": "junkville/pack-member.mjs",
+                            "spriteName": "diamond-dog-white-6b1e1e96--00000096-static-diamond-dog-static-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 9,
+                            "y": 34
+                        },
+                        {
+                            ">": 4,
+                            "animation": "idle-right",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-dog-2",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -972,
+                            "mty": 801,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "pack-member#1",
+                            "rx": -972,
+                            "ry": 801,
+                            "script": "junkville/pack-member.mjs",
+                            "spriteName": "diamond-dog-white-d6b8308b--0000008b-static-diamond-dog-static-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 9,
+                            "y": 36
+                        },
+                        {
+                            ">": 2,
+                            "animation": "idle-left",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-dog-1",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -900,
+                            "mty": 765,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "pack-member#2",
+                            "rx": -900,
+                            "ry": 765,
+                            "script": "junkville/pack-member.mjs",
+                            "spriteName": "diamond-dog-white-6b1e1e96--00000096-static-diamond-dog-static-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 9,
+                            "y": 34
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-dog-1",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -504,
+                            "mty": 855,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "pack-member#3",
+                            "rx": -504,
+                            "ry": 855,
+                            "script": "junkville/pack-member.mjs",
+                            "spriteName": "diamond-dog-white-6b1e1e96--00000096-static-diamond-dog-static-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 17,
+                            "y": 31
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-dog-2",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -108,
+                            "mty": 1053,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "pack-member#4",
+                            "rx": -108,
+                            "ry": 1053,
+                            "script": "junkville/pack-member.mjs",
+                            "spriteName": "diamond-dog-white-d6b8308b--0000008b-static-diamond-dog-static-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 28,
+                            "y": 31
+                        },
+                        {
+                            ">": 4,
+                            "animation": "idle-right",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-dog-1",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -1872,
+                            "mty": 1287,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "pack-member#5",
+                            "rx": -1872,
+                            "ry": 1287,
+                            "script": "junkville/pack-member.mjs",
+                            "spriteName": "diamond-dog-white-6b1e1e96--00000096-static-diamond-dog-static-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 10,
+                            "y": 62
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-dog-guard",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": 576,
+                            "mty": 1179,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "guard",
+                            "rx": 576,
+                            "ry": 1179,
+                            "script": "junkville/dog-guard.mjs",
+                            "spriteName": "diamond-dog-white-0f020274--00000074-static-diamond-dog-static-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 41,
+                            "y": 25
+                        },
+                        {
+                            ">": 1,
+                            "animation": "idle-up",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-dog-1",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -720,
+                            "mty": 1323,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "pack-member#6",
+                            "rx": -720,
+                            "ry": 1323,
+                            "script": "junkville/pack-member.mjs",
+                            "spriteName": "diamond-dog-white-6b1e1e96--00000096-static-diamond-dog-static-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 27,
+                            "y": 47
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-dog-1",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -720,
+                            "mty": 1251,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "pack-member#7",
+                            "rx": -720,
+                            "ry": 1251,
+                            "script": "junkville/pack-member.mjs",
+                            "spriteName": "diamond-dog-white-6b1e1e96--00000096-static-diamond-dog-static-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 25,
+                            "y": 45
+                        },
+                        {
+                            ">": 2,
+                            "animation": "idle-left",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-dog-2",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -648,
+                            "mty": 1287,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "pack-member#8",
+                            "rx": -648,
+                            "ry": 1287,
+                            "script": "junkville/pack-member.mjs",
+                            "spriteName": "diamond-dog-white-d6b8308b--0000008b-static-diamond-dog-static-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 27,
+                            "y": 45
+                        }
+                    ],
+                    "ox": 0,
+                    "oy": 0,
+                    "script": "",
+                    "tasks": {
+                    }
+                },
+                {
+                    "groups": [
+                    ],
+                    "name": "leader-meeting",
+                    "objects": [
+                    ],
+                    "ox": 0,
+                    "oy": 0,
+                    "script": "",
+                    "tasks": {
+                    },
+                    "zone": [
+                        [
+                            11,
+                            53
+                        ],
+                        [
+                            11,
+                            52
+                        ],
+                        [
+                            11,
+                            54
+                        ],
+                        [
+                            11,
+                            51
+                        ],
+                        [
+                            13,
+                            51
+                        ],
+                        [
+                            12,
+                            52
+                        ],
+                        [
+                            12,
+                            51
+                        ],
+                        [
+                            12,
+                            54
+                        ],
+                        [
+                            12,
+                            53
+                        ],
+                        [
+                            13,
+                            54
+                        ],
+                        [
+                            13,
+                            53
+                        ],
+                        [
+                            13,
+                            52
+                        ],
+                        [
+                            10,
+                            54
+                        ],
+                        [
+                            10,
+                            53
+                        ],
+                        [
+                            10,
+                            52
+                        ],
+                        [
+                            10,
+                            51
+                        ],
+                        [
+                            10,
+                            50
+                        ],
+                        [
+                            11,
+                            50
+                        ],
+                        [
+                            12,
+                            50
+                        ],
+                        [
+                            13,
+                            50
+                        ],
+                        [
+                            10,
+                            55
+                        ],
+                        [
+                            11,
+                            55
+                        ],
+                        [
+                            12,
+                            55
+                        ],
+                        [
+                            13,
+                            55
+                        ]
+                    ],
+                    "zoneBlocked": false
+                },
+                {
+                    "groups": [
+                    ],
+                    "name": "captives",
+                    "objects": [
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-resident-1",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "saddle": {
+                                        "hasItem": false,
+                                        "slotType": "saddle"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -468,
+                            "mty": 693,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "junkville-captive#1",
+                            "rx": -468,
+                            "ry": 693,
+                            "script": "junkville/dog-captive.mjs",
+                            "spriteName": "pony-751a7497-pinkie-f8666697-static-pony-eyes-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 13,
+                            "y": 26
+                        },
+                        {
+                            ">": 2,
+                            "animation": "idle-left",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-resident-2",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "saddle": {
+                                        "hasItem": false,
+                                        "slotType": "saddle"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -360,
+                            "mty": 819,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "junkville-captive#2",
+                            "rx": -360,
+                            "ry": 819,
+                            "script": "junkville/dog-captive.mjs",
+                            "spriteName": "pony-c2e5f164-derpy-bb1bd064-static-pony-eyes-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 18,
+                            "y": 28
+                        },
+                        {
+                            ">": 4,
+                            "animation": "idle-right",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "junkville-resident-1",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "armor": {
+                                        "hasItem": false,
+                                        "slotType": "armor"
+                                    },
+                                    "saddle": {
+                                        "hasItem": false,
+                                        "slotType": "saddle"
+                                    },
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    },
+                                    "use-2": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": -432,
+                            "mty": 819,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "junkville-captive#3",
+                            "rx": -432,
+                            "ry": 819,
+                            "script": "junkville/dog-captive.mjs",
+                            "spriteName": "pony-751a7497-pinkie-f8666697-static-pony-eyes-overlay-blank-armor-blank-equip-blank",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 17,
+                            "y": 29
+                        }
+                    ],
+                    "ox": 0,
+                    "oy": 0,
+                    "script": "",
+                    "tasks": {
+                    }
+                }
+            ],
+            "objects": [
+                {
+                    ">": 4,
+                    "animation": "idle-right",
+                    "ap": 0,
+                    "buffs": [
+                    ],
+                    "charsheet": "junkville-dog-leader",
+                    "currentPath": [
+                    ],
+                    "enemyFlag": 0,
+                    "float": false,
+                    "inventory": {
+                        "items": [
+                        ],
+                        "slots": {
+                            "armor": {
+                                "hasItem": false,
+                                "slotType": "armor"
+                            },
+                            "use-1": {
+                                "hasItem": false,
+                                "slotType": "any"
+                            },
+                            "use-2": {
+                                "hasItem": false,
+                                "slotType": "any"
+                            }
+                        }
+                    },
+                    "moveMode": "walking",
+                    "mtx": -1584,
+                    "mty": 1071,
+                    "nextX": 0,
+                    "nextY": 0,
+                    "objectName": "dog-leader",
+                    "rx": -1584,
+                    "ry": 1071,
+                    "script": "junkville/dog-leader.mjs",
+                    "spriteName": "diamond-dog-white-dc0c0c9e--0000009e-static-diamond-dog-static-overlay-blank-armor-blank-equip-blank",
+                    "type": "Character",
+                    "uniq": false,
+                    "x": 8,
+                    "y": 52
+                },
+                {
+                    "animation": "idle",
+                    "float": false,
+                    "mtx": 612,
+                    "mty": 1890,
+                    "nextX": 0,
+                    "nextY": 0,
+                    "objectName": "ladder-dumps",
+                    "rx": 612,
+                    "ry": 1890,
+                    "script": "junkville/underground-ladder.mjs",
+                    "spriteName": "ladder",
+                    "type": "DynamicObject",
+                    "x": 61,
+                    "y": 44
+                },
+                {
+                    ">": 1,
+                    "animation": "idle-up",
+                    "ap": 0,
+                    "buffs": [
+                    ],
+                    "charsheet": "junkville-dog-second",
+                    "currentPath": [
+                    ],
+                    "enemyFlag": 0,
+                    "float": false,
+                    "inventory": {
+                        "items": [
+                        ],
+                        "slots": {
+                            "armor": {
+                                "hasItem": false,
+                                "slotType": "armor"
+                            },
+                            "use-1": {
+                                "hasItem": false,
+                                "slotType": "any"
+                            },
+                            "use-2": {
+                                "hasItem": false,
+                                "slotType": "any"
+                            }
+                        }
+                    },
+                    "moveMode": "walking",
+                    "mtx": -1656,
+                    "mty": 1395,
+                    "nextX": 0,
+                    "nextY": 0,
+                    "objectName": "dog-alt-leader",
+                    "rx": -1656,
+                    "ry": 1395,
+                    "script": "junkville/dog-alt-leader.mjs",
+                    "spriteName": "diamond-dog-white-faf1f124--00000024-static-diamond-dog-static-overlay-blank-armor-blank-equip-blank",
+                    "type": "Character",
+                    "uniq": false,
+                    "x": 16,
+                    "y": 62
+                },
+                {
+                    "animation": "T",
+                    "cover": 25,
+                    "float": false,
+                    "interactive": false,
+                    "mtx": -720,
+                    "mty": 1296,
+                    "nextX": 0,
+                    "nextY": 0,
+                    "objectName": "fireplace",
+                    "rx": -720,
+                    "ry": 1296,
+                    "script": "",
+                    "spriteName": "junk-barrels",
+                    "type": "DynamicObject",
+                    "x": 26,
+                    "y": 46
+                }
             ],
             "ox": 0,
             "oy": 0,
@@ -24604,7 +26122,6 @@
                     }
                 }
             ],
-            "init": true,
             "objects": [
                 {
                     ">": 8,
@@ -24732,7 +26249,7 @@
                     "rx": -252,
                     "ry": 2133,
                     "script": "tutorialdude.mjs",
-                    "spriteName": "pony-450404-dash-cf0101-static-pony-eyes-overlay-blank-armor-blank-equip-blank",
+                    "spriteName": "pony-45040480-dash-cf010180-static-pony-eyes-overlay-blank-armor-blank-equip-blank",
                     "type": "Character",
                     "uniq": false,
                     "x": 56,
@@ -24824,7 +26341,7 @@
                     "inventory": {
                         "items": [
                             {
-                                "animation": "dynamite",
+                                "animation": "misc",
                                 "blocksPath": false,
                                 "float": false,
                                 "itemType": "9mm-ammo",
@@ -25207,7 +26724,7 @@
                     "rx": 684,
                     "ry": 873,
                     "script": "tutoDog.mjs",
-                    "spriteName": "diamond-dog",
+                    "spriteName": "diamond-dog-white-29090980--00000080-static-diamond-dog-static-overlay-blank-armor-blank-equip-blank",
                     "type": "Character",
                     "uniq": false,
                     "x": 34,

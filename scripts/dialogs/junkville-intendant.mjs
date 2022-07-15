@@ -23,6 +23,8 @@ class Dialog extends DialogHelper {
   }
   
   learnAboutLeader() {
+    if (game.hasVariable("junkvilleCookDied"))
+      return this.dialog.t("about-leader-dead");
     level.setVariable("intendantToldAboutLeader", true);
   }
 }

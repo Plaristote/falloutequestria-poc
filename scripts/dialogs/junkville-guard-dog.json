@@ -1,0 +1,62 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "state": ""
+        },
+        "detected-come-with": {
+            "state": "detected-to-leader",
+            "text": "detected-come-with"
+        },
+        "detected-question": {
+            "state": "detected-details",
+            "text": "detected-question"
+        },
+        "detected-refuse-to-come": {
+            "state": "detected-threat",
+            "text": "detected-refuse-to-come"
+        },
+        "detected-start-combat": {
+            "availableHook": "",
+            "hook": "startCombat",
+            "text": "detected-start-combat"
+        },
+        "detected-threat-cool-down": {
+            "availableHook": "canConvinceNotToKill",
+            "state": "detected-to-leader",
+            "text": "detected-threat-cool-down"
+        }
+    },
+    "entryPoint": "detected",
+    "states": {
+        "detected": {
+            "answers": [
+                "detected-question",
+                "detected-come-with",
+                "detected-refuse-to-come"
+            ],
+            "text": "detected"
+        },
+        "detected-details": {
+            "answers": [
+                "detected-come-with",
+                "detected-refuse-to-come"
+            ],
+            "text": "detected-details"
+        },
+        "detected-threat": {
+            "answers": [
+                "detected-threat-cool-down",
+                "detected-start-combat"
+            ],
+            "hook": "",
+            "text": "detected-threat"
+        },
+        "detected-to-leader": {
+            "answers": [
+            ],
+            "hook": "moveToLeader",
+            "text": "detected-to-leader"
+        }
+    }
+}

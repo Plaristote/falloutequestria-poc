@@ -1083,6 +1083,10 @@
         }
     },
     "diamond-dog": {
+        "cloneOf": "diamond-dog-white",
+        "defaultSource": "characters/diamond-dog.png"
+    },
+    "diamond-dog-white": {
         "damaged-down": {
             "frameCount": 4,
             "frameInterval": 218,
@@ -1155,7 +1159,7 @@
             "repeat": false,
             "width": 124
         },
-        "defaultSource": "characters/diamond-dog.png",
+        "defaultSource": "characters/diamond-dog-white.png",
         "fall-down": {
             "frameCount": 6,
             "frameInterval": 240,
@@ -1233,7 +1237,7 @@
             "frameInterval": 0,
             "height": 62,
             "offsetX": 0,
-            "offsetY": 186,
+            "offsetY": 0,
             "repeat": false,
             "width": 124
         },
@@ -1260,7 +1264,7 @@
             "frameInterval": 0,
             "height": 62,
             "offsetX": 0,
-            "offsetY": 0,
+            "offsetY": 186,
             "repeat": false,
             "width": 124
         },
@@ -1374,7 +1378,7 @@
         }
     },
     "diamong-dog-gray": {
-        "cloneOf": "diamond-dog",
+        "cloneOf": "diamond-dog-white",
         "defaultSource": "characters/diamond-dog-gray.png"
     },
     "dumpsters": {
@@ -1921,6 +1925,45 @@
     "giant-rat": {
         "cloneOf": "griffon",
         "defaultSource": "critters/giant-mutated-rat.png"
+    },
+    "graveyard": {
+        "defaultSource": "graveyard.png",
+        "hole-big-1": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 70,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 139
+        },
+        "hole-big-2": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 70,
+            "offsetX": 140,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 139
+        },
+        "hole-big-3": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 70,
+            "offsetX": 280,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 139
+        },
+        "hole-big-4": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 70,
+            "offsetX": 420,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 139
+        }
     },
     "griffon": {
         "damaged-down": {
@@ -4043,6 +4086,18 @@
             "offsetY": 210,
             "repeat": false,
             "width": 65
+        }
+    },
+    "ladder": {
+        "idle": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 109,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "ladder.png",
+            "width": 68
         }
     },
     "landmine": {
@@ -8645,6 +8700,18 @@
             "offsetX": 0,
             "offsetY": 0,
             "repeat": false,
+            "width": 72
+        }
+    },
+    "wooden-hatchway": {
+        "idle": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 36,
+            "offsetX": 0,
+            "offsetY": 0,
+            "repeat": false,
+            "source": "hatchway.png",
             "width": 72
         }
     },

@@ -10,6 +10,13 @@ function prepareRathian() {
   level.setCharacterPosition(rathian, 53, 27);
 }
 
+function removeCook() {
+  const cook = level.findObject("inn.cook");
+
+  if (cook)
+    level.deleteObject(cook);
+}
+
 class Level extends LevelBase {
   constructor(model) {
     super(model);
@@ -22,8 +29,18 @@ class Level extends LevelBase {
   }
 
   delayedInitialize() {
+    game.dataEngine.setFactionReputationEnabled("junkville", true);
     if (!level.hasVariable("rathianPrepared"))
       prepareRathian();
+  }
+
+  goToUndergroundBattle() {
+    game.switchToLevel("junkville-underground", "battle-entry");
+  }
+
+  onLoaded() {
+    if (game.hasVariable("junkvilleBattleCookDied"))
+      removeCook();
   }
 }
 

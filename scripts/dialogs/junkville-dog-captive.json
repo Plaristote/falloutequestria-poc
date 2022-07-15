@@ -1,0 +1,125 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "state": ""
+        },
+        "announce-release": {
+            "availableHook": "wasReleaseAccepted",
+            "state": "",
+            "text": "announce-release"
+        },
+        "ask-about-secrecy": {
+            "availableHook": "",
+            "state": "secrecy",
+            "text": "ask-about-secrecy"
+        },
+        "ask-situation": {
+            "availableHook": "",
+            "state": "situation",
+            "text": "ask-situation"
+        },
+        "dogs-slained": {
+            "availableHook": "dogsEradicated",
+            "state": "released",
+            "text": "dogs-slained"
+        },
+        "leave": {
+            "state": "",
+            "text": "leave"
+        },
+        "leave-sarcastic": {
+            "state": "",
+            "text": "leave-sarcastic"
+        },
+        "let-them-rot": {
+            "availableHook": "",
+            "state": "",
+            "text": "let-them-rot"
+        },
+        "let-them-rot-alt": {
+            "availableHook": "",
+            "state": "",
+            "text": "let-them-rot-alt"
+        },
+        "missioned-by-junkville": {
+            "text": "missioned-by-junkville"
+        },
+        "missionned-by-junkville": {
+            "availableHook": "wasSentByJunkville",
+            "state": "junkville-mission",
+            "text": "missionned-by-junkville"
+        },
+        "missionned-junkville": {
+            "availableHook": "",
+            "text": "missionned-junkville"
+        },
+        "suggest-breakout": {
+            "availableHook": "",
+            "state": "breakout",
+            "text": "suggest-breakout"
+        },
+        "tell-freedom": {
+            "availableHook": "wasReleaseAccepted",
+            "state": "released",
+            "text": "tell-freedom"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "breakout": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "breakout-fail"
+        },
+        "entry": {
+            "answers": [
+                "ask-situation",
+                "tell-freedom",
+                "dogs-slained"
+            ],
+            "hook": "",
+            "text": "entry"
+        },
+        "junkville-mission": {
+            "answers": [
+                "announce-release",
+                "suggest-breakout",
+                "leave"
+            ],
+            "hook": "",
+            "text": "junkville-mission"
+        },
+        "released": {
+            "answers": [
+            ],
+            "hook": "triggerGoToExit",
+            "text": "released"
+        },
+        "secrecy": {
+            "answers": [
+                "missionned-by-junkville",
+                "announce-release",
+                "suggest-breakout",
+                "let-them-rot-alt",
+                "let-them-rot"
+            ],
+            "hook": "",
+            "text": "secrecy"
+        },
+        "situation": {
+            "answers": [
+                "missionned-by-junkville",
+                "tell-freedom",
+                "dogs-slained",
+                "suggest-breakout",
+                "ask-about-secrecy",
+                "leave-sarcastic",
+                "leave"
+            ],
+            "hook": "addQuest",
+            "text": "situation"
+        }
+    }
+}

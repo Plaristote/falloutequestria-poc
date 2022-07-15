@@ -1,0 +1,22 @@
+{
+    "answers": {
+        "accept": {
+            "hook": "sendToPen",
+            "text": "accept"
+        },
+        "start-combat": {
+            "hook": "startCombat",
+            "text": "start-combat"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "accept",
+                "start-combat"
+            ],
+            "text": "entry"
+        }
+    }
+}

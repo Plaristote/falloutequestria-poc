@@ -1,4 +1,11 @@
-export const spriteSheet = "diamond-dog";
+export function spriteSheet(model) {
+  return {
+    cloneOf:    "diamond-dog-white",
+    base:       "diamond-dog-white",
+    staticBase: "diamond-dog-static",
+    color:      model.faceColor
+  };
+}
 
 export const withFaceColor = true;
 

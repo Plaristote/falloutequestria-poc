@@ -1,0 +1,201 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "hook": "",
+            "state": ""
+        },
+        "about-weak-leader-intimidate": {
+            "state": "fight-intro",
+            "text": "about-weak-leader-intimidate"
+        },
+        "escape-entry": {
+            "state": "on-escape",
+            "text": "escape-entry"
+        },
+        "fight-all": {
+            "hook": "startCombat",
+            "state": "",
+            "text": "fight-all"
+        },
+        "fight-ask-1-on-1": {
+            "hook": "",
+            "state": "fight-1on1",
+            "text": "fight-ask-1-on-1"
+        },
+        "hatred-back-to-index": {
+            "state": "about-hatred",
+            "text": "hatred-back-to-index"
+        },
+        "hatred-convince": {
+            "hook": "",
+            "state": "hatred-convince-route",
+            "text": "hatred-convince"
+        },
+        "hatred-convince-exit": {
+            "hook": "",
+            "text": "hatred-convince-exit"
+        },
+        "hatred-convince-legacy": {
+            "hook": "onConvinceError",
+            "state": "hatred-about-legacy",
+            "text": "hatred-convince-legacy"
+        },
+        "hatred-convince-legacy-alt": {
+            "availableHook": "canDoMediationLvl1",
+            "hook": "",
+            "state": "hatred-convince-route-2",
+            "text": "hatred-convince-legacy-alt"
+        },
+        "hatred-convince-nice-exit": {
+            "hook": "gavePlayerName",
+            "text": "hatred-convince-nice-exit"
+        },
+        "hatred-convince-peace": {
+            "availableHook": "canDoMediationLvl2",
+            "hook": "",
+            "state": "hatred-convinced",
+            "text": "hatred-convince-peace"
+        },
+        "hatred-covnince-peace-alt": {
+            "hook": "onConvinceError",
+            "state": "hatred-about-stronger-together",
+            "text": "hatred-covnince-peace-alt"
+        },
+        "hatred-did-nothing": {
+            "hook": "onConvinceError",
+            "state": "hatred-about-not-here",
+            "text": "hatred-did-nothing"
+        },
+        "hatred-leave": {
+            "state": "",
+            "text": "hatred-leave"
+        },
+        "hatred-sacrastic": {
+            "state": "fight-intro",
+            "text": "hatred-sacrastic"
+        },
+        "sarcastic-entry": {
+            "availableHook": "",
+            "state": "fight-intro",
+            "text": "sarcastic-entry"
+        },
+        "start-fight-sarcastic": {
+            "text": "start-fight-sarcastic"
+        },
+        "start-mediation": {
+            "availableHook": "",
+            "state": "about-hatred",
+            "text": "start-mediation"
+        },
+        "start-mediation-alt": {
+            "state": "about-hatred",
+            "text": "start-mediation-alt"
+        },
+        "start-mediation-on-captive-released": {
+            "availableHook": "spokeAgainstLeader",
+            "state": "about-weak-leader",
+            "text": "start-mediation-on-captive-released"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-hatred": {
+            "answers": [
+                "hatred-did-nothing",
+                "hatred-convince",
+                "hatred-sacrastic",
+                "hatred-leave"
+            ],
+            "text": "about-hatred"
+        },
+        "about-weak-leader": {
+            "answers": [
+                "start-mediation-alt",
+                "about-weak-leader-intimidate",
+                "escape-entry"
+            ],
+            "text": "about-weak-leader"
+        },
+        "entry": {
+            "answers": [
+                "start-mediation",
+                "start-mediation-on-captive-released",
+                "sarcastic-entry",
+                "escape-entry"
+            ],
+            "text": "entry"
+        },
+        "fight-1on1": {
+            "answers": [
+                "start-fight-sarcastic"
+            ],
+            "hook": "start1on1Combat",
+            "text": "fight-1on1"
+        },
+        "fight-intro": {
+            "answers": [
+                "fight-ask-1-on-1",
+                "fight-all",
+                "escape-entry"
+            ],
+            "text": "fight-intro"
+        },
+        "hatred-about-legacy": {
+            "answers": [
+                "hatred-convince-legacy-alt",
+                "hatred-leave"
+            ],
+            "text": "hatred-about-legacy"
+        },
+        "hatred-about-not-here": {
+            "answers": [
+                "hatred-back-to-index",
+                "hatred-leave"
+            ],
+            "text": "hatred-about-not-here"
+        },
+        "hatred-about-stronger-together": {
+            "answers": [
+                "hatred-back-to-index",
+                "hatred-leave"
+            ],
+            "text": "hatred-about-stronger-together"
+        },
+        "hatred-convince-fail": {
+            "answers": [
+            ],
+            "text": "hatred-convince-fail"
+        },
+        "hatred-convince-route": {
+            "answers": [
+                "hatred-convince-legacy-alt",
+                "hatred-convince-legacy",
+                "hatred-leave"
+            ],
+            "text": "hatred-convince-route"
+        },
+        "hatred-convince-route-2": {
+            "answers": [
+                "hatred-covnince-peace-alt",
+                "hatred-convince-peace",
+                "hatred-leave"
+            ],
+            "hook": "",
+            "text": "hatred-convince-route-2"
+        },
+        "hatred-convinced": {
+            "answers": [
+                "hatred-convince-nice-exit",
+                "hatred-convince-exit"
+            ],
+            "hook": "onConvinced",
+            "text": "hatred-convinced"
+        },
+        "on-escape": {
+            "answers": [
+            ],
+            "text": "on-escape"
+        }
+    }
+}

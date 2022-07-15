@@ -65,7 +65,7 @@
                 "end-ask"
             ],
             "hook": "learnAboutLeader",
-            "text": "about-leader"
+            "text": "about-leader-dead"
         },
         "about-safety": {
             "answers": [

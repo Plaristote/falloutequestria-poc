@@ -1,14 +1,13 @@
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
-    this.introduced = level.hasVariable("introduced");
-    level.setVariable("introduced", true);
+    this.introduced = this.dialog.npc.hasVariable("met");
+    this.dialog.npc.setVariable("met", true);
   }
 
   getEntryPoint() {
     if (this.introduced)
       return "accompany";
-    this.dialog.setVariable("met", true);
     return "introduction";
   }
 

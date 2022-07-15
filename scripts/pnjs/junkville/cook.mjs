@@ -5,4 +5,8 @@ export class Cook extends CharacterBehaviour {
     super(model);
     this.dialog = "junkville-cook";
   }
+
+  onDied() {
+    game.setVariable("junkvilleCookDied", 1);
+  }
 }
