@@ -2,10 +2,11 @@ import {StackableBuff} from "./helpers/stackable.mjs";
 
 class Ko extends StackableBuff {
   initialize() {
+    const message = this.model.target === game.player ? "player-ko" : "ko";
     this.charges = 1;
     this.model.target.fallUnconscious();
-    game.appendToConsole(i18n.t("messages.ko", {
-      target: this.model.target.statistics.name
+    game.appendToConsole(i18n.t(`messages.${message}`, {
+      target: this.model.target.displayName
     }));
     this.model.tasks.addTask("trigger", 10000, 0);
   }

@@ -68,6 +68,10 @@ export class CombatComponent extends SkillTargetComponent {
     if (movement >= 0) {
       actions.reset();
       if (weapon.maxAmmo > 0 && weapon.ammo === 0) {
+        if (weapon.getScriptObject().availableAmmo === 0) {
+          this.model.inventory.unequipItem("use-1");
+          return this.fightCombatTarget();
+        }
         ap -= 2;
         weapon.useMode = "reload";
         actions.pushItemUse(null, "use-1");

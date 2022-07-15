@@ -16,6 +16,10 @@ export class Gun extends Weapon {
   get requiresTarget() {
     return this.model.useMode == "shoot";
   }
+
+  get availableAmmo() {
+    return this.user.inventory.count(this.ammoType);
+  }
   
   getActionPointCost() {
     if (this.model.useMode == "shoot")
@@ -32,7 +36,7 @@ export class Gun extends Weapon {
   }
 
   onReloaded() {
-    const availableAmmo = this.user.inventory.count(this.ammoType);
+    const availableAmmo = this.availableAmmo;
 
     if (availableAmmo > 0) {
       const requiredAmmo = this.model.maxAmmo - this.model.ammo;
