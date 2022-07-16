@@ -2,6 +2,7 @@ import {QuestHelper, requireQuest} from "./helpers.mjs";
 import {
   isLookingForDisappearedPonies,
   hasFoundDisappearedPonies,
+  onDisappearedPoniesFound,
   captiveReleaseAuthorized
 } from "./junkvilleDumpsDisappeared.mjs";
 import {getValueFromRange} from "../behaviour/random.mjs";
@@ -86,6 +87,8 @@ export function initializeBattle() {
     ]
   });
   junkvilleNpcs.insertIntoZone(level, "battle-entry");
+  if (level.getScriptObject().liveCaptives.length > 0)
+    onDisappearedPoniesFound();
   level.getScriptObject().liveCaptives.forEach(captive => {
     captive.tasks.addUniqueTask("reachExitZone", 1500, 0);
   });

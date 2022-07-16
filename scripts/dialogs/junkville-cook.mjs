@@ -1,4 +1,5 @@
 import {DialogHelper} from "./helpers.mjs";
+import {skillContest} from "../cmap/helpers/checks.mjs";
 import {requireQuest} from "../quests/helpers.mjs";
 import {
   startUndergroundBattle,
@@ -170,12 +171,46 @@ class Dialog extends DialogHelper {
     return "dogs-battle-peacemaking-not-appeased";
   }
 
+  onAskReward() {
+    if (this.improvedBattleReward === undefined) {
+      requireQuest("junkvilleNegociateWithDogs").setVariable("battleReward", 100);
+    } else if (this.improvedBattleReward) {
+      requireQuest("junkvilleNegociateWithDogs").setVariable("battleReward", 200);
+      return this.dialog.t("dogs-battle-ask-reward-improved");
+    } else {
+      return this.dialog.t("dogs-battle-ask-reward-fail");
+    }
+  }
+
+  canAskBetterReward() {
+    return this.improvedBattleReward === undefined;
+  }
+
+  askBetterReward() {
+    const winner = skillContest(game.player, this.dialog.npc, "barter")
+
+    this.improvedBattleReward = winner === game.player;
+  }
+
+  canGetBattleReward() {
+    const quest = requireQuest("junkvilleNegociateWithDogs");
+    if (quest.getScriptObject().isObjectiveCompleted("win-battle"))
+      return quest.getVariable("battleReward") > 0;
+    return false;
+  }
+
+  giveBattleReward() {
+    game.player.inventory.addItemOfType("bottlecaps",
+      requireQuest("junkvilleNegociateWithDogs").getVariable("battleReward")
+    );
+  }
+
   startBattle() {
     startUndergroundBattle();
   }
 
   startBattleWithoutPlayer() {
-    game.appendToConsole("startBattleWithoutPlayer not implemented yet !");
+    this.dialog.npc.tasks.addTask("headTowardsBattle", 1500, 0);
   }
 }
 

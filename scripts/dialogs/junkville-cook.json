@@ -50,6 +50,12 @@
             "state": "town-index",
             "text": "ask-town"
         },
+        "battle-reward-negociate": {
+            "availableHook": "canAskBetterReward",
+            "hook": "askBetterReward",
+            "state": "dogs-battle-ask-reward",
+            "text": "battle-reward-negociate"
+        },
         "dogs-battle-join-gladly": {
             "hook": "startBattle",
             "state": "",
@@ -57,8 +63,14 @@
         },
         "dogs-battle-join-money": {
             "hook": "",
-            "state": "",
+            "state": "dogs-battle-ask-reward",
             "text": "dogs-battle-join-money"
+        },
+        "dogs-battle-join-reward": {
+            "availableHook": "",
+            "hook": "startBattle",
+            "state": "",
+            "text": "dogs-battle-join-reward"
         },
         "dogs-battle-peace": {
             "hook": "",
@@ -136,6 +148,11 @@
             "state": "",
             "text": "exit"
         },
+        "get-battle-reward": {
+            "availableHook": "canGetBattleReward",
+            "state": "dogs-get-reward",
+            "text": "get-battle-reward"
+        },
         "job-haunted-heap-accept-reward": {
             "hook": "hauntedHeapTakeReward",
             "text": "job-haunted-heap-accept-reward"
@@ -192,6 +209,15 @@
     },
     "entryPoint": "entry",
     "states": {
+        "dogs-battle-ask-reward": {
+            "answers": [
+                "battle-reward-negociate",
+                "dogs-battle-join-reward",
+                "dogs-battle-reject"
+            ],
+            "hook": "onAskReward",
+            "text": "dogs-battle-ask-reward"
+        },
         "dogs-battle-peacemaking": {
             "answers": [
                 "dogs-battle-peacemaking-convince",
@@ -221,6 +247,12 @@
                 "dogs-battle-reject-alt"
             ],
             "text": "dogs-battle-start"
+        },
+        "dogs-get-reward": {
+            "answers": [
+            ],
+            "hook": "giveBattleReward",
+            "text": "dogs-get-reward"
         },
         "dogs-mediation-entry": {
             "answers": [
@@ -274,6 +306,7 @@
         },
         "entry": {
             "answers": [
+                "get-battle-reward",
                 "ask-meal",
                 "ask-town",
                 "ask-job",
