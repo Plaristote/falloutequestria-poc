@@ -2,6 +2,7 @@ import {Door} from "./door.mjs";
 
 const autocloseDelay = 7500;
 const autocloseMethod = "autoclose";
+const autocloseDisableVar = "autoclose-disabled";
 
 export class AutoClosingDoor extends Door {
   constructor(model) {
@@ -11,7 +12,7 @@ export class AutoClosingDoor extends Door {
   }
 
   autoclose() {
-    if (!this.model.destroyed) {
+    if (!this.model.destroyed && !this.model.hasVariable(autocloseDisableVar)) {
       this.model.tasks.addTask(autocloseMethod, autocloseDelay, 1);
       this.model.opened = false;
     }
@@ -23,6 +24,14 @@ export class AutoClosingDoor extends Door {
       this.model.tasks.addTask(autocloseMethod, autocloseDelay, 1);
     }
     return false;
+  }
+  
+  disableAutoclose() {
+    this.model.setVariable(autocloseDisableVar, 1);
+  }
+  
+  enableAutoclose() {
+    this.model.unsetVariable(autocloseDisableVar);
   }
 }
 

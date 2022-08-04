@@ -982,6 +982,8 @@
         "read-old-book": "You skim through this book you're already familiar with.",
         "read-skillbook": "You learned more about {{skillName}} and gained {{points}} skill points.",
         "read-spellbook": "You read a spellbook and learn {{spell}}.",
+        "repair-failure": "You weren't able to fix {{target}}.",
+        "repair-success": "You managed to repair {{target}}.",
         "spell-already-known": "You already know that spell.",
         "spellcast-critical-failure": "{{character}} horribly failed to cast a spell.",
         "spellcast-critical-success": "{{character}} masterfully casted {{spell}}.",

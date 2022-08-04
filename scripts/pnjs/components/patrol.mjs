@@ -14,7 +14,6 @@ export class PatrolComponent {
   }
 
   get patrolStep() {
-    console.log("getPatrolZtep");
     return this.model.hasVariable("patrolStep")
       ? this.model.getVariable("patrolStep")
       : 0;

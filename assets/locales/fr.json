@@ -370,7 +370,9 @@
             "critical-failure": "{{user}} échoue catastrophiquement en essayant d'utiliser {{item}}."
         },
         "wont-barter": "Cette personne refuse de troquer avec toi.",
-        "xp-gain": "Tu as gagne {{xp}} points d'experience."
+        "xp-gain": "Tu as gagne {{xp}} points d'experience.",
+        "repair-success": "Tu as réparé {{target}}.",
+        "repair-failure": "Tu n'arrive pas à réparer {{target}}."
     },
     "no-path": "Pas de chemin disponible.",
     "objects": {
