@@ -21,6 +21,6 @@ class Rathian extends CharacterBehaviour {
 }
 
 export function create(model) {
-  console.log("CREATING MEETING JUNKVILLE");
+  console.log("CREATING JUNKVILLE RATHIAN");
   return new Rathian(model);
 }

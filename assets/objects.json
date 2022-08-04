@@ -52,6 +52,14 @@
         "value": 1,
         "weight": 0
     },
+    "celestial-device-blueprints": {
+        "icon": "blueprints.png",
+        "isGroupable": false,
+        "sprite": "misc",
+        "type": "misc",
+        "value": 0,
+        "weight": 1
+    },
     "dynamite": {
         "icon": "dynamite.png",
         "isGroupable": false,
@@ -258,6 +266,14 @@
         "type": "armor",
         "value": 50,
         "weight": 2
+    },
+    "stabletech-facility-key": {
+        "icon": "trial-key.png",
+        "isGroupable": true,
+        "sprite": "misc",
+        "type": "misc",
+        "value": 0,
+        "weight": 0
     },
     "surgeon-coat": {
         "icon": "tuxedo.png",

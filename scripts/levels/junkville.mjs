@@ -1,14 +1,5 @@
 import {LevelBase} from "./base.mjs";
-import {rathianTemplate} from "../pnjs/rathian/template.mjs";
-
-function prepareRathian() {
-  console.log("prepareRathian");
-  const group = game.createNpcGroup({ name: "Rathian", members: [rathianTemplate] });
-  const rathian = group.list[0];
-  rathian.setScript("rathian/junkville.mjs");
-  level.appendObject(rathian);
-  level.setCharacterPosition(rathian, 53, 27);
-}
+import {createRathianInstance, getRathian} from "../pnjs/rathian/template.mjs";
 
 function removeCook() {
   const cook = level.findObject("inn.cook");
@@ -31,7 +22,7 @@ class Level extends LevelBase {
   delayedInitialize() {
     game.dataEngine.setFactionReputationEnabled("junkville", true);
     if (!level.hasVariable("rathianPrepared"))
-      prepareRathian();
+      createRathianInstance("junkville", 53, 27);
   }
 
   goToUndergroundBattle() {
@@ -41,6 +32,13 @@ class Level extends LevelBase {
   onLoaded() {
     if (game.hasVariable("junkvilleBattleCookDied"))
       removeCook();
+  }
+
+  onExit() {
+    if (game.getVariable("rathianGoingToDumps") === 1) {
+      game.setVariable("rathianGoingToDumps", 2);
+      level.deleteObject(getRathian());
+    }
   }
 }
 

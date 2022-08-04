@@ -144,10 +144,6 @@
             "state": "",
             "text": "done-asking"
         },
-        "exit": {
-            "state": "",
-            "text": "exit"
-        },
         "get-battle-reward": {
             "availableHook": "canGetBattleReward",
             "state": "dogs-get-reward",

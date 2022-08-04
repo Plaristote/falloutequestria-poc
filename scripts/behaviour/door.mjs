@@ -2,7 +2,8 @@ import {getValueFromRange} from "./random.mjs";
 import {LockedComponent} from "./locked.mjs";
 
 const racesOpeningDoors = [
-  'diamond-dog', 'earth-pony', 'gator-pony', 'griffon', 'pegasus', 'unicorn'
+  'diamond-dog', 'earth-pony', 'gator-pony', 'griffon', 'pegasus', 'unicorn',
+  'mr-hoofy'
 ];
 
 export class Door {

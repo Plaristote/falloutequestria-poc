@@ -2,6 +2,7 @@
     "answers": {
         "": {
             "availableHook": "",
+            "hook": "",
             "state": "",
             "textHook": ""
         },
@@ -29,15 +30,56 @@
             "availableHook": "",
             "state": "about-steel-rangers",
             "text": "ask-steel-ranger"
+        },
+        "celestial-device-do-later": {
+            "state": "entry",
+            "text": "celestial-device-do-later"
+        },
+        "celestial-device-go": {
+            "hook": "goToStabletechFacility",
+            "state": "",
+            "text": "celestial-device-go"
+        },
+        "celestial-device-where": {
+            "text": "celestial-device-where"
+        },
+        "celestial-device-who-help": {
+            "state": "about-celestial-device-go",
+            "text": "celestial-device-who-help"
+        },
+        "celestial-device-why-done": {
+            "state": "about-celestial-device-go",
+            "text": "celestial-device-why-done"
+        },
+        "celestial-device-why-help": {
+            "state": "about-celestial-device-why-help",
+            "text": "celestial-device-why-help"
         }
     },
     "entryPoint": "entry",
     "states": {
+        "about-celestial-device-go": {
+            "answers": [
+                "celestial-device-go",
+                "celestial-device-do-later"
+            ],
+            "hook": "",
+            "text": "about-celestial-device-go"
+        },
         "about-celestial-device-intro": {
             "answers": [
+                "celestial-device-who-help",
+                "celestial-device-why-help"
             ],
             "hook": "askedAboutCelestialDevice",
             "text": "about-celestial-device-intro"
+        },
+        "about-celestial-device-why-help": {
+            "answers": [
+                "celestial-device-why-done"
+            ],
+            "hook": "",
+            "text": "about-celestial-device-why-help"
         },
         "about-steel-rangers": {
             "answers": [

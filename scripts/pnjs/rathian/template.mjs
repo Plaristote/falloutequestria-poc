@@ -12,3 +12,22 @@ export const rathianTemplate = {
     ]
   }
 };
+
+export function getRathian() {
+  for (let i = 0 ; i < level.objects.length ; ++i) {
+    if (level.objects[i].characterSheet === rathianTemplate.sheet)
+      return level.objects[i];
+  }
+  return null;
+}
+
+export function createRathianInstance(script, x, y, z = 0) {
+  console.log("CREATE RATHIAN INsTANCE", script, x, y, z);
+  const group = game.createNpcGroup({ name: "Rathian", members: [rathianTemplate] });
+  const rathian = group.list[0];
+  rathian.setScript(`rathian/${script}.mjs`);
+  level.appendObject(rathian);
+  level.setCharacterPosition(rathian, x, y, z);
+  console.log("DONE");
+  return rathian;
+}

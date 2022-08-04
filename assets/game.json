@@ -52,9 +52,13 @@
             "enemies": {
             },
             "reputation": true
+        },
+        "stabletech-facility": {
+            "enemies": {
+            }
         }
     },
-    "level": "junkville-underground",
+    "level": "junkville-stabletech-facility",
     "levels": {
         "city-sample": {
             "ambientColor": [
@@ -18869,6 +18873,192 @@
                     "script": "",
                     "tasks": {
                     }
+                },
+                {
+                    "groups": [
+                    ],
+                    "name": "stabletech-facility",
+                    "objects": [
+                        {
+                            "animation": "B-down",
+                            "cover": 0,
+                            "float": true,
+                            "mtx": 252,
+                            "mty": 336,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "stairs",
+                            "rx": 252,
+                            "ry": 336,
+                            "script": "junkville/stabletech-stairs.mjs",
+                            "spriteName": "vault-stairs",
+                            "type": "DynamicObject",
+                            "x": 16,
+                            "y": 9
+                        },
+                        {
+                            ">": 4,
+                            "animation": "idle-right",
+                            "destroyed": false,
+                            "float": false,
+                            "key": "",
+                            "locked": true,
+                            "mtx": 360,
+                            "mty": 540,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "door-exterior",
+                            "opened": false,
+                            "picklvl": 4,
+                            "rx": 360,
+                            "ry": 540,
+                            "script": "vault-door.mjs",
+                            "spriteName": "vault-door",
+                            "type": "Doorway",
+                            "x": 20,
+                            "y": 10
+                        },
+                        {
+                            ">": 4,
+                            "animation": "idle-right",
+                            "destroyed": false,
+                            "float": false,
+                            "key": "",
+                            "locked": true,
+                            "mtx": 180,
+                            "mty": 414,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "door-interior",
+                            "opened": false,
+                            "picklvl": 20,
+                            "rx": 180,
+                            "ry": 414,
+                            "script": "vault-door.mjs",
+                            "spriteName": "vault-door",
+                            "type": "Doorway",
+                            "x": 14,
+                            "y": 9
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "turret",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": 540,
+                            "mty": 513,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "turret#2",
+                            "rx": 540,
+                            "ry": 513,
+                            "script": "turret.mjs",
+                            "spriteName": "turret",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 22,
+                            "y": 7,
+                            "zone": [
+                                [
+                                    -1,
+                                    0
+                                ],
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    0,
+                                    -1
+                                ],
+                                [
+                                    -1,
+                                    -1
+                                ]
+                            ],
+                            "zoneBlocked": true
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "destroyed": false,
+                            "float": false,
+                            "key": "stabletech-facility-key",
+                            "locked": true,
+                            "mtx": -36,
+                            "mty": 450,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "backdoor",
+                            "opened": false,
+                            "picklvl": 2,
+                            "rx": -36,
+                            "ry": 450,
+                            "script": "door.mjs",
+                            "spriteName": "wooden-door",
+                            "type": "Doorway",
+                            "x": 12,
+                            "y": 13
+                        },
+                        {
+                            "animation": "monitor-left-off",
+                            "blocksPath": false,
+                            "cover": 0,
+                            "float": true,
+                            "mtx": 241,
+                            "mty": 254,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "computer#1",
+                            "rx": 241,
+                            "ry": 254,
+                            "script": "",
+                            "spriteName": "vault-computer",
+                            "type": "DynamicObject",
+                            "x": 12,
+                            "y": 6
+                        },
+                        {
+                            "animation": "monitor-right-on",
+                            "blocksPath": false,
+                            "cover": 0,
+                            "float": true,
+                            "mtx": 149,
+                            "mty": 403,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "computer#2",
+                            "rx": 149,
+                            "ry": 403,
+                            "script": "junkville/stabletech-door-switch.mjs",
+                            "spriteName": "vault-computer",
+                            "type": "DynamicObject",
+                            "x": 15,
+                            "y": 11
+                        }
+                    ],
+                    "ox": 0,
+                    "oy": 0,
+                    "script": "",
+                    "tasks": {
+                    }
                 }
             ],
             "objects": [
@@ -18894,8 +19084,1416 @@
             "oy": 0,
             "tasks": {
             },
-            "useAmbientLight": false,
-            "useDaylight": false
+            "useAmbientLight": true,
+            "useDaylight": true
+        },
+        "junkville-stabletech-facility": {
+            "ambientColor": [
+                58,
+                7,
+                7,
+                255
+            ],
+            "currentFloor": 0,
+            "groups": [
+                {
+                    "groups": [
+                    ],
+                    "name": "doors",
+                    "objects": [
+                        {
+                            ">": 4,
+                            "animation": "idle-right",
+                            "destroyed": false,
+                            "float": false,
+                            "key": "stabletech-factory-storage-key",
+                            "locked": true,
+                            "mtx": -900,
+                            "mty": 774,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "storage",
+                            "opened": false,
+                            "picklvl": 10,
+                            "rx": -900,
+                            "ry": 774,
+                            "script": "vault-door.mjs",
+                            "spriteName": "vault-door",
+                            "type": "Doorway",
+                            "x": 9,
+                            "y": 34
+                        },
+                        {
+                            ">": 4,
+                            "animation": "idle-right",
+                            "destroyed": false,
+                            "float": false,
+                            "key": "",
+                            "locked": false,
+                            "mtx": 288,
+                            "mty": 1476,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "tool-room",
+                            "opened": false,
+                            "picklvl": 1,
+                            "rx": 288,
+                            "ry": 1476,
+                            "script": "vault-door.mjs",
+                            "spriteName": "vault-door",
+                            "type": "Doorway",
+                            "x": 45,
+                            "y": 37
+                        },
+                        {
+                            ">": 4,
+                            "animation": "idle-right",
+                            "destroyed": false,
+                            "float": false,
+                            "key": "",
+                            "locked": false,
+                            "mtx": 648,
+                            "mty": 1440,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "generator",
+                            "opened": false,
+                            "picklvl": 1,
+                            "rx": 648,
+                            "ry": 1440,
+                            "script": "vault-door.mjs",
+                            "spriteName": "vault-door",
+                            "type": "Doorway",
+                            "x": 49,
+                            "y": 31
+                        },
+                        {
+                            ">": 4,
+                            "animation": "idle-right",
+                            "destroyed": false,
+                            "float": false,
+                            "key": "",
+                            "locked": false,
+                            "mtx": 1044,
+                            "mty": 702,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "security-west",
+                            "opened": false,
+                            "picklvl": 1,
+                            "rx": 1044,
+                            "ry": 702,
+                            "script": "vault-door.mjs",
+                            "spriteName": "vault-door",
+                            "type": "Doorway",
+                            "x": 34,
+                            "y": 5
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "destroyed": false,
+                            "float": false,
+                            "key": "",
+                            "locked": false,
+                            "mtx": 1080,
+                            "mty": 864,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "security-south",
+                            "opened": false,
+                            "picklvl": 1,
+                            "rx": 1080,
+                            "ry": 864,
+                            "script": "vault-door.mjs",
+                            "spriteName": "vault-door",
+                            "type": "Doorway",
+                            "x": 39,
+                            "y": 9
+                        },
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "destroyed": false,
+                            "float": false,
+                            "key": "",
+                            "locked": false,
+                            "mtx": 684,
+                            "mty": 666,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "factory",
+                            "opened": false,
+                            "picklvl": 1,
+                            "rx": 684,
+                            "ry": 666,
+                            "script": "vault-door.mjs",
+                            "spriteName": "vault-door",
+                            "type": "Doorway",
+                            "x": 28,
+                            "y": 9
+                        },
+                        {
+                            ">": 4,
+                            "animation": "idle-right",
+                            "destroyed": false,
+                            "float": false,
+                            "key": "stabletech-factory-command-key",
+                            "locked": true,
+                            "mtx": 576,
+                            "mty": 468,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "command",
+                            "opened": false,
+                            "picklvl": 1,
+                            "rx": 576,
+                            "ry": 468,
+                            "script": "vault-door.mjs",
+                            "spriteName": "vault-door",
+                            "type": "Doorway",
+                            "x": 21,
+                            "y": 5
+                        }
+                    ],
+                    "ox": 0,
+                    "oy": 0,
+                    "script": "",
+                    "tasks": {
+                    }
+                },
+                {
+                    "groups": [
+                    ],
+                    "name": "control-room",
+                    "objects": [
+                        {
+                            "animation": "alt-monitor-right-off",
+                            "blocksPath": false,
+                            "cover": 0,
+                            "float": true,
+                            "interactive": false,
+                            "mtx": 252,
+                            "mty": 308,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "monitors#2",
+                            "rx": 252,
+                            "ry": 308,
+                            "script": "",
+                            "spriteName": "vault-computer",
+                            "type": "DynamicObject",
+                            "x": 14,
+                            "y": 7
+                        },
+                        {
+                            "animation": "alt-monitor-right-off",
+                            "blocksPath": false,
+                            "cover": 0,
+                            "float": true,
+                            "interactive": false,
+                            "mtx": 360,
+                            "mty": 254,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "monitors#1",
+                            "rx": 360,
+                            "ry": 254,
+                            "script": "",
+                            "spriteName": "vault-computer",
+                            "type": "DynamicObject",
+                            "x": 14,
+                            "y": 4
+                        },
+                        {
+                            "animation": "monitor-left-off",
+                            "blocksPath": false,
+                            "cover": 10,
+                            "float": true,
+                            "mtx": 565,
+                            "mty": 272,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "terminal",
+                            "rx": 565,
+                            "ry": 272,
+                            "script": "junkville/stabletech-command-terminal.mjs",
+                            "spriteName": "vault-computer",
+                            "type": "DynamicObject",
+                            "x": 17,
+                            "y": 2
+                        },
+                        {
+                            "animation": "top-right",
+                            "cover": 30,
+                            "float": true,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                }
+                            },
+                            "mtx": 401,
+                            "mty": 425,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "desk#1",
+                            "rx": 401,
+                            "ry": 425,
+                            "script": "",
+                            "spriteName": "vault-desk",
+                            "type": "StorageObject",
+                            "x": 18,
+                            "y": 7,
+                            "zone": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1,
+                                    0
+                                ]
+                            ],
+                            "zoneBlocked": true
+                        },
+                        {
+                            "animation": "bottom-right",
+                            "cover": 30,
+                            "float": true,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                }
+                            },
+                            "mtx": 365,
+                            "mty": 325,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "desk#2",
+                            "rx": 365,
+                            "ry": 325,
+                            "script": "",
+                            "spriteName": "vault-desk",
+                            "type": "StorageObject",
+                            "x": 15,
+                            "y": 5,
+                            "zone": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    0,
+                                    -1
+                                ]
+                            ],
+                            "zoneBlocked": true
+                        }
+                    ],
+                    "ox": 14,
+                    "oy": 2,
+                    "script": "",
+                    "tasks": {
+                    },
+                    "zone": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            1,
+                            0
+                        ],
+                        [
+                            2,
+                            0
+                        ],
+                        [
+                            3,
+                            0
+                        ],
+                        [
+                            4,
+                            0
+                        ],
+                        [
+                            5,
+                            0
+                        ],
+                        [
+                            6,
+                            0
+                        ],
+                        [
+                            7,
+                            0
+                        ],
+                        [
+                            7,
+                            1
+                        ],
+                        [
+                            7,
+                            3
+                        ],
+                        [
+                            7,
+                            4
+                        ],
+                        [
+                            7,
+                            5
+                        ],
+                        [
+                            7,
+                            6
+                        ],
+                        [
+                            0,
+                            7
+                        ],
+                        [
+                            1,
+                            7
+                        ],
+                        [
+                            3,
+                            7
+                        ],
+                        [
+                            2,
+                            7
+                        ],
+                        [
+                            4,
+                            7
+                        ],
+                        [
+                            5,
+                            7
+                        ],
+                        [
+                            6,
+                            7
+                        ],
+                        [
+                            7,
+                            7
+                        ],
+                        [
+                            0,
+                            6
+                        ],
+                        [
+                            0,
+                            5
+                        ],
+                        [
+                            0,
+                            4
+                        ],
+                        [
+                            0,
+                            3
+                        ],
+                        [
+                            0,
+                            2
+                        ],
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            1,
+                            1
+                        ],
+                        [
+                            2,
+                            1
+                        ],
+                        [
+                            3,
+                            1
+                        ],
+                        [
+                            4,
+                            1
+                        ],
+                        [
+                            5,
+                            1
+                        ],
+                        [
+                            6,
+                            1
+                        ],
+                        [
+                            7,
+                            2
+                        ],
+                        [
+                            6,
+                            2
+                        ],
+                        [
+                            5,
+                            2
+                        ],
+                        [
+                            4,
+                            2
+                        ],
+                        [
+                            2,
+                            2
+                        ],
+                        [
+                            3,
+                            2
+                        ],
+                        [
+                            1,
+                            2
+                        ],
+                        [
+                            2,
+                            3
+                        ],
+                        [
+                            1,
+                            3
+                        ],
+                        [
+                            1,
+                            4
+                        ],
+                        [
+                            1,
+                            5
+                        ],
+                        [
+                            1,
+                            6
+                        ],
+                        [
+                            2,
+                            6
+                        ],
+                        [
+                            2,
+                            5
+                        ],
+                        [
+                            2,
+                            4
+                        ],
+                        [
+                            3,
+                            3
+                        ],
+                        [
+                            3,
+                            4
+                        ],
+                        [
+                            3,
+                            5
+                        ],
+                        [
+                            3,
+                            6
+                        ],
+                        [
+                            4,
+                            6
+                        ],
+                        [
+                            5,
+                            6
+                        ],
+                        [
+                            6,
+                            6
+                        ],
+                        [
+                            6,
+                            5
+                        ],
+                        [
+                            6,
+                            3
+                        ],
+                        [
+                            5,
+                            4
+                        ],
+                        [
+                            6,
+                            4
+                        ],
+                        [
+                            5,
+                            3
+                        ],
+                        [
+                            4,
+                            3
+                        ],
+                        [
+                            4,
+                            5
+                        ],
+                        [
+                            4,
+                            4
+                        ],
+                        [
+                            5,
+                            5
+                        ]
+                    ],
+                    "zoneBlocked": false
+                },
+                {
+                    "groups": [
+                    ],
+                    "name": "storage-room",
+                    "objects": [
+                        {
+                            "animation": "A-1",
+                            "cover": 25,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                    {
+                                        "animation": "misc",
+                                        "blocksPath": false,
+                                        "float": false,
+                                        "itemType": "celestial-device-blueprints",
+                                        "mtx": 0,
+                                        "mty": 0,
+                                        "nextX": 0,
+                                        "nextY": 0,
+                                        "objectName": "celestial-device-blueprints",
+                                        "quantity": 1,
+                                        "rx": 0,
+                                        "ry": 0,
+                                        "spriteName": "items",
+                                        "useMode": "",
+                                        "x": -1,
+                                        "y": -1
+                                    }
+                                ],
+                                "slots": {
+                                }
+                            },
+                            "mtx": -1008,
+                            "mty": 576,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "crates#1",
+                            "rx": -1008,
+                            "ry": 576,
+                            "script": "",
+                            "spriteName": "crates",
+                            "type": "StorageObject",
+                            "x": 2,
+                            "y": 30
+                        },
+                        {
+                            "animation": "A-3",
+                            "cover": 35,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                }
+                            },
+                            "mtx": -900,
+                            "mty": 630,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "crates#2",
+                            "rx": -900,
+                            "ry": 630,
+                            "script": "",
+                            "spriteName": "crates",
+                            "type": "StorageObject",
+                            "x": 5,
+                            "y": 30
+                        },
+                        {
+                            "animation": "A-2",
+                            "cover": 30,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                }
+                            },
+                            "mtx": -1080,
+                            "mty": 612,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "crates#3",
+                            "rx": -1080,
+                            "ry": 612,
+                            "script": "",
+                            "spriteName": "crates",
+                            "type": "StorageObject",
+                            "x": 2,
+                            "y": 32
+                        },
+                        {
+                            "animation": "A-3",
+                            "cover": 35,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                }
+                            },
+                            "mtx": -792,
+                            "mty": 684,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "crates#4",
+                            "rx": -792,
+                            "ry": 684,
+                            "script": "",
+                            "spriteName": "crates",
+                            "type": "StorageObject",
+                            "x": 8,
+                            "y": 30
+                        },
+                        {
+                            "animation": "A-2",
+                            "cover": 30,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                }
+                            },
+                            "mtx": -936,
+                            "mty": 612,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "crates#5",
+                            "rx": -936,
+                            "ry": 612,
+                            "script": "",
+                            "spriteName": "crates",
+                            "type": "StorageObject",
+                            "x": 4,
+                            "y": 30
+                        },
+                        {
+                            "animation": "A-3",
+                            "cover": 35,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                }
+                            },
+                            "mtx": -1116,
+                            "mty": 846,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "crates#6",
+                            "rx": -1116,
+                            "ry": 846,
+                            "script": "",
+                            "spriteName": "crates",
+                            "type": "StorageObject",
+                            "x": 8,
+                            "y": 39
+                        },
+                        {
+                            "animation": "A-1-alt",
+                            "cover": 25,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                }
+                            },
+                            "mtx": -1008,
+                            "mty": 684,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "crates#7",
+                            "rx": -1008,
+                            "ry": 684,
+                            "script": "",
+                            "spriteName": "crates",
+                            "type": "StorageObject",
+                            "x": 5,
+                            "y": 33
+                        },
+                        {
+                            "animation": "A-2",
+                            "cover": 30,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                }
+                            },
+                            "mtx": -1224,
+                            "mty": 684,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "crates#8",
+                            "rx": -1224,
+                            "ry": 684,
+                            "script": "",
+                            "spriteName": "crates",
+                            "type": "StorageObject",
+                            "x": 2,
+                            "y": 36
+                        }
+                    ],
+                    "ox": 0,
+                    "oy": 0,
+                    "script": "",
+                    "tasks": {
+                    },
+                    "zone": [
+                        [
+                            9,
+                            30
+                        ],
+                        [
+                            9,
+                            31
+                        ],
+                        [
+                            9,
+                            32
+                        ],
+                        [
+                            9,
+                            34
+                        ],
+                        [
+                            9,
+                            33
+                        ],
+                        [
+                            9,
+                            35
+                        ],
+                        [
+                            9,
+                            36
+                        ],
+                        [
+                            9,
+                            37
+                        ],
+                        [
+                            9,
+                            38
+                        ],
+                        [
+                            9,
+                            39
+                        ],
+                        [
+                            8,
+                            39
+                        ],
+                        [
+                            7,
+                            39
+                        ],
+                        [
+                            6,
+                            39
+                        ],
+                        [
+                            5,
+                            39
+                        ],
+                        [
+                            4,
+                            39
+                        ],
+                        [
+                            3,
+                            39
+                        ],
+                        [
+                            2,
+                            39
+                        ],
+                        [
+                            2,
+                            37
+                        ],
+                        [
+                            2,
+                            38
+                        ],
+                        [
+                            2,
+                            36
+                        ],
+                        [
+                            2,
+                            35
+                        ],
+                        [
+                            2,
+                            34
+                        ],
+                        [
+                            2,
+                            32
+                        ],
+                        [
+                            2,
+                            33
+                        ],
+                        [
+                            2,
+                            31
+                        ],
+                        [
+                            2,
+                            30
+                        ],
+                        [
+                            3,
+                            30
+                        ],
+                        [
+                            4,
+                            30
+                        ],
+                        [
+                            5,
+                            30
+                        ],
+                        [
+                            6,
+                            30
+                        ],
+                        [
+                            7,
+                            30
+                        ],
+                        [
+                            8,
+                            30
+                        ],
+                        [
+                            8,
+                            31
+                        ],
+                        [
+                            8,
+                            32
+                        ],
+                        [
+                            8,
+                            33
+                        ],
+                        [
+                            8,
+                            34
+                        ],
+                        [
+                            8,
+                            35
+                        ],
+                        [
+                            8,
+                            36
+                        ],
+                        [
+                            8,
+                            37
+                        ],
+                        [
+                            8,
+                            38
+                        ],
+                        [
+                            7,
+                            38
+                        ],
+                        [
+                            6,
+                            38
+                        ],
+                        [
+                            5,
+                            38
+                        ],
+                        [
+                            4,
+                            38
+                        ],
+                        [
+                            3,
+                            38
+                        ],
+                        [
+                            3,
+                            37
+                        ],
+                        [
+                            3,
+                            36
+                        ],
+                        [
+                            3,
+                            35
+                        ],
+                        [
+                            3,
+                            34
+                        ],
+                        [
+                            3,
+                            33
+                        ],
+                        [
+                            3,
+                            32
+                        ],
+                        [
+                            3,
+                            31
+                        ],
+                        [
+                            4,
+                            31
+                        ],
+                        [
+                            5,
+                            31
+                        ],
+                        [
+                            6,
+                            31
+                        ],
+                        [
+                            7,
+                            31
+                        ],
+                        [
+                            7,
+                            32
+                        ],
+                        [
+                            7,
+                            33
+                        ],
+                        [
+                            7,
+                            34
+                        ],
+                        [
+                            7,
+                            35
+                        ],
+                        [
+                            6,
+                            36
+                        ],
+                        [
+                            7,
+                            37
+                        ],
+                        [
+                            7,
+                            36
+                        ],
+                        [
+                            6,
+                            37
+                        ],
+                        [
+                            5,
+                            37
+                        ],
+                        [
+                            4,
+                            37
+                        ],
+                        [
+                            4,
+                            36
+                        ],
+                        [
+                            5,
+                            36
+                        ],
+                        [
+                            5,
+                            35
+                        ],
+                        [
+                            4,
+                            35
+                        ],
+                        [
+                            4,
+                            34
+                        ],
+                        [
+                            4,
+                            33
+                        ],
+                        [
+                            4,
+                            32
+                        ],
+                        [
+                            5,
+                            32
+                        ],
+                        [
+                            6,
+                            32
+                        ],
+                        [
+                            6,
+                            33
+                        ],
+                        [
+                            5,
+                            33
+                        ],
+                        [
+                            5,
+                            34
+                        ],
+                        [
+                            6,
+                            34
+                        ],
+                        [
+                            6,
+                            35
+                        ]
+                    ],
+                    "zoneBlocked": false
+                },
+                {
+                    "groups": [
+                    ],
+                    "name": "generator-room",
+                    "objects": [
+                        {
+                            "animation": "idle-bottom",
+                            "float": true,
+                            "mtx": 624,
+                            "mty": 1495,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "generator",
+                            "rx": 624,
+                            "ry": 1495,
+                            "script": "junkville/stabletech-generator.mjs",
+                            "spriteName": "generator",
+                            "type": "DynamicObject",
+                            "x": 52,
+                            "y": 33,
+                            "zone": [
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1,
+                                    0
+                                ],
+                                [
+                                    2,
+                                    0
+                                ],
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    2,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ]
+                            ],
+                            "zoneBlocked": true
+                        },
+                        {
+                            "animation": "monitor-left-on",
+                            "blocksPath": false,
+                            "cover": 10,
+                            "float": true,
+                            "mtx": 853,
+                            "mty": 1424,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "terminal",
+                            "rx": 853,
+                            "ry": 1424,
+                            "script": "junkville/stabletech-command-terminal.mjs",
+                            "spriteName": "vault-computer",
+                            "type": "DynamicObject",
+                            "x": 53,
+                            "y": 30
+                        }
+                    ],
+                    "ox": 50,
+                    "oy": 30,
+                    "script": "",
+                    "tasks": {
+                    }
+                },
+                {
+                    "groups": [
+                    ],
+                    "name": "tools-room",
+                    "objects": [
+                        {
+                            "animation": "A-3",
+                            "cover": 35,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                }
+                            },
+                            "mtx": 216,
+                            "mty": 1368,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "crates#1",
+                            "rx": 216,
+                            "ry": 1368,
+                            "script": "",
+                            "spriteName": "crates",
+                            "type": "StorageObject",
+                            "x": 41,
+                            "y": 35
+                        },
+                        {
+                            "animation": "A-2",
+                            "cover": 35,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                }
+                            },
+                            "mtx": 252,
+                            "mty": 1386,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "crates#2",
+                            "rx": 252,
+                            "ry": 1386,
+                            "script": "",
+                            "spriteName": "crates",
+                            "type": "StorageObject",
+                            "x": 42,
+                            "y": 35
+                        }
+                    ],
+                    "ox": 0,
+                    "oy": 0,
+                    "script": "",
+                    "tasks": {
+                    }
+                },
+                {
+                    "groups": [
+                    ],
+                    "name": "security-room",
+                    "objects": [
+                        {
+                            ">": 8,
+                            "animation": "idle-down",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "mr-hoofy-sentinel",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": 1188,
+                            "mty": 729,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "sentinel#1",
+                            "rx": 1188,
+                            "ry": 729,
+                            "script": "junkville/stabletech-sentinel.mjs",
+                            "spriteName": "mrhoofy",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 37,
+                            "y": 4
+                        },
+                        {
+                            ">": 2,
+                            "animation": "idle-left",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "mr-hoofy-sentinel",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": 1332,
+                            "mty": 801,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "sentinel#2",
+                            "rx": 1332,
+                            "ry": 801,
+                            "script": "junkville/stabletech-sentinel.mjs",
+                            "spriteName": "mrhoofy",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 41,
+                            "y": 4
+                        },
+                        {
+                            ">": 1,
+                            "animation": "idle-up",
+                            "ap": 0,
+                            "buffs": [
+                            ],
+                            "charsheet": "mr-hoofy-sentinel",
+                            "currentPath": [
+                            ],
+                            "enemyFlag": 0,
+                            "float": false,
+                            "inventory": {
+                                "items": [
+                                ],
+                                "slots": {
+                                    "use-1": {
+                                        "hasItem": false,
+                                        "slotType": "any"
+                                    }
+                                }
+                            },
+                            "moveMode": "walking",
+                            "mtx": 1224,
+                            "mty": 891,
+                            "nextX": 0,
+                            "nextY": 0,
+                            "objectName": "sentinel#3",
+                            "rx": 1224,
+                            "ry": 891,
+                            "script": "junkville/stabletech-sentinel.mjs",
+                            "spriteName": "mrhoofy",
+                            "type": "Character",
+                            "uniq": false,
+                            "x": 42,
+                            "y": 8
+                        }
+                    ],
+                    "ox": 35,
+                    "oy": 2,
+                    "script": "",
+                    "tasks": {
+                    }
+                }
+            ],
+            "objects": [
+                {
+                    "animation": "A-down",
+                    "cover": 10,
+                    "float": true,
+                    "mtx": -270,
+                    "mty": 997,
+                    "nextX": 0,
+                    "nextY": 0,
+                    "objectName": "stairs",
+                    "rx": -270,
+                    "ry": 997,
+                    "script": "junkville/stabletech-stairs.mjs",
+                    "spriteName": "vault-stairs",
+                    "type": "DynamicObject",
+                    "x": 27,
+                    "y": 32,
+                    "zone": [
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            0,
+                            0
+                        ]
+                    ],
+                    "zoneBlocked": true
+                }
+            ],
+            "ox": 0,
+            "oy": 0,
+            "tasks": {
+            },
+            "useAmbientLight": true,
+            "useDaylight": true
         },
         "junkville-underground": {
             "ambientColor": [

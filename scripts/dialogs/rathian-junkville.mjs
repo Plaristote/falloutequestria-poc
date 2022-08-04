@@ -1,3 +1,5 @@
+import {isFacilityQuestAvailable} from "../quests/junkvilleStabletechFacility.mjs";
+
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
@@ -22,9 +24,9 @@ class Dialog {
     }
     return this.dialog.t("entry");
   }
-  
+
   isDeviceQuestAvailable() {
-    return true; // TODO
+    return isFacilityQuestAvailable();
   }
 
   hasTalkedAboutDevice() {
@@ -48,6 +50,12 @@ class Dialog {
       return this.dialog.t("about-celestial-device-intro-alt");
     this.dialog.npc.setVariable("talked-about-device", true);
     return this.dialog.t("about-celestial-device-intro");
+  }
+
+  goToStabletechFacility() {
+    this.dialog.npc.setScript("rathian/stabletech-factory-quest.mjs");
+    this.dialog.npc.inventory.addItemOfType("stabletech-facility-key");
+    game.setVariable("rathianGoingToDumps", 1);
   }
 }
 
