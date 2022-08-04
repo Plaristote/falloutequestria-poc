@@ -1,0 +1,102 @@
+{
+    "answers": {
+        "ask-security-report": {
+            "hook": "",
+            "state": "security-report",
+            "text": "ask-security-report"
+        },
+        "ask-unlock-storage": {
+            "hook": "tryToUnlockStorage",
+            "text": "ask-unlock-storage"
+        },
+        "back": {
+            "hook": "",
+            "state": "entry",
+            "text": "back",
+            "textHook": ""
+        },
+        "disconnect": {
+            "hook": "",
+            "state": "",
+            "text": "disconnect"
+        },
+        "hack-terminal": {
+            "hook": "hackTerminal",
+            "state": "",
+            "text": "hack-terminal"
+        },
+        "terminal-locked-curse": {
+            "text": "terminal-locked-curse"
+        },
+        "toggle-security": {
+            "hook": "toggleSecurity",
+            "state": "",
+            "text": "security-disable",
+            "textHook": "securityToggleText"
+        }
+    },
+    "entryPoint": "door-broken",
+    "states": {
+        "door-broken": {
+            "answers": [
+                "back",
+                "disconnect"
+            ],
+            "text": "door-broken"
+        },
+        "door-opened": {
+            "answers": [
+                "back",
+                "disconnect"
+            ],
+            "text": "door-opened"
+        },
+        "entry": {
+            "answers": [
+                "ask-unlock-storage",
+                "ask-security-report",
+                "disconnect"
+            ],
+            "text": "entry"
+        },
+        "hack-failed": {
+            "answers": [
+                "back",
+                "disconnect"
+            ],
+            "text": "hack-failed"
+        },
+        "needs-admin-access": {
+            "answers": [
+                "hack-terminal",
+                "back"
+            ],
+            "text": "needs-admin-access"
+        },
+        "power-outage": {
+            "answers": [
+            ],
+            "text": "power-outage"
+        },
+        "security-report": {
+            "answers": [
+                "toggle-security",
+                "back"
+            ],
+            "hook": "securityReport",
+            "text": "security-on"
+        },
+        "terminal-locked": {
+            "answers": [
+                "terminal-locked-curse"
+            ],
+            "text": "terminal-locked"
+        },
+        "terminal-unlocked": {
+            "answers": [
+                "back"
+            ],
+            "text": "terminal-unlocked"
+        }
+    }
+}
