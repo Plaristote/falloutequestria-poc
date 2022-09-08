@@ -1,0 +1,27 @@
+{
+    "inspection": {
+        "armed": "C'est active !",
+        "character": "Tu vois {{target}}.",
+        "character-dead-female": "Elle est morte.",
+        "character-dead-male": "Il est mort.",
+        "character-female": "Tu vois {{target}}.",
+        "character-male": "Tu vois {{target}}.",
+        "character-state-female": "Elle a l'air {{state}}.",
+        "character-state-male": "Il a l'air {{state}}.",
+        "character-states": {
+            "fine": "blessé",
+            "low": "gravement blessé",
+            "max": "en forme",
+            "middle": "assez amoché",
+            "min": "d'agoniser"
+        },
+        "disarmed": "C'est desarme.",
+        "item": "Tu vois {{item}}.",
+	"off": "Ça ne fonctionne pas.",
+	"on": "Ça fonctionne.",
+	"stable-103": {
+          "terminal-disabled": "C'est éteint... curieux. On dirait qu'ils ne veulent pas que tu recule tout de suite."
+	},
+        "trap": "Tu vois un piege."
+    }
+}

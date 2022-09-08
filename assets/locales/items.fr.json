@@ -1,0 +1,43 @@
+{
+    "use-modes": {
+        "hit": "Frapper",
+        "reload": "Recharger",
+        "shoot": "Tirer",
+        "throw": "Lancer",
+        "unload": "Décharger",
+        "use": "Utiliser"
+    },
+    "item-descriptions": {
+    },
+    "item-slots": {
+        "armor": "Armure",
+        "saddle": "Selle",
+        "use-1": "Utiliser",
+        "use-2": "Utiliser"
+    },
+    "items": {
+        "dynamite": "Dynamite",
+        "health-potion": "Potion de vie",
+        "melee-bucking": "Ruade",
+        "melee-hoofercut": "Coup de sabot",
+	"stable-suit": "Uniforme",
+        "trialStartKey": "Clef rouillée",
+	"trialKey": "Clef de la caverne des épreuves",
+	"pickaxe": "Pioche",
+	"book": "Livre",
+	"skill-book-medicine": "Manuel de premiers secours",
+        "skill-book-outdoorsman": "Guide de survie",
+        "skill-book-smallGuns": "Magazine de flingues",
+	"bottlecaps": "Capsules",
+	"tuxedo": "Costume",
+        "sparkle-cola": "Sparkle Cola",
+	"metal-armor": "Armure de métal",
+	"gemstone": "Pierres précieuses",
+	"frag-grenade": "Grenade",
+	"apple-whiskey": "Whiskey de pomme",
+	"apple-cider": "Cidre",
+        "food-butter": "Beurre",
+        "food-bread": "Baguette",
+        "food-croissant": "Croissant"
+    }
+}

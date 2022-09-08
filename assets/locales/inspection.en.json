@@ -1,0 +1,27 @@
+{
+    "inspection": {
+        "armed": "It's armed !",
+        "character": "You see {{target}}.",
+        "character-dead-female": "She's dead.",
+        "character-dead-male": "He's dead.",
+        "character-female": "You see {{target}}.",
+        "character-male": "You see {{target}}.",
+        "character-state-female": "She looks {{state}}.",
+        "character-state-male": "He looks {{state}}.",
+        "character-states": {
+            "fine": "slightly hurt",
+            "low": "badly wounded",
+            "max": "unharmed",
+            "middle": "rough",
+            "min": "almost dead"
+        },
+        "disarmed": "It's disarmed.",
+        "item": "You see {{item}}.",
+        "off": "It is off.",
+        "on": "It is on.",
+        "stable-103": {
+            "terminal-disabled": "It's off... weird. It's like they don't want you to chicken out."
+        },
+        "trap": "You see a trap."
+    }
+}
