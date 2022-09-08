@@ -1,0 +1,231 @@
+{
+    "answers": {
+        "": {
+            "hook": "",
+            "state": ""
+        },
+        "about-leave": {
+            "state": "reaction-told-to-stay",
+            "text": "about-leave"
+        },
+        "about-stable": {
+            "text": "about-stable"
+        },
+        "about-stable-discourage": {
+            "state": "ask-to-join",
+            "text": "about-stable-discourage"
+        },
+        "about-stable-encourage": {
+            "state": "ask-to-join",
+            "text": "about-stable-encourage"
+        },
+        "adventure-fable": {
+            "state": "reaction-adventure-fable",
+            "text": "adventure-fable"
+        },
+        "adventure-lie": {
+            "state": "reaction-adventure-lie",
+            "text": "adventure-lie"
+        },
+        "adventure-stable": {
+            "hook": "",
+            "state": "about-stable",
+            "text": "adventure-stable"
+        },
+        "greet-ask-about": {
+            "hook": "",
+            "state": "about",
+            "text": "greet-ask-about"
+        },
+        "greet-hostile": {
+            "hook": "lowerReputation",
+            "state": "hostile-response",
+            "text": "greet-hostile"
+        },
+        "greet-with-name": {
+            "hook": "",
+            "state": "introducing",
+            "text": "greet-with-name"
+        },
+        "hostile-give-up": {
+            "hook": "",
+            "text": "hostile-give-up"
+        },
+        "hostile-yell": {
+            "hook": "lowerReputation",
+            "text": "hostile-yell"
+        },
+        "introducing-evasive": {
+            "state": "about",
+            "text": "introducing-evasive"
+        },
+        "introducing-exit": {
+            "hook": "",
+            "state": "",
+            "text": "introducing-exit"
+        },
+        "introducing-hostile-exit": {
+            "hook": "lowerReputation",
+            "state": "hostile-response",
+            "text": "introducing-hostile-exit"
+        },
+        "join-accept": {
+            "state": "joined",
+            "text": "join-accept"
+        },
+        "join-ask-about-parents": {
+            "state": "join-parents",
+            "text": "join-ask-about-parents"
+        },
+        "join-hostile": {
+            "state": "hostile-response",
+            "text": "join-hostile"
+        },
+        "join-reject": {
+            "state": "reaction-told-to-stay",
+            "text": "join-reject"
+        },
+        "parents-accept": {
+            "state": "joined",
+            "text": "parents-accept"
+        },
+        "parents-accept-sly": {
+            "state": "joined",
+            "text": "parents-accept-sly"
+        },
+        "parents-reject": {
+            "state": "reaction-told-to-stay",
+            "text": "parents-reject"
+        },
+        "parents-reject-sly": {
+            "state": "",
+            "text": "parents-reject-sly"
+        },
+        "tell-stuck-at-home": {
+            "state": "reaction-told-to-stay",
+            "text": "tell-stuck-at-home"
+        },
+        "tell-stuck-at-home-alt": {
+            "state": "about-adventure",
+            "text": "tell-stuck-at-home-alt"
+        }
+    },
+    "entryPoint": "about",
+    "states": {
+        "about": {
+            "answers": [
+                "tell-stuck-at-home-alt",
+                "tell-stuck-at-home",
+                "about-leave"
+            ],
+            "hook": "",
+            "mood": "neutral",
+            "text": "about"
+        },
+        "about-adventure": {
+            "answers": [
+                "adventure-stable",
+                "adventure-fable",
+                "adventure-lie"
+            ],
+            "hook": "",
+            "mood": "smile",
+            "text": "about-adventure"
+        },
+        "about-stable": {
+            "answers": [
+                "about-stable-encourage",
+                "about-stable-discourage"
+            ],
+            "hook": "",
+            "mood": "happy",
+            "text": "about-stable"
+        },
+        "ask-to-join": {
+            "answers": [
+                "join-accept",
+                "join-ask-about-parents",
+                "join-hostile",
+                "join-reject"
+            ],
+            "hook": "",
+            "mood": "smile",
+            "text": "ask-to-join"
+        },
+        "entry": {
+            "answers": [
+                "greet-with-name",
+                "greet-ask-about",
+                "greet-hostile"
+            ],
+            "hook": "",
+            "mood": "smile",
+            "text": "entry"
+        },
+        "hostile-response": {
+            "answers": [
+                "hostile-yell",
+                "hostile-give-up"
+            ],
+            "hook": "",
+            "mood": "angry",
+            "text": "hostile-response"
+        },
+        "introducing": {
+            "answers": [
+                "introducing-evasive",
+                "adventure-stable",
+                "introducing-hostile-exit",
+                "introducing-exit"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "introducing"
+        },
+        "join-parents": {
+            "answers": [
+                "parents-accept",
+                "parents-accept-sly",
+                "parents-reject",
+                "parents-reject-sly"
+            ],
+            "hook": "",
+            "mood": "cocky",
+            "text": "join-parents"
+        },
+        "joined": {
+            "answers": [
+            ],
+            "hook": "joinPlayer",
+            "text": "joined"
+        },
+        "reaction-adventure-fable": {
+            "answers": [
+                "introducing-evasive",
+                "adventure-stable",
+                "introducing-exit"
+            ],
+            "hook": "",
+            "mood": "happy",
+            "text": "reaction-adventure-fable"
+        },
+        "reaction-adventure-lie": {
+            "answers": [
+                "introducing-evasive",
+                "adventure-stable",
+                "adventure-fable",
+                "introducing-exit"
+            ],
+            "hook": "",
+            "mood": "cocky",
+            "text": "reaction-adventure-lie"
+        },
+        "reaction-told-to-stay": {
+            "answers": [
+            ],
+            "hook": "",
+            "mood": "neutral",
+            "text": "reaction-told-to-stay"
+        }
+    }
+}

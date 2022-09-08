@@ -1,10 +1,11 @@
-import {DialogHelper} from "./helpers.mjs";
-import {skillContest} from "../cmap/helpers/checks.mjs";
-import {requireQuest} from "../quests/helpers.mjs";
+import {DialogHelper} from "../helpers.mjs";
+import {skillContest} from "../../cmap/helpers/checks.mjs";
+import {requireQuest} from "../../quests/helpers.mjs";
 import {
   startUndergroundBattle,
   hasAltLeaderTakenOver
-} from "../quests/junkvilleNegociateWithDogs.mjs";
+} from "../../quests/junkvilleNegociateWithDogs.mjs";
+import {isHelpfulQuestAvailable} from "../../quests/junkville/findHelpful.mjs";
 
 class Dialog extends DialogHelper {
   constructor(dialog) {
@@ -32,12 +33,19 @@ class Dialog extends DialogHelper {
   
   jobs() {
     if (this.availableHauntedHeapQuest())
-      this.dialog.t("job-haunted-heap");
+      return this.dialog.t("job-haunted-heap");
+    if (isHelpfulQuestAvailable())
+      return this.dialog.t("job-find-helpful");
     return this.dialog.t("no-jobs");
   }
 
   acceptHauntedHeapQuest() {
     const object = requireQuest("junkvilleDumpsDisappeared");
+    object.setVariable("initBy", this.dialog.npc.objectName);
+  }
+
+  acceptFindHelpfulQuest() {
+    const object = requireQuest("junkville/findHelpful");
     object.setVariable("initBy", this.dialog.npc.objectName);
   }
   
@@ -193,8 +201,8 @@ class Dialog extends DialogHelper {
   }
 
   canGetBattleReward() {
-    const quest = requireQuest("junkvilleNegociateWithDogs");
-    if (quest.getScriptObject().isObjectiveCompleted("win-battle"))
+    const quest = game.quests.getQuest("junkvilleNegociateWithDogs");
+    if (quest && quest.getScriptObject().isObjectiveCompleted("win-battle"))
       return quest.getVariable("battleReward") > 0;
     return false;
   }

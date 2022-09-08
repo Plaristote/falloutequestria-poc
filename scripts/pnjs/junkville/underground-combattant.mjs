@@ -6,7 +6,7 @@ export class UndergroundCombattant extends CharacterBehaviour {
   }
 
   initialize() {
-    this.model.tasks.addTask("onIdle", 2525 * (1 + Math.random()));
+    this.model.tasks.addTask("onIdle", 2525 * (1 + Math.random()), 0);
   }
 
   get textBubbles() {
@@ -74,6 +74,7 @@ export class UndergroundCombattant extends CharacterBehaviour {
   }
 
   onIdle() {
+    console.log("UndergroundCombattant onIdle");
     if (!level.combat && this.model.actionQueue.isEmpty())
       this.headTowardsDog();
   }

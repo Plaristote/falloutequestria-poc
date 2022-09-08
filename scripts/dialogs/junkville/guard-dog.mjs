@@ -1,6 +1,7 @@
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
+    this.dialog.ambiance = "cavern";
     this.dialog.npc.setVariable("met", true);
   }
   

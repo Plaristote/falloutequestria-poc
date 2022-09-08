@@ -1,0 +1,58 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "state": ""
+        },
+        "ask-about-parts": {
+            "state": "about-parts",
+            "text": "ask-about-parts"
+        },
+        "explain-blueprints-response": {
+            "state": "about-blueprints",
+            "text": "explain-blueprints-response"
+        },
+        "found-blueprints": {
+            "state": "explain-blueprints",
+            "text": "found-blueprints"
+        },
+        "identified-blueprints": {
+            "availableHook": "canIdentifyBlueprints",
+            "state": "about-blueprints",
+            "text": "identified-blueprints"
+        },
+        "leave": {
+            "state": "",
+            "text": "leave"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-blueprints": {
+            "answers": [
+                "ask-about-parts",
+                "leave"
+            ],
+            "text": "about-blueprints"
+        },
+        "about-parts": {
+            "answers": [
+                "leave"
+            ],
+            "text": "about-parts"
+        },
+        "entry": {
+            "answers": [
+                "identified-blueprints",
+                "found-blueprints"
+            ],
+            "text": "entry"
+        },
+        "explain-blueprints": {
+            "answers": [
+                "explain-blueprints-response"
+            ],
+            "text": "explain-blueprints"
+        }
+    }
+}

@@ -1,18 +1,19 @@
-import {requireQuest} from "../quests/helpers.mjs";
+import {requireQuest} from "../../quests/helpers.mjs";
 import {
   isLookingForDisappearedPonies,
   onDisappearedPoniesFound,
   authorizeCaptiveRelease
-} from "../quests/junkvilleDumpsDisappeared.mjs";
+} from "../../quests/junkvilleDumpsDisappeared.mjs";
 import {
   startMediation,
   hasMediationStarted,
   mediationNeedsCaptiveRelease
-} from "../quests/junkvilleNegociateWithDogs.mjs";
+} from "../../quests/junkvilleNegociateWithDogs.mjs";
 
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
+    this.dialog.ambiance = "cavern";
     game.dataEngine.showReputation("diamond-dogs", true);
   }
 
@@ -88,6 +89,7 @@ class Dialog {
     if (script.isObjectiveCompleted("alt-leader-dead"))
       text += "<br>" + this.dialog.t("mediation-conclusion-alt-leader-death");
     script.model.completeObjective("peaceful-resolve");
+    this.dialog.mood = "smile";
     return text;
   }
 }

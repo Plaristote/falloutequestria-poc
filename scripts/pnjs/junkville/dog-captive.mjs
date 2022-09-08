@@ -8,7 +8,7 @@ function getQuest() {
 export class DogCaptive extends CharacterBehaviour {
   constructor(model) {
     super(model);
-    this.dialog = "junkville-dog-captive";
+    this.dialog = "junkville/dog-captive";
   }
 
   reachExitZone() {

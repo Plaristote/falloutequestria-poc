@@ -8,7 +8,7 @@ export class DogGuard extends PackMember {
   }
 
   get dialog() {
-    return !this.model.getVariable("met") ? "junkville-guard-dog" : null;
+    return !this.model.getVariable("met") ? "junkville/guard-dog" : null;
   }
 
   get speakOnDetection() {

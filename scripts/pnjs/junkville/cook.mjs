@@ -13,7 +13,11 @@ export class Cook extends CharacterBehaviour {
   get dialog() {
     if (this.model.tasks.hasTask("headTowardsBattle"))
       return ;
-    return "junkville-cook";
+    return "junkville/cook";
+  }
+
+  shouldBeAtJunkville() {
+    return true;
   }
 
   headTowardsBattle() {
@@ -28,6 +32,7 @@ export class Cook extends CharacterBehaviour {
           requireQuest("junkvilleNegociateWithDogs").completed = true;
           model.getScriptObject().onDied();
           level.deleteObject(model);
+          //game.uniqueCharacterStorage.saveCharacterFromCurrentLevel(model);
         }
       });
       this.model.actionQueue.start();

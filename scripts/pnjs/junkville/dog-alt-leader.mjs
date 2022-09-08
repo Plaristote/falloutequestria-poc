@@ -9,7 +9,7 @@ export class DogAltLeader extends PackMember {
 
   get dialog() {
     if (!internalPackIssueDone())
-      return "junkville-dog-alt-leader";
+      return "junkville/dog-alt-leader";
     return null;
   }
 
@@ -23,6 +23,7 @@ export class DogAltLeader extends PackMember {
   }
 
   onDied() {
+    super.onDied();
     requireQuest("junkvilleNegociateWithDogs").completeObjective("alt-leader-dead");
   }
 }

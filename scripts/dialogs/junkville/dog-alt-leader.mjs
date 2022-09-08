@@ -1,8 +1,10 @@
-import {requireQuest} from "../quests/helpers.mjs";
+import {requireQuest} from "../../quests/helpers.mjs";
 
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
+    this.dialog.ambiance = "cavern";
+    this.dialog.mood = "neutral";
     game.dataEngine.showReputation("diamond-dogs");
   }
 
@@ -20,6 +22,7 @@ class Dialog {
   }
 
   onConvinceError() {
+    this.dialog.mood = "angry";
     this.convinceFailureCount++;
     if (this.convinceFailureCount >= 2)
       return "hatred-convince-fail";
@@ -27,6 +30,7 @@ class Dialog {
   }
 
   onConvinced() {
+    this.diaog.mood = "neutral";
     requireQuest("junkvilleNegociateWithDogs").completeObjective("alt-leader-convinced");
     game.player.statistics.addExperience(100);
     game.appendToConsole(i18n.t("messages.xp-gain", {xp: 100}));

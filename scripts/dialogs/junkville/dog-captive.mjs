@@ -1,9 +1,11 @@
-import {requireQuest} from "../quests/helpers.mjs";
-import {captiveReleaseAuthorized} from "../quests/junkvilleDumpsDisappeared.mjs";
+import {requireQuest} from "../../quests/helpers.mjs";
+import {captiveReleaseAuthorized} from "../../quests/junkvilleDumpsDisappeared.mjs";
 
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
+    this.dialog.ambiance = "cavern";
+    this.dialog.mood = "sad";
   }
 
   addQuest() {
@@ -32,6 +34,7 @@ class Dialog {
   }
   
   onBreakout() {
+    this.dialog.mood = "angry";
     return "breakout-fail";
     return "breakout";
   }
@@ -39,7 +42,10 @@ class Dialog {
   dogsEradicated() {
     const questName = "junkvilleNegociateWithDogs";
     if (game.quests.hasQuest(questName))
+    {
+      this.dialog.mood = "smile";
       return requireQuest(questName).getScriptObject().isObjectiveCompleted("win-battle");
+    }
     return false;
   }
 }

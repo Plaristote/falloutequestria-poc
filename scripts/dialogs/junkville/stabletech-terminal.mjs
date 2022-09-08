@@ -1,4 +1,4 @@
-import {skillCheck} from "../cmap/helpers/checks.mjs";
+import {skillCheck} from "../../cmap/helpers/checks.mjs";
 
 function doorToggle(name, state) {
   const door = level.findObject(name);

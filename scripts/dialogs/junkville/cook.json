@@ -6,6 +6,12 @@
             "state": "",
             "textHook": ""
         },
+        "accept-find-helpful": {
+            "availableHook": "",
+            "hook": "acceptFindHelpfulQuest",
+            "state": "",
+            "text": "accept-find-helpful"
+        },
         "accept-haunting-heap": {
             "availableHook": "availableHauntedDumpQuest",
             "hook": "acceptHauntedHeapQuest",
@@ -349,10 +355,11 @@
         "jobs": {
             "answers": [
                 "accept-haunting-heap",
+                "accept-find-helpful",
                 "done-asking"
             ],
             "hook": "jobs",
-            "text": "job-haunted-heap"
+            "text": "job-find-helpful"
         },
         "menu": {
             "answers": [

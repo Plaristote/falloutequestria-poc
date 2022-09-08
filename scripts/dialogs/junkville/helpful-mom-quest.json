@@ -1,0 +1,188 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "hook": "",
+            "state": ""
+        },
+        "accept-payment": {
+            "hook": "",
+            "text": "accept-payment"
+        },
+        "accept-quest": {
+            "text": "accept-quest"
+        },
+        "ask-more-payment": {
+            "hook": "askMorePayment",
+            "text": "ask-more-payment"
+        },
+        "ask-payment": {
+            "state": "payment-asked",
+            "text": "ask-payment"
+        },
+        "demand-payment": {
+            "state": "payment-asked",
+            "text": "demand-payment"
+        },
+        "entry-explain": {
+            "availableHook": "canConvinceToExplain",
+            "hook": "",
+            "state": "explain-success",
+            "text": "entry-explain"
+        },
+        "entry-explain-wrong": {
+            "availableHook": "",
+            "hook": "nothingSaid",
+            "state": "explain-failure",
+            "text": "entry-explain-wrong"
+        },
+        "entry-leave": {
+            "hook": "nothingSaid",
+            "state": "",
+            "text": "entry-leave"
+        },
+        "explain-quest": {
+            "availableHook": "hasQuestFromRandy",
+            "state": "",
+            "text": "explain-quest"
+        },
+        "explanations-provoke": {
+            "hook": "lowerReputation",
+            "state": "angered-exit",
+            "text": "explanations-provoke"
+        },
+        "explanations-reject": {
+            "hook": "",
+            "state": "",
+            "text": "explanations-reject"
+        },
+        "explanations-where": {
+            "hook": "",
+            "state": "speculate-where",
+            "text": "explanations-where"
+        },
+        "go-hopeful": {
+            "state": "",
+            "text": "go-hopeful"
+        },
+        "half-accept-quest": {
+            "state": "",
+            "text": "half-accept-quest"
+        },
+        "refuse-payment": {
+            "text": "refuse-payment"
+        },
+        "refuse-quest": {
+            "hook": "",
+            "state": "",
+            "text": "refuse-quest"
+        }
+    },
+    "entryPoint": "accepted",
+    "states": {
+        "accepted": {
+            "answers": [
+                "go-hopeful",
+                "ask-payment",
+                "demand-payment"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "accepted"
+        },
+        "angered-exit": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "angered-exit"
+        },
+        "entry": {
+            "answers": [
+                "explain-quest",
+                "entry-explain",
+                "entry-explain-wrong",
+                "entry-leave"
+            ],
+            "mood": "sad",
+            "text": "entry"
+        },
+        "entry-alt": {
+            "answers": [
+                "go-hopeful",
+                "explanations-where",
+                "refuse-quest"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "entry-alt"
+        },
+        "explain-failure": {
+            "answers": [
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "explain-failure"
+        },
+        "explain-randy": {
+            "answers": [
+                "accept-quest",
+                "half-accept-quest",
+                "explanations-where",
+                "explanations-provoke",
+                "refuse-quest"
+            ],
+            "hook": "onExplain",
+            "mood": "",
+            "text": "explain-randy"
+        },
+        "explain-success": {
+            "answers": [
+                "accept-quest",
+                "half-accept-quest",
+                "explanations-where",
+                "explanations-provoke",
+                "explanations-reject",
+                "refuse-quest"
+            ],
+            "hook": "onExplain",
+            "mood": "",
+            "text": "explain-success"
+        },
+        "payment-asked": {
+            "answers": [
+                "accept-payment",
+                "ask-more-payment"
+            ],
+            "hook": "acceptedPayment1",
+            "mood": "",
+            "text": "payment-asked"
+        },
+        "payment-asked-more-failure": {
+            "answers": [
+                "accept-payment",
+                "refuse-payment"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "payment-asked-more-failure"
+        },
+        "payment-asked-more-success": {
+            "answers": [
+                "accept-payment"
+            ],
+            "hook": "acceptedPayment2",
+            "mood": "angry",
+            "text": "payment-asked-more-success"
+        },
+        "speculate-where": {
+            "answers": [
+                "half-accept-quest",
+                "accept-quest",
+                "refuse-quest"
+            ],
+            "hook": "",
+            "mood": "sad",
+            "text": "speculate-where"
+        }
+    }
+}

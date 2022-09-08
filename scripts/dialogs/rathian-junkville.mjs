@@ -55,7 +55,7 @@ class Dialog {
   goToStabletechFacility() {
     this.dialog.npc.setScript("rathian/stabletech-factory-quest.mjs");
     this.dialog.npc.inventory.addItemOfType("stabletech-facility-key");
-    game.setVariable("rathianGoingToDumps", 1);
+    game.quests.addQuest("junkvilleStabletechFacility");
   }
 }
 
