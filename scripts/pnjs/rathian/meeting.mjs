@@ -32,12 +32,17 @@ class Rathian extends CharacterBehaviour {
     this.model.tasks.removeTask("followPlayer");
   }
 
+  shouldBeAtJunkville() {
+    return true;
+  }
+
   insertedIntoZone(zoneName) {
     console.log("Rathian inserted into zone", level.name, zoneName);
     if (isDropOffLevel()) {
       console.log("Rathian dropping ovv");
       game.playerParty.removeCharacter(this.model);
       this.stopFollowingPlayer();
+      this.model.movementMode = "walking";
       this.model.tasks.addTask("talkOnArrival", 1000, 1);
       if (level.name === "junkville") {
         level.setVariable("rathianPrepared", true);
@@ -72,7 +77,7 @@ class Rathian extends CharacterBehaviour {
   removeRathian() {
     console.log("TRIGGER REMOVAL");
     if (this.talkedOnArrival)
-      level.deleteObject(this.model);
+      game.uniqueCharacterStorage.saveCharacterFromCurrentLevel(this.model);
     else
       this.model.tasks.addTask("removeRathian", 1500, 1);
   }

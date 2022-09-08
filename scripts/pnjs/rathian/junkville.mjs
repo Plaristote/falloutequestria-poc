@@ -5,6 +5,10 @@ class Rathian extends CharacterBehaviour {
     super(model);
   }
 
+  shouldBeAtJunkville() {
+    return true;
+  }
+
   isInWorkshop() {
     if (typeof level !== "undefined" && level.name === "junkville") {
       const zone = level.findGroup("smith").controlZone;

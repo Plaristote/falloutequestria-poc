@@ -19,9 +19,9 @@ export class UndergroundTrap {
         const character = game.playerParty.list[i];
         const damage = Math.min(getValueFromRange(12, 16), character.statistics.hitPoints - 1);
         const resistance = character.statistics.endurance;
-
         character.takeDamage(Math.max(0, damage - resistance), null);
         character.addBuff("ko");
+        game.appendToConsole(i18n.t("junkville.dumps-dog-hole-fell"));
       }
       game.switchToLevel("junkville-underground", "trap-entry");
     }

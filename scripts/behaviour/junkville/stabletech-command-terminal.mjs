@@ -4,7 +4,7 @@ export class StabletechCommandTerminal {
     this.sprite = "monitor-left";
     this.dialog = "junkville-stabletech-terminal";
   }
-  
+
   initialize() {
     if (this.model.path === "generator-room.terminal")
       this.enabled = true;

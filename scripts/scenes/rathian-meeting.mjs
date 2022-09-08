@@ -124,6 +124,7 @@ export class MeetingScene extends SceneManager {
       level.joinCombat(bandit);
       bandit.getScriptObject().combatTarget = i == 0 ? game.player : rathian;
     }
+    rathian.getScriptObject().combatTarget = this.bandits[1];
   }
 
   finalize() {

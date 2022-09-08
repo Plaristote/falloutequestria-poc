@@ -59,4 +59,12 @@ export class Generator {
       failure: this.onRepairFailure.bind(this, user)
     });
   }
+
+  onLook() {
+    let message = i18n.t("inspection.item", {target: this.model.displayName});
+
+    message += i18n.t(this.running ? "inspection.on" : "inspection.off");
+    game.appendToConsole(message);
+    return true;
+  }
 }

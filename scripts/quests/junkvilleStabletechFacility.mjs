@@ -1,12 +1,36 @@
 import {QuestHelper, requireQuest} from "./helpers.mjs";
 
 const questName = "junkvilleStabletechFacility";
+const rathianScript = "rathian/stabletech-factory-quest.mjs";
 
 function hasQuest() { return game.quests.hasQuest(questName); }
 function getQuest() { return game.quests.getQuest(questName); }
 
 export function isFacilityQuestAvailable() {
   return !hasQuest() || getQuest().getScriptObject().isObjectiveCompleted("enter-facility");
+}
+
+function ifRathianIsInvolved(callback) {
+  const rathian = game.uniqueCharacterStorage.getCharacter("rathian");
+  if (rathian && rathian.scriptName === rathianScript)
+    callback(rathian.getScriptObject());
+}
+
+const rathianPopPoints = {
+  "junkville-dumps":               { condition: "shouldPopAtDumps", position: [19,189] },
+  "junkville-stabletech-facility": { condition: "shouldPopAtFacility", position: [29,25] }
+};
+
+function tryToPopRathianInCurrentLevel() {
+  const popPoint = rathianPopPoints[level.name];
+  if (popPoint) {
+    ifRathianIsInvolved(rathian => {
+      if (rathian[popPoint.condition]()) {
+        game.uniqueCharacterStorage.loadCharacterToCurrentLevel("rathian", ...popPoint.position);
+        rathian.state++;
+      }
+    });
+  }
 }
 
 export class JunkvilleStabletechFacility extends QuestHelper {
@@ -42,5 +66,15 @@ export class JunkvilleStabletechFacility extends QuestHelper {
       });
     }
     return objectives;
+  }
+
+  loadJunkvilleDumps() {
+    tryToPopRathianInCurrentLevel();
+  }
+
+  loadJunkvilleFacility() {
+    const quest = requireQuest(questName);
+    quest.completeObjective("enter-facility");
+    tryToPopRathianInCurrentLevel();
   }
 }

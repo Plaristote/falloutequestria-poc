@@ -3,10 +3,11 @@ import {createRathianInstance, getRathian} from "../pnjs/rathian/template.mjs";
 
 export class JunkvilleDumps extends LevelBase {
   onLoaded() {
-    if (game.getVariable("rathianGoingToDumps") === 2) {
-      const rathian = createRathianInstance("stabletech-factory-quest", 19, 189);
-      game.unsetVariable("rathianGoingToDumps");
-      rathian.getScriptObject().state = 1;
-    }
+    this.prepareRathianForFactoryQuest();
+  }
+
+  prepareRathianForFactoryQuest() {
+    const quest = game.quests.getQuest("junkvilleStabletechFacility");
+    if (quest) quest.getScriptObject().loadJunkvilleDumps();
   }
 }

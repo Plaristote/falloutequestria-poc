@@ -13,13 +13,14 @@ export class JunkvilleStabletechFacility extends LevelBase {
 
   onLoaded() {
     const quest = requireQuest("junkvilleStabletechFacility");
+    quest.getScriptObject().loadJunkvilleFacility();
+  }
 
-    if (game.getVariable("rathianGoingToStabletechFacility") === 1) {
-      const rathian = createRathianInstance("stabletech-factory-quest", 29, 25);
-      game.unsetVariable("rathianGoingToStabletechFacility");
-      rathian.getScriptObject().state = 4;
-    }
-    quest.completeObjective("enter-facility");
+  onZoneEntered(zoneName, object) {
+    if (object === game.player && zoneName === "stock-room")
+      requireQuest("junkvilleStabletechFacility").completeObjective("explore-facility");
+    if (object.objectName === "Rathian#1")
+      object.getScriptObject().onZoneEntered(level.getTileZone(zoneName));
   }
 
   setSecurityEnabled(value) {

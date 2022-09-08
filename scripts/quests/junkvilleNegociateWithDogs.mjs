@@ -69,23 +69,24 @@ export function startUndergroundBattle() {
 }
 
 export function initializeBattle() {
+  const cook = game.uniqueCharacterStorage.getCharacter("junkville-cook");
   let junkvilleNpcs;
   game.diplomacy.setAsEnemy(true, "junkville", "diamond-dogs");
   game.diplomacy.setAsEnemy(true, "player", "diamond-dogs");
   junkvilleNpcs = game.createNpcGroup({
     name: "junkville",
     members: [
-      {
-        sheet: "junkville-cook",
-        script: "junkville/cook-underground-combat.mjs",
-        items: []
-      },
       junkvilleCombattantTemplate(1),
       junkvilleCombattantTemplate(2),
       junkvilleCombattantTemplate(3),
       junkvilleCombattantTemplate(4)
     ]
   });
+  if (cook) {
+    game.uniqueCharacterStorage.loadCharacterToCurrentLevel("junkville-cook", 0, 0);
+    junkvilleNpcs.addCharacter(cook);
+    cook.setScript("junkville/cook-underground-combat.mjs");
+  }
   junkvilleNpcs.insertIntoZone(level, "battle-entry");
   if (level.getScriptObject().liveCaptives.length > 0)
     onDisappearedPoniesFound();
@@ -219,6 +220,10 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
   completeObjective(objective) {
     super.completeObjective(objective);
     switch (objective) {
+      case "safe":
+        game.appendToConsole(i18n.t("junkville.escape-from-dogs-success"));
+        game.player.statistics.addExperience(100);
+        break ;
       case "peaceful-resolve":
       case "win-battle":
         this.model.completed = true;

@@ -49,6 +49,7 @@ class Level extends LevelBase {
       name: "Rathian",
       members: [rathianTemplate]
     });
+    this.rathian.list[0].isUnique = true;
     this.scene = new MeetingScene(this, this.bandits, this.rathian);
     level.tasks.addTask("startAmbush", 1, 1);
   }
@@ -60,6 +61,7 @@ class Level extends LevelBase {
   onZoneExited(zone, object) {
     if (object === game.player
       && zone === "escape-zone"
+      && this.scene
       && this.scene.active) {
       this.scene.playerEscaping();
     }
