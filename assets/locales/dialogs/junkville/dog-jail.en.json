@@ -1,0 +1,9 @@
+{
+  "dialogs": {
+        "junkville/dog-jail": {
+            "accept": "Yeah, sure, what am I even doing here ? Let's go back to the pen !",
+            "entry": "What are you doing here, pony ? Back to the pen you go !",
+            "start-combat": "I'm not going back there !"
+        }
+  }
+}
