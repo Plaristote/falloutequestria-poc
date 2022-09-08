@@ -290,7 +290,7 @@
         "scriptName": "turret-gun.mjs",
         "sprite": "misc",
         "type": "weapon",
-        "value": 0,
+        "value": 0
     },
     "trialKey": {
         "icon": "trial-key.png",
