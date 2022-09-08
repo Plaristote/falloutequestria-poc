@@ -1,4 +1,6 @@
 {
+    "characterStorage": {
+    },
     "characters": {
     },
     "diplomacy": {
@@ -58,7 +60,7 @@
             }
         }
     },
-    "level": "junkville-stabletech-facility",
+    "level": "junkville",
     "levels": {
         "city-sample": {
             "ambientColor": [
@@ -12110,7 +12112,7 @@
                             "objectName": "copain-mom",
                             "rx": -108,
                             "ry": 297,
-                            "script": "",
+                            "script": "junkville/helpful-mom.mjs",
                             "spriteName": "pony-bbe534a9-derpy-cd5d54a9-static-pony-eyes-overlay-unicorn-armor-blank-equip-blank",
                             "type": "Character",
                             "uniq": false,
@@ -12158,7 +12160,7 @@
                             "objectName": "copain-dad",
                             "rx": -36,
                             "ry": 297,
-                            "script": "",
+                            "script": "junkville/helpful-dad.mjs",
                             "spriteName": "pony-df9f78a0-pip-2a1a1aa0-static-pony-eyes-overlay-blank-armor-blank-equip-blank",
                             "type": "Character",
                             "uniq": false,
@@ -12222,7 +12224,7 @@
                             "objectName": "copain",
                             "rx": -216,
                             "ry": 387,
-                            "script": "",
+                            "script": "junkville/helpful-copain.mjs",
                             "spriteName": "pony-df9f78b0-pip-cd5d54b0-static-pony-eyes-overlay-blank-armor-stable-suit-equip-blank",
                             "type": "Character",
                             "uniq": true,
@@ -28412,19 +28414,49 @@
                 "level": "junkville",
                 "name": "junkville",
                 "size": 52,
+                "splashscreen": {
+                    "entryPoints": {
+                        "junkville": {
+                            "x": 30,
+                            "y": 85
+                        },
+                        "junkville-dumps": {
+                            "x": 60,
+                            "y": 30
+                        },
+                        "junkville-stabletech-facility": {
+                            "x": 73,
+                            "y": 10
+                        },
+                        "junkville-underground": {
+                            "x": 68,
+                            "y": 54
+                        }
+                    },
+                    "imagePath": "junkville.png"
+                },
                 "x": 1050,
-                "y": 650,
-                "zones": {
-                }
+                "y": 650
             },
             {
                 "level": "stable-entrance",
                 "name": "stable-103",
                 "size": 30,
+                "splashscreen": {
+                    "entryPoints": {
+                        "stable": {
+                            "x": 30,
+                            "y": 55
+                        },
+                        "stable-entrance": {
+                            "x": 25,
+                            "y": 90
+                        }
+                    },
+                    "imagePath": "stable-103"
+                },
                 "x": 950,
-                "y": 320,
-                "zones": {
-                }
+                "y": 320
             }
         ],
         "height": 2300,
