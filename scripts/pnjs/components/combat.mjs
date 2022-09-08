@@ -32,9 +32,11 @@ export class CombatComponent extends SkillTargetComponent {
       return false;
     }
   }
-  
+
   findCombatTarget() {
-    if (!this.hasCombatTarget()) {
+    let shouldLookForTarget = true;
+    try { shouldLookForTarget = !(this.combatTarget && this.combatTarget.isAlive()); } catch (err) {}
+    if (shouldLookForTarget) {
       const enemies = this.model.fieldOfView.getEnemies();
 
       console.log("Detected enemies:", enemies, enemies.length, enemies[0]);
@@ -61,10 +63,12 @@ export class CombatComponent extends SkillTargetComponent {
     const actions  = this.model.actionQueue;
     const weapon   = this.model.inventory.getEquippedItem("use-1");
     const movement = actions.getReachApCost(this.combatTarget, weapon.getRange(), pathEval);
-    const itemAp   = Math.max(1, actions.getItemUseApCost(this.combatTarget, "use-1"));
-    var   ap       = this.model.actionPoints;
+    let   ap       = this.model.actionPoints;
+    let   itemAp;
 
-    console.log(this.model.statistics.name, "onTurnStart", movement, ap);
+    weapon.useMode = weapon.defaultUseMode;
+    itemAp = Math.max(1, actions.getItemUseApCost(this.combatTarget, "use-1"));
+    console.log(this.model.statistics.name, "fightCombatTarget", movement, ap, itemAp, weapon.itemType, weapon.useMode);
     if (movement >= 0) {
       actions.reset();
       if (weapon.maxAmmo > 0 && weapon.ammo === 0) {
@@ -75,6 +79,7 @@ export class CombatComponent extends SkillTargetComponent {
         ap -= 2;
         weapon.useMode = "reload";
         actions.pushItemUse(null, "use-1");
+        weapon.useMode = weapon.defaultUseMode;
       }
       if (movement > 0) {
         ap -= Math.min(movement, ap);
