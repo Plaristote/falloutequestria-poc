@@ -73,7 +73,7 @@ export function initializeBattle() {
   let junkvilleNpcs;
   game.diplomacy.setAsEnemy(true, "junkville", "diamond-dogs");
   game.diplomacy.setAsEnemy(true, "player", "diamond-dogs");
-  junkvilleNpcs = game.createNpcGroup({
+  junkvilleNpcs = level.createNpcGroup({
     name: "junkville",
     members: [
       junkvilleCombattantTemplate(1),

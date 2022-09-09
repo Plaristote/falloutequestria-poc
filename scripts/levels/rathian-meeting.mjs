@@ -41,11 +41,11 @@ class Level extends LevelBase {
   }
 
   delayedInitialize() {
-    this.bandits = game.createNpcGroup({
+    this.bandits = level.createNpcGroup({
       name: "bandits",
       members: [banditTemplate("B"), banditTemplate("A"), banditTemplate("A"), banditTemplate("C")]
     });
-    this.rathian = game.createNpcGroup({
+    this.rathian = level.createNpcGroup({
       name: "Rathian",
       members: [rathianTemplate]
     });

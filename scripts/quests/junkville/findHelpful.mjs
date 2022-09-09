@@ -2,7 +2,7 @@ import {QuestHelper} from "../helpers.mjs";
 
 export function helpfulHasDisappeared() {
   if (!game.hasVariable("helpfulDead")) {
-    const character = game.uniqueCharacterStorage.getCharacter("helpful-copain");
+    const character = game.getCharacter("helpful-copain");
     return character && character.hasVariable("disappearedAt");
   }
   return true;
