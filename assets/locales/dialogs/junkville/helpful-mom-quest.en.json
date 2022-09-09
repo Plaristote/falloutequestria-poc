@@ -22,11 +22,17 @@
             "explanations-where": "Do you have any idea of where he might've been ?",
             "go-hopeful": "I'll be back soon with Helpful. Hang in there !",
             "half-accept-quest": "I see. I don't know how much I can do, but I'll keep an eye out for your foal.",
+            "on-death-ask-payment": "Hm... and what about my payment ?",
+            "on-death-leave": "<i>Leave her alone.",
+            "on-death-report": "<i>She tries to speak, but nothing comes out. As she tries her best to keep her composure, she show you the door and makes it clear she wants to be left alone.",
+            "on-help-report": "Dear Celestia all mighty ! He's alive ! Let's go and get him back up to the surface ! Lead the way !",
             "payment-asked": "I should've known... nothing's ever free in this damned world. Well, at least you're willing to help. We've been saving caps for the hard times... I guess this is a hard time. 200 caps sound ok ?",
             "payment-asked-more-failure": "This is outrageous ! You would ruin a family already visited by misery ? Don't you have a heart ? 200 caps is a lot of money for us already ! That's our final price !",
             "payment-asked-more-success": "This is outrageous... but there's no price I wouldn't pay to see my little Helpful alive and well. Go, find him, and you'll have your money.",
             "refuse-payment": "Alright then. I sure hope Helpful can fend for himself out there. Goodbye.",
             "refuse-quest": "It doesn't look like I'll be able to help. I'm sorry for your loss. Goodbye.",
+            "report-death": "I'm sorry... I found him. He fell down the well and died.",
+            "report-hurt": "I've found him ! He's down in the caverns, I need help getting him out of there !",
             "speculate-where": "We've been telling him not to wander too far from here, to avoid the dumps, and to never, ever leave town. He usually hangs out around the house. But recently, he's been talking more and more about seeing the world... it's all those damn wanderers, vagrants and scavengers that pass by Junkville... they've been a bad influence over him. Yesterday, we had a... heated talk about it. He wanted our permission to find a party and go on an adventure... you know how the youngs are: can't reason with them, can't hold them into place.<br>We thought the matter was resolved for the time being... and then... <i>she starts sobbing</i>."
         }
     }

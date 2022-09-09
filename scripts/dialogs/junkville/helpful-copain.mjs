@@ -16,6 +16,10 @@ class Dialog {
     this.dialog.npc.setScript("companion/helpful-copain.mjs");
     game.playerParty.addCharacter(this.dialog.npc);
   }
+
+  nameGiven() {
+    this.dialog.npc.setVariable("nameGiven", 1);
+  }
 }
 
 export function create(dialog) {

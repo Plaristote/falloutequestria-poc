@@ -1,0 +1,27 @@
+{
+    "dialogs": {
+        "junkville/helpful-copain-disappeared": {
+            "ask-story": "What happened to you ?",
+            "build-slint": "<i>Craft a slint</i>",
+            "cannot-come": "But I can't get up... my legs don't work no more ! I think I need a medic !",
+            "come": "Okay... help me get up. I'll follow you.",
+            "come-with-me": "Come with me if you want to live.",
+            "entry": "Please, help me !",
+            "entry-with-name": "{{name}} ! You came to save me !",
+            "examine-wounds": "<i>He's got a broken leg. It's not going to be possible for him to move in his current condition. But you're confident that you'll be able to craft a slint.</i>",
+            "examine-wounds-fail": "<i>His leg is clearly wounded, but you won't be able to help him on your own.</i>",
+            "introduction": "<i>Looking down, you see the lifeless body of a foal. It looks like it's been here for a few days.</i>",
+            "introduction-alive": "<i>Upon closer inspection, you realize the kid is actually just sleeping.</i>",
+            "introduction-examine": "<i>Take a closer look.</i>",
+            "introduction-leave": "<i>Let him rest in peace.</i>",
+            "introduction-perceptive": "<i>Looking down, you notice the body of a foal. It's very faint, but he's still breathing.</i>",
+            "introduction-poke": "<i>Poke him.</i>",
+            "look-for-wounds": "<i>Look for wounds.</i>",
+            "slint-crafted": "<i>You successfully crafted a slint for the kid. You feel confident he's gonna be able to walk home with this.</i>",
+            "story": "I was playing around the house... I don't remember much. I think I fell into the old well. I woke up here later. I tried to call, but nobody heard me. I tried to crawl, but my leg hurts so bad, I could barely move at all... I'm so glad you're here ! You'll take me out of here, right ?",
+            "wake-up": "Hey ! Wake up !",
+            "wounds-get-help": "Hang on, kid ! I'm gonna get some help !",
+            "wounds-give-up": "Welp. I guess there's nothing I can do. Good luck, kid !"
+        }
+    }
+}

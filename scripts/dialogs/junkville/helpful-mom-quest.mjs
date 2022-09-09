@@ -33,7 +33,7 @@ class Dialog {
 
   onExplain() {
     const quest = getQuest();
-    quest.completeObjective("save-helpful");
+    quest.completeObjective("talk-to-parents");
   }
 
   acceptedPayment1() {
@@ -42,6 +42,20 @@ class Dialog {
 
   acceptedPayment2() {
     getQuest().setVariable("payment", 400);
+  }
+
+  hasFoundHelpful() {
+    const quest = getQuest();
+    return quest.isObjectiveComplete("find-helpful");
+  }
+
+  canGetHelpForHelpful() {
+    const quest = getQuest();
+    return this.hasFoundHelpful() && !quest.hasVariable("died");
+  }
+
+  canConvinceToExplain() {
+    return game.player.statistics.speech > 45;
   }
 }
 

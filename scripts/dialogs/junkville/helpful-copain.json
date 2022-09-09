@@ -33,7 +33,7 @@
             "text": "adventure-stable"
         },
         "greet-ask-about": {
-            "hook": "",
+            "hook": "nameGiven",
             "state": "about",
             "text": "greet-ask-about"
         },
@@ -43,7 +43,7 @@
             "text": "greet-hostile"
         },
         "greet-with-name": {
-            "hook": "",
+            "hook": "nameGiven",
             "state": "introducing",
             "text": "greet-with-name"
         },
@@ -110,7 +110,7 @@
             "text": "tell-stuck-at-home-alt"
         }
     },
-    "entryPoint": "about",
+    "entryPoint": "entry",
     "states": {
         "about": {
             "answers": [

@@ -12,20 +12,20 @@ export class HelpfulCopain extends CharacterBehaviour {
   }
 
   initialize() {
-    console.log("HELPFULL COPAIN DISAPPEARING IN", 172800);
     this.model.tasks.addTask("prepareDisappear", disappearDelay * 1000, 1)
   }
 
   prepareDisappear() {
-    console.log("HELPFUL COPAIN Prepare disappear", game.timeManager.getTimestamp(), level.getVariable("lastVisit"));
-    if (game.timeManager.getTimestamp() - level.getVariable("lastVisit") >= disappearDelay)
+    const lastVisit = game.dataEngine.getLevelData("junkville")["lastUpdate"];
+
+    if (game.timeManager.getTimestamp() - lastVisit >= disappearDelay)
       this.model.tasks.addTask("delayedDisappear", 1000, 1);
   }
 
   delayedDisappear() {
-    console.log("HELPFUL COPAIN disappear");
     this.model.setVariable("disappeared", 1);
     this.model.setVariable("disappearedAt", game.timeManager.getTimestamp());
+    this.model.setScript("junkville/helpful-copain-disappeared.mjs");
     game.uniqueCharacterStorage.saveCharacterFromCurrentLevel(this.model);
   }
 }

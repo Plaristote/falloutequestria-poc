@@ -43,7 +43,7 @@
         },
         "explain-quest": {
             "availableHook": "hasQuestFromRandy",
-            "state": "",
+            "state": "explain-success",
             "text": "explain-quest"
         },
         "explanations-provoke": {
@@ -62,12 +62,19 @@
             "text": "explanations-where"
         },
         "go-hopeful": {
+            "availableHook": "",
             "state": "",
             "text": "go-hopeful"
         },
         "half-accept-quest": {
             "state": "",
             "text": "half-accept-quest"
+        },
+        "on-death-ask-payment": {
+            "text": "on-death-ask-payment"
+        },
+        "on-death-leave": {
+            "text": "on-death-leave"
         },
         "refuse-payment": {
             "text": "refuse-payment"
@@ -76,9 +83,19 @@
             "hook": "",
             "state": "",
             "text": "refuse-quest"
+        },
+        "report-death": {
+            "availableHook": "hasFoundHelpful",
+            "state": "on-death-report",
+            "text": "report-death"
+        },
+        "report-hurt": {
+            "availableHook": "canGetHelpForHelpful",
+            "state": "on-help-report",
+            "text": "report-hurt"
         }
     },
-    "entryPoint": "accepted",
+    "entryPoint": "entry",
     "states": {
         "accepted": {
             "answers": [
@@ -108,6 +125,8 @@
         },
         "entry-alt": {
             "answers": [
+                "report-hurt",
+                "report-death",
                 "go-hopeful",
                 "explanations-where",
                 "refuse-quest"
@@ -147,6 +166,18 @@
             "hook": "onExplain",
             "mood": "",
             "text": "explain-success"
+        },
+        "on-death-report": {
+            "answers": [
+                "on-death-leave",
+                "on-death-ask-payment"
+            ],
+            "text": "on-death-report"
+        },
+        "on-help-report": {
+            "answers": [
+            ],
+            "text": "on-help-report"
         },
         "payment-asked": {
             "answers": [

@@ -12,7 +12,7 @@ export function isHelpfulQuestAvailable() {
   return !game.quests.getQuest("junkville/findHelpful") && helpfulHasDisappeared();
 }
 
-export class FindHelpful {
+export class FindHelpful extends QuestHelper {
   initialize() {
     this.model.location = "junkville";
   }
@@ -34,5 +34,29 @@ export class FindHelpful {
       label: this.tr("find-helpful"),
       success: this.isObjectiveCompleted("find-helpful")
     });
+    if (this.isObjectiveCompleted("find-helpful")) {
+      objectives.push({
+        label: this.tr("save-helpful"),
+        success: this.isObjectiveCompleted("save-helpful"),
+        failure: this.model.hasVariable("died")
+      });
+    }
+    if (this.model.hasVariable("died")) {
+      objectives.push({
+        label: this.tr("tell-parents"),
+        success: this.isObjectiveCompleted("tell-parents")
+      });
+    }
+    return objectives;
+  }
+
+  completeObjective(objective) {
+    super.completeObjective(objective);
+    switch (objective) {
+      case "save-helpful":
+      case "tell-parents":
+        this.model.completed = true;
+        break ;
+    }
   }
 }

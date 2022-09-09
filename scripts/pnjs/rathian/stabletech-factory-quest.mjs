@@ -59,7 +59,7 @@ class Rathian extends CharacterBehaviour {
     case States.ArrivedAtFacility:
       return this.arrivedAtFacility();
     case States.FollowingPlayerInFacilty:
-      return this.followPlayer();
+      return this.followPlayer(); // from MovementComponent
     case States.FixingGenerator:
       return this.fixGenerator();
     case States.SearchingStockRoom:
@@ -138,11 +138,6 @@ class Rathian extends CharacterBehaviour {
     this.model.movementMode = "running";
     this.model.statistics.faction = "player";
     this.state++;
-  }
-
-  followPlayer() {
-    this.model.actionQueue.pushReach(game.player);
-    this.model.actionQueue.start();
   }
 
   onPlayerGoesUpstairs() {

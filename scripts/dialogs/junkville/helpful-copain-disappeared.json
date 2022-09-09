@@ -1,0 +1,140 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "hook": "",
+            "state": ""
+        },
+        "ask-story": {
+            "availableHook": "",
+            "hook": "",
+            "state": "",
+            "text": "ask-story"
+        },
+        "build-slint": {
+            "availableHook": "canBuildSlint",
+            "hook": "craftSlint",
+            "state": "slint-crafted",
+            "text": "build-slint"
+        },
+        "come-with-me": {
+            "availableHook": "isAwake",
+            "hook": "onComeWithMe",
+            "state": "",
+            "text": "come-with-me"
+        },
+        "introduction-examine": {
+            "hook": "onIntroductionExamine",
+            "state": "",
+            "text": "introduction-examine"
+        },
+        "introduction-leave": {
+            "hook": "onIntroductionLeave",
+            "text": "introduction-leave"
+        },
+        "introduction-poke": {
+            "hook": "wakeUp",
+            "state": "entry",
+            "text": "introduction-poke"
+        },
+        "look-for-wounds": {
+            "availableHook": "canLookForWounds",
+            "state": "examine-wounds",
+            "text": "look-for-wounds"
+        },
+        "wake-up": {
+            "availableHook": "isSleeping",
+            "hook": "wakeUp",
+            "state": "entry",
+            "text": "wake-up"
+        },
+        "wounds-get-help": {
+            "availableHook": "",
+            "hook": "onWoundsLeave",
+            "state": "",
+            "text": "wounds-get-help"
+        },
+        "wounds-give-up": {
+            "availableHook": "",
+            "hook": "onWoundsLeave",
+            "state": "",
+            "text": "wounds-give-up"
+        }
+    },
+    "entryPoint": "cannot-come",
+    "states": {
+        "cannot-come": {
+            "answers": [
+                "look-for-wounds",
+                "wounds-get-help",
+                "wounds-give-up"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "cannot-come"
+        },
+        "come": {
+            "answers": [
+            ],
+            "hook": "joinPlayer",
+            "text": "come"
+        },
+        "entry": {
+            "answers": [
+                "come-with-me",
+                "ask-story",
+                "look-for-wounds"
+            ],
+            "hook": "entry",
+            "mood": "sad",
+            "text": "entry"
+        },
+        "examine-wounds": {
+            "answers": [
+                "build-slint",
+                "wounds-get-help",
+                "wounds-give-up"
+            ],
+            "hook": "examineWounds",
+            "mood": "",
+            "text": "examine-wounds-fail"
+        },
+        "introduction": {
+            "answers": [
+                "introduction-poke",
+                "introduction-examine",
+                "introduction-leave"
+            ],
+            "hook": "introduction",
+            "mood": "sleep",
+            "text": "introduction-perceptive"
+        },
+        "introduction-alive": {
+            "answers": [
+                "wake-up",
+                "introduction-poke",
+                "look-for-wounds"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "introduction-alive"
+        },
+        "slint-crafted": {
+            "answers": [
+                "come-with-me",
+                "wake-up"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "slint-crafted"
+        },
+        "story": {
+            "answers": [
+                "come-with-me"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "story"
+        }
+    }
+}

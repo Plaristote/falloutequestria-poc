@@ -45,7 +45,6 @@ class Level extends LevelBase {
   }
 
   onExit() {
-    this.setVariable("lastVisit", game.timeManager.getTimestamp());
     this.prepareJunkvilleDisappearence();
   }
 
