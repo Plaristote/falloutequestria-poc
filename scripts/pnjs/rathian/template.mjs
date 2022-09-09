@@ -20,14 +20,3 @@ export function getRathian() {
   }
   return null;
 }
-
-export function createRathianInstance(script, x, y, z = 0) {
-  console.log("CREATE RATHIAN INsTANCE", script, x, y, z);
-  const group = game.createNpcGroup({ name: "Rathian", members: [rathianTemplate] });
-  const rathian = group.list[0];
-  rathian.setScript(`rathian/${script}.mjs`);
-  level.appendObject(rathian);
-  level.setCharacterPosition(rathian, x, y, z);
-  console.log("DONE");
-  return rathian;
-}

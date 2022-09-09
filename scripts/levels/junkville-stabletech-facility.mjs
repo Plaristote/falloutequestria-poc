@@ -1,5 +1,4 @@
 import {LevelBase} from "./base.mjs";
-import {createRathianInstance, getRathian} from "../pnjs/rathian/template.mjs";
 import {requireQuest} from "../quests/helpers.mjs";
 
 const faction = "stabletech-facility";

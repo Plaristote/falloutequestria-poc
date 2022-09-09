@@ -1,5 +1,4 @@
 import {LevelBase} from "./base.mjs";
-import {createRathianInstance, getRathian} from "../pnjs/rathian/template.mjs";
 
 export class JunkvilleDumps extends LevelBase {
   onLoaded() {

@@ -1,5 +1,4 @@
 import {LevelBase} from "./base.mjs";
-import {createRathianInstance, getRathian} from "../pnjs/rathian/template.mjs";
 
 class Level extends LevelBase {
   constructor(model) {
