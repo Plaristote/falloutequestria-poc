@@ -60,7 +60,7 @@
             }
         }
     },
-    "level": "junkville",
+    "level": "stable-entrance",
     "levels": {
         "city-sample": {
             "ambientColor": [
@@ -25828,7 +25828,6 @@
             "currentFloor": 0,
             "groups": [
             ],
-            "init": true,
             "objects": [
                 {
                     "animation": "idle",
@@ -27257,23 +27256,22 @@
                     }
                 }
             ],
-            "init": true,
             "objects": [
                 {
                     "animation": "monitor-right-off",
                     "blocksPath": false,
                     "float": true,
-                    "mtx": 431,
-                    "mty": 292,
+                    "mtx": 432,
+                    "mty": 295,
                     "nextX": 0,
                     "nextY": 0,
                     "objectName": "access-computer",
-                    "rx": 431,
-                    "ry": 292,
+                    "rx": 432,
+                    "ry": 295,
                     "script": "stable-103-access-computer.mjs",
                     "spriteName": "vault-computer",
                     "type": "DynamicObject",
-                    "x": 15,
+                    "x": 16,
                     "y": 4
                 },
                 {
