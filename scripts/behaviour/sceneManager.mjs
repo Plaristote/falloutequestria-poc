@@ -53,10 +53,16 @@ export class SceneManager {
   prepare() {
     this.actors.forEach(actor => {
       if (actor) {
+        const actorScript = actor.getScriptObject();
         toggleRoutine(actor, false);
-        actor.getScriptObject().sceneManager = this;
+        if (actorScript)
+          actor.getScriptObject().sceneManager = this;
+        else
+          console.log("Invalid script on scene actor", actor.displayName);
         actor.actionQueue.reset();
       }
+      else
+        console.log("Scene", id, "has invalid an actor.");
     });
     this.triggerCurrentStep();
   }
