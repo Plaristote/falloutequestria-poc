@@ -52,9 +52,11 @@ export class SceneManager {
 
   prepare() {
     this.actors.forEach(actor => {
-      toggleRoutine(actor, false);
-      actor.getScriptObject().sceneManager = this;
-      actor.actionQueue.reset();
+      if (actor) {
+        toggleRoutine(actor, false);
+        actor.getScriptObject().sceneManager = this;
+        actor.actionQueue.reset();
+      }
     });
     this.triggerCurrentStep();
   }
