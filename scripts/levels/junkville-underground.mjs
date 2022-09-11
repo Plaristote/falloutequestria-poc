@@ -5,8 +5,12 @@ import {
   clearBattle,
   safeObjectiveCompleted,
   shouldAltLeaderTakeOver,
-  makeAltLeaderTakeOver
+  makeAltLeaderTakeOver,
+  prepareDiamondDogsOnCavernAccessTransgression
 } from "../quests/junkvilleNegociateWithDogs.mjs";
+import {
+  findHelpfulRescueRouteState
+} from "../quests/junkville/findHelpful.mjs";
 
 export class JunkvilleUnderground extends LevelBase {
   onLoaded() {
@@ -19,6 +23,8 @@ export class JunkvilleUnderground extends LevelBase {
       game.unsetVariable("junkvilleUndergroundBattle");
       game.setVariable("ongoingJunkvilleUndergroundBattle", true);
     }
+    if (findHelpfulRescueRouteState() == 2)
+      prepareDiamondDogsOnCavernAccessTransgression();
   }
 
   onFellIntoHole() {

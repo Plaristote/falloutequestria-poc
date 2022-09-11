@@ -39,6 +39,8 @@ class Dialog extends DialogHelper {
     return this.dialog.t("no-jobs");
   }
 
+  isHelpfulQuestAvailable_() { return !this.availableHauntedHeapQuest() && isHelpfulQuestAvailable(); }
+
   acceptHauntedHeapQuest() {
     const object = requireQuest("junkvilleDumpsDisappeared");
     object.setVariable("initBy", this.dialog.npc.objectName);

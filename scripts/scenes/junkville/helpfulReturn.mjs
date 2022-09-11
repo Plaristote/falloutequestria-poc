@@ -49,5 +49,6 @@ export class HelpfulReturnScene extends SceneManager {
   finalize() {
     super.finalize();
     requireQuest("junkville/findHelpful").completeObjective("save-helpful");
+    this.son.setScript("junkville/helpful-copain.mjs");
   }
 }

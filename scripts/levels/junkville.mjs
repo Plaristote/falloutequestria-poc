@@ -1,4 +1,8 @@
 import {LevelBase} from "./base.mjs";
+import {
+  findHelpfulRescueRouteState,
+  finalizeRescueRoute
+} from "../quests/junkville/findHelpful.mjs";
 
 class Level extends LevelBase {
   constructor(model) {
@@ -42,6 +46,8 @@ class Level extends LevelBase {
   onLoaded() {
     this.prepareRathian();
     this.prepareCook();
+    if (findHelpfulRescueRouteState() == 3)
+      finalizeRescueRoute();
   }
 
   onExit() {

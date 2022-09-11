@@ -1,5 +1,5 @@
 {
-  "dialogs": {
+    "dialogs": {
         "junkville/dog-leader": {
             "accept-start-mediation": "Okay. I'm going right away.",
             "complete-mediation": "It's done. Junkville has agreed to make sure nopony would make it into your tunnels.",
@@ -8,6 +8,7 @@
             "convince-release": "The people on the surface won't exactly take it well when they know you've kept some of them captive. If you want to avoid war, you would do well to release them first, as a token of your good will.",
             "convince-release#2": "I understand. However, unless the captive are released, then war will become inevitable to the surface people. Let's take care of one problem at a time. Appease the surface people, then appease your people.",
             "convince-release-route#1": "It's not that simple. My people are very wary, and some of them would rather go to war than showing any sign of weakness to the surface dwellers. If I release the captives, I might get overthrown... and then, war will be inevitable.",
+            "convince-release-success": "You're right, of course... this is a delicate situation. I'll trust you. We'll make the first step, hoping you can convince the surface folks to accept a fair deal. You may go tell the captives that they are free to go.",
             "entry": "Yes ? What is it ?",
             "entry-exit": "Nothing ! Bye !",
             "force-release-captives": "My only concern is for the captive. Release them, while I'm still asking nicely.",
@@ -43,5 +44,5 @@
             "release-captive-convince": "That's probably true... please, go and tell the captives they are free to go. I'll try to calm down my dogs on my own.",
             "start-shooting": "On second thought, it might just be easier to kick your sorry asses."
         }
-  }
+    }
 }

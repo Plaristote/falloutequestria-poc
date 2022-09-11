@@ -8,7 +8,7 @@
         "ask-story": {
             "availableHook": "",
             "hook": "",
-            "state": "",
+            "state": "story",
             "text": "ask-story"
         },
         "build-slint": {

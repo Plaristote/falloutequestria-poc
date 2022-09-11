@@ -34,12 +34,32 @@ export function startMediation(type) {
 }
 
 export function hasMediationStarted() {
-  console.log("toto2#1");
   return hasQuest() && getQuest().hasVariable("mediation");
 }
 
 export function hasBattleStarted() {
   return hasQuest() && getQuest().hasVariable("battleState");
+}
+
+export function allowedInCaverns() {
+  const quest = getQuest();
+  return !quest || !quest.isObjectiveCompleted("peaceful-resolve") || quest.getVariable("mediation") == "trade";
+}
+
+export function prepareDiamondDogsOnCavernAccessTransgression() {
+  const dogs  = level.getScriptObject().liveDiamondDogs;
+  const dolly = level.findObject("dog-alt-leader");
+
+  if (!allowedInCaverns()) {
+    const quest = requireQuest(questName);
+
+    dogs.splice(2);
+    if (dolly.isAlive()) dogs.push(dolly);
+    dogs.forEach(dog => { level.moveCharacterToZone(dog, "battle-entry")});
+    game.diplomacy.setAsEnemy(true, "diamond-dogs", "junkville");
+    game.diplomacy.setAsEnemy(true, "diamond-dogs", "player");
+    quest.setVariable("battle-forced", 1);
+  }
 }
 
 function junkvilleCombattantTemplate() {

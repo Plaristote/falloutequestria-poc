@@ -1,5 +1,7 @@
 import {QuestHelper} from "../helpers.mjs";
 
+const questName = "junkville/findHelpful";
+
 export function helpfulHasDisappeared() {
   if (!game.hasVariable("helpfulDead")) {
     const character = game.getCharacter("helpful-copain");
@@ -10,6 +12,51 @@ export function helpfulHasDisappeared() {
 
 export function isHelpfulQuestAvailable() {
   return !game.quests.getQuest("junkville/findHelpful") && helpfulHasDisappeared();
+}
+
+export function teleportToCaverns() {
+  game.quests.getQuest(questName).setVariable("rescue-route", 1);
+  game.playerParty.addCharacter(level.findObject("house-copain.copain-dad"));
+  game.playerParty.addCharacter(level.findObject("house-copain.copain-mom"));
+  game.switchToLevel("junkville-cavern", "well-entry");
+}
+
+export function findHelpfulRescueRouteState() {
+  if (game.quests.getQuest(questName))
+    return game.quests.getQuest(questName).getVariable("rescue-route") || 0;
+  return 0;
+}
+
+export function finalizeRescueRoute() {
+  const mom = game.getCharacter("junkville-copain-mom");
+  const dad = game.getCharacter("junkville-copain-dad");
+  const son = game.getCharacter("helpful-copain");
+  const quest = game.quests.getQuest(questName);
+
+  [mom,dad,son].forEach(character => {
+    game.playerParty.removeCharacter(character);
+    character.tasks.removeTask("followPlayer");
+  });
+  level.setCharacterPosition(mom, 7, 10);
+  level.setCharacterPosition(dad, 8, 9);
+  level.setCharacterPosition(son, 7, 9);
+  level.setCharacterPosition(game.player, 10, 12);
+  level.addTextBubble(mom, "Kthxbye", 5000, "cyan");
+  if (!quest.hasVariable("died")) {
+    quest.completeObjective("escape-cavern");
+    quest.completeObjective("save-helpful");
+  }
+}
+
+export function helpfulExitCavernHook() {
+  console.log("Current state", findHelpfulRescueRouteState());
+  if (findHelpfulRescueRouteState() === 2) {
+    game.quests.getQuest(questName).setVariable("rescue-route", 3);
+    game.switchToLevel("junkville");
+    console.log("switchng to junkville");
+    return true;
+  }
+  return false;
 }
 
 export class FindHelpful extends QuestHelper {
@@ -34,6 +81,13 @@ export class FindHelpful extends QuestHelper {
       label: this.tr("find-helpful"),
       success: this.isObjectiveCompleted("find-helpful")
     });
+    if (findHelpfulRescueRouteState() > 0) {
+      objectives.push({
+        label: this.tr("escape-cavern"),
+        success: this.isObjectiveCompleted("escape-cavern"),
+        failure: this.model.hasVariable("died")
+      });
+    }
     if (this.isObjectiveCompleted("find-helpful")) {
       objectives.push({
         label: this.tr("save-helpful"),
@@ -58,5 +112,18 @@ export class FindHelpful extends QuestHelper {
         this.model.completed = true;
         break ;
     }
+  }
+
+  onCharacterKilled(character) {
+    if (character.characterSheet === "helpful-copain") {
+      this.model.failed = true;
+      this.model.setVariable("died", true);
+    }
+  }
+
+  onSuccess() {
+    super.onSuccess();
+    game.getCharacter("helpful-copain").setScript("junkville/helpful-copain.mjs");
+    game.dataEngine.addReputation("junkville", 51);
   }
 }

@@ -1,5 +1,6 @@
 import {requireQuest} from "../../quests/helpers.mjs";
-//import {} from "../../quests/junkville/findHelpful.mjs"
+import {teleportToCaverns} from "../../quests/junkville/findHelpful.mjs"
+import {allowedInCaverns} from "../../quests/junkvilleNegociateWithDogs.mjs";
 
 function getQuest() { return requireQuest("junkville/findHelpful"); }
 
@@ -9,6 +10,8 @@ class Dialog {
   }
 
   getEntryPoint() {
+    if (game.quests.hasQuest("junkville/findHelpful") && getQuest().isObjectiveCompleted("save-helpful"))
+      return "quest-success";
     if (this.dialog.npc.hasVariable("quest-talked"))
       return "entry-alt";
     this.dialog.npc.setVariable("quest-talked", 1);
@@ -44,9 +47,13 @@ class Dialog {
     getQuest().setVariable("payment", 400);
   }
 
+  askedForPayment() {
+    return getQuest().hasVariable("payment");
+  }
+
   hasFoundHelpful() {
     const quest = getQuest();
-    return quest.isObjectiveComplete("find-helpful");
+    return quest.isObjectiveCompleted("find-helpful");
   }
 
   canGetHelpForHelpful() {
@@ -56,6 +63,29 @@ class Dialog {
 
   canConvinceToExplain() {
     return game.player.statistics.speech > 45;
+  }
+
+  onReportHurt() {
+    return allowedInCaverns() ? "going-to-help" : "forbidden-caverns";
+  }
+
+  areDogsDead() {
+    const quest = game.quests.getQuest("junkvilleNegociateWithDogs");
+    return quest && quest.isObjectiveCompleted("win-battle");
+  }
+
+  goToCaverns() {
+    teleportToCaverns();
+  }
+
+  rejectedReward() {
+    game.dataEngine.addReputation("junkville", 45);
+  }
+
+  givePayment() {
+    const payment = getQuest().getVariable("payment");
+    game.player.inventory.addItemOfType("bottlecaps", payment);
+    return this.dialog.t("give-payment", {reward: payment });
   }
 }
 

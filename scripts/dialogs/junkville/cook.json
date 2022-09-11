@@ -7,7 +7,7 @@
             "textHook": ""
         },
         "accept-find-helpful": {
-            "availableHook": "",
+            "availableHook": "isHelpfulQuestAvailable_",
             "hook": "acceptFindHelpfulQuest",
             "state": "",
             "text": "accept-find-helpful"

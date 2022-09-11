@@ -119,7 +119,7 @@
             "text": "start-shooting"
         }
     },
-    "entryPoint": "convince-release-route#1",
+    "entryPoint": "entry",
     "states": {
         "convince-release-route#1": {
             "answers": [
@@ -128,6 +128,12 @@
                 "force-release-captives"
             ],
             "text": "convince-release-route#1"
+        },
+        "convince-release-success": {
+            "answers": [
+            ],
+            "hook": "_authorizeCaptiveRelease",
+            "text": "convince-release-success"
         },
         "entry": {
             "answers": [

@@ -30,7 +30,7 @@ class Dialog {
   }
 
   onConvinced() {
-    this.diaog.mood = "neutral";
+    this.dialog.mood = "neutral";
     requireQuest("junkvilleNegociateWithDogs").completeObjective("alt-leader-convinced");
     game.player.statistics.addExperience(100);
     game.appendToConsole(i18n.t("messages.xp-gain", {xp: 100}));
