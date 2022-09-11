@@ -1,5 +1,4 @@
 import {CharacterBehaviour} from "../character.mjs";
-import {peacefullTowns} from "../../towns.mjs";
 
 function isDropOffLevel() {
   return worldmap.getCurrentCity() !== null;
