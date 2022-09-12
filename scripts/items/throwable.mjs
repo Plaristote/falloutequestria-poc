@@ -102,9 +102,11 @@ export class ThrowableBehaviour extends ItemBehaviour {
   }
 
   getRange() {
-    const strength = this.user.statistics.strength;
+    if (this.model.useMode === "throw") {
+      const strength = this.user.statistics.strength;
 
-    return Math.max(3, strength + 1);
+      return Math.max(3, strength + 1);
+    }
   }
 
   getUseAtSuccessRate(x, y) {
