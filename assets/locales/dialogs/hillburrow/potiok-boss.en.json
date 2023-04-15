@@ -1,0 +1,16 @@
+{
+    "dialogs": {
+        "hillburrow/potiok-boss": {
+            "ask-about-errand-quest": "Sure thing.",
+            "give-errand-quest": "Let me explain the situation. I'm in charge of running this town's coal mine. But I'm mainly working with a bunch of lazy pricks, and it hasn't been easy increasing the mine's output with this kind of workforce. So I want you to go to the slave guild at Crystal Den, and tell them to send a dozen of more capable slaves. Not the half-dead ones, not the elderly, and definitely not the fucking ghouls. I want young, virgorous ponies, who can actually hold their picks and move the earth around for that damn coal. If they disagree, remind them that the Potiok family owns Crystal Den. Think you can remember all that ?",
+            "introduction": "Yes ? Who are you and why did you let yourself into my office ?",
+            "introduction-chase-away": "You're right. Where are my manners ? My name is {{npc}}. You're in my office. This is the place I run. People here to whatever I ask them. Wanna see how it works ?<br/><br/><i>He yells towards the door:</i> Guards ! Get this fucking clown out of my sight !<br/><i>A bunch of tough looking ponies come in, grab you and start dragging you out.",
+            "introduction-confused": "I'm {{name}}. I was just wondering what this building was and who you people were.",
+            "introduction-explanations": "I'd advise you to avoid doing that in the future. You could've been in serious trouble... but you caught me in a good mood. It's nice meeting you, {{name}}. You're in the Potiok Hillburrow's headquarters. The Potiok is the most powerful family in the crystal wastes, and I'm one of them. The name's {{npc}}. I'm in charge of this place. Say, would you be intersted in performing a small task for me ? As a way to introduce yourself to the family.",
+            "introduction-give-work": "Well, it's nice meeting you {{name}}. I'm {{npc}}. So you'd like to work for me ? You  came in just at the right time. I could use the help of someone like you. I need you to run an errand for me. It doesn't sound like much, I know, but if you prove trustworthy, I'll be sure to give you responsabilities more tuned with your abilities. How does that sound to you ?",
+            "introduction-hostile": "I'm {{name}}. I'm not very famous yet, but in a few years, everypony will remember me as the one who rid the wasteland of the Potiok family. Are you ready to meet your ancestors ?",
+            "introduction-polite": "My name is {{name}}, and I'm at your service if it pleases you.",
+            "introduction-rude": "Didn't your momma taught you to introduce yourself before asking somepony's name ?"
+        }
+    }
+}

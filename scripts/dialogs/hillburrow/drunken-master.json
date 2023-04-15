@@ -1,0 +1,178 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "hook": "",
+            "state": ""
+        },
+        "ask-about-brawl": {
+            "availableHook": "",
+            "hook": "toldBrawlStory",
+            "state": "about-brawl",
+            "text": "ask-about-brawl"
+        },
+        "ask-about-mercenaries": {
+            "availableHook": "",
+            "hook": "",
+            "state": "about-mercenaries",
+            "text": "ask-about-mercenaries"
+        },
+        "ask-about-sheriff-murder": {
+            "availableHook": "canAskAboutSheriffMurder",
+            "hook": "",
+            "state": "quest-sheriff-murder",
+            "text": "ask-about-sheriff-murder"
+        },
+        "ask-for-training": {
+            "availableHook": "knowAboutFightingAbility",
+            "hook": "onAskTeaching",
+            "state": "",
+            "text": "ask-for-training"
+        },
+        "end-training-no-beer": {
+            "availableHook": "",
+            "hook": "",
+            "state": "",
+            "text": "end-training-no-beer"
+        },
+        "end-training-with-beer": {
+            "availableHook": "canBuyBeer",
+            "hook": "buyBeer",
+            "state": "teach-fighting-beer",
+            "text": "end-training-with-beer"
+        },
+        "exit-about-brawl": {
+            "availableHook": "",
+            "hook": "",
+            "text": "exit-about-brawl"
+        },
+        "exit-entry": {
+            "hook": "",
+            "state": "",
+            "text": "exit-entry"
+        },
+        "exit-teaching": {
+            "hook": "",
+            "text": "exit-teaching"
+        },
+        "quest-sheriff-ask-murder-night": {
+            "state": "quest-sheriff-murder-night",
+            "text": "quest-sheriff-ask-murder-night"
+        },
+        "quest-sheriff-ask-murder-night-suspicions": {
+            "state": "quest-sheriff-murder-night-suspicions",
+            "text": "quest-sheriff-ask-murder-night-suspicions"
+        },
+        "quest-sheriff-ask-relationship": {
+            "hook": "onLearnAboutSheriffGoingAtBar",
+            "state": "quest-sheriff-relationship",
+            "text": "quest-sheriff-ask-relationship"
+        },
+        "quest-sheriff-ask-suspects": {
+            "state": "quest-sheriff-suspects",
+            "text": "quest-sheriff-ask-suspects"
+        },
+        "quest-sheriff-back-to-entry": {
+            "state": "quest-sheriff-murder",
+            "text": "quest-sheriff-back-to-entry"
+        },
+        "quest-sheriff-exit": {
+            "text": "quest-sheriff-exit"
+        },
+        "start-fighting": {
+            "hook": "startTraining",
+            "state": "teach-fighting-done",
+            "text": "start-fighting"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-brawl": {
+            "answers": [
+                "ask-about-mercenaries",
+                "ask-for-training",
+                "exit-about-brawl"
+            ],
+            "text": "about-brawl"
+        },
+        "about-mercenaries": {
+            "answers": [
+                "ask-for-training",
+                "exit-about-brawl"
+            ],
+            "text": "about-mercenaries"
+        },
+        "entry": {
+            "answers": [
+                "ask-for-training",
+                "ask-about-sheriff-murder",
+                "ask-about-brawl",
+                "exit-entry"
+            ],
+            "text": "entry"
+        },
+        "quest-sheriff-murder": {
+            "answers": [
+                "quest-sheriff-ask-relationship",
+                "quest-sheriff-ask-murder-night",
+                "quest-sheriff-ask-suspects",
+                "quest-sheriff-exit"
+            ],
+            "text": "quest-sheriff-murder"
+        },
+        "quest-sheriff-murder-night": {
+            "answers": [
+                "quest-sheriff-ask-murder-night-suspicions",
+                "quest-sheriff-back-to-entry"
+            ],
+            "text": "quest-sheriff-murder-night"
+        },
+        "quest-sheriff-murder-night-suspicions": {
+            "answers": [
+                "quest-sheriff-back-to-entry"
+            ],
+            "text": "quest-sheriff-murder-night-suspicions"
+        },
+        "quest-sheriff-relationship": {
+            "answers": [
+                "quest-sheriff-back-to-entry"
+            ],
+            "text": "quest-sheriff-relationship"
+        },
+        "quest-sheriff-suspects": {
+            "answers": [
+                "quest-sheriff-back-to-entry"
+            ],
+            "text": "quest-sheriff-suspects"
+        },
+        "teach-fighting": {
+            "answers": [
+                "start-fighting",
+                "exit-teaching"
+            ],
+            "text": "teach-fighting"
+        },
+        "teach-fighting-beer": {
+            "answers": [
+            ],
+            "text": "teach-fighting-beer"
+        },
+        "teach-fighting-done": {
+            "answers": [
+                "end-training-with-beer",
+                "end-training-no-beer"
+            ],
+            "text": "teach-fighting-done"
+        },
+        "teach-fighting-over": {
+            "answers": [
+            ],
+            "text": "teach-fighting-over"
+        },
+        "teach-fighting-recover": {
+            "answers": [
+            ],
+            "text": "teach-fighting-recover"
+        }
+    }
+}

@@ -60,6 +60,32 @@
         "value": 0,
         "weight": 1
     },
+    "combat-armor": {
+        "icon": "combat-armor.webp",
+        "isGroupable": true,
+        "scriptName": "armor.mjs",
+        "sprite": "metal-armor",
+        "type": "armor",
+        "value": 2500,
+        "weight": 30
+    },
+    "combat-knife": {
+        "icon": "combat-knife.png",
+        "isGroupable": true,
+        "scriptName": "combat-knife.mjs",
+        "sprite": "knife",
+        "type": "weapon",
+        "value": 95,
+        "weight": 1
+    },
+    "doctor-bag": {
+        "icon": "doctors-bag.webp",
+        "isGroupable": true,
+        "sprite": "health-potion",
+        "type": "consommables",
+        "value": 180,
+        "weight": 10
+    },
     "dynamite": {
         "icon": "dynamite.png",
         "isGroupable": false,
@@ -134,15 +160,6 @@
         "icon": "laser-gun.png",
         "isGroupable": false,
         "scriptName": "lasergun.mjs",
-        "sprite": "mouthgun",
-        "type": "weapon",
-        "value": 600,
-        "weight": 5
-    },
-    "laser-gun": {
-        "icon": "laser-gun.png",
-        "isGroupable": false,
-        "scriptName": "lasergun.mjs",
         "sprite": "misc",
         "type": "weapon",
         "value": 600,
@@ -194,15 +211,6 @@
         "type": "weapon",
         "value": 25,
         "weight": 5
-    },
-    "scribe-armor": {
-        "icon": "steel-ranger-scribe.png",
-        "isGroupable": true,
-        "scriptName": "scribeArmor.mjs",
-        "sprite": "steel-ranger-scribe",
-        "type": "armor",
-        "value": 670,
-        "weight": 10
     },
     "power-armor": {
         "icon": "powerarmor.png",
@@ -283,14 +291,6 @@
         "type": "armor",
         "value": 150,
         "weight": 3
-    },
-    "turret-gun": {
-        "icon": "",
-        "isGroupable": false,
-        "scriptName": "turret-gun.mjs",
-        "sprite": "misc",
-        "type": "weapon",
-        "value": 0
     },
     "trialKey": {
         "icon": "trial-key.png",

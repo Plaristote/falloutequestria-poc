@@ -6,7 +6,7 @@ class Alcohol extends Drink {
     super(model);
     this.alcoholic = true;
   }
-  
+
   consumedBy(target) {
     const drunk = target.getBuff("drunk");
 
@@ -25,7 +25,7 @@ class Alcohol extends Drink {
     else
       game.appendToConsole(i18n.t("messages.drunk"));
   }
-  
+
   passOut(target, duration) {
     target.addBuff("ko");
     target.getBuff("ko").tasks.removeTask("trigger"); // KO will be manually removed later

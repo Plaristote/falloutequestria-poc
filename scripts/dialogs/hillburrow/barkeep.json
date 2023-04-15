@@ -1,0 +1,134 @@
+{
+    "answers": {
+        "": {
+        },
+        "ask-about-drinks": {
+            "hook": "openDrink",
+            "state": "order-drink",
+            "text": "ask-about-drinks"
+        },
+        "ask-about-npc": {
+            "state": "about-npc",
+            "text": "ask-about-npc"
+        },
+        "exit": {
+            "text": "exit"
+        },
+        "exit-without-drinks": {
+            "text": "exit-without-drinks"
+        },
+        "not-tell-name": {
+            "text": "not-tell-name"
+        },
+        "quest-sheriff-ask-about-drunken": {
+            "text": "quest-sheriff-ask-about-drunken"
+        },
+        "quest-sheriff-ask-about-night-more": {
+            "state": "quest-sheriff-about-night-more",
+            "text": "quest-sheriff-ask-about-night-more"
+        },
+        "quest-sheriff-ask-about-suspicions": {
+            "state": "quest-sheriff-about-suspects",
+            "text": "quest-sheriff-ask-about-suspicions"
+        },
+        "quest-sheriff-ask-about-the-night": {
+            "state": "quest-sheriff-about-the-night",
+            "text": "quest-sheriff-ask-about-the-night"
+        },
+        "quest-sheriff-back-to-entry": {
+            "state": "quest-sheriff-murder",
+            "text": "quest-sheriff-back-to-entry"
+        },
+        "quest-sheriff-exit": {
+            "text": "quest-sheriff-exit"
+        },
+        "quest-sheriff-find-mercenaries": {
+            "state": "quest-sheriff-about-mercenaries",
+            "text": "quest-sheriff-find-mercenaries"
+        },
+        "quest-sheriff-murder-start": {
+            "availableHook": "canAskAboutSheriffMurder",
+            "state": "quest-sheriff-murder",
+            "text": "quest-sheriff-murder-start"
+        },
+        "tell-name": {
+            "hook": "onToldName",
+            "state": "entry",
+            "text": "tell-name"
+        },
+        "tell-name-reject": {
+            "state": "entry",
+            "text": "tell-name-reject"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-npc": {
+            "answers": [
+                "tell-name",
+                "tell-name-reject"
+            ],
+            "mood": "smile",
+            "text": "about-npc"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-drinks",
+                "quest-sheriff-murder-start",
+                "ask-about-npc",
+                "exit-without-drinks"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "entry"
+        },
+        "order-drink": {
+            "answers": [
+            ],
+            "hook": "barDialog",
+            "mood": "smile",
+            "text": "order-drink"
+        },
+        "quest-sheriff-about-mercenaries": {
+            "answers": [
+                "quest-sheriff-back-to-entry"
+            ],
+            "mood": "",
+            "text": "quest-sheriff-about-mercenaries"
+        },
+        "quest-sheriff-about-night-more": {
+            "answers": [
+                "quest-sheriff-back-to-entry"
+            ],
+            "mood": "",
+            "text": "quest-sheriff-about-night-more"
+        },
+        "quest-sheriff-about-suspects": {
+            "answers": [
+                "quest-sheriff-find-mercenaries",
+                "quest-sheriff-back-to-entry"
+            ],
+            "hook": "toldAboutMercenariesInvolvementInSheriffMurder",
+            "mood": "",
+            "text": "quest-sheriff-about-suspects"
+        },
+        "quest-sheriff-about-the-night": {
+            "answers": [
+                "quest-sheriff-ask-about-night-more",
+                "quest-sheriff-back-to-entry"
+            ],
+            "mood": "",
+            "text": "quest-sheriff-about-the-night"
+        },
+        "quest-sheriff-murder": {
+            "answers": [
+                "quest-sheriff-ask-about-suspicions",
+                "quest-sheriff-ask-about-the-night",
+                "quest-sheriff-exit"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "quest-sheriff-murder"
+        }
+    }
+}

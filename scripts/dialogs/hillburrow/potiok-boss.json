@@ -1,0 +1,62 @@
+{
+    "answers": {
+        "ask-about-errand-quest": {
+            "state": "give-errand-quest",
+            "text": "ask-about-errand-quest"
+        },
+        "introduction-confused": {
+            "state": "introduction-explanations",
+            "text": "introduction-confused"
+        },
+        "introduction-hostile": {
+            "text": "introduction-hostile"
+        },
+        "introduction-polite": {
+            "state": "introduction-give-work",
+            "text": "introduction-polite"
+        },
+        "introduction-rude": {
+            "state": "introduction-chase-away",
+            "text": "introduction-rude"
+        }
+    },
+    "entryPoint": "introduction",
+    "states": {
+        "give-errand-quest": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "give-errand-quest"
+        },
+        "introduction": {
+            "answers": [
+                "introduction-confused",
+                "introduction-polite",
+                "introduction-rude",
+                "introduction-hostile"
+            ],
+            "mood": "",
+            "text": "introduction"
+        },
+        "introduction-chase-away": {
+            "answers": [
+            ],
+            "mood": "cocky",
+            "text": "introduction-chase-away"
+        },
+        "introduction-explanations": {
+            "answers": [
+                "ask-about-errand-quest"
+            ],
+            "mood": "",
+            "text": "introduction-explanations"
+        },
+        "introduction-give-work": {
+            "answers": [
+                "ask-about-errand-quest"
+            ],
+            "mood": "smile",
+            "text": "introduction-give-work"
+        }
+    }
+}

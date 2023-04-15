@@ -1,0 +1,189 @@
+{
+    "answers": {
+        "": {
+            "hook": "",
+            "state": ""
+        },
+        "about-capital-ruins": {
+            "state": "about-capital-ruins-",
+            "text": "about-capital-ruins"
+        },
+        "about-crystal-den": {
+            "state": "about-crystal-den-",
+            "text": "about-crystal-den"
+        },
+        "about-npc": {
+            "text": "about-npc"
+        },
+        "accept-old-sheriff-quest": {
+            "state": "quest-old-sheriff-briefing",
+            "text": "accept-old-sheriff-quest"
+        },
+        "ask-about-npc": {
+            "state": "about-npc",
+            "text": "ask-about-npc"
+        },
+        "ask-about-work": {
+            "hook": "onAskedForWork",
+            "state": "",
+            "text": "ask-about-work"
+        },
+        "back-to-entry": {
+            "hook": "",
+            "state": "entry",
+            "text": "back-to-entry"
+        },
+        "exit-entry": {
+            "state": "",
+            "text": "exit-entry"
+        },
+        "introduce-player": {
+            "hook": "onNameGiven",
+            "state": "entry",
+            "text": "introduce-player"
+        },
+        "old-sheriff-quest-ask-reward": {
+            "state": "quest-old-sheriff-reward-asked",
+            "text": "old-sheriff-quest-ask-reward"
+        },
+        "quest-old-sheriff-asked-reward-accepted": {
+            "state": "quest-old-sheriff-briefing",
+            "text": "quest-old-sheriff-asked-reward-accepted"
+        },
+        "quest-old-sheriff-briefing-reaction": {
+            "text": "quest-old-sheriff-briefing-reaction"
+        },
+        "quest-old-sheriff-briefing-reaction-alt": {
+            "text": "quest-old-sheriff-briefing-reaction-alt"
+        },
+        "quest-old-sheriff-negociate": {
+            "availableHook": "canNegociateSheriffQuestReward",
+            "state": "quest-old-sheriff-on-negociate-success",
+            "text": "quest-old-sheriff-negociate"
+        },
+        "quest-old-sheriff-negociate-badly": {
+            "availableHook": "",
+            "hook": "loseTownReputation",
+            "state": "quest-old-sheriff-on-negociate-failure",
+            "text": "quest-old-sheriff-negociate-badly"
+        },
+        "quest-old-sheriff-negociate-failed-reaction": {
+            "hook": "loseTownReputation",
+            "state": "quest-old-sheriff-briefing",
+            "text": "quest-old-sheriff-negociate-failed-reaction"
+        },
+        "quest-old-sheriff-negociate-failed-reaction-alt": {
+            "state": "quest-old-sheriff-briefing",
+            "text": "quest-old-sheriff-negociate-failed-reaction-alt"
+        },
+        "reject-old-sheriff-quest": {
+            "state": "",
+            "text": "reject-old-sheriff-quest"
+        },
+        "reject-old-sheriff-quest-alt": {
+            "state": "about-daring-do",
+            "text": "reject-old-sheriff-quest-alt"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-capital-ruins-": {
+            "answers": [
+                "about-crystal-den",
+                "back-to-entry"
+            ],
+            "text": "about-capital-ruins-"
+        },
+        "about-crystal-den-": {
+            "answers": [
+                "about-capital-ruins",
+                "back-to-entry"
+            ],
+            "text": "about-crystal-den-"
+        },
+        "about-daring-do": {
+            "answers": [
+                "about-crystal-den",
+                "about-capital-ruins",
+                "back-to-entry"
+            ],
+            "mood": "smile",
+            "text": "about-daring-do"
+        },
+        "about-npc": {
+            "answers": [
+                "introduce-player",
+                "back-to-entry"
+            ],
+            "mood": "",
+            "text": "about-npc"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-work",
+                "ask-about-npc",
+                "exit-entry"
+            ],
+            "text": "entry"
+        },
+        "name-already-known": {
+            "answers": [
+                "back-to-entry"
+            ],
+            "text": "name-already-known"
+        },
+        "no-more-work": {
+            "answers": [
+                "back-to-entry"
+            ],
+            "mood": "",
+            "text": "no-more-work"
+        },
+        "quest-old-sheriff": {
+            "answers": [
+                "accept-old-sheriff-quest",
+                "old-sheriff-quest-ask-reward",
+                "reject-old-sheriff-quest-alt",
+                "reject-old-sheriff-quest"
+            ],
+            "mood": "",
+            "text": "quest-old-sheriff"
+        },
+        "quest-old-sheriff-briefing": {
+            "answers": [
+                "quest-old-sheriff-briefing-reaction",
+                "quest-old-sheriff-briefing-reaction-alt"
+            ],
+            "hook": "startOldSheriffQuest",
+            "mood": "neutral",
+            "text": "quest-old-sheriff-briefing"
+        },
+        "quest-old-sheriff-on-negociate-failure": {
+            "answers": [
+                "quest-old-sheriff-negociate-failed-reaction",
+                "quest-old-sheriff-negociate-failed-reaction-alt",
+                "reject-old-sheriff-quest"
+            ],
+            "mood": "angry",
+            "text": "quest-old-sheriff-on-negociate-failure"
+        },
+        "quest-old-sheriff-on-negociate-success": {
+            "answers": [
+                "quest-old-sheriff-asked-reward-accepted"
+            ],
+            "mood": "",
+            "text": "quest-old-sheriff-on-negociate-success"
+        },
+        "quest-old-sheriff-reward-asked": {
+            "answers": [
+                "quest-old-sheriff-asked-reward-accepted",
+                "quest-old-sheriff-negociate",
+                "quest-old-sheriff-negociate-badly",
+                "reject-old-sheriff-quest"
+            ],
+            "hook": "",
+            "mood": "smile",
+            "text": "quest-old-sheriff-reward-asked"
+        }
+    }
+}

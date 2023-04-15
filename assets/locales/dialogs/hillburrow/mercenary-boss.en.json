@@ -1,0 +1,24 @@
+{
+    "dialogs": {
+        "hillburrow/mercenary-boss": {
+            "about-npc": "The name's {{npc}}. See all the mean tough motherfuckers guarding this place ? Well I'm the meanest and the toughest of them all, and they all obey me.",
+            "about-npc-provoke": "Heh. You don't look so tough to me.",
+            "ask-about-npc": "Hi. I'm {{name}}. What's your name ?",
+            "ask-about-sabotage": "I see. Can you tell me more about these incidents ?",
+            "ask-about-sheriff-murder": "I have some questions about the murder of Scratchy Lead, if you don't mind answering them.",
+            "back-to-entry": "Let's talk about something else.",
+            "entry": "What's up ?",
+            "exit-entry": "Nothing. See you later.",
+            "quest-seriff-murder-ask-suspicions": "Do you know anybody that would've had a reason to get rid of him ?",
+            "quest-seriff-murder-exit": "That'll be all. Thank you for your cooperation.",
+            "quest-sheriff-murder": "Scratchy Lead's murder ? Good riddance. That old fool was useless. Sitting on his ass all day long, never solved a crime in his career... good to know he isn't wasting the air he used to be breathing anymore.",
+            "quest-sheriff-murder-about-case": "He wasn't working a case \"for us\". He was just supposed to do this job. People were killed at the coal mine. Some psycho set up explosive traps near the exploitation. Several times, at that. It kills people and damages our tools. Scratchy Lead was never able to get a single clue about the psycho who's been sabotaging us.",
+            "quest-sheriff-murder-ask-about-case": "I've been told that Scratchy Lead was working a case for you. What was that all about ?",
+            "quest-sheriff-murder-back-to-entry": "I've got other questions for you.",
+            "quest-sheriff-murder-confront": "Is that why you killed him ?",
+            "quest-sheriff-murder-on-confront": "Ha ! I see you're just as bad a detective as he was ! No, I didn't murder that pony. It would've been a waste of my time.",
+            "quest-sheriff-murder-sabotage": "I could. But you'd better talk to Bitty about that. She's probably in her office right now. It's on the other side of the hallway.",
+            "quest-sheriff-suspicions": "Can't say that I do. Maybe some criminal could've done it, if they believed he could've been a threat to their business. But as I've said before, Scratchy Lead was a shitty sheriff, he wouldn't have been a threat to a criminal even if he had been able to sniff one out... which he wasn't."
+        }
+    }
+}

@@ -1,5 +1,10 @@
 {
     "bubbles": {
+        "caravaneer-1": "Can't wait until the next stop !",
+        "caravaneer-2": "So, you're joining the caravan ?",
+        "caravaneer-3": "Nothing beats the traveler's life.",
+        "caravaneer-4": "Gotta make sure these wares are safe.",
+        "caravaneer-5": "Caravaneer is a risky job, but it pays.",
         "chase-from-kitchen": "Get ouf of my kitchen !",
         "guard-1": "Move along, nothing to see here.",
         "guard-2": "I've got my eye on you.",
@@ -142,6 +147,10 @@
             "description": "factions.bandits.description",
             "name": "factions.bandits.name"
         },
+        "cristal-den": {
+            "description": "factions.cristal-den.description",
+            "name": "factions.cristal-den.name"
+        },
         "critters": {
             "description": "factions.critters.description",
             "name": "factions.critters.name"
@@ -149,12 +158,20 @@
         "diamond-dogs": {
             "name": "Diamond dogs"
         },
+        "hillburrow-slaves": {
+            "description": "factions.hillburrow-slaves.description",
+            "name": "factions.hillburrow-slaves.name"
+        },
         "junkville": {
             "description": "The inhabitants of the small town of Junkville. They're a peaceful bunch of ponies living off the resources of an old pre-war dump.",
             "name": "Junkville"
         },
         "mordino": {
             "name": "Mordino Family "
+        },
+        "potioks": {
+            "description": "factions.potioks.description",
+            "name": "factions.potioks.name"
         },
         "sample-city": {
             "name": "Sample Town"

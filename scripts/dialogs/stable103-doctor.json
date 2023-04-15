@@ -1,9 +1,6 @@
 {
     "answers": {
         "": {
-            "availableHook": "",
-            "hook": "",
-            "state": ""
         },
         "I'm not feeling so good, doc... can you take care of me ?": {
             "text": "I'm not feeling so good, doc... can you take care of me ?"
@@ -16,7 +13,7 @@
             "text": "ask-nothing"
         },
         "ask-wellbeing": {
-            "hook": "",
+            "state": "aboutWellbeing",
             "text": "ask-wellbeing"
         },
         "main-quest-done": {
@@ -26,7 +23,6 @@
             "text": "main-quest-done"
         },
         "main-quest-not-done": {
-            "availableHook": "",
             "hook": "onMainQuestNotDone",
             "state": "entryPoint",
             "text": "main-quest-not-done"
@@ -45,6 +41,7 @@
             "answers": [
             ],
             "hook": "onAngry",
+            "mood": "",
             "text": "aboutWellbeing"
         },
         "entryPoint": {
@@ -54,11 +51,14 @@
                 "ask-nothing"
             ],
             "hook": "entryPoint",
+            "mood": "",
             "text": "entryPoint"
         },
         "healedWounds": {
             "answers": [
             ],
+            "hook": "",
+            "mood": "",
             "text": "healedWounds"
         },
         "introductionQuestDone": {
@@ -67,6 +67,7 @@
                 "quest-done-worrying"
             ],
             "hook": "",
+            "mood": "",
             "text": "introductionQuestDone"
         },
         "mainQuest": {
@@ -75,12 +76,14 @@
                 "main-quest-not-done"
             ],
             "hook": "mainQuestQuestion",
+            "mood": "",
             "text": "mainQuest"
         },
         "nothingToHeal": {
             "answers": [
             ],
             "hook": "onAngry",
+            "mood": "",
             "text": "nothingToHeal"
         }
     }

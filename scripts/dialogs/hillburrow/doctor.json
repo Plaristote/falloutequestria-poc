@@ -1,0 +1,179 @@
+{
+    "answers": {
+        "": {
+        },
+        "about-den-do": {
+            "text": "about-den-do"
+        },
+        "about-npc-leaving-den": {
+            "state": "about-npc-den",
+            "text": "about-npc-leaving-den"
+        },
+        "about-npc-leaving-den-alt": {
+            "state": "about-npc-den",
+            "text": "about-npc-leaving-den-alt"
+        },
+        "ask-about-den-doc": {
+            "state": "about-den-doc",
+            "text": "ask-about-den-doc"
+        },
+        "ask-about-den-doc-treatment": {
+            "state": "about-den-doc-treatment",
+            "text": "ask-about-den-doc-treatment"
+        },
+        "ask-about-npc": {
+            "state": "about-npc",
+            "text": "ask-about-npc"
+        },
+        "ask-about-old-sheriff": {
+            "availableHook": "canTalkAboutOldSheriffMurder",
+            "state": "about-old-sheriff",
+            "text": "ask-about-old-sheriff"
+        },
+        "ask-about-potioks": {
+            "state": "about-potioks",
+            "text": "ask-about-potioks"
+        },
+        "ask-more-about-npc": {
+            "state": "about-npc-more",
+            "text": "ask-more-about-npc"
+        },
+        "ask-more-about-potioks": {
+            "state": "about-potioks-more",
+            "text": "ask-more-about-potioks"
+        },
+        "ask-more-about-sheriff": {
+            "state": "old-sheriff-tell-more",
+            "text": "ask-more-about-sheriff"
+        },
+        "ask-suspicion-about-sheriff": {
+            "state": "old-sheriff-suspicions",
+            "text": "ask-suspicion-about-sheriff"
+        },
+        "back-to-entrhy": {
+            "text": "back-to-entrhy"
+        },
+        "back-to-entry": {
+            "state": "entry",
+            "text": "back-to-entry"
+        },
+        "exit-barter": {
+            "text": "exit-barter"
+        },
+        "exit-entry": {
+            "text": "exit-entry"
+        },
+        "trade": {
+            "hook": "barter",
+            "state": "barter",
+            "text": "trade"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-den-doc": {
+            "answers": [
+                "ask-about-den-doc-treatment",
+                "back-to-entry"
+            ],
+            "mood": "",
+            "text": "about-den-doc"
+        },
+        "about-den-doc-treatment": {
+            "answers": [
+                "back-to-entry"
+            ],
+            "mood": "",
+            "text": "about-den-doc-treatment"
+        },
+        "about-npc": {
+            "answers": [
+                "ask-more-about-npc",
+                "back-to-entry"
+            ],
+            "mood": "",
+            "text": "about-npc"
+        },
+        "about-npc-den": {
+            "answers": [
+                "ask-about-potioks",
+                "ask-about-den-doc",
+                "back-to-entry"
+            ],
+            "mood": "",
+            "text": "about-npc-den"
+        },
+        "about-npc-more": {
+            "answers": [
+                "about-npc-leaving-den",
+                "about-npc-leaving-den-alt",
+                "back-to-entry"
+            ],
+            "mood": "",
+            "text": "about-npc-more"
+        },
+        "about-old-sheriff": {
+            "answers": [
+                "ask-suspicion-about-sheriff",
+                "ask-more-about-sheriff",
+                "back-to-entry"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "about-old-sheriff"
+        },
+        "about-potioks": {
+            "answers": [
+                "ask-more-about-potioks",
+                "back-to-entry"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "about-potioks"
+        },
+        "about-potioks-more": {
+            "answers": [
+                "back-to-entry"
+            ],
+            "mood": "",
+            "text": "about-potioks-more"
+        },
+        "barter": {
+            "answers": [
+                "back-to-entry",
+                "exit-barter"
+            ],
+            "mood": "",
+            "text": "barter"
+        },
+        "entry": {
+            "answers": [
+                "trade",
+                "ask-about-old-sheriff",
+                "ask-about-npc",
+                "exit-entry"
+            ],
+            "hook": "entryLine",
+            "mood": "",
+            "text": "entry"
+        },
+        "old-sheriff-suspicions": {
+            "answers": [
+                "ask-more-about-sheriff",
+                "back-to-entry"
+            ],
+            "hook": "suspicionsAboutOldSheriffMurder",
+            "mood": "",
+            "text": "old-sheriff-suspicions"
+        },
+        "old-sheriff-tell-more": {
+            "answers": [
+                "ask-suspicion-about-sheriff",
+                "back-to-entry"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "old-sheriff-tell-more"
+        }
+    }
+}

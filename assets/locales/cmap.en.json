@@ -152,6 +152,16 @@
         "unarmed": "Unarmed",
         "very-good": "Very good"
     },
+    "factions": {
+        "hillburrow": {
+            "description": "factions.hillburrow.description",
+            "name": "factions.hillburrow.name"
+        },
+        "junkville": {
+            "description": "factions.junkville.description",
+            "name": "factions.junkville.name"
+        }
+    },
     "genders": {
         "female": "Female",
         "male": "Male"

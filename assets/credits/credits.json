@@ -2,20 +2,23 @@
   {
     "name": "Plaristote",
     "category": "developers",
+    "avatar": "picon.png",
     "url": "https://github.com/Plaristote"
   },
   {
     "name": "LazyTortoise",
     "category": "developers",
+    "avatar": "11179950.jpeg",
     "url": "https://github.com/LazyTurtle"
   },
   {
     "name": "Salv-a-Door",
-    "category": "writing"
+    "category": "writing",
+    "avatar": "salvadoor.gif"
   },
   {
     "name": "Szamanx",
-    "category": "UI design",
+    "category": "User Interfaces",
     "files": [
       "assets/credits/szamanx.png",
       "assets/credits/szamanx2.png"
@@ -24,18 +27,21 @@
   {
     "name": "Munkari",
     "category": "artwork",
+    "avatar": "munkari.jpg",
     "url": "https://www.deviantart.com/munkari",
     "files": ["assets/backgrounds/default.png"]
   },
   {
     "name": "Zeka10000",
     "category": "sprites",
+    "avatar": "zeka10000.gif",
     "url": "https://www.deviantart.com/zeka10000",
     "files": ["assets/credits/zeka10000.png"]
   },
   {
     "name": "Akumath",
     "category": "sprites",
+    "avatar": "akumath.gif",
     "url": "https://www.deviantart.com/akumath",
     "files": ["assets/credits/akumath.png"]
   },
@@ -56,5 +62,18 @@
       "assets/icons/survival-book.png"
     ],
     "consent": false
+  },
+  {
+    "name": "SkyBolt",
+    "category": "music",
+    "avatar": "skybolt.png",
+    "url": "https://www.youtube.com/c/SkyBoltsMusic",
+    "files": [
+      "assets/audio/worldmap/SkyBolt - 99 Problems.mp3",
+      "assets/audio/worldmap/SkyBolt - Brains.mp3",
+      "assets/audio/worldmap/SkyBolt - Silver Bell.mp3",
+      "assets/audio/worldmap/SkyBolt - Summer Wind.mp3"
+    ],
+    "consent": true
   }
 ]

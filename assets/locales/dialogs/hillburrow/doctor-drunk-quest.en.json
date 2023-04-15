@@ -1,0 +1,30 @@
+{
+    "dialogs": {
+        "hillburrow/doctor-drunk-quest": {
+            "about-steward": "What ? Sure, doctor's bag, coming right up ! Wait, where can I find the steward again ?",
+            "complete": "I have a doctor's bag right here.",
+            "discuss-doctor-bag": "Alright ! That's exactly what I needed ! Hoof it over, no time to waste !",
+            "entry": "<i>You come into a clinic. Somepony is laying on the floor, a wooden stake sticking out of his stomach. A stressed out doctor is tending to his wound. As you step into the room, the doctor raises her head and yells at you:</i><br/><br/>Who are you and what are you doing standing there like an idiot ? Can't you see this pony is bleeding out ? I need a doctor's bag ASAP ! Make yourself useful and go get one from the steward !",
+            "entry-alt": "You're back ! And not a minute too soon ! Do you have the doctor bag I asked you for ?",
+            "find-steward": "The steward, dammit ! It's literally the first building when you come into town, on your right when you exit this here clinic ! Make it snappy !",
+            "hand-doctor-bag": "Here you go.",
+            "heal-success": "<i>You spend around 15 minutes patching up the wounded pony. After a careful operation, you're confident your patient is going to be just fine.</i><br/><br/>Well, I'll be damned. I did have a few things to learn from you. Good job, my dear colleague. If you need anything from me, feel free to come back. There's a lot more brutes than healers in this world. Us medics need to have each other's backs. Thank you.",
+            "medical-check": "I'm a doctor as well, and I'm familiar with such wounds. From what I can see, the stake has likely pierced the patient's stomach. If we take out the stake right now, I'm confident that I can patch up the organ before the patient bleeds out. Then he'll just need stitches, antibiotics and some rest.",
+            "medical-check-2-fail": "Oh. I hadn't thought about that. You're right, we do need a doctor's bag. I'll be right back with one.",
+            "medical-check-2-success": "I know a spell that can close wounds. It's a bit tricky to use on an internal wound, but I'm confident I can do it.",
+            "medical-check-fail": "Of course I know what I'm doing ! I'll take off the wooden stake and cauterize the wound. Let me take care of this.",
+            "medical-dont-care": "Just kidding, I don't really care. This is none of my business. I'll come back when I need something from you.",
+            "medical-give-up": "Em, yeah, I don't really know. I'll get you that doctor's bag ! I'll be right back !",
+            "medical-route": "Hang on, let me take a look, I might be able to help him right away. Will you let me take a look ?",
+            "medical-route-cocky": "There's a new doctor in town, baby ! Hoofs off my patient, I'll take care of this.",
+            "on-heal-prompt": "Sounds good to me. Proceed. I'll watch you closely... looks like I could learn a thing or two from you.",
+            "on-medical-check-fail": "Yeah, and then the patient dies from internal bleeding. Good job, \"doctor\" ! Get the buck out of here !",
+            "on-medical-check-success": "Alright, you do have a clue about what we're doing here. And how are you gonna close the internal wound without a doctor's bag then ?",
+            "on-try-to-help": "Where the buck do you think you are ? This is my clinic, and this client needs medical help, not a circus act you freakin' bozo. Get the buck out. Next time I see you, you better have a doctor's bag for me or this dude won't be the only one to die today. What do you even know about healing a deep wound anyway ?",
+            "perform-heal": "Let us begin.",
+            "reject": "Er... I'm pretty busy already, I think I'm just going to go. Bye !",
+            "start-negociating": "Whoa there ! These things ain't free you know ! Tell me, how much is this pony's life worth to you ?",
+            "success": "<i>The doctor opens the doctor's bag and starts tinkering around the wounded pony's flesh. After 15 minutes of this slightly gruesome display, she violently wakes the pony up with a huge slap on his muzzle</i><br/><br/>Alright buddy ! You're all patched up, thanks to that pony standing in the doorway. They even took the time to watch this whole operation unfold, watching over me the whole time. What a creep, am I right ? Anyhow, you're not getting any younger. I don't ever wanna do this again, so do me a solid and avoid bar brawls from now on, okay ? Okay. You should be able to limp out of here safely. Get out of here already !"
+        }
+    }
+}

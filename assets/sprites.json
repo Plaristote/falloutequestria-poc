@@ -878,6 +878,90 @@
             "width": 27
         }
     },
+    "coal-ore": {
+        "A": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 70,
+            "offsetX": 15,
+            "offsetY": 5,
+            "repeat": false,
+            "width": 80
+        },
+        "B": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 80,
+            "offsetX": 133,
+            "offsetY": 0,
+            "repeat": false,
+            "width": 108
+        },
+        "C": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 75,
+            "offsetX": 285,
+            "offsetY": 10,
+            "repeat": false,
+            "width": 85
+        },
+        "D": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 75,
+            "offsetX": 390,
+            "offsetY": 5,
+            "repeat": false,
+            "width": 109
+        },
+        "E": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 159,
+            "offsetX": 7,
+            "offsetY": 136,
+            "repeat": false,
+            "width": 148
+        },
+        "F": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 163,
+            "offsetX": 175,
+            "offsetY": 125,
+            "repeat": false,
+            "width": 287
+        },
+        "G": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 125,
+            "offsetX": 493,
+            "offsetY": 150,
+            "repeat": false,
+            "width": 143
+        },
+        "H": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 181,
+            "offsetX": 3,
+            "offsetY": 321,
+            "repeat": false,
+            "width": 283
+        },
+        "I": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 179,
+            "offsetX": 357,
+            "offsetY": 319,
+            "repeat": false,
+            "width": 308
+        },
+        "defaultSource": "coal-ore.png"
+    },
     "crates": {
         "A-1": {
             "frameCount": 1,
@@ -2343,6 +2427,16 @@
             "repeat": false,
             "source": "items/health-potion.png",
             "width": 72
+        },
+        "knife": {
+            "frameCount": 1,
+            "frameInterval": 0,
+            "height": 37,
+            "offsetX": 1,
+            "offsetY": 39,
+            "repeat": false,
+            "source": "items/weapons.png",
+            "width": 73
         },
         "medikit": {
             "height": 36,

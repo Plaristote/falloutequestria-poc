@@ -1,0 +1,111 @@
+{
+    "answers": {
+        "about-npc-provoke": {
+            "text": "about-npc-provoke"
+        },
+        "ask-about-npc": {
+            "state": "about-npc",
+            "text": "ask-about-npc"
+        },
+        "ask-about-sabotage": {
+            "state": "quest-sheriff-murder-sabotage",
+            "text": "ask-about-sabotage"
+        },
+        "ask-about-sheriff-murder": {
+            "availableHook": "canAskAboutSheriffMurder",
+            "state": "quest-sheriff-murder",
+            "text": "ask-about-sheriff-murder"
+        },
+        "back-to-entry": {
+            "state": "entry",
+            "text": "back-to-entry"
+        },
+        "exit-entry": {
+            "text": "exit-entry"
+        },
+        "quest-seriff-murder-ask-suspicions": {
+            "state": "quest-sheriff-suspicions",
+            "text": "quest-seriff-murder-ask-suspicions"
+        },
+        "quest-seriff-murder-exit": {
+            "text": "quest-seriff-murder-exit"
+        },
+        "quest-sheriff-murder-ask-about-case": {
+            "availableHook": "knowsAboutSheriffWorkingCase",
+            "state": "quest-sheriff-murder-about-case",
+            "text": "quest-sheriff-murder-ask-about-case"
+        },
+        "quest-sheriff-murder-back-to-entry": {
+            "state": "quest-sheriff-murder",
+            "text": "quest-sheriff-murder-back-to-entry"
+        },
+        "quest-sheriff-murder-confront": {
+            "state": "quest-sheriff-murder-on-confront",
+            "text": "quest-sheriff-murder-confront"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-npc": {
+            "answers": [
+                "about-npc-provoke",
+                "back-to-entry"
+            ],
+            "hook": "onToldName",
+            "mood": "cocky",
+            "text": "about-npc"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-npc",
+                "ask-about-sheriff-murder",
+                "exit-entry"
+            ],
+            "hook": "",
+            "mood": "neutral",
+            "text": "entry"
+        },
+        "quest-sheriff-murder": {
+            "answers": [
+                "quest-seriff-murder-ask-suspicions",
+                "quest-sheriff-murder-ask-about-case",
+                "quest-sheriff-murder-confront",
+                "quest-seriff-murder-exit"
+            ],
+            "mood": "cocky",
+            "text": "quest-sheriff-murder"
+        },
+        "quest-sheriff-murder-about-case": {
+            "answers": [
+                "ask-about-sabotage",
+                "quest-sheriff-murder-back-to-entry"
+            ],
+            "hook": "onTalkAboutSabotage",
+            "mood": "",
+            "text": "quest-sheriff-murder-about-case"
+        },
+        "quest-sheriff-murder-on-confront": {
+            "answers": [
+                "quest-sheriff-murder-back-to-entry"
+            ],
+            "mood": "laugh",
+            "text": "quest-sheriff-murder-on-confront"
+        },
+        "quest-sheriff-murder-sabotage": {
+            "answers": [
+                "quest-seriff-murder-exit",
+                "quest-sheriff-murder-back-to-entry"
+            ],
+            "mood": "",
+            "text": "quest-sheriff-murder-sabotage"
+        },
+        "quest-sheriff-suspicions": {
+            "answers": [
+                "quest-sheriff-murder-back-to-entry"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "quest-sheriff-suspicions"
+        }
+    }
+}

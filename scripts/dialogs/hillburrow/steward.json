@@ -1,0 +1,130 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "hook": "",
+            "state": ""
+        },
+        "about-steward": {
+            "availableHook": "",
+            "state": "about-steward-answer",
+            "text": "about-steward"
+        },
+        "drunken-quest-ask-about-potioks": {
+            "availableHook": "",
+            "hook": "",
+            "state": "drunken-quest-about-potioks",
+            "text": "drunken-quest-ask-about-potioks"
+        },
+        "drunken-quest-cantpay": {
+            "availableHook": "",
+            "hook": "",
+            "state": "",
+            "text": "drunken-quest-cantpay"
+        },
+        "drunken-quest-lower-price": {
+            "availableHook": "canNegociateDoctorsBagPrice",
+            "hook": "onNegociateDoctorsBagPrice",
+            "text": "drunken-quest-lower-price"
+        },
+        "drunken-quest-pay": {
+            "availableHook": "canPayDoctorsBag",
+            "hook": "onBuyDoctorsBag",
+            "state": "",
+            "text": "drunken-quest-pay"
+        },
+        "drunken-quest-try-negociate": {
+            "availableHook": "",
+            "hook": "",
+            "state": "drunken-quest-on-negociate",
+            "text": "drunken-quest-try-negociate"
+        },
+        "entry-exit": {
+            "text": "entry-exit"
+        },
+        "lets-trade": {
+            "availableHook": "",
+            "state": "trade",
+            "text": "lets-trade"
+        },
+        "no-trade": {
+            "text": "no-trade"
+        },
+        "start-drunken-quest": {
+            "availableHook": "canSaveDrunkenMaster",
+            "state": "drunken-quest",
+            "text": "start-drunken-quest"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-steward-answer": {
+            "answers": [
+                "lets-trade",
+                "no-trade"
+            ],
+            "hook": "",
+            "text": "about-steward-answer"
+        },
+        "drunken-quest": {
+            "answers": [
+                "drunken-quest-pay",
+                "drunken-quest-try-negociate",
+                "drunken-quest-cantpay"
+            ],
+            "text": "drunken-quest"
+        },
+        "drunken-quest-about-potioks": {
+            "answers": [
+                "drunken-quest-pay",
+                "drunken-quest-lower-price",
+                "drunken-quest-cantpay"
+            ],
+            "text": "drunken-quest-about-potioks"
+        },
+        "drunken-quest-on-cantpay": {
+            "answers": [
+            ],
+            "text": "drunken-quest-on-cantpay"
+        },
+        "drunken-quest-on-negociate": {
+            "answers": [
+                "drunken-quest-ask-about-potioks",
+                "drunken-quest-pay",
+                "drunken-quest-lower-price",
+                "drunken-quest-cantpay"
+            ],
+            "text": "drunken-quest-on-negociate"
+        },
+        "drunken-quest-on-negociate-failure": {
+            "answers": [
+                "drunken-quest-pay",
+                "drunken-quest-cantpay"
+            ],
+            "text": "drunken-quest-on-negociate-failure"
+        },
+        "drunken-quest-on-negociate-success": {
+            "answers": [
+                "drunken-quest-pay",
+                "drunken-quest-cantpay"
+            ],
+            "text": "drunken-quest-on-negociate-success"
+        },
+        "entry": {
+            "answers": [
+                "start-drunken-quest",
+                "lets-trade",
+                "about-steward",
+                "entry-exit"
+            ],
+            "hook": "",
+            "text": "entry"
+        },
+        "trade": {
+            "answers": [
+            ],
+            "hook": "barter",
+            "text": "trade"
+        }
+    }
+}

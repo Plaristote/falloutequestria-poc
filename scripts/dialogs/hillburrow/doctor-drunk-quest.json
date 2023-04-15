@@ -1,0 +1,143 @@
+{
+    "answers": {
+        "": {
+            "availableHook": "",
+            "hook": "",
+            "state": ""
+        },
+        "about-steward": {
+            "availableHook": "",
+            "state": "find-steward",
+            "text": "about-steward"
+        },
+        "complete": {
+            "availableHook": "hasDoctorBag",
+            "state": "discuss-doctor-bag",
+            "text": "complete"
+        },
+        "hand-doctor-bag": {
+            "hook": "handDoctorBag",
+            "state": "success",
+            "text": "hand-doctor-bag"
+        },
+        "medical-check": {
+            "availableHook": "medicalCheckSuccess",
+            "hook": "onDiagnostic",
+            "state": "on-medical-check-success",
+            "text": "medical-check"
+        },
+        "medical-check-2-fail": {
+            "availableHook": "",
+            "state": "",
+            "text": "medical-check-2-fail"
+        },
+        "medical-check-2-success": {
+            "availableHook": "canPerformHeal",
+            "state": "on-heal-prompt",
+            "text": "medical-check-2-success"
+        },
+        "medical-check-fail": {
+            "availableHook": "medicalCheckFails",
+            "hook": "",
+            "state": "on-medical-check-fail",
+            "text": "medical-check-fail"
+        },
+        "medical-dont-care": {
+            "availableHook": "",
+            "hook": "",
+            "state": "",
+            "text": "medical-dont-care"
+        },
+        "medical-give-up": {
+            "state": "",
+            "text": "medical-give-up"
+        },
+        "medical-route": {
+            "state": "on-try-to-help",
+            "text": "medical-route"
+        },
+        "medical-route-cocky": {
+            "state": "on-try-to-help",
+            "text": "medical-route-cocky"
+        },
+        "perform-heal": {
+            "hook": "tryToHeal",
+            "text": "perform-heal"
+        },
+        "reject": {
+            "text": "reject"
+        },
+        "start-negociating": {
+            "hook": "",
+            "state": "",
+            "text": "start-negociating"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "discuss-doctor-bag": {
+            "answers": [
+                "hand-doctor-bag",
+                "start-negociating"
+            ],
+            "hook": "",
+            "text": "discuss-doctor-bag"
+        },
+        "entry": {
+            "answers": [
+                "complete",
+                "about-steward",
+                "medical-route-cocky",
+                "medical-route",
+                "reject"
+            ],
+            "hook": "entryLine",
+            "text": "entry"
+        },
+        "find-steward": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "find-steward"
+        },
+        "heal-success": {
+            "answers": [
+            ],
+            "text": "heal-success"
+        },
+        "on-heal-prompt": {
+            "answers": [
+                "perform-heal"
+            ],
+            "text": "on-heal-prompt"
+        },
+        "on-medical-check-fail": {
+            "answers": [
+            ],
+            "hook": "",
+            "text": "on-medical-check-fail"
+        },
+        "on-medical-check-success": {
+            "answers": [
+                "medical-check-2-success",
+                "medical-check-2-fail"
+            ],
+            "text": "on-medical-check-success"
+        },
+        "on-try-to-help": {
+            "answers": [
+                "medical-check-fail",
+                "medical-check",
+                "medical-dont-care",
+                "medical-give-up"
+            ],
+            "hook": "",
+            "text": "on-try-to-help"
+        },
+        "success": {
+            "answers": [
+            ],
+            "text": "success"
+        }
+    }
+}

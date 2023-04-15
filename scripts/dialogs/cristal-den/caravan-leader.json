@@ -1,0 +1,44 @@
+{
+    "answers": {
+        "": {
+            "state": ""
+        },
+        "about-caravan": {
+            "state": "about-caravan-answer",
+            "text": "about-caravan"
+        },
+        "about-joining": {
+            "state": "about-joining-answer",
+            "text": "about-joining"
+        },
+        "entry-exit": {
+            "state": "",
+            "text": "entry-exit"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-caravan-answer": {
+            "answers": [
+                "about-joining"
+            ],
+            "mood": "smile",
+            "text": "about-caravan-answer"
+        },
+        "about-joining-answer": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "about-joining-answer"
+        },
+        "entry": {
+            "answers": [
+                "about-caravan",
+                "about-joining",
+                "entry-exit"
+            ],
+            "mood": "",
+            "text": "entry"
+        }
+    }
+}

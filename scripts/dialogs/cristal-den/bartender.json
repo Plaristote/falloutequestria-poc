@@ -1,0 +1,18 @@
+{
+    "answers": {
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+            ],
+            "text": "entry"
+        },
+        "meeting": {
+            "answers": [
+            ],
+            "mood": "smile",
+            "text": "meeting"
+        }
+    }
+}

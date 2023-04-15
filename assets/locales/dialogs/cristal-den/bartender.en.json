@@ -1,0 +1,8 @@
+{
+    "dialogs": {
+        "cristal-den/bartender": {
+            "entry": "Hi ! Nice to see you again ! Care for a drink ?",
+            "meeting": "Hi there ! It's always nice seeing new faces here ! Welcome to the Café of Cristal Dreams ! How can I be of service ?"
+        }
+    }
+}

@@ -1,0 +1,148 @@
+{
+    "answers": {
+        "": {
+            "hook": "",
+            "state": ""
+        },
+        "accept-work-negociator": {
+            "hook": "acceptNegociatorQuest",
+            "state": "",
+            "text": "accept-work-negociator"
+        },
+        "ask-about-bibin": {
+            "state": "work-negociator-bibin",
+            "text": "ask-about-bibin"
+        },
+        "ask-about-potioks": {
+            "state": "work-negociator-potioks",
+            "text": "ask-about-potioks"
+        },
+        "ask-for-work": {
+            "state": "work-answer",
+            "text": "ask-for-work"
+        },
+        "ask-negociator-leads": {
+            "hook": "",
+            "state": "work-negociator-leads",
+            "text": "ask-negociator-leads"
+        },
+        "back-to-work-negociator": {
+            "state": "work-negociator",
+            "text": "back-to-work-negociator"
+        },
+        "exit-entry": {
+            "text": "exit-entry"
+        },
+        "reject-work-negociator": {
+            "hook": "",
+            "state": "",
+            "text": "reject-work-negociator"
+        },
+        "work-caravan-accept": {
+            "state": "work-caravan-start",
+            "text": "work-caravan-accept"
+        },
+        "work-caravan-accept-reluctantly": {
+            "state": "work-caravan-start",
+            "text": "work-caravan-accept-reluctantly"
+        },
+        "work-caravan-barter": {
+            "text": "work-caravan-barter"
+        },
+        "work-caravan-reject": {
+            "state": "work-caravan-rejected",
+            "text": "work-caravan-reject"
+        },
+        "work-skills-cancel": {
+            "state": "",
+            "text": "work-skills-cancel"
+        },
+        "work-skills-gunner": {
+            "state": "work-caravan",
+            "text": "work-skills-gunner"
+        },
+        "work-skills-talker": {
+            "state": "",
+            "text": "work-skills-talker"
+        },
+        "work-skills-wastelander": {
+            "state": "work-caravan",
+            "text": "work-skills-wastelander"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "ask-for-work",
+                "exit-entry"
+            ],
+            "mood": "angry",
+            "text": "entry"
+        },
+        "work-answer": {
+            "answers": [
+                "work-skills-gunner",
+                "work-skills-talker",
+                "work-skills-wastelander",
+                "work-skills-cancel"
+            ],
+            "mood": "",
+            "text": "work-answer"
+        },
+        "work-caravan": {
+            "answers": [
+                "work-caravan-accept",
+                "work-caravan-accept-reluctantly",
+                "work-caravan-reject"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "work-caravan"
+        },
+        "work-caravan-rejected": {
+            "answers": [
+            ],
+            "hook": "",
+            "mood": "cocky",
+            "text": "work-caravan-rejected"
+        },
+        "work-caravan-start": {
+            "answers": [
+            ],
+            "hook": "onAcceptedCaravanWork",
+            "mood": "",
+            "text": "work-caravan-start"
+        },
+        "work-negociator": {
+            "answers": [
+                "accept-work-negociator",
+                "ask-negociator-leads",
+                "reject-work-negociator"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "work-negociator"
+        },
+        "work-negociator-bibin": {
+            "answers": [
+                "back-to-work-negociator"
+            ],
+            "text": "work-negociator-bibin"
+        },
+        "work-negociator-leads": {
+            "answers": [
+                "ask-about-potioks",
+                "back-to-work-negociator"
+            ],
+            "text": "work-negociator-leads"
+        },
+        "work-negociator-potioks": {
+            "answers": [
+                "ask-about-bibin",
+                "back-to-work-negociator"
+            ],
+            "text": "work-negociator-potioks"
+        }
+    }
+}

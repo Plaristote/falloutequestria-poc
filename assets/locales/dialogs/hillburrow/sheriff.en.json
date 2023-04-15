@@ -1,0 +1,36 @@
+{
+    "dialogs": {
+        "hillburrow/sheriff": {
+            "about-capital-ruins": "What about the capital ruins ?",
+            "about-capital-ruins-": "The ruins of the capital city. Rumored to be full of pre-war tech, magical relics and valuable crap of all kind. Though there's a reason why everything you hear about it are rumors. My best guess is that people who go there probably never come back. I tried to go there when I was younger, but I was never able to get inside the city: its surroundings are riddled with all kinds of freaky mutated creatures. It's pretty far from here, to the north-east. If you feel that lucky, or suicidal maybe, just go up the river. You can't miss it.",
+            "about-crystal-den": "Where's Crystal Den at ?",
+            "about-crystal-den-": "Crystal Den is the biggest town around. It's east from here. That city is a nest of complete douchebags, mostly. The best way to make some caps over there is probably to join crime rather than fight it. But hey, who am I to judge, am I right ?",
+            "about-daring-do": "Huh. That's funny. It's not everyday you meet somepony who actually reads books in the wastes. I used to love those Daring Do stories when I was a young foal... maybe that's why I threw myself into the wastelands, before I ended up suck in this hole. Anyway, you're in the wrong town for this kind of action. If you want to fight crime, Crystal Den is probably what you're looking for. And if you're more of the tomb raider kind, you can try your luck at the capital ruins... though I wouldn't advise you to do so, of course !",
+            "about-npc": "My name is {{npc}}. I'm the enforcer of law and order in these parts.",
+            "accept-old-sheriff-quest": "You can count on me. I'll find the culprit and bring them to you.",
+            "ask-about-npc": "Who are you ?",
+            "ask-about-work": "I'm looking for work. Anything I can help you with ?",
+            "back-to-entry": "Let's talk about something else.",
+            "entry": "Hey. Need help with something ?",
+            "exit-entry": "Nothing, bye.",
+            "introduce-player": "Nice to meet you. I'm {{name}}.",
+            "name-already-known": "Yes. You're {{name}}. I know that. We've met before.",
+            "no-more-work": "I've got nothing for you at the moment. It's a small town after all.",
+            "old-sheriff-quest-ask-reward": "I might be interested. What kind of reward can I expect ?",
+            "quest-old-sheriff": "Actually... I guess I could use the help of someone who's not from around here. How do you feel about a murder mystery ? Somepony's been killed not too long ago, in a pretty gruesome way. The victim... he was the previous sheriff. Everpony here knows I used to be close to him, so I guess people are pretty careful about what they say around me. But maybe you'll be able to find out more about what happened. What do you say ? Feel like a detective yet ?",
+            "quest-old-sheriff-asked-reward-accepted": "Sounds fair.",
+            "quest-old-sheriff-briefing": "Alright. The victim's name was Scratchy Lead. He used to be the sheriff... back when I was his deputy.<br/><br/><i>As she starts describing the victim, you notice she tries to keep control of her voice as it starts wavering.</i><br/><br/>He was fair, righteous... and the darndest goodest earth pony in this town. Yet some fucker killed him, a few nights ago. His body was found somewhere between this here building and the coal mine. I don't have a single clue what the motive might've been. He wasn't involved in anything shady, that's for sure. He was too honest for any of that. And I would've known for sure. Perhaps he was just at the wrong place at the wrong time...<br/><br/>You may want to ask Stitch Poker for more details. She practiced the autopsy. You can find her at the clinic, right in front of you when you come out the front door of this building.",
+            "quest-old-sheriff-briefing-reaction": "Thank you. I'll be on my way.",
+            "quest-old-sheriff-briefing-reaction-alt": "Don't worry. Whoever thought he could murder your friend and get away with it was wrong. I'll find them and bring them to justice.",
+            "quest-old-sheriff-negociate": "That doesn't work for me. See if I want to find the murderer, I'll probably have to throw some bribes around, to get people talking. {{sheriffQuestReward}} would barely cover my costs. I'll need at least twice that amount.",
+            "quest-old-sheriff-negociate-badly": "Come on. You already told me you were close to the victim. I'm sure you're not that shitty of a friend that you can't spare more than {{sheriffQuestReward}} caps for your dead friend.",
+            "quest-old-sheriff-negociate-failed-reaction": "Sheesh, alright, no need to get so upset over this.",
+            "quest-old-sheriff-negociate-failed-reaction-alt": "Er... that was innapropriate. I'm sorry, I didn't mean any of it.",
+            "quest-old-sheriff-on-negociate-failure": "The reward is {{sheriffQuestReward}} bottlecaps, and that's final.",
+            "quest-old-sheriff-on-negociate-success": "Tough businesspony huh ? I can appreciate that too. Alright, you've got yourself a deal.",
+            "quest-old-sheriff-reward-asked": "Straight to the point, I see ! I like that. The reward is {{sheriffQuestReward}}. That is, if you bring me that murderous prick alive.",
+            "reject-old-sheriff-quest": "I'm sorry for your loss, but I don't think I'm qualified to help.",
+            "reject-old-sheriff-quest-alt": "Not my kind of police work. I was hoping for less Sherlock Pones and more Daring Do."
+        }
+    }
+}
