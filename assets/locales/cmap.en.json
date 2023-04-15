@@ -1,26 +1,4 @@
 {
-    "races": {
-        "earth-pony": "Earth pony",
-        "pegasus": "Pegasus",
-        "unicorn": "Unicorn"
-    },
-    "genders": {
-        "female": "Female",
-        "male": "Male"
-    },
-    "reputation": {
-        "disliked": "mistrustful",
-        "disliked+": "disliked",
-        "disliked++": "hated",
-        "disliked+++": "abhored",
-        "liked": "accepted",
-        "liked+": "liked",
-        "liked++": "loved",
-        "liked+++": "adored",
-        "max": "idolatred",
-        "min": "villified",
-        "neutral": "neutral"
-    },
     "cmap": {
         "abysmal": "Abysmal",
         "actionPoints": "Action points",
@@ -173,5 +151,27 @@
         "traits": "Traits",
         "unarmed": "Unarmed",
         "very-good": "Very good"
+    },
+    "genders": {
+        "female": "Female",
+        "male": "Male"
+    },
+    "races": {
+        "earth-pony": "Earth pony",
+        "pegasus": "Pegasus",
+        "unicorn": "Unicorn"
+    },
+    "reputation": {
+        "disliked": "mistrustful",
+        "disliked+": "disliked",
+        "disliked++": "hated",
+        "disliked+++": "abhored",
+        "liked": "accepted",
+        "liked+": "liked",
+        "liked++": "loved",
+        "liked+++": "adored",
+        "max": "idolatred",
+        "min": "villified",
+        "neutral": "neutral"
     }
 }
