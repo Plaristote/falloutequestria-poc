@@ -57,6 +57,10 @@ export class Shop {
   set stealAttemptCount(value) {
     this.model.setVariable("stealAttemptCount", value);
   }
+
+  get guards() {
+    return level.findGroup("guards");
+  }
   
   get opened() {
     return this.routineComponent.getCurrentRoutine().callback === "openShopRoutine";
@@ -129,7 +133,7 @@ export class Shop {
 
       this.stealAttemptCount = i + 1;
       i = Math.min(i, this.maxShopliftAttempts);
-      if (i >= this.maxShopliftAttempts)
+      if (i >= this.maxShopliftAttempts && this.guards)
         callGuards(this.guards, user, AlarmLevel.Arrest);
       level.addTextBubble(this.shopOwner, stealReactions[i].content, stealReactions[i].duration, stealReactions[i].color);
       return false;

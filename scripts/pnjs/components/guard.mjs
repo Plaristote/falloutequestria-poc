@@ -41,8 +41,7 @@ export class GuardComponent {
   }
 
   enable() {
-    if (!this.model.tasks.hasTask(this.taskName))
-      this.model.tasks.addTask(this.taskName, 15000, 0);
+    this.model.tasks.addUniqueTask(this.taskName, 15000, 0);
   }
 
   disable() {
