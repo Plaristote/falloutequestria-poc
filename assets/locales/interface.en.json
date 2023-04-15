@@ -105,9 +105,15 @@
             "use": "{{user}} used {{item}} on {{target}} for {{damage}} damage."
         },
         "wont-barter": "This person doesn't want to barter with you.",
-        "xp-gain": "You gained {{xp}} experience points."
+        "xp-gain": "You gained {{xp}} experience points.",
+        "training": "You trained {{skill}} and gained {{amount}} skill points."
     },
     "options": {
+        "title": {
+          "interface": "Interface",
+	  "sounds": "Audio",
+	  "gameplay": "Gameplay"
+        },
         "combatSpeed": "Combat speed",
         "fullscreen": "Full screen",
         "locale": "Language",
@@ -117,7 +123,8 @@
             "mixed": "Run on double-click"
         },
         "movementMode": "Movement mode",
-        "volume": "Music volume"
+        "musicVolume": "Music volume",
+        "soundEffectsVolume": "Sound effects volume"
     },
     "pipboy": {
         "Archives": "Archives",
