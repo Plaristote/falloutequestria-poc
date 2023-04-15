@@ -136,9 +136,15 @@
         "wont-barter": "Cette personne refuse de troquer avec toi.",
         "xp-gain": "Tu as gagne {{xp}} points d'experience.",
         "repair-success": "Tu as réparé {{target}}.",
-        "repair-failure": "Tu n'arrive pas à réparer {{target}}."
+        "repair-failure": "Tu n'arrive pas à réparer {{target}}.",
+        "training": "Tu as entrainé ta compétence {{skill}} et gagné {{amount}} points dans cette compétence."
     },
     "options": {
+        "title": {
+          "interface": "Interface",
+          "sounds": "Audio",
+          "gameplay": "Options de jeu"
+        },
         "combatSpeed": "Vitesse des combats",
         "fullscreen": "Plein écran",
         "locale": "Langue",
@@ -148,7 +154,8 @@
             "mixed": "Double-clique pour courrir"
         },
         "movementMode": "Mode de déplacement",
-        "volume": "Volume musique"
+        "musicVolume": "Volume de la musique",
+        "soundEffectsVolume": "Volume des effets sonores"
     },
     "pipboy": {
         "Archives": "Archives",
