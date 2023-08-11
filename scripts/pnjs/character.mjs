@@ -8,6 +8,10 @@ export class CharacterBehaviour extends SceneActorComponent {
     this.canPush = true;
   }
 
+  get isBusy() {
+    return level.isInCombat(this.model) || !this.model.actionQueue.isEmpty();
+  }
+
   get xpValue() {
     return this.xpBaseValue * this.model.statistics.level;
   }

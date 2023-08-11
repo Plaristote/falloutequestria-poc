@@ -19,9 +19,11 @@ export class GuardBehaviour extends CharacterBehaviour {
   get squad() { return this.model.parent.objects; }
 
   callSquadToCombat() {
-    for (var i = 0 ; i < this.squad.length ; ++i) {
-      if (!level.isInCombat(this.squad[i]))
-        level.joinCombat(this.squad[i]);
+    if (this.squad) {
+      for (var i = 0 ; i < this.squad.length ; ++i) {
+        if (!level.isInCombat(this.squad[i]))
+          level.joinCombat(this.squad[i]);
+      }
     }
   }
 
