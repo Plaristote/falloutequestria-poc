@@ -147,5 +147,6 @@ export class RainyPurpleVendetta extends QuestHelper {
     super.onSuccess();
     if (this.rainyPurpleAlive)
       this.rainyPurple.script.onVendettaOver();
+    game.dataEngine.addReputation("cristal-den", -10);
   }
 }

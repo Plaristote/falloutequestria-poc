@@ -12,6 +12,19 @@
             "state": "quest-sheriff-murder-sabotage",
             "text": "ask-about-sabotage"
         },
+        "ask-about-sabotage-timing": {
+            "state": "sabotage/about-timing",
+            "text": "ask-about-sabotage-timing"
+        },
+        "ask-about-sabotage-timing-insist": {
+            "availableHook": "canAskAboutSabotageTiming",
+            "state": "sabotage/about-timing-answer",
+            "text": "ask-about-sabotage-timing-insist"
+        },
+        "ask-about-sabotage-whereabouts": {
+            "state": "sabotage/about-explosives",
+            "text": "ask-about-sabotage-whereabouts"
+        },
         "ask-about-sabotages": {
             "availableHook": "canAskAboutSabotages",
             "state": "sabotage/entry",
@@ -48,6 +61,19 @@
         "quest-sheriff-murder-confront": {
             "state": "quest-sheriff-murder-on-confront",
             "text": "quest-sheriff-murder-confront"
+        },
+        "sabotage-ask-something-else": {
+            "state": "sabotage/entry",
+            "text": "sabotage-ask-something-else"
+        },
+        "sabotage-nothing-more-to-ask": {
+            "text": "sabotage-nothing-more-to-ask"
+        },
+        "sabotage-solve-explosive-via-science": {
+            "availableHook": "canFigureOutSabotageExplosives",
+            "hook": "figureOutSabotageExplosives",
+            "state": "sabotage/about-explosive-reaction",
+            "text": "sabotage-solve-explosive-via-science"
         }
     },
     "entryPoint": "entry",
@@ -60,6 +86,12 @@
             "hook": "onToldName",
             "mood": "cocky",
             "text": "about-npc"
+        },
+        "about-timing-answer": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "about-timing-answer"
         },
         "entry": {
             "answers": [
@@ -123,8 +155,43 @@
             "mood": "",
             "text": "quest-sheriff-suspicions"
         },
+        "sabotage/about-explosive-reaction": {
+            "answers": [
+                "sabotage-ask-something-else"
+            ],
+            "mood": "confused",
+            "text": "sabotage/about-explosive-reaction"
+        },
+        "sabotage/about-explosives": {
+            "answers": [
+                "sabotage-solve-explosive-via-science",
+                "sabotage-ask-something-else"
+            ],
+            "mood": "",
+            "text": "sabotage/about-explosives"
+        },
+        "sabotage/about-timing": {
+            "answers": [
+                "ask-about-sabotage-timing-insist",
+                "sabotage-ask-something-else"
+            ],
+            "hook": "",
+            "mood": "angry",
+            "text": "sabotage/about-timing"
+        },
+        "sabotage/about-timing-answer": {
+            "answers": [
+                "sabotage-ask-something-else"
+            ],
+            "hook": "learnAboutSabotageTiming",
+            "mood": "neutral",
+            "text": "sabotage/about-timing-answer"
+        },
         "sabotage/entry": {
             "answers": [
+                "ask-about-sabotage-timing",
+                "ask-about-sabotage-whereabouts",
+                "sabotage-nothing-more-to-ask"
             ],
             "mood": "",
             "text": "sabotage/entry"

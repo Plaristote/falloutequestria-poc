@@ -1,22 +1,28 @@
 import {QuestFlags, requireQuest} from "../../quests/helpers.mjs";
+import * as Checks from "../../cmap/helpers/checks.mjs";
 
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
   }
 
+  get sabotageQuest() {
+    return game.quests.getQuest("hillburrow/sabotage");
+  }
+
   dynamiteHasBeenFound() {
-    const quest = requireQuest("hillburrow/mineSabotage", QuestFlags.HiddenQuest);
-    return quest.hasVariable("foundDynamite");
+    const quest = requireQuest("hillburrow/sabotage", QuestFlags.HiddenQuest);
+    return quest.isObjectiveCompleted("findWaterCarrierDynamite");
   }
 
   canAskAboutSabotage() {
-    const quest = game.quests.getQuest("hillburrow/mineSabotage");
-    return quest && !quest.hidden;
+    return this.sabotageQuest && !this.sabotageQuest.hidden;
   }
 
   intimidationAttempt() {
-    return "sabotage-intimidation-fail";
+    const winner = Checks.skillContest(game.player, this.dialog.npc, "strength", 3);
+
+    return `sabotage-intimidation-${winner == game.player ? "success" : "fail"}`;
   }
 
   canConvinceToConfess() {
@@ -24,18 +30,24 @@ class Dialog {
   }
 
   findOutDynamiteFromNpc() {
-    const quest = requireQuest("hillburrow/mineSabotage", QuestFlags.HiddenQuest);
+    const quest = game.quests.addQuest("hillburrow/sabotage", QuestFlags.HiddenQuest);
     quest.completeObjective("findSuspect");
   }
 
   onConfessionHeard() {
-    const quest = requireQuest("hillburrow/mineSabotage");
-    quest.completeObjective("getConfession");
+    this.sabotageQuest.script.onWaterCarrierConfessed();
   }
 
   onLearnAboutBibinInvolvment() {
-    const quest = requireQuest("hillburrow/mineSabotage");
-    quest.completeObjective("binbinFoundOut");
+    this.sabotageQuest.setVariable("bibinFoundOut", 1);
+  }
+
+  startFight() {
+    this.dialog.npc.setAsEnemy(game.player);
+  }
+
+  takeToPotiokBoss() {
+    console.log("TAKE TO POTIOK BOSS");
   }
 }
 

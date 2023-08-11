@@ -42,6 +42,7 @@
             "text": "bye"
         },
         "confession-ask-about-orders": {
+            "state": "sabotage-confession-more",
             "text": "confession-ask-about-orders"
         },
         "confession-exit": {
@@ -60,9 +61,24 @@
         "interrogate-sabotage-give-up": {
             "text": "interrogate-sabotage-give-up"
         },
+        "sabotage-about-bibin-press-further": {
+            "state": "sabotage-about-bibin-2",
+            "text": "sabotage-about-bibin-press-further"
+        },
+        "sabotage-ask-about-bibin": {
+            "state": "sabotage-about-bibin",
+            "text": "sabotage-ask-about-bibin"
+        },
+        "sabotage-go-to-potiok-boss": {
+            "hook": "takeToPotiokBoss",
+            "text": "sabotage-go-to-potiok-boss"
+        },
         "sabotage-intimiadation-failed-reaction": {
             "hook": "startFight",
             "text": "sabotage-intimiadation-failed-reaction"
+        },
+        "sabotage-let-go": {
+            "text": "sabotage-let-go"
         }
     },
     "entryPoint": "entry",
@@ -109,6 +125,7 @@
                 "interrogate-sabotage-1",
                 "interrogate-sabotage-give-up"
             ],
+            "hook": "",
             "mood": "",
             "text": "about-sabotage"
         },
@@ -116,6 +133,7 @@
             "answers": [
                 "back-to-entry"
             ],
+            "hook": "",
             "mood": "",
             "text": "about-talkative"
         },
@@ -123,6 +141,7 @@
             "answers": [
                 "back-to-entry-alt"
             ],
+            "hook": "",
             "mood": "",
             "text": "about-water-carrying"
         },
@@ -136,10 +155,29 @@
             "mood": "",
             "text": "entry"
         },
+        "sabotage-about-bibin": {
+            "answers": [
+                "sabotage-go-to-potiok-boss",
+                "sabotage-about-bibin-press-further",
+                "sabotage-let-go"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "sabotage-about-bibin"
+        },
+        "sabotage-about-bibin-2": {
+            "answers": [
+                "sabotage-go-to-potiok-boss",
+                "sabotage-let-go"
+            ],
+            "hook": "onLearnAboutBibinInvolvment",
+            "mood": "",
+            "text": "sabotage-about-bibin-2"
+        },
         "sabotage-confession": {
             "answers": [
-                "confession-ask-about-orders",
-                "confession-exit"
+                "confession-exit",
+                "confession-ask-about-orders"
             ],
             "hook": "onConfessionHeard",
             "mood": "smile",
@@ -160,6 +198,16 @@
             "hook": "onConfessionHeard",
             "mood": "sad",
             "text": "sabotage-intimidation-fail"
+        },
+        "sabotage-intimidation-success": {
+            "answers": [
+                "sabotage-go-to-potiok-boss",
+                "sabotage-ask-about-bibin",
+                "sabotage-let-go"
+            ],
+            "hook": "onConfessionHeard",
+            "mood": "",
+            "text": "sabotage-intimidation-success"
         }
     }
 }

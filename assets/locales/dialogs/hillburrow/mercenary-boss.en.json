@@ -5,6 +5,9 @@
             "about-npc-provoke": "Heh. You don't look so tough to me.",
             "ask-about-npc": "Hi. I'm {{name}}. What's your name ?",
             "ask-about-sabotage": "I see. Can you tell me more about these incidents ?",
+            "ask-about-sabotage-timing": "Tell me, what would the best time be for the culprit to lay his traps without being detected ?",
+            "ask-about-sabotage-timing-insist": "And yet somepony did slip through your \"tight watch\" and destroyed your boss' valuable property. So do you want to help me find whoever did it, or do you want me to continue this conversation with Bitty Potiok ? Tell me, when did you loosen your watch ?",
+            "ask-about-sabotage-whereabouts": "Come on ! I can see that you're a pony who knows his way around weaponry ! Can't you at least tell me what kind of explosvies they were using ?",
             "ask-about-sabotages": "Bitty Potiok told me to ask you about the sabotages.",
             "ask-about-sheriff-murder": "I have some questions about the murder of Scratchy Lead, if you don't mind answering them.",
             "back-to-entry": "Let's talk about something else.",
@@ -21,6 +24,13 @@
             "quest-sheriff-murder-on-confront": "Ha ! I see you're just as bad a detective as he was ! No, I didn't murder that pony. It would've been a waste of my time.",
             "quest-sheriff-murder-sabotage": "I could. But you'd better talk to Bitty about that. She's probably in her office right now. It's on the other side of the hallway.",
             "quest-sheriff-suspicions": "Can't say that I do. Maybe some criminal could've done it, if they believed he could've been a threat to their business. But as I've said before, Scratchy Lead was a shitty sheriff, he wouldn't have been a threat to a criminal even if he had been able to sniff one out... which he wasn't.",
+            "sabotage-ask-something-else": "I have other questions about the sabotage.",
+            "sabotage-nothing-more-to-ask": "I don't have anymore questions for you.",
+            "sabotage-solve-explosive-via-science": "Sounds like nitroglycerin to me. It's very sensitive to movement, and would easily explode if you were to hit it around. But that would've been pretty hard to handle, especially if the culprit had little time to lay his traps. The simplest way to achieve this result would probably have been to use dynamite sticks, tinkering the sticks to make them less stable, which can be done directly on the location of the trap.",
+            "sabotage/about-explosive-reaction": "Er... yeah, that sounds accurate... I guess... dynamite then. No short supplies of that in the cristal wastes, our pony could've gotten it from anywhere.",
+            "sabotage/about-explosives": "I don't see how that's going to help you catch your target... I can't help you much though. All I can tell you is that they stash something in the ground that triggers when our slaves try to dig.",
+            "sabotage/about-timing": "What the hell are you implying here ? There ain't such a time ! Me and my ponies are keeping a tight watch on this place. They'd never get past us !",
+            "sabotage/about-timing-answer": "Yeah, yeah, I guess you're right... every once in a while, me and my ponies head to town. We have a few drinks at the bar, we get shitfaced and come back. I'm guessing the culprit waited for us to go drink, and set the trap when some of us were away.<br>Just do me a favor and don't tell that to Bitty. She'd nag me to death about it, and I'm not one to listen at her rants.",
             "sabotage/entry": "Eh... I don't know much, to be fair. I don't know what Bitty expects. My ponies and I, we're warriors. We don't solve crime. I could find a hundred of ways to rip you apart limb by limb, but when it comes to solving some kind of crappy mystery, I don't even know where to start !"
         }
     }

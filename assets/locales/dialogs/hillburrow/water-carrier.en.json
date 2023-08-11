@@ -25,10 +25,17 @@
             "interrogate-sabotage-1": "Look, you don't have to hide anything from me. I hate the Potioks, and the fact that they're working slaves to death over there. I think it's great you've been damaging their operation. I won't tell on you.",
             "interrogate-sabotage-2": "You're lying. The next thing that comes out of your mouth better be the truth, else your next chat will be with our goddesses in the beyond.",
             "interrogate-sabotage-give-up": "Nothing. Don't worry about it. I'm gonna go now, bye !",
+            "sabotage-about-bibin": "I can't tell you. I promised I would never tell.",
+            "sabotage-about-bibin-2": "Okay. I'm part of Bibin's family. I used to be just a bum in the Cristal Den slums. But he took me in, fed me, taught me... then he got me a job of water carrier in this town... then he sent me instructions. He told me where to get some dynamite, and how to set up the traps. I just did how I was told.",
+            "sabotage-about-bibin-press-further": "You got yourself in a very tricky situation. Things are about to turn really bad for you unless you tell me everything I want to know. Start talking.",
+            "sabotage-ask-about-bibin": "And just who told you to set up explosives in the mine ?",
             "sabotage-confession": "Oh, good ! I was worried you'd tell on me ! I was told not to let the Potioks know about me, that maybe I'd let something slip if I got caught me.",
             "sabotage-confession-more": "Darn right I'm no snitch ! What kind of pony would I be if I were to give away the people who are most like a family to me ! I used to be just a bum living in the streets before Bibin took me in ! Had no friends, no family, no future ! Now I help the family, and the family helps me !",
+            "sabotage-go-to-potiok-boss": "I'm taking you to Bitty Potiok. I'll make sure you tell her all the details.",
             "sabotage-intimiadation-failed-reaction": "Bring it on !",
-            "sabotage-intimidation-fail": "Oh... no... not again... I'm sorry. I can't let people know about this."
+            "sabotage-intimidation-fail": "Oh... no... not again... I'm sorry. I can't let people know about this.",
+            "sabotage-intimidation-success": "Please, don't hurt me ! I've been doing everything I was told to do. I'm just trying to be a good family member. I don't understand why everpony's so mad about it !",
+            "sabotage-let-go": "Alright. I was just curious about it. I don't care that you sabotaged the mines. I'm gonna go now. See you around !"
         }
     }
 }

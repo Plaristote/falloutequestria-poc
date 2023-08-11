@@ -172,7 +172,7 @@
             "name": "Diamond dogs"
         },
         "hillburrow": {
-            "description": "The inhabitants of a small mining town located on a bunch of isolated hills.",
+            "description": "A small town located on the hills, west of the Cristal Empire. It's best known for its coal mine, which provides a power source to the inhabitants of the wastes.",
             "name": "Hillburrow"
         },
         "hillburrow-slaves": {
@@ -187,8 +187,8 @@
             "name": "Mordino Family "
         },
         "potioks": {
-            "description": "factions.potioks.description",
-            "name": "factions.potioks.name"
+            "description": "The Potioks are the ruler of Cristal Den, and their influence extends further into the cristal wastes. They're a tight family, or so it seems to the outsiders.",
+            "name": "Potiok Family"
         },
         "sample-city": {
             "name": "Sample Town"

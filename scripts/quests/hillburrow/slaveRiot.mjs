@@ -113,7 +113,8 @@ export class SlaveRiot extends QuestHelper {
     }
   }
 
-  onCompleted() {
-    super.onCompleted();
+  onSuccess() {
+    super.onSuccess();
+    game.dataEngine.addReputation("hillburrow", 75);
   }
 }

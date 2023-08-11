@@ -25,4 +25,31 @@ export class Sabotage extends QuestHelper {
     this.model.addObjective("findWaterCarrierDynamite", this.tr("findWaterCarrierDynamite"));
     this.model.completeObjective("findWaterCarrierDynamite");
   }
+
+  onWaterCarrierConfessed() {
+    this.model.addObjective("confession", this.tr("confession"));
+    this.model.completeObjective("confession");
+  }
+
+  onFigureOutSabotageExplosives() {
+    this.model.setVariable("knowsAboutDymamite", 1);
+  }
+
+  onLearnAboutSabotageTiming() {
+    this.model.setVariable("knowsAboutTiming", 1);
+  }
+
+  get knowsAboutDynamite() {
+    return this.model.getVariable("knowsAboutDynamite", false);
+  }
+
+  get knowsAboutTiming() {
+    return this.model.getVariable("knowsAboutTiming", false);
+  }
+
+  onSuccess() {
+    super.onSuccess();
+    game.dataEngine.addReputation("potioks", 45);
+    game.dataEngine.addReputation("bibins-band", -20);
+  }
 }

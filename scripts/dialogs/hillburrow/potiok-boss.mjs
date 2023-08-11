@@ -15,7 +15,7 @@ class Dialog {
   }
 
   getEntryPoint() {
-    if (this.sabotageQuest && !this.sabotageQuest.completed)
+    if (this.sabotageQuest && !this.sabotageQuest.hidden && !this.sabotageQuest.completed)
       return "sabotage/entry";
     else if (this.slaversErrand) {
       if (!this.slaversErrand.isObjectiveCompleted("fetchSlaves"))

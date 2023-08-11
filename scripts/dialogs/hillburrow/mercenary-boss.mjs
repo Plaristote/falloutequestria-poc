@@ -32,6 +32,22 @@ class Dialog {
   onAskedAboutSabotages() {
     game.quests.getQuest("hillburrow/sabotage").script.onTalkedWithMercenaryBoss();
   }
+
+  canAskAboutSabotageTiming() {
+    return game.player.statistics.speech > 71;
+  }
+
+  canFigureOutSabotageExplosives() {
+    return game.player.statistics.science > 69;
+  }
+
+  figureOutSabotageExplosives() {
+    game.quests.getQuest("hillburrow/sabotage").script.onFiguredOutExplosiveType();
+  }
+
+  learnAboutSabotageTiming() {
+    game.quests.getQuest("hillburrow/sabotage").script.onLearnAboutSabotageTiming();
+  }
 }
 
 export function create(dialog) {

@@ -16,4 +16,9 @@ export class SlaversErrand extends QuestHelper {
         this.model.completed = true;
     }
   }
+
+  onSuccess() {
+    super.onSuccess();
+    game.dataEngine.addReputation("potioks", 25);
+  }
 }
