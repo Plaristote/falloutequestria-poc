@@ -1,0 +1,424 @@
+{
+    "answers": {
+        "about-family-join-them": {
+            "state": "after-riot/peaceful-route/join-them",
+            "text": "about-family-join-them"
+        },
+        "after-riot-about-what-comes-next": {
+            "state": "after-riot/peaceful-route/next-step",
+            "text": "after-riot-about-what-comes-next"
+        },
+        "after-riot-cancel": {
+            "text": "after-riot-cancel"
+        },
+        "ask-about-help": {
+            "state": "quest-introduction",
+            "text": "ask-about-help"
+        },
+        "at-pen-about-help": {
+            "state": "quest-introduction",
+            "text": "at-pen-about-help"
+        },
+        "at-pen-ask-about-confused": {
+            "state": "at-pen/about-confusion",
+            "text": "at-pen-ask-about-confused"
+        },
+        "at-pen-exit-gently": {
+            "text": "at-pen-exit-gently"
+        },
+        "at-pen-exit-violently": {
+            "text": "at-pen-exit-violently"
+        },
+        "at-work-ask-about": {
+            "state": "at-work/about",
+            "text": "at-work-ask-about"
+        },
+        "at-work-ask-about-help": {
+            "state": "at-work/about-help",
+            "text": "ask-about-help"
+        },
+        "at-work-ask-about-more": {
+            "state": "at-work/about-more",
+            "text": "at-work-ask-about-more"
+        },
+        "at-work-call-guards": {
+            "hook": "onCalledGuards",
+            "text": "at-work-call-guards"
+        },
+        "at-work-leave": {
+            "text": "at-work-leave"
+        },
+        "join-vendetta-convince-1": {
+            "state": "after-riot/join-vendetta/convince-1",
+            "text": "join-vendetta-convince-1"
+        },
+        "join-vendetta-convince-2": {
+            "state": "after-riot/join-vendetta/convince-2",
+            "text": "join-vendetta-convince-2"
+        },
+        "join-vendetta-convince-3": {
+            "state": "after-riot/join-vendetta/start",
+            "text": "join-vendetta-convince-3"
+        },
+        "join-vendetta-give-up": {
+            "text": "join-vendetta-give-up"
+        },
+        "join-vendetta-not-go": {
+            "text": "join-vendetta-not-go"
+        },
+        "join-vendetta-start": {
+            "hook": "triggerVendetta",
+            "text": "join-vendetta-start"
+        },
+        "on-peaceful-route-about-suicide": {
+            "state": "after-riot/peaceful-route/on-suicide-confront",
+            "text": "on-peaceful-route-about-suicide"
+        },
+        "on-peaceful-route-goodbye": {
+            "text": "on-peaceful-route-goodbye"
+        },
+        "on-suicide-confront-giveup": {
+            "state": "after-riot/peaceful-route/suicide-confront-failure",
+            "text": "on-suicide-confront-giveup"
+        },
+        "on-suicide-confront-guilt": {
+            "state": "after-riot/peaceful-route/suicide-confront-failure",
+            "text": "on-suicide-confront-guilt"
+        },
+        "on-suicide-confront-hope": {
+            "state": "after-riot/peaceful-route/suicide-confront-failure",
+            "text": "on-suicide-confront-hope"
+        },
+        "peaceful-route-about-family": {
+            "state": "after-riot/peaceful-route/about-family",
+            "text": "peaceful-route-about-family"
+        },
+        "peaceful-route-join-vendetta": {
+            "availableHook": "areDenSlaversStillAlive",
+            "state": "after-riot/join-vendetta/entry",
+            "text": "peaceful-route-join-vendetta"
+        },
+        "peaceful-route-join-vendetta-alt": {
+            "state": "after-riot/join-vendetta/entry",
+            "text": "peaceful-route-join-vendetta-alt"
+        },
+        "peaceful-route-next-step": {
+            "state": "peaceful-route/next-step",
+            "text": "peaceful-route-next-step"
+        },
+        "peaceful-route-reason": {
+            "state": "peaceful-route/reason",
+            "text": "peaceful-route-reason"
+        },
+        "peaceful-route-suicide-mission": {
+            "availableHook": "areDenSlaversStillAlive",
+            "state": "after-riot/peaceful-route/about-suicide-mission",
+            "text": "peaceful-route-suicide-mission"
+        },
+        "quest-give-weapons": {
+            "state": "quest-weapon-trade",
+            "text": "quest-give-weapons"
+        },
+        "quest-introduction-accept": {
+            "text": "quest-introduction-accept"
+        },
+        "quest-introduction-ask-about-risks": {
+            "state": "quest-introduction-about-risks",
+            "text": "quest-introduction-ask-about-risks"
+        },
+        "quest-introduction-be-a-hero": {
+            "state": "quest-introduction-on-hero-play",
+            "text": "quest-introduction-be-a-hero"
+        },
+        "quest-introduction-go-on": {
+            "state": "quest-introduction-plan",
+            "text": "quest-introduction-go-on"
+        },
+        "quest-introduction-hero-antihero-exit": {
+            "text": "quest-introduction-hero-antihero-exit"
+        },
+        "quest-introduction-hero-exit": {
+            "text": "quest-introduction-hero-exit"
+        },
+        "quest-introduction-hero-give-up": {
+            "state": "quest-introduction-plan",
+            "text": "quest-introduction-hero-give-up"
+        },
+        "quest-introduction-refuse": {
+            "state": "quest-introduction-on-refusal",
+            "text": "quest-introduction-refuse"
+        },
+        "quest-nothing-to-give": {
+            "state": "quest-weapons-not-given",
+            "text": "quest-nothing-to-give"
+        },
+        "quest-riot-start": {
+            "hook": "startRiot",
+            "text": "quest-riot-start"
+        },
+        "quest-riot-start-later": {
+            "text": "quest-riot-start-later"
+        },
+        "quest-weapon-trade-done": {
+            "hook": "afterGiveWeapons",
+            "text": "quest-weapon-trade-done"
+        },
+        "riot-follow-up-peaceful-route": {
+            "state": "peaceful-route/next-step",
+            "text": "riot-follow-up-peaceful-route"
+        },
+        "slavers-already-dead": {
+            "availableHook": "areDenSlaversAlreadyDead",
+            "text": "slavers-already-dead"
+        }
+    },
+    "entryPoint": "",
+    "states": {
+        "after-riot/about-dead-slavers/entry": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "after-riot/about-dead-slavers/entry"
+        },
+        "after-riot/entry": {
+            "answers": [
+                "after-riot-about-what-comes-next",
+                "after-riot-cancel"
+            ],
+            "mood": "",
+            "text": "on-riot-completed"
+        },
+        "after-riot/join-vendetta/convince-1": {
+            "answers": [
+                "join-vendetta-convince-2",
+                "join-vendetta-convince-3",
+                "join-vendetta-give-up"
+            ],
+            "mood": "",
+            "text": "on-join-vendetta-convince-1"
+        },
+        "after-riot/join-vendetta/convince-2": {
+            "answers": [
+                "join-vendetta-convince-3",
+                "join-vendetta-give-up"
+            ],
+            "mood": "",
+            "text": "on-join-vendetta-convince-2"
+        },
+        "after-riot/join-vendetta/entry": {
+            "answers": [
+                "join-vendetta-convince-1",
+                "join-vendetta-give-up"
+            ],
+            "mood": "",
+            "text": "on-join-vendetta"
+        },
+        "after-riot/join-vendetta/start": {
+            "answers": [
+                "join-vendetta-start",
+                "join-vendetta-not-go"
+            ],
+            "mood": "",
+            "text": "on-join-vendetta-start"
+        },
+        "after-riot/peaceful-route/about-family": {
+            "answers": [
+                "about-family-join-them"
+            ],
+            "mood": "",
+            "text": "on-peaceful-route-about-family"
+        },
+        "after-riot/peaceful-route/about-suicide-mission": {
+            "answers": [
+                "peaceful-route-join-vendetta",
+                "peaceful-route-about-family"
+            ],
+            "mood": "",
+            "text": "on-peaceful-route-about-suicide-mission"
+        },
+        "after-riot/peaceful-route/join-them": {
+            "answers": [
+                "on-peaceful-route-about-suicide",
+                "peaceful-route-join-vendetta-alt",
+                "on-peaceful-route-goodbye"
+            ],
+            "mood": "",
+            "text": "on-peaceful-route-join-them"
+        },
+        "after-riot/peaceful-route/next-step": {
+            "answers": [
+                "slavers-already-dead",
+                "peaceful-route-suicide-mission",
+                "peaceful-route-join-vendetta",
+                "peaceful-route-about-family",
+                "on-peaceful-route-goodbye"
+            ],
+            "mood": "",
+            "text": "on-peaceful-route-next-step"
+        },
+        "after-riot/peaceful-route/on-suicide-confront": {
+            "answers": [
+                "on-suicide-confront-guilt",
+                "on-suicide-confront-hope",
+                "on-suicide-confront-giveup"
+            ],
+            "mood": "",
+            "text": "on-peaceful-route-on-suicide-confront"
+        },
+        "after-riot/peaceful-route/suicide-confront-failure": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "after-riot/peaceful-route/suicide-confront-failure"
+        },
+        "after-riot/peaceful-route/suicide-confront-guilt": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "after-riot/peaceful-route/suicide-confront-guilt"
+        },
+        "at-pen/about-confusion": {
+            "answers": [
+                "ask-about-help",
+                "at-pen-exit-gently"
+            ],
+            "mood": "",
+            "text": "at-pen-about-confusion"
+        },
+        "at-pen/entry": {
+            "answers": [
+                "at-pen-ask-about-confused",
+                "at-pen-exit-violently",
+                "at-pen-exit-gently"
+            ],
+            "mood": "",
+            "text": "at-pen"
+        },
+        "at-pen/introduced": {
+            "answers": [
+                "at-pen-about-help",
+                "at-pen-exit-gently"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "at-pen-introduced"
+        },
+        "at-work/about": {
+            "answers": [
+                "at-work-ask-about-help",
+                "at-work-ask-about-more",
+                "at-work-leave"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "at-work-about"
+        },
+        "at-work/about-help": {
+            "answers": [
+            ],
+            "hook": "onProposedToHelp",
+            "mood": "neutral",
+            "text": "at-work-about-help"
+        },
+        "at-work/about-more": {
+            "answers": [
+                "at-work-ask-about-help",
+                "at-work-call-guards",
+                "at-work-leave"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "at-work-about-more"
+        },
+        "at-work/entry": {
+            "answers": [
+                "at-work-ask-about",
+                "at-work-leave"
+            ],
+            "hook": "",
+            "mood": "angry",
+            "text": "at-work"
+        },
+        "quest-introduction": {
+            "answers": [
+                "quest-introduction-go-on"
+            ],
+            "mood": "",
+            "text": "quest-introduction"
+        },
+        "quest-introduction-about-risks": {
+            "answers": [
+                "quest-introduction-accept",
+                "quest-introduction-be-a-hero",
+                "quest-introduction-refuse"
+            ],
+            "mood": "",
+            "text": "quest-introduction-about-risks"
+        },
+        "quest-introduction-on-hero-play": {
+            "answers": [
+                "quest-introduction-hero-exit",
+                "quest-introduction-hero-antihero-exit",
+                "quest-introduction-hero-give-up"
+            ],
+            "mood": "",
+            "text": "quest-introduction-on-hero-play"
+        },
+        "quest-introduction-on-refusal": {
+            "answers": [
+            ],
+            "mood": "angry",
+            "text": "quest-introduction-on-refusal"
+        },
+        "quest-introduction-plan": {
+            "answers": [
+                "quest-introduction-accept",
+                "quest-introduction-ask-about-risks",
+                "quest-introduction-be-a-hero",
+                "quest-introduction-refuse"
+            ],
+            "hook": "addRiotQuest",
+            "mood": "",
+            "text": "quest-introduction-plan"
+        },
+        "quest-not-enough-weapons": {
+            "answers": [
+            ],
+            "hook": "",
+            "mood": "angry",
+            "text": "quest-not-enough-weapons"
+        },
+        "quest-prompt": {
+            "answers": [
+                "quest-give-weapons",
+                "quest-nothing-to-give"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "quest-prompt"
+        },
+        "quest-riot-prompt": {
+            "answers": [
+                "quest-riot-start",
+                "quest-riot-start-later"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "quest-riot-prompt"
+        },
+        "quest-weapon-trade": {
+            "answers": [
+                "quest-weapon-trade-done"
+            ],
+            "hook": "onGiveWeapons",
+            "mood": "smile",
+            "text": "quest-weapon-trade"
+        },
+        "quest-weapons-not-given": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "quest-weapons-not-given"
+        }
+    }
+}

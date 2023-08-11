@@ -27,5 +27,6 @@ export class PackMember extends CharacterBehaviour {
   onDied() {
     console.log("PackMember onDied");
     level.getScriptObject().onDogDied(this.model);
+    super.onDied();
   }
 }

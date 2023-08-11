@@ -32,6 +32,6 @@ export class DogCaptive extends CharacterBehaviour {
   onDied() {
     const quest = getQuest();
     quest.getScriptObject().onCaptiveKilled();
-    //super.onDied();
+    super.onDied();
   }
 }

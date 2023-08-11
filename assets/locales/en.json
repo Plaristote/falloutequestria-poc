@@ -152,9 +152,17 @@
             "description": "factions.bandits.description",
             "name": "factions.bandits.name"
         },
+        "bibins-band": {
+            "description": "A gang located in the Cristal Den's slums, led by the infamous Bibin.",
+            "name": "Bibin's Band"
+        },
         "cristal-den": {
             "description": "factions.cristal-den.description",
             "name": "factions.cristal-den.name"
+        },
+        "cristal-den-slaves": {
+            "description": "factions.cristal-den-slaves.description",
+            "name": "factions.cristal-den-slaves.name"
         },
         "critters": {
             "description": "factions.critters.description",
@@ -162,6 +170,10 @@
         },
         "diamond-dogs": {
             "name": "Diamond dogs"
+        },
+        "hillburrow": {
+            "description": "The inhabitants of a small mining town located on a bunch of isolated hills.",
+            "name": "Hillburrow"
         },
         "hillburrow-slaves": {
             "description": "factions.hillburrow-slaves.description",

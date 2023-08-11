@@ -1,0 +1,84 @@
+{
+    "answers": {
+        "ask-about-clients": {
+            "state": "about/clients",
+            "text": "ask-about-clients"
+        },
+        "ask-about-slave-sources": {
+            "state": "about/getting-slaves",
+            "text": "ask-about-slave-sources"
+        },
+        "ask-about-slavers": {
+            "state": "about/entry",
+            "text": "ask-about-slavers"
+        },
+        "ask-about-slavers-errand": {
+            "availableHook": "isSlaversErrandActive",
+            "state": "about-slavers-errand",
+            "text": "ask-about-slavers-errand"
+        },
+        "back-to-entry": {
+            "state": "entry",
+            "text": "back-to-entry"
+        },
+        "exit-from-entry": {
+            "text": "exit-from-entry"
+        },
+        "tell-slavery-is-wrong": {
+            "state": "about/evil",
+            "text": "tell-slavery-is-wrong"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-slavers-errand": {
+            "answers": [
+            ],
+            "hook": "onSentToBossOffice",
+            "mood": "",
+            "text": "about-slavers-errand"
+        },
+        "about/clients": {
+            "answers": [
+            ],
+            "hook": "about",
+            "mood": "",
+            "text": "about/clients"
+        },
+        "about/entry": {
+            "answers": [
+                "tell-slavery-is-wrong",
+                "ask-about-clients",
+                "ask-about-slave-sources",
+                "back-to-entry"
+            ],
+            "hook": "about",
+            "mood": "",
+            "text": "about/entry"
+        },
+        "about/evil": {
+            "answers": [
+            ],
+            "hook": "about",
+            "mood": "",
+            "text": "about/evil"
+        },
+        "about/getting-slaves": {
+            "answers": [
+            ],
+            "hook": "about",
+            "mood": "",
+            "text": "about/getting-slaves"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-slavers",
+                "ask-about-slavers-errand",
+                "exit-from-entry"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "entry"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "answers": {
+    },
+    "entryPoint": "",
+    "states": {
+        "entry": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "entry"
+        }
+    }
+}

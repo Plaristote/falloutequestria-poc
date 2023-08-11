@@ -61,5 +61,6 @@ export class HelpfulCopainDisappeared extends CharacterBehaviour {
   onDied() {
     const quest = requireQuest("junkville/findHelpful");
     quest.setVariable("died", 1);
+    super.onDied();
   }
 }

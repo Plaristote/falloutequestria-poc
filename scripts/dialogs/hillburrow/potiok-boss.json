@@ -1,14 +1,50 @@
 {
     "answers": {
+        "about-sabotage-motives": {
+            "state": "sabotage/motives",
+            "text": "about-sabotage-motives"
+        },
+        "about-sabotage-pointers": {
+            "state": "sabotage/more-intel",
+            "text": "about-sabotage-pointers"
+        },
+        "accept-errand-quest": {
+            "hook": "takeSlaversErrandQuest",
+            "text": "accept-errand-quest"
+        },
+        "accept-sabotage-quest": {
+            "hook": "takeSabotageQuest",
+            "text": "accept-sabotage-quest"
+        },
+        "ask-about-errand-money": {
+            "state": "slavers-errand/about-money",
+            "text": "ask-about-errand-money"
+        },
         "ask-about-errand-quest": {
             "state": "give-errand-quest",
             "text": "ask-about-errand-quest"
+        },
+        "ask-slaves-errand-refund": {
+            "state": "slavers-errand/refund",
+            "text": "ask-slaves-errand-refund"
+        },
+        "entry-accept-new-quest": {
+            "hook": "onTakeOnNewQuest",
+            "text": "entry-accept-new-quest"
+        },
+        "entry-accept-new-quest-for-money": {
+            "hook": "onTakeOnNewQuest",
+            "text": "entry-accept-new-quest-for-money"
+        },
+        "entry-exit": {
+            "text": "entry-exit"
         },
         "introduction-confused": {
             "state": "introduction-explanations",
             "text": "introduction-confused"
         },
         "introduction-hostile": {
+            "hook": "startCombat",
             "text": "introduction-hostile"
         },
         "introduction-polite": {
@@ -18,13 +54,61 @@
         "introduction-rude": {
             "state": "introduction-chase-away",
             "text": "introduction-rude"
+        },
+        "on-chased-away-fight-back": {
+            "hook": "onFightGuards",
+            "text": "on-chased-away-fight-back"
+        },
+        "on-chased-away-let-it-happen": {
+            "hook": "onChasedAway",
+            "text": "on-chased-away-let-it-happen"
+        },
+        "reject-errand": {
+            "text": "reject-errand"
+        },
+        "reject-errand-flipping": {
+            "text": "reject-errand-flipping"
+        },
+        "slavers-errand-ask-more-money": {
+            "availableHook": "slaversErrandCanNegociatePrice",
+            "hook": "slaversErrandNegociatePrice",
+            "state": "slavers-errand/price-not-upped",
+            "text": "slavers-errand-ask-more-money"
+        },
+        "slavers-errand-negociate-refund": {
+            "hook": "slaversErrandNegociateRefund",
+            "state": "slavers-errand/refund-negociation-rejected",
+            "text": "slavers-errand-negociate-refund"
+        },
+        "slavers-errand-take-refund": {
+            "hook": "onTakeRefund",
+            "state": "slavers-errand/exit",
+            "text": "slavers-errand-take-refund"
+        },
+        "slaves-errand-gift-slaves": {
+            "state": "slavers-errand/exit",
+            "text": "slaves-errand-gift-slaves"
         }
     },
     "entryPoint": "introduction",
     "states": {
+        "entry": {
+            "answers": [
+                "entry-accept-new-quest",
+                "entry-accept-new-quest-for-money",
+                "entry-exit"
+            ],
+            "mood": "",
+            "text": "entry"
+        },
         "give-errand-quest": {
             "answers": [
+                "accept-errand-quest",
+                "ask-about-errand-money",
+                "reject-errand-flipping",
+                "reject-errand"
             ],
+            "hook": "",
             "mood": "",
             "text": "give-errand-quest"
         },
@@ -40,6 +124,8 @@
         },
         "introduction-chase-away": {
             "answers": [
+                "on-chased-away-let-it-happen",
+                "on-chased-away-fight-back"
             ],
             "mood": "cocky",
             "text": "introduction-chase-away"
@@ -57,6 +143,104 @@
             ],
             "mood": "smile",
             "text": "introduction-give-work"
+        },
+        "sabotage/entry": {
+            "answers": [
+                "accept-sabotage-quest",
+                "about-sabotage-pointers",
+                "about-sabotage-motives"
+            ],
+            "mood": "",
+            "text": "sabotage/entry"
+        },
+        "sabotage/more-intel": {
+            "answers": [
+                "accept-sabotage-quest",
+                "about-sabotage-motives"
+            ],
+            "hook": "sabotageQuestPointersGiven",
+            "mood": "",
+            "text": "sabotage/more-intel"
+        },
+        "sabotage/motives": {
+            "answers": [
+                "accept-sabotage-quest",
+                "about-sabotage-pointers"
+            ],
+            "hook": "sabotageQuestMotivesGiven",
+            "mood": "",
+            "text": "sabotage/motives"
+        },
+        "slavers-errand/about-money": {
+            "answers": [
+                "accept-errand-quest",
+                "slavers-errand-ask-more-money",
+                "reject-errand-flipping",
+                "reject-errand"
+            ],
+            "mood": "",
+            "text": "slavers-errand/about-money"
+        },
+        "slavers-errand/exit": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "slavers-errand/exit"
+        },
+        "slavers-errand/price-not-upped": {
+            "answers": [
+                "accept-errand-quest",
+                "reject-errand"
+            ],
+            "mood": "",
+            "text": "slavers-errand/price-not-upped"
+        },
+        "slavers-errand/price-upped": {
+            "answers": [
+                "accept-errand-quest"
+            ],
+            "mood": "",
+            "text": "slavers-errand/price-upped"
+        },
+        "slavers-errand/refund": {
+            "answers": [
+                "slavers-errand-take-refund",
+                "slavers-errand-negociate-refund"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "slavers-errand/refund"
+        },
+        "slavers-errand/refund-negociation-accepted": {
+            "answers": [
+                "slavers-errand-take-refund"
+            ],
+            "hook": "slaversErrandIncreaseRefund",
+            "mood": "",
+            "text": "slavers-errand/refund-negociation-accepted"
+        },
+        "slavers-errand/refund-negociation-rejected": {
+            "answers": [
+                "slavers-errand-take-refund"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "slavers-errand/refund-negociation-rejected"
+        },
+        "slavers-errand/waiting-report": {
+            "answers": [
+                "slaves-errand-gift-slaves",
+                "ask-slaves-errand-refund"
+            ],
+            "hook": "slaversErrandReported",
+            "mood": "",
+            "text": "slavers-errand/waiting-report"
+        },
+        "slavers-errand/waiting-slaves": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "slavers-errand/waiting-slaves"
         }
     }
 }

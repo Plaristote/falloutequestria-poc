@@ -1,0 +1,142 @@
+{
+    "answers": {
+        "ask-about-slavers-errand": {
+            "availableHook": "isSlaversErrandActive",
+            "state": "slavers-errand/entry",
+            "text": "ask-about-slavers-errand"
+        },
+        "slavers-errand/about-explosions": {
+            "state": "slavers-errand/on-explosions",
+            "text": "slavers-errand/about-explosions"
+        },
+        "slavers-errand/ask-for-slaves": {
+            "state": "slavers-errand/slave-sale",
+            "text": "slavers-errand/ask-for-slaves"
+        },
+        "slavers-errand/buy-slaves": {
+            "availableHook": "slaversErrandCanPay",
+            "state": "slavers-errand/on-slaves-bought",
+            "text": "slavers-errand/buy-slaves"
+        },
+        "slavers-errand/cannot-buy": {
+            "text": "slavers-errand/cannot-buy"
+        },
+        "slavers-errand/negociate-event-further-beyond": {
+            "hook": "onNegociateEvenFurtherBeyond",
+            "state": "slavers-errand/on-negociate-failure",
+            "text": "slavers-errand/negociate-event-further-beyond"
+        },
+        "slavers-errand/negociate-further": {
+            "availableHook": "slaversErrandCanNegociateFurther",
+            "state": "slavers-errand/on-negociate-further",
+            "text": "slavers-errand/negociate-further"
+        },
+        "slavers-errand/negociate-outraged": {
+            "availableHook": "slaversErrandCanNegociate",
+            "state": "slavers-errand/negociate",
+            "text": "slavers-errand/negociate-outraged"
+        },
+        "slavers-errand/tell-slavers-owe-potioks": {
+            "state": "slavers-errand/about-potiok-deal",
+            "text": "slavers-errand/tell-slavers-owe-potioks"
+        }
+    },
+    "entryPoint": "meeting",
+    "states": {
+        "meeting": {
+            "answers": [
+                "ask-about-slavers-errand"
+            ],
+            "mood": "angry",
+            "text": "meeting"
+        },
+        "on-negociate-even-further-beyond": {
+            "answers": [
+                "slavers-errand/buy-slaves",
+                "slavers-errand/cannot-buy"
+            ],
+            "mood": "",
+            "text": "on-negociate-even-further-beyond"
+        },
+        "slavers-errand/about-potiok-deal": {
+            "answers": [
+                "slavers-errand/ask-for-slaves",
+                "slavers-errand/about-explosions"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "slavers-errand/about-potiok-deal"
+        },
+        "slavers-errand/entry": {
+            "answers": [
+                "slavers-errand/tell-slavers-owe-potioks",
+                "slavers-errand/ask-for-slaves"
+            ],
+            "hook": "loadSlaversErrandQuest",
+            "mood": "",
+            "text": "slavers-errand/entry"
+        },
+        "slavers-errand/negociate": {
+            "answers": [
+                "slavers-errand/buy-slaves",
+                "slavers-errand/negociate-further",
+                "slavers-errand/cannot-buy"
+            ],
+            "hook": "onNegociate",
+            "mood": "cocky",
+            "text": "slavers-errand/negociate"
+        },
+        "slavers-errand/on-explosions": {
+            "answers": [
+                "slavers-errand/ask-for-slaves"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "slavers-errand/on-explosions"
+        },
+        "slavers-errand/on-negociate-even-further-beyond": {
+            "answers": [
+                "slavers-errand/buy-slaves",
+                "slavers-errand/cannot-buy"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "slavers-errand/on-negociate-even-further-beyond"
+        },
+        "slavers-errand/on-negociate-failure": {
+            "answers": [
+                "slavers-errand/buy-slaves",
+                "slavers-errand/cannot-buy"
+            ],
+            "mood": "angry",
+            "text": "slavers-errand/on-negociate-failure"
+        },
+        "slavers-errand/on-negociate-further": {
+            "answers": [
+                "slavers-errand/buy-slaves",
+                "slavers-errand/negociate-event-further-beyond",
+                "slavers-errand/cannot-buy"
+            ],
+            "hook": "onNegociateFurther",
+            "mood": "",
+            "text": "slavers-errand/on-negociate-further"
+        },
+        "slavers-errand/on-slaves-bought": {
+            "answers": [
+            ],
+            "hook": "onSlavesBought",
+            "mood": "cocky",
+            "text": "slavers-errand/on-slaves-bought"
+        },
+        "slavers-errand/slave-sale": {
+            "answers": [
+                "slavers-errand/buy-slaves",
+                "slavers-errand/negociate-outraged",
+                "slavers-errand/cannot-buy"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "slavers-errand/slave-sale"
+        }
+    }
+}

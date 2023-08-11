@@ -1,17 +1,11 @@
 {
     "answers": {
         "": {
-            "availableHook": "",
-            "hook": "",
-            "state": ""
         },
         "I'll have an apple cider.": {
-            "hook": "",
-            "state": "",
             "text": "I'll have an apple cider."
         },
         "drink-cider": {
-            "availableHook": "",
             "hook": "drankCider",
             "state": "entryPoint",
             "text": "drink-cider"
@@ -22,14 +16,10 @@
             "text": "drink-juice"
         },
         "drink-nothing": {
-            "hook": "",
-            "state": "",
             "text": "drink-nothing"
         },
         "partyPlanAccepted": {
-            "availableHook": "",
             "hook": "startPartyQuest",
-            "state": "",
             "text": "partyPlanAccepted"
         },
         "partyPlanAlreadyHasBottles": {
@@ -47,8 +37,6 @@
             "text": "partyPlanPassing"
         },
         "partyPlanReject": {
-            "availableHook": "",
-            "state": "",
             "text": "partyPlanReject"
         },
         "partyPlanSuggest": {
@@ -66,6 +54,7 @@
                 "drink-nothing"
             ],
             "hook": "entryPoint",
+            "mood": "",
             "text": "entryPoint"
         },
         "partyPlanAccept": {
@@ -74,6 +63,8 @@
                 "partyPlanAccepted",
                 "partyPlanReject"
             ],
+            "hook": "",
+            "mood": "",
             "text": "partyPlanAccept"
         },
         "partyPlanIntro": {
@@ -81,11 +72,13 @@
                 "partyPlanSuggest",
                 "partyPlanPassing"
             ],
+            "mood": "",
             "text": "partyPlanIntro"
         },
         "partyPlanStart": {
             "answers": [
             ],
+            "mood": "",
             "text": "partyPlanStart"
         }
     }

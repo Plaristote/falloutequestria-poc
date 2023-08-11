@@ -6,46 +6,63 @@
  "name":"City walls",
  "spacing":1,
  "tilecount":16,
- "tiledversion":"1.7.2",
+ "tiledversion":"1.9.2",
  "tileheight":108,
- "tiles":[
+ "tileproperties":
+    {
+     "13":
         {
-         "id":4,
-         "properties":[
-                {
-                 "name":"cover",
-                 "type":"int",
-                 "value":75
-                }]
-        }, 
+         "doorway":true
+        },
+     "14":
         {
-         "id":5,
-         "properties":[
-                {
-                 "name":"doorway",
-                 "type":"bool",
-                 "value":true
-                }]
-        }, 
+         "doorway":true
+        },
+     "4":
         {
-         "id":6,
-         "properties":[
-                {
-                 "name":"cover",
-                 "type":"int",
-                 "value":75
-                }]
-        }, 
+         "cover":75
+        },
+     "5":
         {
-         "id":7,
-         "properties":[
-                {
-                 "name":"doorway",
-                 "type":"bool",
-                 "value":true
-                }]
-        }],
+         "doorway":true
+        },
+     "6":
+        {
+         "cover":75
+        },
+     "7":
+        {
+         "doorway":true
+        }
+    },
+ "tilepropertytypes":
+    {
+     "13":
+        {
+         "doorway":"bool"
+        },
+     "14":
+        {
+         "doorway":"bool"
+        },
+     "4":
+        {
+         "cover":"int"
+        },
+     "5":
+        {
+         "doorway":"bool"
+        },
+     "6":
+        {
+         "cover":"int"
+        },
+     "7":
+        {
+         "doorway":"bool"
+        }
+    },
  "tilewidth":72,
  "type":"tileset",
- "version":"1.6"
+ "version":1.1
 }

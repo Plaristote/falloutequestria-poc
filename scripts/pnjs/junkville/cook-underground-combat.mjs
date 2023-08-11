@@ -22,6 +22,7 @@ export class CookUndergroundCombat extends UndergroundCombattant {
   onDied() {
     game.setVariable("junkvilleBattleCookDied", 1);
     game.setVariable("junkvilleCookDied", 1);
+    super.onDied();
   }
 
   shouldBeAtJunkville() {

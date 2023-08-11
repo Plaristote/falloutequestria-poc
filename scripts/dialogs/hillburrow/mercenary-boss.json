@@ -1,6 +1,7 @@
 {
     "answers": {
         "about-npc-provoke": {
+            "state": "fight/entry",
             "text": "about-npc-provoke"
         },
         "ask-about-npc": {
@@ -10,6 +11,11 @@
         "ask-about-sabotage": {
             "state": "quest-sheriff-murder-sabotage",
             "text": "ask-about-sabotage"
+        },
+        "ask-about-sabotages": {
+            "availableHook": "canAskAboutSabotages",
+            "state": "sabotage/entry",
+            "text": "ask-about-sabotages"
         },
         "ask-about-sheriff-murder": {
             "availableHook": "canAskAboutSheriffMurder",
@@ -59,11 +65,19 @@
             "answers": [
                 "ask-about-npc",
                 "ask-about-sheriff-murder",
+                "ask-about-sabotages",
                 "exit-entry"
             ],
             "hook": "",
             "mood": "neutral",
             "text": "entry"
+        },
+        "fight/entry": {
+            "answers": [
+            ],
+            "hook": "",
+            "mood": "angry",
+            "text": "fight/entry"
         },
         "quest-sheriff-murder": {
             "answers": [
@@ -72,6 +86,7 @@
                 "quest-sheriff-murder-confront",
                 "quest-seriff-murder-exit"
             ],
+            "hook": "",
             "mood": "cocky",
             "text": "quest-sheriff-murder"
         },
@@ -96,6 +111,7 @@
                 "quest-seriff-murder-exit",
                 "quest-sheriff-murder-back-to-entry"
             ],
+            "hook": "",
             "mood": "",
             "text": "quest-sheriff-murder-sabotage"
         },
@@ -106,6 +122,12 @@
             "hook": "",
             "mood": "",
             "text": "quest-sheriff-suspicions"
+        },
+        "sabotage/entry": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "sabotage/entry"
         }
     }
 }

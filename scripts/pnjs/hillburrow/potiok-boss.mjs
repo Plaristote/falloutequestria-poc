@@ -3,7 +3,7 @@ import {CharacterBehaviour} from "../character.mjs";
 class PotiokBoss extends CharacterBehaviour {
   constructor(model) {
     super(model);
-    this.dialog = "hillburrow/bitty-potiok";
+    this.dialog = "hillburrow/potiok-boss";
   }
 }
 

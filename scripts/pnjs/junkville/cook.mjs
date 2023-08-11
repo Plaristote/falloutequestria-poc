@@ -8,6 +8,7 @@ export class Cook extends CharacterBehaviour {
 
   onDied() {
     game.setVariable("junkvilleCookDied", 1);
+    super.onDied();
   }
 
   get dialog() {

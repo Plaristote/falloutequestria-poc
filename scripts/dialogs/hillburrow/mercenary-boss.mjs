@@ -20,10 +20,17 @@ class Dialog {
   }
 
   onToldAboutSabotage() {
-    const sabotageQuest = requireQuest("hillburrow/coalMineSabotage");
     const sheriffQuest  = requireQuest("hillburrow/oldSheriffMurder");
-    sabotageQuest.setVariable("canTalkToPotiokAboutSabotage", 1);
     sheriffQuest.setVariable("leadsSabotage", 1);
+  }
+
+  canAskAboutSabotages() {
+    const quest = game.quests.getQuest("hillburrow/sabotage");
+    return quest && !quest.hidden && this.dialog.npc.hasVariable("knowsName");
+  }
+
+  onAskedAboutSabotages() {
+    game.quests.getQuest("hillburrow/sabotage").script.onTalkedWithMercenaryBoss();
   }
 }
 

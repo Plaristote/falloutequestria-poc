@@ -2,6 +2,7 @@ import {CharacterBehaviour} from "../character.mjs";
 import {GuardBehaviour} from "../guard.mjs";
 import {GuardComponent} from "../components/guard.mjs";
 import {RoutineComponent} from "../../behaviour/routine.mjs";
+import {MercenaryRiotComponent} from "./mercenary-riot-component.mjs";
 
 const routine = [
   { hour: "9", minute: "30", callback: "startDayShift" },
@@ -32,6 +33,7 @@ class Mercenary extends GuardBehaviour {
     super(model);
     this.guardComponent = new GuardComponent(this);
     this.routineComponent = new RoutineComponent(this, routine);
+    this.riotComponent = new MercenaryRiotComponent(this);
   }
 
   initialize() {
@@ -49,8 +51,8 @@ class Mercenary extends GuardBehaviour {
   get squad() {
     let guards = [];
 
-    for (var group of level.findGroup("guards").groups) {
-      for (var guard of group.objects) guards.push(guard);
+    for (var group in level.findGroup("guards").groups) {
+      for (var guard in group.objects) guards.push(guard);
     }
     return guard;
   }
@@ -92,7 +94,8 @@ class Mercenary extends GuardBehaviour {
   }
 
   moveTowardsBedroom() {
-    // TODO how about implementing a way to get a random case from a ZoneComponent ?
+    // DONE how about implementing a way to get a random case from a ZoneComponent ?
+    // TODO use getRandomZonePosition here
     if (this.model.actionQueue.isEmpty()) {
       this.model.actionQueue.pushReachNear(43, 29, 1, 5);
       this.model.actionQueue.start();

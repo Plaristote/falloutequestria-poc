@@ -1,0 +1,165 @@
+{
+    "answers": {
+        "ask-about-dynamite": {
+            "state": "about-dynamite",
+            "text": "ask-about-dynamite"
+        },
+        "ask-about-home": {
+            "availableHook": "dynamiteHasBeenFound",
+            "state": "about-home",
+            "text": "ask-about-home"
+        },
+        "ask-about-job": {
+            "state": "about-job",
+            "text": "ask-about-job"
+        },
+        "ask-about-npc": {
+            "state": "about-npc",
+            "text": "ask-about-npc"
+        },
+        "ask-about-sabotage": {
+            "availableHook": "canAskAboutSabotage",
+            "state": "about-sabotage",
+            "text": "ask-about-sabotage"
+        },
+        "ask-about-water-carrying": {
+            "state": "about-water-carrying",
+            "text": "ask-about-water-carrying"
+        },
+        "ask-talkative-sarcasm": {
+            "state": "about-talkative",
+            "text": "ask-talkative-sarcasm"
+        },
+        "back-to-entry": {
+            "state": "entry",
+            "text": "back-to-entry"
+        },
+        "back-to-entry-alt": {
+            "state": "entry",
+            "text": "back-to-entry-alt"
+        },
+        "bye": {
+            "text": "bye"
+        },
+        "confession-ask-about-orders": {
+            "text": "confession-ask-about-orders"
+        },
+        "confession-exit": {
+            "text": "confession-exit"
+        },
+        "interrogate-sabotage-1": {
+            "availableHook": "canConvinceToConfess",
+            "state": "sabotage-confession",
+            "text": "interrogate-sabotage-1"
+        },
+        "interrogate-sabotage-2": {
+            "hook": "intimidationAttempt",
+            "state": "sabotage-intimidation-fail",
+            "text": "interrogate-sabotage-2"
+        },
+        "interrogate-sabotage-give-up": {
+            "text": "interrogate-sabotage-give-up"
+        },
+        "sabotage-intimiadation-failed-reaction": {
+            "hook": "startFight",
+            "text": "sabotage-intimiadation-failed-reaction"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-dynamite": {
+            "answers": [
+                "ask-about-sabotage",
+                "back-to-entry"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "about-dynamite"
+        },
+        "about-home": {
+            "answers": [
+                "ask-about-dynamite",
+                "back-to-entry"
+            ],
+            "hook": "findOutDynamiteFromNpc",
+            "mood": "",
+            "text": "about-home"
+        },
+        "about-job": {
+            "answers": [
+                "ask-about-water-carrying",
+                "back-to-entry"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "about-job"
+        },
+        "about-npc": {
+            "answers": [
+                "ask-talkative-sarcasm",
+                "ask-about-job",
+                "back-to-entry"
+            ],
+            "mood": "",
+            "text": "about-npc"
+        },
+        "about-sabotage": {
+            "answers": [
+                "interrogate-sabotage-2",
+                "interrogate-sabotage-1",
+                "interrogate-sabotage-give-up"
+            ],
+            "mood": "",
+            "text": "about-sabotage"
+        },
+        "about-talkative": {
+            "answers": [
+                "back-to-entry"
+            ],
+            "mood": "",
+            "text": "about-talkative"
+        },
+        "about-water-carrying": {
+            "answers": [
+                "back-to-entry-alt"
+            ],
+            "mood": "",
+            "text": "about-water-carrying"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-npc",
+                "ask-about-home",
+                "bye"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "entry"
+        },
+        "sabotage-confession": {
+            "answers": [
+                "confession-ask-about-orders",
+                "confession-exit"
+            ],
+            "hook": "onConfessionHeard",
+            "mood": "smile",
+            "text": "sabotage-confession"
+        },
+        "sabotage-confession-more": {
+            "answers": [
+                "confession-exit"
+            ],
+            "hook": "onLearnAboutBibinInvolvment",
+            "mood": "",
+            "text": "sabotage-confession-more"
+        },
+        "sabotage-intimidation-fail": {
+            "answers": [
+                "sabotage-intimiadation-failed-reaction"
+            ],
+            "hook": "onConfessionHeard",
+            "mood": "sad",
+            "text": "sabotage-intimidation-fail"
+        }
+    }
+}
