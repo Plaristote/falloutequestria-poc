@@ -33,15 +33,24 @@ export class CombatComponent extends SkillTargetComponent {
     }
   }
 
+  defaultCombatTargetLookup() {
+    const enemies = this.model.fieldOfView.getEnemies();
+
+    console.log("Detected enemies:", enemies, enemies.length, enemies[0]);
+    return enemies[0];
+  }
+
   findCombatTarget() {
+    console.log(this.model.name, "looking for a combat target");
     let shouldLookForTarget = true;
     try { shouldLookForTarget = !(this.combatTarget && this.combatTarget.isAlive()); } catch (err) {}
     if (shouldLookForTarget) {
-      const enemies = this.model.fieldOfView.getEnemies();
-
-      console.log("Detected enemies:", enemies, enemies.length, enemies[0]);
-      this.combatTarget = enemies[0];
+      if (typeof this.searchForNextCombatTarget == "function")
+        this.combatTarget = this.searchForNextCombatTarget();
+      else
+        this.combatTarget = this.defaultCombatTargetLookup();
     }
+    console.log(this.model.name, "found a combat target");
     return this.combatTarget != null;
   }
 
@@ -53,6 +62,8 @@ export class CombatComponent extends SkillTargetComponent {
 
       if (result != null)
         return result;
+    } else if (typeof this.searchForNextCombatTarget == "function") {
+      return this.searchForNextCombatTarget();
     }
     console.log("- pass turn", this.model);
     level.passTurn(this.model);
