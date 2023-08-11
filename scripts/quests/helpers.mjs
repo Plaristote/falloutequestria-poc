@@ -1,6 +1,10 @@
-export function requireQuest(name) {
+export const QuestFlags = {
+  NormalQuest: 0, HiddenQuest: 1
+};
+
+export function requireQuest(name, flags) {
   if (!game.quests.hasQuest(name))
-    game.quests.addQuest(name);
+    game.quests.addQuest(name, QuestFlags.HiddenQuest);
   return game.quests.getQuest(name);
 }
 
@@ -13,14 +17,6 @@ export class QuestHelper {
     return i18n.t(`quests.${this.model.name}.${name}`, options);
   }
 
-  completeObjective(objective) {
-    this.model.setVariable(objective, 1);
-  }
-
-  isObjectiveCompleted(objective) {
-    return this.model.getVariable(objective) === 1;
-  }
-  
   onCompleted() {
     if (this.model.failed)
       this.onFailed();
