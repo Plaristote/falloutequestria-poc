@@ -51,12 +51,12 @@ export class SceneManager {
   }
 
   prepare() {
+    const self = this;
     this.actors.forEach(actor => {
       if (actor) {
-        const actorScript = actor.getScriptObject();
         toggleRoutine(actor, false);
-        if (actorScript)
-          actor.getScriptObject().sceneManager = this;
+        if (actor.script)
+          actor.script.sceneManager = self;
         else
           console.log("Invalid script on scene actor", actor.displayName);
         actor.actionQueue.reset();
@@ -110,5 +110,11 @@ export class SceneManager {
   }
   
   onActionQueueCompleted(character) {
+  }
+
+  onDied(character) {
+  }
+
+  onSceneTick() {
   }
 }
