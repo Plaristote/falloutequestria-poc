@@ -1,7 +1,7 @@
 import {Consumable} from "./consumable.mjs";
 import {getValueFromRange} from "../behaviour/random.mjs";
 
-class Food extends Consumable {
+export class Food extends Consumable {
   consumedBy(target) {
     const stats   = target.statistics;
     const maxHeal = stats.maxHitPoints - stats.hitPoints;
