@@ -18,4 +18,10 @@ export class SceneActorComponent extends CombatComponent {
       this.sceneManager.onActionQueueCompleted(this.model);
     super.onActionQueueCompleted();
   }
+
+  onDied() {
+    if (this.sceneManager && this.sceneManager.active)
+      this.sceneManager.onDied(this.model);
+    //super.onDied();
+  }
 }
