@@ -1,11 +1,15 @@
 export class DialogHelper {
   constructor(dialog) {
-    const levelScript = level ? level.getScriptObject() : null;
+    const levelScript = typeof level !== "undefined" ? level.script : null;
 
     this.dialog = dialog;
     if (levelScript && levelScript.ambiance)
       this.dialog.ambiance = level.getScriptObject().ambiance;
     //this.updateMood();
+  }
+
+  get npcScript() {
+    return this.dialog.npc.getScriptObject();
   }
 
   getDefaultMood() {
