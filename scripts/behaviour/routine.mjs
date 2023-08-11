@@ -112,7 +112,7 @@ export class RoutineComponent {
     const callback = this.getCurrentRoutine().callback;
 
     this.scheduleNextRoutineAction();
-    if (callback)
+    if (callback && typeof callback == "function")
       this.parent[callback]();
   }
 }
