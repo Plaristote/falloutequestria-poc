@@ -4,7 +4,7 @@ import {getValueFromRange} from "../behaviour/random.mjs";
 import {Explosion} from "../behaviour/explosion.mjs";
 import {TrappedComponent} from "../behaviour/trapped.mjs";
 
-class Dynamite extends ThrowableBehaviour {
+export class Dynamite extends ThrowableBehaviour {
   constructor(model) {
     super(model);
     this.useModes = ["use", "throw"];
@@ -18,6 +18,10 @@ class Dynamite extends ThrowableBehaviour {
 
   get defaultUseMode() {
     return this.trappedComponent.disarmed ? "use" : "throw";
+  }
+
+  get requiresTarget() {
+    return this.model.useMode != "use";
   }
 
   getActionPointCost() {
@@ -109,8 +113,4 @@ class Dynamite extends ThrowableBehaviour {
     else
       level.deleteObject(this.model);
   }
-}
-
-export function create(model) {
-  return new Dynamite(model);
 }
