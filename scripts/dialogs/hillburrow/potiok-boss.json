@@ -69,6 +69,65 @@
         "reject-errand-flipping": {
             "text": "reject-errand-flipping"
         },
+        "sabotage-accept-reward": {
+            "text": "sabotage-accept-reward"
+        },
+        "sabotage-accept-to-warn-potioks": {
+            "text": "sabotage-accept-to-warn-potioks"
+        },
+        "sabotage-accusation-water-carrier": {
+            "availableHook": "sabotageCanAccuseWaterCarrier",
+            "state": "sabotage/accusation/water-carrier/entry",
+            "text": "sabotage-accusation-water-carrier"
+        },
+        "sabotage-accusation-wc-confession": {
+            "availableHook": "sabotageKnowsAboutConfession",
+            "state": "sabotage/accusation/water-carrier/abou-confession",
+            "text": "sabotage-accusation-wc-confession"
+        },
+        "sabotage-accusation-wc-confession-bibin": {
+            "availableHook": "sabotageKnowsAboutConfessionAndBibin",
+            "state": "sabotage/accusation/water-carrier/about-bibin",
+            "text": "sabotage-accusation-wc-confession-bibin"
+        },
+        "sabotage-accusation-wc-giveup": {
+            "text": "sabotage-accusation-wc-giveup"
+        },
+        "sabotage-accusation-wc-slaver-lover": {
+            "availableHook": "sabotageKnowsAboutWaterCarryingForSlaves",
+            "state": "sabotage/accusation/water-carrier/whereabouts",
+            "text": "sabotage-accusation-wc-slaver-lover"
+        },
+        "sabotage-ask-payment": {
+            "state": "sabotage/about-payment",
+            "text": "sabotage-ask-payment"
+        },
+        "sabotage-ask-payment-alt": {
+            "state": "sabotage/about-payment",
+            "text": "sabotage-ask-payment-alt"
+        },
+        "sabotage-end": {
+            "text": "slaves-errand-gift-slaves"
+        },
+        "sabotage-start-accusations": {
+            "availableHook": "sabotageCanStartAccusations",
+            "state": "sabotage/accusations",
+            "text": "sabotage-start-accusations"
+        },
+        "sabotage-water-carrier-convince": {
+            "availableHook": "sabotageCanConvinceOfWaterCarierCuplability",
+            "state": "sabotage/accusation/water-carrier/whereabouts",
+            "text": "sabotage-water-carrier-convince"
+        },
+        "sabotage-water-carrier-fought-back": {
+            "availableHook": "sabotageKilledWaterCarrier",
+            "state": "sabotage/accusation/water-carrier/water-carrier-dead",
+            "text": "sabotage-water-carrier-fought-back"
+        },
+        "sabotage-water-carrier-whereabouts": {
+            "hook": "sabotageTakeWaterCarrierToBoss",
+            "text": "sabotage-water-carrier-whereabouts"
+        },
         "slavers-errand-ask-more-money": {
             "availableHook": "slaversErrandCanNegociatePrice",
             "hook": "slaversErrandNegociatePrice",
@@ -144,12 +203,79 @@
             "mood": "smile",
             "text": "introduction-give-work"
         },
+        "sabotage/about-payment": {
+            "answers": [
+                "sabotage-accept-reward"
+            ],
+            "mood": "",
+            "text": "sabotage/about-payment"
+        },
+        "sabotage/accusation/water-carrier/abou-confession": {
+            "answers": [
+                "sabotage-accusation-wc-confession-bibin",
+                "sabotage-water-carrier-fought-back",
+                "sabotage-accusation-wc-slaver-lover",
+                "sabotage-water-carrier-convince",
+                "sabotage-accusation-wc-giveup"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "sabotage/accusation/water-carrier/abou-confession"
+        },
+        "sabotage/accusation/water-carrier/about-bibin": {
+            "answers": [
+                "sabotage-accept-to-warn-potioks",
+                "sabotage-ask-payment-alt"
+            ],
+            "hook": "sabotageCompleteQuestWaterCarrierRouteWithBibinWarning",
+            "mood": "",
+            "text": "sabotage/accusation/water-carrier/about-bibin"
+        },
+        "sabotage/accusation/water-carrier/entry": {
+            "answers": [
+                "sabotage-accusation-wc-confession",
+                "sabotage-accusation-wc-confession-bibin",
+                "sabotage-accusation-wc-slaver-lover",
+                "sabotage-accusation-wc-giveup"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "sabotage/accusation/water-carrier/entry"
+        },
+        "sabotage/accusation/water-carrier/water-carrier-dead": {
+            "answers": [
+                "sabotage-end",
+                "sabotage-ask-payment"
+            ],
+            "hook": "sabotageCompleteQuestWaterCarrierRoute",
+            "mood": "",
+            "text": "sabotage/accusation/water-carrier/water-carrier-dead"
+        },
+        "sabotage/accusation/water-carrier/whereabouts": {
+            "answers": [
+                "sabotage-water-carrier-whereabouts",
+                "sabotage-water-carrier-fought-back"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "sabotage/accusation/water-carrier/whereabouts"
+        },
+        "sabotage/accusations": {
+            "answers": [
+                "sabotage-accusation-water-carrier"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "sabotage/accusations"
+        },
         "sabotage/entry": {
             "answers": [
+                "sabotage-start-accusations",
                 "accept-sabotage-quest",
                 "about-sabotage-pointers",
                 "about-sabotage-motives"
             ],
+            "hook": "",
             "mood": "",
             "text": "sabotage/entry"
         },
@@ -239,6 +365,7 @@
         "slavers-errand/waiting-slaves": {
             "answers": [
             ],
+            "hook": "",
             "mood": "",
             "text": "slavers-errand/waiting-slaves"
         }

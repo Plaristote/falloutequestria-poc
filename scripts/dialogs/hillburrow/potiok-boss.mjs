@@ -135,6 +135,49 @@ class Dialog {
     this.sabotageQuest.script.onMotivesSuggestedByBittyPotiok();
   }
 
+  sabotageKnowsAboutConfession() {
+    return this.sabotageQuest.isObjectiveCompleted("confession");
+  }
+
+  sabotageKnowsAboutConfessionAndBibin() {
+    return this.sabotageKnowsAboutConfession() && this.sabotageQuest.script.knowsAboutBibinInvolvment;
+  }
+
+  sabotageKnowsAboutWaterCarryingForSlaves() {
+    return this.sabotageQuest.script.knowsAboutWaterCariedToSlaves;
+  }
+
+  sabotageCanAccuseWaterCarrier() {
+    return this.sabotageKnowsAboutConfession() || this.sabotageKnowsAboutWaterCarryingForSlaves();
+  }
+
+  sabotageCanStartAccusations() {
+    return this.sabotageCanAccuseWaterCarrier();
+  }
+
+  sabotageKilledWaterCarrier() {
+    return true;
+    const waterCarrier = game.getCharacter("hillburrow/water-carrier");
+
+    return (!waterCarrier || !waterCarrier.isAlive()) || this.sabogtageQuest.foughtWaterCarrier;
+  }
+
+  sabotageCanConvinceOfWaterCarierCuplability() {
+    return game.player.statistics.speech > 85;
+  }
+
+  sabotageCompleteQuestWaterCarrierRoute() {
+    this.sabotageQuest.script.completeWaterCarrierRoute();
+  }
+
+  sabotageCompleteQuestWaterCarrierRouteWithBibinWarning() {
+    this.sabotageQuest.script.completeWaterCarrierRoute();
+    this.sabotageQuest.setVariable("mustWarnPotioksAboutBibin", 1);
+  }
+
+  sabotageTakeWaterCarrierToBoss() {
+    this.sabotageQuest.script.startWaterCarrierScene();
+  }
 }
 
 export function create(dialog) {

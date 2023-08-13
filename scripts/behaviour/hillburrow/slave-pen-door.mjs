@@ -1,7 +1,7 @@
 import {AutoClosingDoor} from "../door-auto-close.mjs";
 
 function isAuthorized(character) {
-  return character.parent && (character.parent.name === "slave-guards" || character.parent.name === "slaves") || character.characterSheet == "hillburrow/rainy-potiok";
+  return (character.parent && (character.parent.name === "slave-guards" || character.parent.name === "slaves")) || character.characterSheet == "hillburrow/rainy-potiok";
 }
 
 export class SlavePenDoor extends AutoClosingDoor {

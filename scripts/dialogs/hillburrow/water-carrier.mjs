@@ -43,11 +43,12 @@ class Dialog {
   }
 
   startFight() {
+    this.sabotageQuest.setVariable("foughtHobo", 1);
     this.dialog.npc.setAsEnemy(game.player);
   }
 
   takeToPotiokBoss() {
-    console.log("TAKE TO POTIOK BOSS");
+    this.saboageQuest.startWaterCarrierScene();
   }
 }
 

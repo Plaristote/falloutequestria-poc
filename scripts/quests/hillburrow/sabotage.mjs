@@ -39,12 +39,56 @@ export class Sabotage extends QuestHelper {
     this.model.setVariable("knowsAboutTiming", 1);
   }
 
+  startWaterCarrierScene() {
+    const self = this;
+
+    if (level.name == "hillburrow-backtown")
+      this.setupWaterCarrierScene();
+    else
+    {
+      game.switchToLevel("hillburrow-backtown", "", function() {
+        self.setupWaterCarrierScene();
+      });
+    }
+  }
+
+  setupWaterCarrierScene() {
+    const office = level.findGroup("house.office");
+    const waterCarrier = game.getCharacter("hillburrow/water-carrier");
+    const potiokBoss = level.findObject("boss");
+
+    level.moveCharacterToZone(waterCarrier, office.controlZone);
+    level.moveCharacterToZone(game.player, office.controlZone);
+    potiokBoss.script.startWaterCarrierScene();
+  }
+
   get knowsAboutDynamite() {
-    return this.model.getVariable("knowsAboutDynamite", false);
+    return this.model.getVariable("knowsAboutDynamite", 0) == 1;
   }
 
   get knowsAboutTiming() {
-    return this.model.getVariable("knowsAboutTiming", false);
+    return this.model.getVariable("knowsAboutTiming", 0) == 1;
+  }
+
+  get knowsAboutBibinInvolvment() {
+    return this.model.getVariable("bibinFoundOut", 0) == 1;
+  }
+
+  get knowsAboutWaterCariedToSlaves() {
+    return false; // TODO
+  }
+
+  get canWarnPotioksAboutBibin() {
+    return this.model.getVariable("mustWarnPotioksAboutBibin", 0) == 1;
+  }
+
+  get foughtWaterCarrier() {
+    return this.model.getVariable("foughtHobo", 0) == 1;
+  }
+
+  completeWaterCarrierRoute() {
+    this.model.completeObjective("findCulprit");
+    this.model.completed = true;
   }
 
   onSuccess() {
