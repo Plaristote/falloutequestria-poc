@@ -1,6 +1,6 @@
 function soonerFirst(a, b) { return a.nextTrigger < b.nextTrigger ? -1 : 1; }
 function latestFirst(a, b) { return a.nextTrigger > b.nextTrigger ? -1 : 1; }
-function randomInterval() { return Math.ceil(Math.random() * 3000); }
+function randomInterval() { return 1000 + Math.ceil(Math.random() * 3000); }
 
 const refreshRoutineTaskName = "refreshRoutine";
 const updateRoutineTaskName  = "updateRoutine";
@@ -27,24 +27,26 @@ export function toggleRoutine(object, value) {
   }
 }
 
-function hasType(object, typeName) {
-  return object.toString().startsWith(typeName + '(');
-}
-
 function isBusyCharacter(routine) {
+  try {
+    return routine.model.getScriptObject().isBusy;
+  } catch (err) {
+    console.log("routine.mjs: isBusyCharacter: ", err);
+  }
   return level.isInCombat(routine.model) || !routine.model.actionQueue.isEmpty();
 }
 
 function isBusy(routine) {
   return routine.interrupted
-      || (hasType(routine.model, "Character") && isBusyCharacter(routine));
+      || (routine.model.type == "Character" && isBusyCharacter(routine));
 }
 
 function scheduleRoutineRefresh(routine, enabled = true) {
-  const interval      = routine.refreshInterval + Math.ceil(Math.random() * 3000);
-  const randomization = Math.ceil(Math.random() * 3000);
-
-  routine.model.tasks.addTask(refreshRoutineTaskName, interval + randomization, 1);
+  routine.model.tasks.addUniqueTask(
+    refreshRoutineTaskName,
+    routine.refreshInterval + randomInterval(),
+    1
+  );
 }
 
 function refreshRoutine(routine) {
@@ -64,7 +66,7 @@ export class RoutineComponent {
     this.parent[updateRoutineTaskName] = this.updateRoutine.bind(this);
     this.parent[refreshRoutineTaskName] = () => refreshRoutine(this);
     if (!this.model.tasks.hasTask(updateRoutineTaskName))
-      this.model.tasks.addTask(updateRoutineTaskName, randomInterval(), 1);
+      this.model.tasks.addUniqueTask(updateRoutineTaskName, randomInterval(), 1);
   }
 
   enablePersistentRoutine() {
@@ -98,12 +100,12 @@ export class RoutineComponent {
 
   scheduleNextRoutineAction() {
     const options = this.getRoutines().sort(soonerFirst);
-    this.model.tasks.addTask(updateRoutineTaskName, options[0].nextTrigger, 1);
+    this.model.tasks.addUniqueTask(updateRoutineTaskName, options[0].nextTrigger, 1);
   }
 
   updateRoutine() {
     if (isBusy(this))
-      this.model.tasks.addTask(updateRoutineTaskName, 1234, 1);
+      this.model.tasks.addUniqueTask(updateRoutineTaskName, 1234, 1);
     else
       this.triggerRoutine();
   }

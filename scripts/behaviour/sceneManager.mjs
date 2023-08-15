@@ -93,6 +93,8 @@ export class SceneManager {
   }
 
   triggerNextStep(continuing = true) {
+    if (!continuing)
+      return ;
     if (this.active) {
       this.state++;
       this.triggerCurrentStep(continuing);
@@ -113,6 +115,9 @@ export class SceneManager {
   }
 
   onDied(character) {
+  }
+
+  onDamageTaken(character) {
   }
 
   onSceneTick() {

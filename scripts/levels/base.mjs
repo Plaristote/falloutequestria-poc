@@ -1,6 +1,7 @@
 export class LevelBase {
   constructor() {
     this.scenes = [];
+    this.model = level;
   }
 
   appendSceneManager(sceneManager) {
@@ -16,7 +17,7 @@ export class LevelBase {
 
   sceneTick() {
     this.scenes.forEach(sceneManager => {
-      sceneManager.onTick();
+      sceneManager.onSceneTick();
     });
   }
 
