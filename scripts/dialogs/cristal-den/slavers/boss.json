@@ -5,6 +5,9 @@
             "state": "slavers-errand/entry",
             "text": "ask-about-slavers-errand"
         },
+        "meeting-oopsie": {
+            "text": "meeting-oopsie"
+        },
         "slavers-errand/about-explosions": {
             "state": "slavers-errand/on-explosions",
             "text": "slavers-errand/about-explosions"
@@ -45,7 +48,8 @@
     "states": {
         "meeting": {
             "answers": [
-                "ask-about-slavers-errand"
+                "ask-about-slavers-errand",
+                "meeting-oopsie"
             ],
             "mood": "angry",
             "text": "meeting"

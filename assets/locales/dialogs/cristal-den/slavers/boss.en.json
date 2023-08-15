@@ -3,6 +3,7 @@
         "cristal-den/slavers/boss": {
             "ask-about-slavers-errand": "My name's {{name}}. I was sent by Miss Bitty Potiok.",
             "meeting": "What the buck is this ? Who the buck are you and why did my ponies let you into my office ?",
+            "meeting-oopsie": "Oops, sorry, wrong door ! I'll be on my way !",
             "on-negociate-even-further-beyond": "<i>He stays silent for a moment, looking at you intently. Suddenly, he bursts out laughing:</i><br/>Hahaha ! I like you, you're funny ! Alright, I'll sell you these 10 slaves for a total of {{slaversErrandPrice}}. Do we have a deal ?",
             "slavers-errand/about-explosions": "Wait, you mentionned explosions at the mines ? What's that about ?",
             "slavers-errand/about-potiok-deal": "Oh no, I don't think so. This just isn't going to work. I know the reason why Bitty keeps asking for new slaves is to replace those that are getting killed in those explosions at the mines. I'm not going to give her slaves for free forever. So, what does she need ?",

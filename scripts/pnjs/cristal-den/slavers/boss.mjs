@@ -5,6 +5,7 @@ export class Boss extends CharacterBehaviour {
   constructor(model) {
     super(model);
     this.dialog = "cristal-den/slavers/boss";
+    this.speakOnDetection = true;
   }
 
   onDied() {

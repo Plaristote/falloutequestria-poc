@@ -48,7 +48,7 @@ class Dialog {
   }
 
   takeToPotiokBoss() {
-    this.saboageQuest.startWaterCarrierScene();
+    this.sabotageQuest.script.startWaterCarrierScene();
   }
 }
 

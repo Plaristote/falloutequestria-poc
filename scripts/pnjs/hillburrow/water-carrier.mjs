@@ -97,12 +97,14 @@ export class WaterCarrier extends CharacterBehaviour {
   }
 
   runRoutineStep() {
-    console.log("runRoutineStep", this.currentTask, this.currentTaskStep);
-    const taskFunction = taskSteps[this.currentTask][this.currentTaskStep];
+    console.log(this.model, "runRoutineStep", this.currentTask, this.currentTaskStep);
+    if (this.currentTask && this.currentTaskStep >= 0) {
+      const taskFunction = taskSteps[this.currentTask][this.currentTaskStep];
 
-    console.log("runRoutineStep func", taskFunction);
-    if (taskFunction)
-      taskFunction.bind(this)();
+      console.log("runRoutineStep func", taskFunction);
+      if (taskFunction)
+        taskFunction.bind(this)();
+    }
   }
 
   carryWaterEntranceLeave() {

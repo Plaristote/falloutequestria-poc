@@ -53,13 +53,7 @@ export class Sabotage extends QuestHelper {
   }
 
   setupWaterCarrierScene() {
-    const office = level.findGroup("house.office");
-    const waterCarrier = game.getCharacter("hillburrow/water-carrier");
-    const potiokBoss = level.findObject("boss");
-
-    level.moveCharacterToZone(waterCarrier, office.controlZone);
-    level.moveCharacterToZone(game.player, office.controlZone);
-    potiokBoss.script.startWaterCarrierScene();
+    level.script.waterCarrierInterrogationScene.initialize();
   }
 
   get knowsAboutDynamite() {
