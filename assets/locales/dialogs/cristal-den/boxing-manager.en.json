@@ -1,0 +1,21 @@
+{
+    "dialogs": {
+        "cristal-den/boxing-manager": {
+            "about-gym": "You're in the Cristal Den's gym, and I'm the manager. Everypony's free to come here and train using our equipments. We also organize fights every night. You can bet on the winner. Or you can go in the ring yourself.",
+            "ask-about-gym": "What's this place ?",
+            "ask-bet": "I'd like to place a bet on the next fight.",
+            "ask-join-fights": "I want to get in the ring.",
+            "bet-accepted": "Nice ! The fight will start in a minute or so. Come back afterwards if {{selectedFighterName}} wins and I'll give you your earnings.",
+            "bet-earnings": "You won your last bet ! Here are your earnings.  Come back whenever you want, I'm sure you can make even more money !<br><i>He hoofs you {{betPotentialGains}} bottlecaps.</i>",
+            "bets": "That's nice ! The next fight will be between {{name1}} and {{name2}}. Which one do you wanna bet on ?",
+            "boxing-closed": "If you're here to see the matches or enter the ring, come back later. We fight every night, starting at 11pm.",
+            "boxing-entry": "What is it gonna be ? Are you betting, or are you fighting ?",
+            "entry-exit": "I'll be on my way.",
+            "exit-bets": "I changed my mind, I won't be placing a bet.",
+            "introduction": "Hey ! Welcome to the gym ! What can I do you for ?",
+            "introduction-for-strong": "Holy Celestia on a bicycle ! I don't see that everyday ! With that strong build of yours, you must be here to make some money, right ? We can get you start right away ! I'll make a star out of you !",
+            "set-bet-amount": "Good choice, I'm sure ! How much do you want to bet ?",
+            "placeBet": "I'll bet on {{name}}."
+        }
+    }
+}

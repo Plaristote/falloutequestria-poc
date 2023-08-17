@@ -1,0 +1,98 @@
+{
+    "answers": {
+        "ask-about-gym": {
+            "state": "about-gym",
+            "text": "ask-about-gym"
+        },
+        "ask-bet": {
+            "hook": "onAskAboutBets",
+            "state": "bets",
+            "text": "ask-bet"
+        },
+        "ask-join-fights": {
+            "hook": "onAskAboutRing",
+            "text": "ask-join-fights"
+        },
+        "entry-exit": {
+            "text": "entry-exit"
+        },
+        "exit-bets": {
+            "text": "exit-bets"
+        }
+    },
+    "entryPoint": "boxing-closed",
+    "states": {
+        "about-gym": {
+            "answers": [
+                "ask-bet",
+                "ask-join-fights",
+                "entry-exit"
+            ],
+            "mood": "",
+            "text": "about-gym"
+        },
+        "bet-accepted": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "bet-accepted"
+        },
+        "bet-earnings": {
+            "answers": [
+            ],
+            "hook": "betEarnings",
+            "mood": "",
+            "text": "bet-earnings"
+        },
+        "bets": {
+            "answers": [
+                "exit-bets"
+            ],
+            "hook": "bets",
+            "mood": "",
+            "text": "bets"
+        },
+        "boxing-closed": {
+            "answers": [
+                "ask-about-gym",
+                "entry-exit"
+            ],
+            "mood": "",
+            "text": "boxing-closed"
+        },
+        "boxing-entry": {
+            "answers": [
+                "ask-bet",
+                "ask-join-fights",
+                "entry-exit"
+            ],
+            "mood": "",
+            "text": "boxing-entry"
+        },
+        "introduction": {
+            "answers": [
+                "ask-about-gym",
+                "entry-exit"
+            ],
+            "mood": "",
+            "text": "introduction"
+        },
+        "introduction-for-strong": {
+            "answers": [
+                "ask-about-gym",
+                "entry-exit"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "introduction-for-strong"
+        },
+        "set-bet-amount": {
+            "answers": [
+                "exit-bets"
+            ],
+            "hook": "setBetAmount",
+            "mood": "",
+            "text": "set-bet-amount"
+        }
+    }
+}
