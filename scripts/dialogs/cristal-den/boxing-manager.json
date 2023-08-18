@@ -13,11 +13,52 @@
             "hook": "onAskAboutRing",
             "text": "ask-join-fights"
         },
+        "avoid-fight": {
+            "text": "avoid-fight"
+        },
         "entry-exit": {
             "text": "entry-exit"
         },
         "exit-bets": {
             "text": "exit-bets"
+        },
+        "heroName-1": {
+        },
+        "heroName-10": {
+        },
+        "heroName-11": {
+        },
+        "heroName-12": {
+        },
+        "heroName-13": {
+        },
+        "heroName-14": {
+        },
+        "heroName-15": {
+        },
+        "heroName-16": {
+        },
+        "heroName-17": {
+        },
+        "heroName-2": {
+        },
+        "heroName-3": {
+        },
+        "heroName-4": {
+        },
+        "heroName-5": {
+        },
+        "heroName-6": {
+        },
+        "heroName-7": {
+        },
+        "heroName-8": {
+        },
+        "heroName-9": {
+        },
+        "start-ight": {
+            "hook": "onStartFight",
+            "text": "start-ight"
         }
     },
     "entryPoint": "boxing-closed",
@@ -28,6 +69,7 @@
                 "ask-join-fights",
                 "entry-exit"
             ],
+            "hook": "",
             "mood": "",
             "text": "about-gym"
         },
@@ -57,6 +99,7 @@
                 "ask-about-gym",
                 "entry-exit"
             ],
+            "hook": "",
             "mood": "",
             "text": "boxing-closed"
         },
@@ -66,14 +109,39 @@
                 "ask-join-fights",
                 "entry-exit"
             ],
+            "hook": "",
             "mood": "",
             "text": "boxing-entry"
+        },
+        "fight": {
+            "answers": [
+                "start-ight",
+                "avoid-fight"
+            ],
+            "hook": "fight",
+            "mood": "",
+            "text": "fight"
+        },
+        "fight-champion-earnings": {
+            "answers": [
+            ],
+            "hook": "fightEarnings",
+            "mood": "",
+            "text": "fight-champion-earnings"
+        },
+        "fight-earnings": {
+            "answers": [
+            ],
+            "hook": "fightEarnings",
+            "mood": "",
+            "text": "fight-earnings"
         },
         "introduction": {
             "answers": [
                 "ask-about-gym",
                 "entry-exit"
             ],
+            "hook": "",
             "mood": "",
             "text": "introduction"
         },
@@ -85,6 +153,22 @@
             "hook": "",
             "mood": "",
             "text": "introduction-for-strong"
+        },
+        "no-more-challengers": {
+            "answers": [
+                "ask-bet",
+                "entry-exit"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "no-more-challengers"
+        },
+        "pick-ring-name": {
+            "answers": [
+            ],
+            "hook": "pickRingName",
+            "mood": "",
+            "text": "pick-ring-name"
         },
         "set-bet-amount": {
             "answers": [

@@ -19,9 +19,27 @@ class Dialog {
     return this.gym.getVariable("betWon", 0) == 1;
   }
 
+  get hasPendingWonFight() {
+    return this.gym.getVariable("fightWon", 0) == 1;
+  }
+
+  get playerHasRingName() {
+    return this.gym.hasVariable("ringName");
+  }
+
+  get ringName() {
+    return this.gym.script.ringName;
+  }
+
+  get currentOpponentName() {
+    return this.gym.script.playerCurrentOpponent.statistics.name;
+  }
+
   getEntryPoint() {
     if (this.hasPendingWonBet)
       return "bet-earnings";
+    if (this.hasPendingWonFight)
+      return this.gym.script.playerCurrentOpponent ? "fight-earnings" : "fight-champion-earnings";
     if (this.openForMatches) {
       if (!this.dialog.npc.hasVariable("met")) {
         this.dialog.npc.setVariable("met", 1);
@@ -41,8 +59,10 @@ class Dialog {
   }
 
   onAskAboutRing() {
+    if (this.gym.script.playerCurrentOpponent == null)
+      return "no-more-challengers";
     if (this.openForMatches)
-      return "fight";
+      return this.playerHasRingName ? "fight" : "pick-ring-name";
     return "boxing-closed";
   }
 
@@ -94,9 +114,65 @@ class Dialog {
   }
 
   betEarnings() {
-    this.gym.removeVariable("betWon");
+    this.gym.unsetVariable("betWon");
     game.player.inventory.addItemOfType("bottlecaps", this.betPotentialGains);
   }
+
+  fightWinningPriceAt(it) {
+    switch (it) {
+      case 1: return 250;
+      case 2: return 400;
+      case 3: return 800;
+    }
+    return 100;
+  }
+
+  get fightWinningPrice() {
+    return this.fightWinningPriceAt(this.gym.script.playerWinCount);
+  }
+
+  get nextFightWinningPrice() {
+    return this.fightWinningPriceAt(this.gym.script.playerWinCount + 1);
+  }
+
+  fightEarnings() {
+    this.gym.unsetVariable("fightWon");
+    game.player.inventory.addItemOfType("bottlecaps", this.fightWinningPrice);
+  }
+
+  fight() {
+    const opponent = this.gym.script.playerCurrentOpponent;
+    const winCount = this.gym.script.playerWinCount;
+
+    if (winCount > 0)
+        return this.dialog.t(`fight-${winCount}`, {opponent: opponent.statistics.name});
+    return null;
+  }
+
+  pickRingName() {
+    const names = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
+    const answers = [];
+
+    names.forEach(name => {
+      answers.push(ringNameOption(this.gym, name));
+    });
+    return { answers: answers };
+  }
+
+  onStartFight() {
+    this.gym.script.startPlayerCombat();
+  }
+}
+
+function ringNameOption(gym, name) {
+  return {
+    symbol: `heroName-${name}`,
+    text: gym.script.labelForRingName(name),
+    hook: function() {
+      gym.setVariable("ringName", name);
+      return "fight";
+    }
+  };
 }
 
 export function create(dialog) {

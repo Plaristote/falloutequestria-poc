@@ -48,6 +48,14 @@ export class Gym {
     });
   }
 
+  labelForRingName(name) {
+    return i18n.t(`cristal-den.ring.names.${name}`);
+  }
+
+  get ringName() {
+    return this.labelForRingName(this.model.getVariable("ringName"));
+  }
+
   set combatOngoing(value) {
     this.model.setVariable("combat", value ? 1 : 0);
   }
@@ -62,6 +70,26 @@ export class Gym {
 
   get combatWinner() {
     return level.findObject(this.model.getVariable("winner"));
+  }
+
+  get playerWinCount() {
+    return this.model.getVariable("winCount", 0);
+  }
+
+  set playerWinCount(value) {
+    this.model.setVariable("winCount", value);
+  }
+
+  get playerCurrentOpponent() {
+    if (this.playerWinCount < 4) {
+      const opponent = this.model.findObject(`boxer-${this.playerWinCount + 1}`);
+
+      if (opponent && opponent.isAlive())
+        return opponent;
+      this.playerWinCount++;
+      return this.playerCurrentOpponent;
+    }
+    return null;
   }
 
   get nextNpcFighters() {
@@ -103,21 +131,92 @@ export class Gym {
         combattants.push(candidates[i]);
         candidates.splice(i, 1);
       }
-      this.combatOngoing = true;
       this.nextNpcFighters = combattants;
       this.model.tasks.addUniqueTask("startNpcCombat", 30000, 1);
     }
   }
 
+  startPlayerCombat() {
+    if (!this.combatOngoing) {
+      const opponent = this.playerCurrentOpponent;
+
+      this.combatOngoing = true;
+      game.player.script.invulnerable = true;
+      level.moveCharacterToZone(game.player,  "ring-entry-A", 2);
+      level.moveCharacterToZone(opponent,     "ring-entry-B", 2);
+      level.moveCharacterToZone(this.referee, "ring-entry-C", 2);
+      opponent.statistics.hitPoints = opponent.statistics.maxHitPoints;
+      this.combatPresentation(game.player, opponent);
+      this.model.tasks.addTask("triggerPlayerCombat", this.presentationTime, 1);
+      this.model.tasks.removeTask("startNpcCombat");
+    }
+  }
+
+  triggerPlayerCombat() {
+    const opponent = this.playerCurrentOpponent;
+
+    opponent.statistics.faction = "";
+    opponent.setAsEnemy(game.player);
+  }
+
+  onPlayerWinsCombat() {
+    this.combatWinner = game.player;
+    this.onPlayerCombatEnds();
+  }
+
+  onPlayerLosesCombat() {
+    this.combatWinner = this.playerCurrentOpponent;
+    this.onPlayerCombatEnds();
+  }
+
+  onPlayerCombatEnds() {
+    const opponent = this.playerCurrentOpponent;
+    const actions = this.referee.actionQueue;
+    const self = this;
+    const winnerName = this.combatWinner == game.player ? this.ringName : this.combatWinner.statistics.name;
+
+    game.player.script.invulnerable = false;
+    opponent.setAsFriendly(game.player);
+    opponent.fieldOfView.reset();
+    this.model.setVariable("fightWon", this.combatWinner == game.player);
+    if (level.combat)
+      level.scheduleCombatEnd();
+    actions.pushReach(this.combatWinner);
+    actions.pushSpeak(i18n.t("cristal-den.ring.combat-ending-part-0"), 5000, "white");
+    actions.pushWait(5);
+    actions.pushSpeak(i18n.t("cristal-den.ring.combat-ending-part-1", {name: winnerName}), 5000, "white");
+    actions.pushWait(5);
+    actions.pushScript({
+      onTrigger: function() {
+        if (self.combatWinner == game.player)
+          self.playerWinCount++;
+        opponent.statistics.faction = "cristal-den";
+        opponent.setAsFriendly(game.player);
+        level.moveCharacterToZone(game.player, self.ringExitZone);
+        self.finalizeCombat();
+      },
+      onCancel: function() { self.model.tasks.addTask("onPlayerCombatEnds", 1515, 1); }
+    });
+    actions.start();
+  }
+
   startNpcCombat() {
+    this.combatOngoing = true;
     if (!this.model.tasks.hasTask("npcCombatTick")) {
       const combattants = this.nextNpcFighters;
-      level.moveCharacterToZone(combattants[0],   "ring-entry-A", 2);
-      level.moveCharacterToZone(combattants[1],   "ring-entry-B", 2);
-      level.moveCharacterToZone(this.referee, "ring-entry-C", 2);
+      level.moveCharacterToZone(combattants[0], "ring-entry-A", 2);
+      level.moveCharacterToZone(combattants[1], "ring-entry-B", 2);
+      level.moveCharacterToZone(this.referee,   "ring-entry-C", 2);
       combattants.forEach(combattant => { combattant.statistics.hitPoints = combattant.statistics.maxHitPoints; });
       this.combatPresentation(combattants[0], combattants[1]);
+      this.model.tasks.addTask("npcCombatTick", this.presentationTime, 1);
     }
+  }
+
+  fighterName(character) {
+    if (character == game.player)
+      return this.ringName;
+    return character.statistics.name;
   }
 
   combatPresentation(characterA, characterB) {
@@ -128,13 +227,13 @@ export class Gym {
     actions.pushSpeak(i18n.t("cristal-den.ring.combat-introduction-1"), 3000, "white");
     actions.pushWait(3);
     actions.pushSpeak(i18n.t("cristal-den.ring.combat-introduction-2", {
-      name1: characterA.statistics.name,
-      name2: characterB.statistics.name
+      name1: this.fighterName(characterA),
+      name2: this.fighterName(characterB)
     }), 4000, "white");
     actions.pushWait(4);
     actions.pushSpeak(i18n.t("cristal-den.ring.combat-introduction-3"), 3500, "white");
     actions.start();
-    this.model.tasks.addTask("npcCombatTick", 3000 + 4000 + 3500, 1);
+    this.presentationTime = 7000;
   }
 
   npcCombatTick() {
