@@ -42,7 +42,7 @@ function isBusy(routine) {
 }
 
 function scheduleRoutineRefresh(routine, enabled = true) {
-  routine.model.tasks.addUniqueTask(
+  routine.model.tasks.addTask(
     refreshRoutineTaskName,
     routine.refreshInterval + randomInterval(),
     1
@@ -53,7 +53,10 @@ function refreshRoutine(routine) {
   scheduleRoutineRefresh(routine);
   if (!isBusy(routine)) {
     const callback = routine.getCurrentRoutine().callback;
-    routine.parent[callback]();
+    if (typeof callback == "function")
+      callback();
+    else
+      routine.parent[callback]();
   }
 }
 
@@ -66,7 +69,7 @@ export class RoutineComponent {
     this.parent[updateRoutineTaskName] = this.updateRoutine.bind(this);
     this.parent[refreshRoutineTaskName] = () => refreshRoutine(this);
     if (!this.model.tasks.hasTask(updateRoutineTaskName))
-      this.model.tasks.addUniqueTask(updateRoutineTaskName, randomInterval(), 1);
+      this.model.tasks.addTask(updateRoutineTaskName, randomInterval(), 1);
   }
 
   enablePersistentRoutine() {
@@ -100,12 +103,12 @@ export class RoutineComponent {
 
   scheduleNextRoutineAction() {
     const options = this.getRoutines().sort(soonerFirst);
-    this.model.tasks.addUniqueTask(updateRoutineTaskName, options[0].nextTrigger, 1);
+    this.model.tasks.addTask(updateRoutineTaskName, options[0].nextTrigger, 1);
   }
 
   updateRoutine() {
     if (isBusy(this))
-      this.model.tasks.addUniqueTask(updateRoutineTaskName, 1234, 1);
+      this.model.tasks.addTask(updateRoutineTaskName, 1234, 1);
     else
       this.triggerRoutine();
   }
@@ -114,7 +117,13 @@ export class RoutineComponent {
     const callback = this.getCurrentRoutine().callback;
 
     this.scheduleNextRoutineAction();
-    if (callback && typeof callback == "function")
-      this.parent[callback]();
+    if (callback) {
+      if (typeof callback == "function")
+        callback();
+      else if (typeof callback == "string")
+        this.parent[callback]();
+      else
+        console.log("triggerRoutine: invalid routine callback", callback);
+    }
   }
 }
