@@ -24,7 +24,7 @@ export class DrunkenMaster extends CharacterBehaviour {
   }
 
   initialize() {
-    this.model.setAnimation("dead");
+    this.model.fallUnconscious();
     this.routineComponent.enablePersistentRoutine();
   }
 

@@ -28,7 +28,7 @@ export function initializeDrunkenQuest() {
   game.quests.addQuest(questName);
   drunk.fallUnconscious();
   drunk.setAnimation("dead");
-  doctor.getScriptObject().startDialog("hillburrow/doctor-drunk-quest");
+  doctor.script.startDialog("hillburrow/doctor-drunk-quest");
 }
 
 export function failDrunkenQuest() {
@@ -47,7 +47,8 @@ export function completeDrunkenQuest() {
   quest.completeObjective("save-drunken-master");
   quest.completed = true;
   drunk.wakeUp();
-  drunk.scriptCall("onHealed");
+  if (typeof drunk.script.onHealed == "function")
+    drunk.script.onHealed();
   game.dataEngine.addReputation("hillburrow", 25);
 }
 
