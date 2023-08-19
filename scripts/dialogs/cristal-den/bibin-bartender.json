@@ -1,0 +1,82 @@
+{
+    "answers": {
+        "ask-about-bibin": {
+            "state": "about-place/bibin",
+            "text": "ask-about-bibin"
+        },
+        "ask-about-gym": {
+            "state": "about-place/gym",
+            "text": "ask-about-gym"
+        },
+        "ask-about-place": {
+            "state": "about-place/entry",
+            "text": "ask-about-place"
+        },
+        "ask-order-drink": {
+            "state": "order-drinks",
+            "text": "ask-order-drink"
+        },
+        "exit-entry": {
+            "text": "exit-entry"
+        },
+        "exit-questions": {
+            "text": "exit-questions"
+        },
+        "exit-without-drinks": {
+            "text": "exit-without-drinks"
+        },
+        "order-drink-bibin's brew": {
+        },
+        "order-drink-sparkeCola": {
+        },
+        "order-drink-whiskey": {
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "about-place/bibin": {
+            "answers": [
+                "ask-about-gym",
+                "exit-questions"
+            ],
+            "mood": "",
+            "text": "about-place/bibin"
+        },
+        "about-place/entry": {
+            "answers": [
+                "ask-about-bibin",
+                "ask-about-gym",
+                "exit-questions"
+            ],
+            "mood": "",
+            "text": "about-place/entry"
+        },
+        "about-place/gym": {
+            "answers": [
+                "ask-about-bibin",
+                "exit-questions"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "about-place/gym"
+        },
+        "entry": {
+            "answers": [
+                "ask-order-drink",
+                "ask-about-place",
+                "exit-entry"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "entry"
+        },
+        "order-drinks": {
+            "answers": [
+                "exit-without-drinks"
+            ],
+            "hook": "barDialog",
+            "mood": "",
+            "text": "order-drink-alt"
+        }
+    }
+}

@@ -1,8 +1,13 @@
 {
     "dialogs": {
         "cristal-den/bartender": {
+            "do-order-drink": "Sure, I'll have a drink.",
             "entry": "Hi ! Nice to see you again ! Care for a drink ?",
-            "meeting": "Hi there ! It's always nice seeing new faces here ! Welcome to the Café of Cristal Dreams ! How can I be of service ?"
+            "exit-entry": "I don't need anything, bye !",
+            "exit-without-drinks": "Nothing.",
+            "meeting": "Hi there ! It's always nice seeing new faces here ! Welcome to the Café of Cristal Dreams ! How can I be of service ?",
+            "order-drink": "Pick your poison !",
+            "order-drink-alt": "Drink something else ?"
         }
     }
 }

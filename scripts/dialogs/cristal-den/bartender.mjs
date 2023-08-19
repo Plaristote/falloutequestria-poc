@@ -1,12 +1,19 @@
-class Dialog {
+import {BarkeepHelper} from "../barkeep.mjs";
+
+class Dialog extends BarkeepHelper {
   constructor(dialog) {
-    this.dialog = dialog;
+    super(dialog, [
+      { name: "oatmilk",    price: 3 },
+      { name: "beer",       price: 4, onDrink: "drunk" },
+      { name: "whiskey",    price: 6, onDrink: "drunk" },
+      { name: "sparkeCola", price: 8 }
+    ]);
   }
 
   getEntryPoint() {
-    if (this.npc.hasVariable("talked"))
+    if (this.dialog.npc.hasVariable("talked"))
       return "entry";
-    this.npc.setVariable("talked", 1);
+    this.dialog.npc.setVariable("talked", 1);
     return "meeting";
   }
 }

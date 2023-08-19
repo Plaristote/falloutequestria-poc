@@ -1,11 +1,33 @@
 {
     "answers": {
+        "do-order-drink": {
+            "state": "order-drink",
+            "text": "do-order-drink"
+        },
+        "exit-entry": {
+            "text": "exit-entry"
+        },
+        "exit-without-drinks": {
+            "text": "exit-without-drinks"
+        },
+        "order-drink-beer": {
+        },
+        "order-drink-oatmilk": {
+        },
+        "order-drink-sparkeCola": {
+        },
+        "order-drink-whiskey": {
+        }
     },
     "entryPoint": "entry",
     "states": {
         "entry": {
             "answers": [
+                "do-order-drink",
+                "exit-entry"
             ],
+            "hook": "",
+            "mood": "",
             "text": "entry"
         },
         "meeting": {
@@ -13,6 +35,14 @@
             ],
             "mood": "smile",
             "text": "meeting"
+        },
+        "order-drink": {
+            "answers": [
+                "exit-without-drinks"
+            ],
+            "hook": "barDialog",
+            "mood": "",
+            "text": "order-drink-alt"
         }
     }
 }
