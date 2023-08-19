@@ -40,12 +40,24 @@ export class Gym {
     });
   }
 
+  get trainingAppliances() {
+    return this.model.findGroup("training-appliances").objects;
+  }
+
   get ringCharacters() {
     const blacklist = [game.player, this.referee];
 
     return level.getZoneOccupants(this.ringZone).filter(function(character) {
       return character.type == "Character" && blacklist.indexOf(character) < 0;
     });
+  }
+
+  get ringFighters() {
+    const fighters = this.ringCharacters;
+
+    if (!this.model.tasks.hasTask("npcCombatTick"))
+      fighters.push(game.player);
+    return fighters;
   }
 
   labelForRingName(name) {
@@ -102,6 +114,15 @@ export class Gym {
   set nextNpcFighters(characters) {
     this.model.setVariable("npcFighterA", characters[0].path);
     this.model.setVariable("npcFighterB", characters[1].path);
+  }
+
+  generateCheer() {
+    const fighters = this.ringFighters;
+    const fighter = fighters[Math.floor(Math.random() * 2)];
+    const name = fighter == game.player ? this.ringName : fighter.statistics.name;
+    const cheerIt = Math.floor(Math.random() * 7);
+
+    return [i18n.t(`cristal-den.ring.cheers-${cheerIt}`, {name: name}), 4500, "beige"];
   }
 
   placeBet(fighter, amount) {
