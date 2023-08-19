@@ -8,6 +8,10 @@
             "state": "about-place/gym",
             "text": "ask-about-gym"
         },
+        "ask-about-meeting-bibin": {
+            "state": "about-place/bibin-meeting",
+            "text": "ask-about-meeting-bibin"
+        },
         "ask-about-place": {
             "state": "about-place/entry",
             "text": "ask-about-place"
@@ -36,11 +40,20 @@
     "states": {
         "about-place/bibin": {
             "answers": [
+                "ask-about-meeting-bibin",
                 "ask-about-gym",
                 "exit-questions"
             ],
             "mood": "",
             "text": "about-place/bibin"
+        },
+        "about-place/bibin-meeting": {
+            "answers": [
+                "ask-about-gym",
+                "exit-questions"
+            ],
+            "mood": "",
+            "text": "about-place/bibin-meeting"
         },
         "about-place/entry": {
             "answers": [

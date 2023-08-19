@@ -11,7 +11,7 @@ class Dialog {
       game.setVariable("rathian-knows-stable-location", true);
       return "arrival-at-stable";
     default:
-      return "arrival-elswhere";
+      return "arrival-elsewhere";
     }
   }
 }

@@ -3,10 +3,7 @@ import {CharacterBehaviour} from "../character.mjs";
 class Rathian extends CharacterBehaviour {
   constructor(model) {
     super(model);
-  }
-
-  shouldBeAtJunkville() {
-    return true;
+    this.shouldBeAtJunkville = true;
   }
 
   isInWorkshop() {

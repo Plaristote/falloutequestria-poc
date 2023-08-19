@@ -22,7 +22,7 @@ class Level extends LevelBase {
   prepareRathian() {
     const rathian = game.uniqueCharacterStorage.getCharacter("rathian");
 
-    if (rathian && rathian.getScriptObject().shouldBeAtJunkville()) {
+    if (rathian && rathian.script.shouldBeAtJunkville) {
       game.uniqueCharacterStorage.loadCharacterToCurrentLevel("rathian", 53, 27, 0);
       rathian.setScript("rathian/junkville.mjs");
       rathian.movementMode = "walking";

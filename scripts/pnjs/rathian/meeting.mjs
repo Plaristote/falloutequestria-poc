@@ -5,6 +5,11 @@ function isDropOffLevel() {
 }
 
 class Rathian extends CharacterBehaviour {
+  constructor(model) {
+    super(model);
+    this.shouldBeAtJunkville = true;
+  }
+
   get dialog() {
     if (level.name === "rathian-meeting")
       return "rathian-introduction";
@@ -29,10 +34,6 @@ class Rathian extends CharacterBehaviour {
   stopFollowingPlayer() {
     this.model.statistics.faction = "";
     this.model.tasks.removeTask("followPlayer");
-  }
-
-  shouldBeAtJunkville() {
-    return true;
   }
 
   insertedIntoZone(zoneName) {
