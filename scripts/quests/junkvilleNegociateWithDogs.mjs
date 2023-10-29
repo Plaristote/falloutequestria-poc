@@ -181,7 +181,7 @@ export function shouldAltLeaderTakeOver() {
 
 export function hasAltLeaderTakenOver() {
   return hasQuest() &&
-         getQuest().getScriptObject().isObjectiveCompleted("alt-leader-took-over");
+         getQuest().isObjectiveCompleted("alt-leader-took-over");
 }
 
 export function makeAltLeaderTakeOver() {

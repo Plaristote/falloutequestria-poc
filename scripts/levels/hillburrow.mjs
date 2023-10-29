@@ -1,5 +1,6 @@
 import {LevelBase} from "./base.mjs";
 import {waterCarrierAppearences, waterCarrierPopPositions} from "../pnjs/hillburrow/water-carrier.mjs";
+import {saboteurShouldDisappear} from "../quests/hillburrow/sabotage.mjs";
 
 export class Hillburrow extends LevelBase {
   initialize() {
@@ -25,13 +26,15 @@ export class Hillburrow extends LevelBase {
   }
 
   currentWaterCarrierTask() {
-    const schedule = waterCarrierAppearences[level.name];
-    const hour     = game.timeManager.hour;
-    const minute   = game.timeManager.second;
+    if (!saboteurShouldDisappear()) {
+      const schedule = waterCarrierAppearences[level.name];
+      const hour     = game.timeManager.hour;
+      const minute   = game.timeManager.second;
 
-    for (var appearence of schedule) {
-      if (game.timeManager.isWithinRange(appearence))
-        return appearence.task;
+      for (var appearence of schedule) {
+        if (game.timeManager.isWithinRange(appearence))
+          return appearence.task;
+      }
     }
     return "none";
   }

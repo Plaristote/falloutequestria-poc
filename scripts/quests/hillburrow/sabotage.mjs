@@ -2,6 +2,30 @@ import {QuestHelper} from "../helpers.mjs";
 
 const questName = "hillburrow/sabotage";
 
+export function canWarnPotioksAboutBibin() {
+  const quest = game.quests.getQuest(questName);
+  return quest && quest.script.canWarnPotioksAboutBibin;
+}
+
+export function wasSaboteurInterrogatedByBibin() {
+  const quest = game.quests.getQuest(questName);
+  return quest && quest.getVariable("bittyInterrogatedHobo", 0) == 1;
+}
+
+export function saboteurShouldDisappear() {
+  const quest = game.quests.getQuest(questName);
+  return quest && quest.script.foughtWaterCarrier;
+}
+
+export function sabotageReportedToMatriarch() {
+  game.quests.getQuest(questName).completeObjective("mustWarnPotioksAboutBibin");
+}
+
+export function bibinSabotageReportedToMatriarch() {
+  sabotageReportedToMatriarch();
+  game.quests.getQuest(questName).setVariable("matriarchKnwosAboutBibinInvolvement", 1);
+}
+
 export class Sabotage extends QuestHelper {
   initialize() {
     this.model.location = "hillburrow";
@@ -53,6 +77,7 @@ export class Sabotage extends QuestHelper {
   }
 
   setupWaterCarrierScene() {
+    this.model.setVariable("bittyInterrogatedHobo", 1);
     level.script.waterCarrierInterrogationScene.initialize();
   }
 
@@ -73,7 +98,16 @@ export class Sabotage extends QuestHelper {
   }
 
   get canWarnPotioksAboutBibin() {
-    return this.model.getVariable("mustWarnPotioksAboutBibin", 0) == 1;
+    const objective = "mustWarnPotioksAboutBibin";
+    return this.model.hasObjective(objective) && !this.model.isObjectiveCompleted(objective);
+  }
+
+  get reportedToMatriarch() {
+    return this.model.hasObjective("mustWarnPotioksAboutBibin");
+  }
+
+  get matriarchKnowsAboutBibinInvolvement() {
+    return this.model.getVariable("matriarchKnwosAboutBibinInvolvement", 0) == 1;
   }
 
   get foughtWaterCarrier() {

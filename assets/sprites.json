@@ -7987,6 +7987,10 @@
             "width": 72
         }
     },
+    "vault-elevator": {
+        "cloneOf": "wooden-stairs",
+        "defaultSource": "stairs/vault-elevator.png"
+    },
     "vault-stairs": {
         "cloneOf": "wooden-stairs",
         "defaultSource": "stairs/vault.png"

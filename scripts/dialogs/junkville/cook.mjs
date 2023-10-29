@@ -135,7 +135,7 @@ class Dialog extends DialogHelper {
   onDogMediationEntry() {
     const quest = requireQuest("junkvilleNegociateWithDogs");
 
-    if (quest.getScriptObject().isObjectiveCompleted("junkville-warned"))
+    if (quest.isObjectiveCompleted("junkville-warned"))
       return this.dialog.t("dogs-mediation-reentry");
     quest.completeObjective("junkville-warned");
     return this.dialog.t("dogs-mediation-entry");

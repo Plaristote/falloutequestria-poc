@@ -2012,7 +2012,7 @@
                         {
                          "name":"targetZone",
                          "type":"string",
-                         "value":"from-den-center"
+                         "value":"from-cristal-den-center"
                         }, 
                         {
                          "name":"type",
@@ -2428,7 +2428,7 @@
  "nextobjectid":1,
  "orientation":"isometric",
  "renderorder":"left-down",
- "tiledversion":"1.8.2",
+ "tiledversion":"1.10.1",
  "tileheight":36,
  "tilesets":[
         {
@@ -2473,6 +2473,6 @@
         }],
  "tilewidth":72,
  "type":"map",
- "version":"1.8.2",
+ "version":"1.10",
  "width":80
 }
