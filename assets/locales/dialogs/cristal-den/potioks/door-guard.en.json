@@ -1,0 +1,17 @@
+{
+    "dialogs": {
+        "cristal-den/potioks/door-guard": {
+            "about-place": "This is the Potiok's ranch. That's where most of them live. And if they had invited you, I would've been warned.",
+            "about-work": "Alright. Speak with Pat. She's in the room behind me. You're not allowed anywhere else. I've got my eye on you.",
+            "ask-about-place": "What's this place ?",
+            "ask-about-work": "I'd like to work for the Potiok family.",
+            "back-from-about-place": "Ok.",
+            "exit": "",
+            "exit-entry": "Nothing, I'll be on my way.",
+            "on-sent-by-bitty": "Bitty, huh ? I wonder in what kind of way she fucked up this time. Alright then, go on. The matriarch is in the bunker. Go past the room behind me and take the elevator. She's in the room downstairs, right out of the elevator.",
+            "prompt": "This is a private property. What's your business here ?",
+            "prompt-with-access": "Hey. What's new ?",
+            "sent-by-bitty": "I've been sent by Bitty Potiok. I bring important information that the matriarch will want to hear for herself."
+        }
+    }
+}

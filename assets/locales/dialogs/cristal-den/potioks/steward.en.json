@@ -1,0 +1,10 @@
+{
+    "dialogs": {
+        "cristal-den/potioks/steward": {
+            "ask-about-work": "I want to work for the Potiok family.",
+            "exit-entry": "I'm just passing through.",
+            "prompt": "Yes ? What's the motive of your visit ?",
+            "send-away": "Oh no you're not ! You're not allowed past this room. If you've got nothing to ask me, then scram."
+        }
+    }
+}

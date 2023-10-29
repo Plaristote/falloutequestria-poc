@@ -172,11 +172,15 @@ class Dialog {
 
   sabotageCompleteQuestWaterCarrierRouteWithBibinWarning() {
     this.sabotageQuest.script.completeWaterCarrierRoute();
-    this.sabotageQuest.setVariable("mustWarnPotioksAboutBibin", 1);
+    this.sabotageQuest.addObjective("mustWarnPotioksAboutBibin", this.sabotageQuest.tr("warnPotioks"));
   }
 
   sabotageTakeWaterCarrierToBoss() {
     this.sabotageQuest.script.startWaterCarrierScene();
+  }
+
+  giveSabotagePayment() {
+    game.player.inventory.addItemOfType("bottlecaps", 100);
   }
 }
 

@@ -1,0 +1,68 @@
+{
+    "answers": {
+        "ask-about-place": {
+            "state": "about-place",
+            "text": "ask-about-place"
+        },
+        "ask-about-work": {
+            "state": "about-work",
+            "text": "ask-about-work"
+        },
+        "back-from-about-place": {
+            "state": "prompt",
+            "text": "back-from-about-place"
+        },
+        "exit-entry": {
+            "text": "exit-entry"
+        },
+        "sent-by-bitty": {
+            "availableHook": "wasSentByBitty",
+            "state": "on-sent-by-bitty",
+            "text": "sent-by-bitty"
+        }
+    },
+    "entryPoint": "prompt",
+    "states": {
+        "about-place": {
+            "answers": [
+                "back-from-about-place"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "about-place"
+        },
+        "about-work": {
+            "answers": [
+            ],
+            "hook": "giveWorkAccess",
+            "mood": "",
+            "text": "about-work"
+        },
+        "on-sent-by-bitty": {
+            "answers": [
+            ],
+            "hook": "giveFullAccess",
+            "mood": "cocky",
+            "text": "on-sent-by-bitty"
+        },
+        "prompt": {
+            "answers": [
+                "sent-by-bitty",
+                "ask-about-place",
+                "ask-about-work",
+                "exit-entry"
+            ],
+            "hook": "",
+            "mood": "angry",
+            "text": "prompt"
+        },
+        "prompt-with-access": {
+            "answers": [
+                "sent-by-bitty",
+                "exit-entry"
+            ],
+            "mood": "",
+            "text": "prompt-with-access"
+        }
+    }
+}

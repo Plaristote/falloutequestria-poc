@@ -207,6 +207,7 @@
             "answers": [
                 "sabotage-accept-reward"
             ],
+            "hook": "giveSabotagePayment",
             "mood": "",
             "text": "sabotage/about-payment"
         },

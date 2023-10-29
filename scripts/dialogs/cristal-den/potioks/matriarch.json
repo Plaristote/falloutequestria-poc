@@ -1,0 +1,376 @@
+{
+    "answers": {
+        "back-to-sabotage-report": {
+            "state": "sabotage/report-follow-up",
+            "text": "back-to-sabotage-report"
+        },
+        "bitty-appreciation-bad": {
+            "state": "sabotage/bitty-leadership/on-bad",
+            "text": "bitty-appreciation-bad"
+        },
+        "bitty-appreciation-good": {
+            "state": "sabotage/bitty-leadership/on-good",
+            "text": "bitty-appreciation-good"
+        },
+        "bitty-appreciation-medium": {
+            "state": "sabotage/bitty-leadership/on-medium",
+            "text": "bitty-appreciation-medium"
+        },
+        "bitty-appreciation-reject": {
+            "state": "sabotage/bitty-leadership/on-skip",
+            "text": "bitty-appreciation-reject"
+        },
+        "hide-bibin-involvement": {
+            "state": "sabotage/about-saboteur",
+            "text": "hide-bibin-involvement"
+        },
+        "hide-bibin-involvement-alt": {
+            "text": "hide-bibin-involvement-alt"
+        },
+        "intrusion-evasive": {
+            "state": "intrusion-questions",
+            "text": "intrusion-evasive"
+        },
+        "intrusion-on-sneaked-in-accept-job": {
+            "state": "sneak-job/pre-entry",
+            "text": "intrusion-on-sneaked-in-accept-job"
+        },
+        "intrusion-on-sneaked-in-accept-job-alt": {
+            "state": "sneak-job/pre-entry-alt",
+            "text": "intrusion-on-sneaked-in-accept-job-alt"
+        },
+        "intrusion-secretary-wasnt-there": {
+            "text": "intrusion-secretary-wasnt-there"
+        },
+        "intrusion-sneaked-in": {
+            "state": "intrusion-on-sneaked-in",
+            "text": "intrusion-sneaked-in"
+        },
+        "on-bitty-intrusion-go-on": {
+            "state": "sabotage/entry",
+            "text": "on-bitty-intrusion-go-on"
+        },
+        "on-bitty-intrusion-secrecy": {
+            "state": "sabotage/entry",
+            "text": "on-bitty-intrusion-secrecy"
+        },
+        "praise-bitty-reason-loyalty": {
+            "state": "sabotage/bitty-leadership/on-loyalty",
+            "text": "praise-bitty-reason-loyalty"
+        },
+        "report-bibin-involvement": {
+            "hook": "saboteurToldAboutBibinInvolvement",
+            "state": "sabotage/about-saboteur-tortured",
+            "text": "report-bibin-involvement"
+        },
+        "sabotage-report": {
+            "state": "sabotage/report",
+            "text": "sabotage-report"
+        },
+        "sabotage-report-ask-more-slaves": {
+            "state": "sabotage/asked-for-supplies",
+            "text": "sabotage-report-ask-more-slaves"
+        },
+        "sabotage-report-confirm-mine-output": {
+            "state": "sabotage/report-follow-up",
+            "text": "sabotage-report-confirm-mine-output"
+        },
+        "sabotage-to-end": {
+            "state": "sabotage/exit",
+            "text": "sabotage-to-end"
+        },
+        "saboteur-escaped-bitty-blame": {
+            "state": "sabotage/on-blame-bitty",
+            "text": "saboteur-escaped-bitty-blame"
+        },
+        "saboteur-escaped-take-blame": {
+            "state": "sabotage/on-take-blame-for-culprit",
+            "text": "saboteur-escaped-take-blame"
+        },
+        "saboteur-interrogated-by-bitty": {
+            "availableHook": "saboteurWasInterrogated",
+            "state": "sabotage/about-saboteur-tortured",
+            "text": "saboteur-interrogated-by-bitty"
+        },
+        "saboteur-killed-by-player": {
+            "state": "sabotage/about-saboteur-disappeared",
+            "text": "saboteur-killed-by-player"
+        },
+        "saboteur-slipped-away": {
+            "state": "sabotage/about-saboteur-disappeared",
+            "text": "saboteur-slipped-away"
+        },
+        "sneak-job/accept": {
+            "state": "sneak-job/on-accepted",
+            "text": "sneak-job/accept"
+        },
+        "sneak-job/accept-reward": {
+            "text": "sneak-job/accept-reward"
+        },
+        "sneak-job/ask-more-reward": {
+            "availableHook": "sneakJobCanNegociateReward",
+            "hook": "sneakJobNegociateReward",
+            "state": "sneak-job/reward-not-increased",
+            "text": "sneak-job/ask-more-reward"
+        },
+        "sneak-job/ask-reward": {
+            "state": "sneak-job/about-reward",
+            "text": "sneak-job/ask-reward"
+        },
+        "sneak-job/entry-alt-go-on": {
+            "state": "sneak-job/entry",
+            "text": "sneak-job/entry-alt-go-on"
+        },
+        "sneak-job/reject": {
+            "state": "sneak-job/on-rejected",
+            "text": "sneak-job/reject"
+        },
+        "sneak-job/reject-reward": {
+            "state": "sneak-job/on-rejected",
+            "text": "sneak-job/reject-reward"
+        },
+        "was-sent-by-bibin": {
+            "availableHook": "wasSentByBibin",
+            "text": "was-sent-by-bibin"
+        },
+        "was-sent-by-bitty": {
+            "availableHook": "wasSentByBitty",
+            "state": "intrusion-bitty",
+            "text": "was-sent-by-bitty"
+        },
+        "was-sent-by-no-one": {
+            "state": "intrusion-explore",
+            "text": "was-sent-by-no-one"
+        }
+    },
+    "entryPoint": "intrusion",
+    "states": {
+        "intrusion": {
+            "answers": [
+                "was-sent-by-bitty",
+                "was-sent-by-bibin",
+                "intrusion-evasive"
+            ],
+            "mood": "",
+            "text": "intrusion"
+        },
+        "intrusion-bitty": {
+            "answers": [
+                "on-bitty-intrusion-go-on",
+                "on-bitty-intrusion-secrecy"
+            ],
+            "mood": "",
+            "text": "intrusion-bitty"
+        },
+        "intrusion-explore": {
+            "answers": [
+                "intrusion-sneaked-in",
+                "intrusion-secretary-wasnt-there"
+            ],
+            "mood": "",
+            "text": "intrusion-explore"
+        },
+        "intrusion-on-sneaked-in": {
+            "answers": [
+                "intrusion-on-sneaked-in-accept-job-alt",
+                "intrusion-on-sneaked-in-accept-job"
+            ],
+            "mood": "",
+            "text": "intrusion-on-sneaked-in"
+        },
+        "intrusion-questions": {
+            "answers": [
+                "was-sent-by-bitty",
+                "was-sent-by-bibin",
+                "was-sent-by-no-one"
+            ],
+            "mood": "",
+            "text": "intrusion-questions"
+        },
+        "on-blame-bitty": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "on-blame-bitty"
+        },
+        "sabotage/about-saboteur": {
+            "answers": [
+                "saboteur-interrogated-by-bitty",
+                "saboteur-killed-by-player",
+                "saboteur-slipped-away"
+            ],
+            "mood": "",
+            "text": "sabotage/about-saboteur"
+        },
+        "sabotage/about-saboteur-disappeared": {
+            "answers": [
+                "saboteur-escaped-bitty-blame",
+                "saboteur-escaped-take-blame"
+            ],
+            "mood": "",
+            "text": "sabotage/about-saboteur-disappeared"
+        },
+        "sabotage/about-saboteur-tortured": {
+            "answers": [
+            ],
+            "hook": "endSabotageReportWithBibinInvolvement",
+            "mood": "",
+            "text": "sabotage/about-saboteur-tortured"
+        },
+        "sabotage/asked-for-supplies": {
+            "answers": [
+                "back-to-sabotage-report"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "sabotage/asked-for-supplies"
+        },
+        "sabotage/bitty-leadership/on-bad": {
+            "answers": [
+                "sabotage-report"
+            ],
+            "mood": "",
+            "text": "sabotage/bitty-leadership/on-bad"
+        },
+        "sabotage/bitty-leadership/on-good": {
+            "answers": [
+                "praise-bitty-reason-loyalty"
+            ],
+            "mood": "",
+            "text": "sabotage/bitty-leadership/on-good"
+        },
+        "sabotage/bitty-leadership/on-loyalty": {
+            "answers": [
+                "sabotage-report"
+            ],
+            "mood": "",
+            "text": "sabotage/bitty-leadership/on-loyalty"
+        },
+        "sabotage/bitty-leadership/on-medium": {
+            "answers": [
+                "sabotage-report"
+            ],
+            "mood": "",
+            "text": "sabotage/bitty-leadership/on-medium"
+        },
+        "sabotage/bitty-leadership/on-skip": {
+            "answers": [
+                "sabotage-report"
+            ],
+            "mood": "",
+            "text": "sabotage/bitty-leadership/on-skip"
+        },
+        "sabotage/entry": {
+            "answers": [
+                "bitty-appreciation-good",
+                "bitty-appreciation-medium",
+                "bitty-appreciation-bad",
+                "bitty-appreciation-reject"
+            ],
+            "mood": "",
+            "text": "sabotage/entry"
+        },
+        "sabotage/exit": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "sabotage/exit"
+        },
+        "sabotage/on-blame-bitty": {
+            "answers": [
+                "sabotage-to-end"
+            ],
+            "mood": "",
+            "text": "sabotage/on-blame-bitty"
+        },
+        "sabotage/on-take-blame-for-culprit": {
+            "answers": [
+                "sabotage-to-end"
+            ],
+            "mood": "",
+            "text": "sabotage/on-take-blame-for-culprit"
+        },
+        "sabotage/report": {
+            "answers": [
+                "sabotage-report-confirm-mine-output",
+                "sabotage-report-ask-more-slaves"
+            ],
+            "mood": "",
+            "text": "sabotage/report"
+        },
+        "sabotage/report-follow-up": {
+            "answers": [
+                "report-bibin-involvement",
+                "hide-bibin-involvement",
+                "hide-bibin-involvement-alt"
+            ],
+            "hook": "endSabotageReport",
+            "mood": "",
+            "text": "sabotage/report-follow-up"
+        },
+        "sneak-job/about-reward": {
+            "answers": [
+                "sneak-job/accept-reward",
+                "sneak-job/ask-more-reward",
+                "sneak-job/reject-reward"
+            ],
+            "mood": "",
+            "text": "sneak-job/about-reward"
+        },
+        "sneak-job/entry": {
+            "answers": [
+                "sneak-job/accept",
+                "sneak-job/ask-reward",
+                "sneak-job/reject"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "sneak-job/entry"
+        },
+        "sneak-job/increase-reward": {
+            "answers": [
+                "sneak-job/accept-reward",
+                "sneak-job/reject-reward"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "sneak-job/increase-reward"
+        },
+        "sneak-job/on-accepted": {
+            "answers": [
+            ],
+            "hook": "sneakJobAccepted",
+            "mood": "",
+            "text": "sneak-job/on-accepted"
+        },
+        "sneak-job/on-rejected": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "sneak-job/on-rejected"
+        },
+        "sneak-job/pre-entry": {
+            "answers": [
+                "sneak-job/entry-alt-go-on"
+            ],
+            "mood": "",
+            "text": "sneak-job/pre-entry"
+        },
+        "sneak-job/pre-entry-alt": {
+            "answers": [
+                "sneak-job/entry-alt-go-on"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "sneak-job/pre-entry-alt"
+        },
+        "sneak-job/reward-not-increased": {
+            "answers": [
+                "sneak-job/accept-reward",
+                "sneak-job/reject-reward"
+            ],
+            "mood": "",
+            "text": "sneak-job/reward-not-increased"
+        }
+    }
+}

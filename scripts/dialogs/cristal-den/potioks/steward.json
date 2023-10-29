@@ -1,0 +1,29 @@
+{
+    "answers": {
+        "ask-about-work": {
+            "availableHook": "canAskForWork",
+            "text": "ask-about-work"
+        },
+        "exit-entry": {
+            "hook": "onPassingThrough",
+            "text": "exit-entry"
+        }
+    },
+    "entryPoint": "",
+    "states": {
+        "prompt": {
+            "answers": [
+                "ask-about-work",
+                "exit-entry"
+            ],
+            "mood": "",
+            "text": "prompt"
+        },
+        "send-away": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "send-away"
+        }
+    }
+}
