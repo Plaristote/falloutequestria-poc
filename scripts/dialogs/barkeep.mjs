@@ -1,8 +1,4 @@
-import {MerchantHelper} from "./merchant.mjs";
-
-function upcaseFirstLetter(name) {
-  return name[0].toUpperCase() + name.slice(1);
-}
+import {MerchantHelper, makeOrderChoice} from "./merchant.mjs";
 
 function onDrinkAlcohol() {
   game.asyncAdvanceTime(5, () => {
@@ -10,29 +6,20 @@ function onDrinkAlcohol() {
   });
 }
 
-function canOrderBeverage(beverage) {
-  return this.canBuy(beverage.price);
-}
-
 function orderBeverage(beverage) {
   this.firstDrink = false;
-  this.spendMoney(beverage.price);
-  if (typeof beverage.onDrink == "function")
-    beverage.onDrink();
-  else if (beverage.onDrink == "drunk")
+  this.orderConsumible(beverage);
+  if (beverage.onConsume == "drunk")
     onDrinkAlcohol.bind(this)();
-  else
-    game.asyncAdvanceTime(1);
   return this.afterOrderDrink || "order-drink";
 }
 
 function makeBeverageChoice(self, beverage) {
-  return {
-    symbol:        `order-drink-${beverage.name}`,
-    textHook:      function() { return i18n.t(`barkeep.dialog-choices.order-${beverage.name}`) },
-    availableHook: canOrderBeverage.bind(self, beverage),
-    hook:          orderBeverage.bind(self, beverage)
-  };
+  return makeOrderChoice(self, beverage, {
+    type:     "drink",
+    textHook: function() { return i18n.t(`barkeep.dialog-choices.order-${beverage.name}`) },
+    hook:     orderBeverage
+  });
 }
 
 function addBeverage(beverage) {
@@ -57,5 +44,11 @@ export class BarkeepHelper extends MerchantHelper {
       text: this.dialog.t(this.firstDrink ? "order-drink" : "order-drink-alt"),
       answers: this.beverageChoices
     };
+  }
+
+  onConsume(type) {
+    if (type == "drunk")
+      return onDrinkAlcohol.bind(this)();
+    return super.onConsume(type);
   }
 }
