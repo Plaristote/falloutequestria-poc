@@ -69,7 +69,7 @@ export class RoutineComponent {
     this.parent[updateRoutineTaskName] = this.updateRoutine.bind(this);
     this.parent[refreshRoutineTaskName] = () => refreshRoutine(this);
     if (!this.model.tasks.hasTask(updateRoutineTaskName))
-      this.model.tasks.addTask(updateRoutineTaskName, randomInterval(), 1);
+      this.model.tasks.addUniqueTask(updateRoutineTaskName, randomInterval(), 1);
   }
 
   enablePersistentRoutine() {
@@ -103,12 +103,12 @@ export class RoutineComponent {
 
   scheduleNextRoutineAction() {
     const options = this.getRoutines().sort(soonerFirst);
-    this.model.tasks.addTask(updateRoutineTaskName, options[0].nextTrigger, 1);
+    this.model.tasks.addUniqueTask(updateRoutineTaskName, options[0].nextTrigger, 1);
   }
 
   updateRoutine() {
     if (isBusy(this))
-      this.model.tasks.addTask(updateRoutineTaskName, 1234, 1);
+      this.model.tasks.addUniqueTask(updateRoutineTaskName, 1234, 1);
     else
       this.triggerRoutine();
   }
