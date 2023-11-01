@@ -25,6 +25,7 @@
             "text": "hide-bibin-involvement"
         },
         "hide-bibin-involvement-alt": {
+            "state": "sabotage/exit",
             "text": "hide-bibin-involvement-alt"
         },
         "intrusion-evasive": {
@@ -58,10 +59,17 @@
             "state": "sabotage/bitty-leadership/on-loyalty",
             "text": "praise-bitty-reason-loyalty"
         },
+        "prompt-exit": {
+            "text": "prompt-exit"
+        },
         "report-bibin-involvement": {
             "hook": "saboteurToldAboutBibinInvolvement",
             "state": "sabotage/about-saboteur-tortured",
             "text": "report-bibin-involvement"
+        },
+        "sabotage-exit": {
+            "state": "sabotage/exit",
+            "text": "sabotage-exit"
         },
         "sabotage-report": {
             "state": "sabotage/report",
@@ -100,11 +108,22 @@
             "state": "sabotage/about-saboteur-disappeared",
             "text": "saboteur-slipped-away"
         },
+        "sneak-job-reentry": {
+            "availableHook": "sneakJobCanReenter",
+            "state": "sneak-job/entry",
+            "text": "sneak-job-reentry"
+        },
+        "sneak-job-report": {
+            "availableHook": "sneakJobIsOngoing",
+            "state": "sneak-job/report",
+            "text": "sneak-job-report"
+        },
         "sneak-job/accept": {
             "state": "sneak-job/on-accepted",
             "text": "sneak-job/accept"
         },
         "sneak-job/accept-reward": {
+            "state": "sneak-job/on-accepted",
             "text": "sneak-job/accept-reward"
         },
         "sneak-job/ask-more-reward": {
@@ -187,11 +206,14 @@
             "mood": "",
             "text": "intrusion-questions"
         },
-        "on-blame-bitty": {
+        "prompt": {
             "answers": [
+                "sneak-job-reentry",
+                "sneak-job-report",
+                "prompt-exit"
             ],
             "mood": "",
-            "text": "on-blame-bitty"
+            "text": "prompt"
         },
         "sabotage/about-saboteur": {
             "answers": [
@@ -199,6 +221,7 @@
                 "saboteur-killed-by-player",
                 "saboteur-slipped-away"
             ],
+            "hook": "",
             "mood": "",
             "text": "sabotage/about-saboteur"
         },
@@ -212,6 +235,7 @@
         },
         "sabotage/about-saboteur-tortured": {
             "answers": [
+                "sabotage-exit"
             ],
             "hook": "endSabotageReportWithBibinInvolvement",
             "mood": "",
@@ -273,6 +297,7 @@
         "sabotage/exit": {
             "answers": [
             ],
+            "hook": "",
             "mood": "",
             "text": "sabotage/exit"
         },
@@ -314,6 +339,7 @@
                 "sneak-job/ask-more-reward",
                 "sneak-job/reject-reward"
             ],
+            "hook": "",
             "mood": "",
             "text": "sneak-job/about-reward"
         },
@@ -323,7 +349,7 @@
                 "sneak-job/ask-reward",
                 "sneak-job/reject"
             ],
-            "hook": "",
+            "hook": "sneakJobIntroduce",
             "mood": "",
             "text": "sneak-job/entry"
         },
@@ -346,6 +372,7 @@
         "sneak-job/on-rejected": {
             "answers": [
             ],
+            "hook": "",
             "mood": "",
             "text": "sneak-job/on-rejected"
         },
@@ -353,6 +380,7 @@
             "answers": [
                 "sneak-job/entry-alt-go-on"
             ],
+            "hook": "",
             "mood": "",
             "text": "sneak-job/pre-entry"
         },
@@ -363,6 +391,12 @@
             "hook": "",
             "mood": "",
             "text": "sneak-job/pre-entry-alt"
+        },
+        "sneak-job/report": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "sneak-job/report"
         },
         "sneak-job/reward-not-increased": {
             "answers": [

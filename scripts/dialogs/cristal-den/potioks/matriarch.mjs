@@ -40,6 +40,18 @@ class Dialog {
     this.dialog.npc.setVariable("sneakJobReward", value);
   }
 
+  get sneakJobIntroduced() {
+    return this.dialog.npc.getVariable("toldAboutSpyJob", 0) == 1;
+  }
+
+  set sneakJobIntroduced(value) {
+    this.dialog.npc.setVariable("toldAboutSpyJob", value ? 1 : 0);
+  }
+
+  sneakJobIntroduce() {
+    this.sneakJobIntroduced = true;
+  }
+
   sneakJobCanNegociateReward() {
     return this.sneakJobReward < 750;
   }
@@ -53,7 +65,16 @@ class Dialog {
   }
 
   sneakJobAccepted() {
+    game.quests.addQuest("potioks-spy");
+  }
 
+  sneakJobCanReenter() {
+    return this.sneakJobIntroduced && !game.quests.hasQuest("potioks-spy");
+  }
+
+  sneakJobIsOngoing() {
+    const quest = game.quests.getQuest("potioks-spy");
+    return quest && quest.inProgress;
   }
 
   saboteurWasInterrogated() {
