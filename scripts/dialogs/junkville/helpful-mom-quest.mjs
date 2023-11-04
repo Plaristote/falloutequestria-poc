@@ -7,6 +7,7 @@ function getQuest() { return requireQuest("junkville/findHelpful"); }
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
+    game.loadingScreenBackground = "helpful_copain";
   }
 
   getEntryPoint() {

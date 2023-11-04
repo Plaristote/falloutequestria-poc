@@ -5,6 +5,7 @@ class Dialog {
     this.quest = requireQuest("junkville/findHelpful");
     this.dialog = dialog;
     this.ambiance = "cavern";
+    game.loadingScreenBackground = "helpful_copain";
   }
 
   getEntryPoint() {
