@@ -34,7 +34,7 @@ class Dialog {
   hasPartyBottles() {
     const quest = quests.getQuest("stable-party");
     if (quest)
-      return quest.getScriptObject().hasEnoughBottles();
+      return quest.script.hasEnoughBottles();
     return false;
   }
 }

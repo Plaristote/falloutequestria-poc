@@ -1,7 +1,7 @@
 import {QuestHelper} from "./helpers.mjs";
 
 function isAlcoholicItem(item) {
-  return item.getScriptObject().alcoholic === true;
+  return item.script.alcoholic === true;
 }
 
 export class StableParty extends QuestHelper {
@@ -16,7 +16,7 @@ export class StableParty extends QuestHelper {
 
   onItemPicked(item) {
     if (isAlcoholicItem(item) && this.hasEnoughBottles())
-      this.completeObjective("objective-bottles");
+      this.model.completeObjective("objective-bottles");
   }
   
   bottleCount() {
@@ -36,9 +36,9 @@ export class StableParty extends QuestHelper {
     return [
       {
         label: this.tr("objective-bottles", {count: this.requiredBottles, currentCount: this.bottleCount()}),
-        success: this.isObjectiveCompleted("bottles")
+        success: this.model.isObjectiveCompleted("bottles")
       },
-      {label: this.tr("give-bottles-to-barmaid"), success: this.isObjectiveCompleted("give")}
+      {label: this.tr("give-bottles-to-barmaid"), success: this.model.isObjectiveCompleted("give")}
     ];
   }
 
