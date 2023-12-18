@@ -1,0 +1,210 @@
+{
+    "answers": {
+        "ask-for-potiok-leaks": {
+            "availableHook": "canProbePotiokLeaks",
+            "text": "ask-for-potiok-leaks"
+        },
+        "ask-whats-going-on": {
+            "state": "start-explanations",
+            "text": "ask-whats-going-on"
+        },
+        "cant-help-right-now": {
+            "text": "cant-help-right-now"
+        },
+        "convince-confession": {
+            "availableHook": "canConvinceToTellAboutConfession",
+            "text": "convince-confession"
+        },
+        "end-probing-bluff": {
+            "text": "end-probing-bluff"
+        },
+        "end-probing-truth": {
+            "state": "on-misunderstanding",
+            "text": "end-probing-truth"
+        },
+        "express-misunderstanding": {
+            "state": "on-misunderstanding",
+            "text": "express-misunderstanding"
+        },
+        "leave-alone": {
+            "text": "leave-alone"
+        },
+        "perform-murder": {
+            "hook": "murderNpc",
+            "text": "perform-murder"
+        },
+        "probe-discoveries": {
+            "state": "on-probing-discoveries",
+            "text": "probe-discoveries"
+        },
+        "probe-discoveries-further": {
+            "state": "on-probing-discoveries-further",
+            "text": "probe-discoveries-further"
+        },
+        "probe-employer": {
+            "state": "on-probe-employer",
+            "text": "probe-employer"
+        },
+        "probe-identity": {
+            "state": "on-probing-capture",
+            "text": "probe-identity"
+        },
+        "probe-visitor": {
+            "state": "on-probe-visitor",
+            "text": "probe-visitor"
+        },
+        "probe-visitor-further": {
+            "state": "on-probe-visitor-further",
+            "text": "probe-visitor-further"
+        },
+        "refuse-to-help": {
+            "text": "refuse-to-help"
+        },
+        "start-probing": {
+            "availableHook": "canPassForBibinBand",
+            "state": "on-probing",
+            "text": "start-probing"
+        },
+        "tell-sent-by-bibin": {
+            "availableHook": "wasSentByPotioks",
+            "state": "potiok-escape",
+            "text": "tell-sent-by-bibin"
+        },
+        "tell-sent-by-bibin-alt": {
+            "availableHook": "wasSentByPotioks",
+            "text": "tell-sent-by-bibin-alt"
+        },
+        "trigger-murder": {
+            "state": "murdered",
+            "text": "trigger-murder"
+        }
+    },
+    "entryPoint": "entry",
+    "states": {
+        "entry": {
+            "answers": [
+                "ask-whats-going-on",
+                "leave-alone"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "entry"
+        },
+        "murdered": {
+            "answers": [
+                "perform-murder"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "murdered"
+        },
+        "on-confession": {
+            "answers": [
+                "cant-help-right-now",
+                "trigger-murder",
+                "end-probing-bluff"
+            ],
+            "hook": "onConfession",
+            "mood": "",
+            "text": "on-confession"
+        },
+        "on-misunderstanding": {
+            "answers": [
+                "tell-sent-by-bibin",
+                "cant-help-right-now",
+                "refuse-to-help"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "on-misunderstanding"
+        },
+        "on-potiok-probing": {
+            "answers": [
+                "cant-help-right-now",
+                "convince-confession"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "on-potiok-probing"
+        },
+        "on-probe-employer": {
+            "answers": [
+                "probe-discoveries"
+            ],
+            "hook": "onProbeEmployer",
+            "mood": "",
+            "text": "on-probe-employer"
+        },
+        "on-probe-visitor": {
+            "answers": [
+                "probe-visitor-further"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "on-probe-visitor"
+        },
+        "on-probe-visitor-further": {
+            "answers": [
+                "tell-sent-by-bibin",
+                "end-probing-truth",
+                "end-probing-bluff"
+            ],
+            "hook": "onProbeVisitorFurther",
+            "mood": "",
+            "text": "on-probe-visitor-further"
+        },
+        "on-probing": {
+            "answers": [
+                "probe-identity",
+                "tell-sent-by-bibin-alt"
+            ],
+            "hook": "triggerFoundPotiokSpy",
+            "mood": "",
+            "text": "on-probing"
+        },
+        "on-probing-capture": {
+            "answers": [
+                "probe-discoveries",
+                "probe-employer"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "on-probing-capture"
+        },
+        "on-probing-discoveries": {
+            "answers": [
+                "probe-discoveries-further"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "on-probing-discoveries"
+        },
+        "on-probing-discoveries-further": {
+            "answers": [
+                "probe-visitor"
+            ],
+            "mood": "",
+            "text": "on-probing-discoveries-further"
+        },
+        "potiok-escape": {
+            "answers": [
+                "cant-help-right-now",
+                "ask-for-potiok-leaks",
+                "trigger-murder"
+            ],
+            "hook": "triggerFoundPotiokSpy",
+            "mood": "",
+            "text": "potiok-escape"
+        },
+        "start-explanations": {
+            "answers": [
+                "express-misunderstanding",
+                "start-probing",
+                "leave-alone"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "start-explanations"
+        }
+    }
+}

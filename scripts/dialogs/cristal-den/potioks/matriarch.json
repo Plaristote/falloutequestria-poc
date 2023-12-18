@@ -1,5 +1,9 @@
 {
     "answers": {
+        "ask-about-bibin-feud": {
+            "state": "sneak-job/about-bibin-feud",
+            "text": "ask-about-bibin-feud"
+        },
         "back-to-sabotage-report": {
             "state": "sabotage/report-follow-up",
             "text": "back-to-sabotage-report"
@@ -19,6 +23,10 @@
         "bitty-appreciation-reject": {
             "state": "sabotage/bitty-leadership/on-skip",
             "text": "bitty-appreciation-reject"
+        },
+        "go-back-to-sneak-job-report": {
+            "state": "sneak-job/report-details",
+            "text": "go-back-to-sneak-job-report"
         },
         "hide-bibin-involvement": {
             "state": "sabotage/about-saboteur",
@@ -55,6 +63,22 @@
             "state": "sabotage/entry",
             "text": "on-bitty-intrusion-secrecy"
         },
+        "on-report-death-misunderstanding": {
+            "state": "sneak-job/on-report-death-misjudged",
+            "text": "on-report-death-misunderstanding"
+        },
+        "on-report-death-sorry": {
+            "state": "sneak-job/report-details",
+            "text": "on-report-death-sorry"
+        },
+        "on-report-death-sorry-alt": {
+            "state": "sneak-job/report-details",
+            "text": "on-report-death-sorry-alt"
+        },
+        "on-report-death-unapologetic": {
+            "state": "sneak-job/on-report-death-misjudged",
+            "text": "on-report-death-unapologetic"
+        },
         "praise-bitty-reason-loyalty": {
             "state": "sabotage/bitty-leadership/on-loyalty",
             "text": "praise-bitty-reason-loyalty"
@@ -66,6 +90,39 @@
             "hook": "saboteurToldAboutBibinInvolvement",
             "state": "sabotage/about-saboteur-tortured",
             "text": "report-bibin-involvement"
+        },
+        "report-cancel": {
+            "text": "report-cancel"
+        },
+        "report-details-done": {
+            "state": "sneak-job/done",
+            "text": "report-details-done"
+        },
+        "report-move-to-questions": {
+            "state": "sneak-job/report-details",
+            "text": "report-move-to-questions"
+        },
+        "report-savage-connection": {
+            "availableHook": "sneakJobSavageConnection",
+            "state": "sneak-job/report-on-bibin-outsider",
+            "text": "report-savage-connection"
+        },
+        "report-spy-talked": {
+            "availableHook": "sneakJobSpyTalked",
+            "state": "sneak-job/report-on-bibin-knows",
+            "text": "report-spy-talked"
+        },
+        "report-vague-died": {
+            "state": "sneak-job/report-death",
+            "text": "report-vague-died"
+        },
+        "report-vague-killed": {
+            "state": "sneak-job/report-death",
+            "text": "report-vague-killed"
+        },
+        "report-vague-saved": {
+            "state": "sneak-job/report-lived",
+            "text": "report-vague-saved"
         },
         "sabotage-exit": {
             "state": "sabotage/exit",
@@ -108,6 +165,14 @@
             "state": "sabotage/about-saboteur-disappeared",
             "text": "saboteur-slipped-away"
         },
+        "sneak-job-outsider-no-clue": {
+            "state": "sneak-job/report-details",
+            "text": "sneak-job-outsider-no-clue"
+        },
+        "sneak-job-outsider-tatoo": {
+            "state": "sneak-job/report-savage",
+            "text": "sneak-job-outsider-tatoo"
+        },
         "sneak-job-reentry": {
             "availableHook": "sneakJobCanReenter",
             "state": "sneak-job/entry",
@@ -117,6 +182,21 @@
             "availableHook": "sneakJobIsOngoing",
             "state": "sneak-job/report",
             "text": "sneak-job-report"
+        },
+        "sneak-job-report-dead-spy": {
+            "availableHook": "sneakJobSpyKilled",
+            "state": "sneak-job/report-death",
+            "text": "sneak-job-report-dead-spy"
+        },
+        "sneak-job-report-found-spy": {
+            "availableHook": "sneakJobSpyFoundAndAlive",
+            "state": "sneak-job/on-found",
+            "text": "sneak-job-report-found-spy"
+        },
+        "sneak-job-report-spy-solve": {
+            "availableHook": "sneakJobSpySolved",
+            "state": "sneak-job/report-vague",
+            "text": "sneak-job-report-spy-solve"
         },
         "sneak-job/accept": {
             "state": "sneak-job/on-accepted",
@@ -139,6 +219,9 @@
         "sneak-job/entry-alt-go-on": {
             "state": "sneak-job/entry",
             "text": "sneak-job/entry-alt-go-on"
+        },
+        "sneak-job/on-found-done": {
+            "text": "sneak-job/on-found-done"
         },
         "sneak-job/reject": {
             "state": "sneak-job/on-rejected",
@@ -178,6 +261,7 @@
                 "on-bitty-intrusion-go-on",
                 "on-bitty-intrusion-secrecy"
             ],
+            "hook": "grantAccess",
             "mood": "",
             "text": "intrusion-bitty"
         },
@@ -186,6 +270,7 @@
                 "intrusion-sneaked-in",
                 "intrusion-secretary-wasnt-there"
             ],
+            "hook": "grantAccess",
             "mood": "",
             "text": "intrusion-explore"
         },
@@ -318,7 +403,8 @@
         "sabotage/report": {
             "answers": [
                 "sabotage-report-confirm-mine-output",
-                "sabotage-report-ask-more-slaves"
+                "sabotage-report-ask-more-slaves",
+                "report-cancel"
             ],
             "mood": "",
             "text": "sabotage/report"
@@ -333,6 +419,13 @@
             "mood": "",
             "text": "sabotage/report-follow-up"
         },
+        "sneak-job/about-bibin-feud": {
+            "answers": [
+                "go-back-to-sneak-job-report"
+            ],
+            "mood": "",
+            "text": "sneak-job/about-bibin-feud"
+        },
         "sneak-job/about-reward": {
             "answers": [
                 "sneak-job/accept-reward",
@@ -342,6 +435,13 @@
             "hook": "",
             "mood": "",
             "text": "sneak-job/about-reward"
+        },
+        "sneak-job/done": {
+            "answers": [
+            ],
+            "hook": "sneakJobFinished",
+            "mood": "",
+            "text": "sneak-job/done"
         },
         "sneak-job/entry": {
             "answers": [
@@ -369,12 +469,26 @@
             "mood": "",
             "text": "sneak-job/on-accepted"
         },
+        "sneak-job/on-found": {
+            "answers": [
+                "sneak-job/on-found-done"
+            ],
+            "mood": "",
+            "text": "sneak-job/on-found"
+        },
         "sneak-job/on-rejected": {
             "answers": [
             ],
             "hook": "",
             "mood": "",
             "text": "sneak-job/on-rejected"
+        },
+        "sneak-job/on-report-death-misjudged": {
+            "answers": [
+                "report-move-to-questions"
+            ],
+            "mood": "",
+            "text": "sneak-job/on-report-death-misjudged"
         },
         "sneak-job/pre-entry": {
             "answers": [
@@ -394,9 +508,78 @@
         },
         "sneak-job/report": {
             "answers": [
+                "sneak-job-report-found-spy",
+                "sneak-job-report-spy-solve",
+                "sneak-job-report-dead-spy",
+                "report-cancel"
             ],
             "mood": "",
             "text": "sneak-job/report"
+        },
+        "sneak-job/report-death": {
+            "answers": [
+                "on-report-death-misunderstanding",
+                "on-report-death-sorry-alt",
+                "on-report-death-sorry",
+                "on-report-death-unapologetic"
+            ],
+            "mood": "",
+            "text": "sneak-job/report-death"
+        },
+        "sneak-job/report-death-consolation": {
+            "answers": [
+                "report-move-to-questions"
+            ],
+            "mood": "",
+            "text": "sneak-job/report-death-consolation"
+        },
+        "sneak-job/report-details": {
+            "answers": [
+                "report-spy-talked",
+                "report-savage-connection",
+                "report-details-done"
+            ],
+            "mood": "",
+            "text": "sneak-job/report-details"
+        },
+        "sneak-job/report-lived": {
+            "answers": [
+                "report-move-to-questions"
+            ],
+            "mood": "",
+            "text": "sneak-job/report-lived"
+        },
+        "sneak-job/report-on-bibin-knows": {
+            "answers": [
+                "ask-about-bibin-feud",
+                "go-back-to-sneak-job-report"
+            ],
+            "mood": "",
+            "text": "sneak-job/report-on-bibin-knows"
+        },
+        "sneak-job/report-on-bibin-outsider": {
+            "answers": [
+                "sneak-job-outsider-tatoo",
+                "sneak-job-outsider-no-clue"
+            ],
+            "mood": "",
+            "text": "sneak-job/report-on-bibin-outsider"
+        },
+        "sneak-job/report-savage": {
+            "answers": [
+                "go-back-to-sneak-job-report"
+            ],
+            "mood": "",
+            "text": "sneak-job/report-savage"
+        },
+        "sneak-job/report-vague": {
+            "answers": [
+                "report-vague-killed",
+                "report-vague-saved",
+                "report-vague-died"
+            ],
+            "mood": "",
+            "text": "sneak-job/report-vague"
         },
         "sneak-job/reward-not-increased": {
             "answers": [

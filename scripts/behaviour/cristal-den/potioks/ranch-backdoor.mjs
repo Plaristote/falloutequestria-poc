@@ -1,4 +1,5 @@
 import {Door} from "../../door.mjs";
+import {canGuardPreventInteraction} from "../../watchObject.mjs";
 
 export class RanchBackdoor extends Door {
   constructor(model) {
@@ -12,7 +13,8 @@ export class RanchBackdoor extends Door {
   onUse(character) {
     const guard = this.guard;
 
-    if (guard && guard.isAlive() && guard.fieldOfView.isDetected(character) && !guard.isEnemy(character) && character.getFactionName() != "potioks") {
+    if (canGuardPreventInteraction(guard, character) &&
+        character.getFactionName() != "potioks") {
       if (character == game.player) {
         if (level.getVariable("access") > 1)
           return false;

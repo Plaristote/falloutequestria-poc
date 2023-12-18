@@ -5,4 +5,12 @@ export class Matriarch extends CharacterBehaviour {
     super(model);
     this.dialog = "cristal-den/potioks/matriarch";
   }
+
+  get speakOnDetection() {
+    return this.model.getVariable("met") !== true && !this.hasPlayerBeenIntroduced;
+  }
+
+  get hasPlayerBeenIntroduced() {
+    return this.model.hasVariable("sabotagePrompt");
+  }
 }

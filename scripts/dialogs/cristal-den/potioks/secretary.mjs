@@ -16,6 +16,7 @@ class Dialog {
     if (!character || !character.isAlive())
       return "on-matriarch-dead";
     character.setVariable("sabotagePrompt", 1);
+    this.dialog.npc.script.accessGranted = true;
     return "on-sent-by-bitty";
   }
 }

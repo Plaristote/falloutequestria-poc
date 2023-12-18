@@ -4,6 +4,9 @@ import {
   bibinSabotageReportedToMatriarch,
   wasSaboteurInterrogatedByBibin
 } from "../../../quests/hillburrow/sabotage.mjs";
+import {
+  hasPotiokSpyQuest
+} from "../../../quests/cristal-den/potioks-spy.mjs";
 import {skillContest} from "../../../cmap/helpers/checks.mjs";
 
 class Dialog {
@@ -22,6 +25,10 @@ class Dialog {
     }
     this.dialog.npc.setVariable("met", 1);
     return entryPoint;
+  }
+
+  grantAccess() {
+    level.setVariable("access", 2);
   }
 
   wasSentByBitty() {
@@ -65,16 +72,44 @@ class Dialog {
   }
 
   sneakJobAccepted() {
-    game.quests.addQuest("potioks-spy");
+    game.quests.addQuest("cristal-den/potioks-spy");
   }
 
   sneakJobCanReenter() {
-    return this.sneakJobIntroduced && !game.quests.hasQuest("potioks-spy");
+    return this.sneakJobIntroduced && !hasPotiokSpyQuest();
+  }
+
+  get sneakJobQuest() {
+    return game.quests.getQuest("cristal-den/potioks-spy");
   }
 
   sneakJobIsOngoing() {
-    const quest = game.quests.getQuest("potioks-spy");
-    return quest && quest.inProgress;
+    return this.sneakJobQuest && this.sneakJobQuest.inProgress;
+  }
+
+  sneakJobSpyKilled() {
+    return this.sneakJobQuest.getVariable("killedSpy", 0) == 1;
+  }
+
+  sneakJobSpyFoundAndAlive() {
+    return this.sneakJobQuest.isObjectiveCompleted("findSpy") && !this.sneakJobQuest.isObjectiveCompleted("solveSpy");
+  }
+
+  sneakJobSpySolved() {
+    return this.sneakJobQuest.isObjectiveCompleted("solveSpy");
+  }
+
+  sneakJobSpyTalked() {
+    return this.sneakJobQuest.isObjectiveCompleted("learnAboutConfession");
+  }
+
+  sneakJobSavageConnection() {
+    return this.sneakJobQuest.isObjectiveCompleted("learnAboutSavageConnection");
+  }
+
+  sneakJobFinished() {
+    game.player.inventory.addItemOfType("bottlecaps", this.sneakJobReward);
+    this.sneakJobQuest.completeObjective("report");
   }
 
   saboteurWasInterrogated() {
