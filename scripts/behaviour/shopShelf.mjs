@@ -1,16 +1,24 @@
-import {stealCheck} from "../cmap/helpers/checks.mjs";
+import {OwnedStorage} from "./ownedStorage.mjs";
 
-export class ShopShelf {
+export class ShopShelf extends OwnedStorage {
   constructor(model) {
-    this.model = model;
+    super(model);
+  }
+
+  get storageOwners() {
+    return [ this.shopOwner ];
+  }
+
+  get withRestrictedAccess() {
+    return this.isUnderSurveillance();
   }
   
   get shopScript() {
     var parent = this.model.parent;
 
-    while (parent && parent.getScriptObject() && !parent.getScriptObject().isShop)
+    while (parent && parent.script && !parent.script.isShop)
       parent = parent.parent;
-    return parent.getScriptObject();
+    return parent.script;
   }
 
   get shopOwner() {
@@ -25,34 +33,7 @@ export class ShopShelf {
     return this.shopScript.isUnderSurveillance();
   }
 
-  onUse() {
-    const shopOwner = this.shopOwner;
-
-    if (this.isUnderSurveillance())
-    {
-      level.addTextBubble(shopOwner, "Don't touch that.", 2500, "white");
-      return true;
-    }
-    return false;
-  }
-
-  onTakeItem(user, item, quantity) {
-    const shopOwner = this.shopOwner;
-
-    if (shopOwner && this.isUnderSurveillance()) {
-      return stealCheck(user, shopOwner, item, quantity, {
-        failure:         this.onStealFailure.bind(this, user, false, item),
-        criticalFailure: this.onStealFailure.bind(this, user, true, item)
-      });
-    }
-    return true;
-  }
-
-  onPutItem(user, item, quantity) {
-    return this.onTakeItem(user, item, quantity);
-  }
-  
-  onStealFailure(user, critical, item) {
+  onStealFailure(guard, user, critical, item) {
     this.shopScript.onShopliftAttempt(user);
   }
 }
