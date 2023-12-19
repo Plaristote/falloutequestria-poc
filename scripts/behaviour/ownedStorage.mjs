@@ -25,8 +25,8 @@ export class OwnedStorage {
   findMonitoringOwner() {
     const guards = this.storageOwners;
     for (let i = 0 ; i < guards.length ; ++i) {
-      if (canGuardPreventInteraction(guard[i])) {
-        return guard[i];
+      if (canGuardPreventInteraction(guards[i])) {
+        return guards[i];
       }
     }
     return null;
