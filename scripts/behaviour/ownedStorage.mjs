@@ -1,5 +1,5 @@
 import {stealCheck} from "../cmap/helpers/checks.mjs";
-import {canGuardPreventInteraction} from "./watchObject.mjs";
+import {canGuardPreventInteraction, canPreventSteal} from "./watchObject.mjs";
 
 const forbidTextBubbles = [
   { content: i18n.t("bubbles.forbid-rummaging-1"), duration: 2950 },
@@ -22,19 +22,19 @@ export class OwnedStorage {
     return true;
   }
 
-  findMonitoringOwner() {
+  findMonitoringOwner(user, checkCallback = canGuardPreventInteraction) {
     const guards = this.storageOwners;
     for (let i = 0 ; i < guards.length ; ++i) {
-      if (canGuardPreventInteraction(guards[i])) {
+      if (checkCallback(guards[i], user)) {
         return guards[i];
       }
     }
     return null;
   }
 
-  onUse() {
+  onUse(user) {
     if (this.withRestrictedAccess) {
-      const guard = this.findMonitoringOwner();
+      const guard = this.findMonitoringOwner(user);
 
       if (guard) {
         guard.script.displayRandomTextBubble(
@@ -47,9 +47,9 @@ export class OwnedStorage {
   }
 
   onTakeItem(user, item, quantity) {
-    if (this.withRestrictedAccess) {
-      const guard = this.findMonitoringOwner();
+    const guard = this.findMonitoringOwner(user, canPreventSteal);
 
+    if (this.withRestrictedAccess && guard) {
       return stealCheck(user, guard, item, quantity, {
         failure:         this.onStealFailure.bind(this, guard, user, false, item),
         criticalFailure: this.onStealFailure.bind(this, guard, user, true, item)
@@ -63,6 +63,7 @@ export class OwnedStorage {
   }
 
   onStealFailure(guard, user, critical, item) {
+    guard.fieldOfView.setCharacterDetected(user);
     guard.script.displayRandomTextBubble(
       forbidTextBubbles
     );
