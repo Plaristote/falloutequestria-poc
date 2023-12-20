@@ -7,3 +7,12 @@ export function canGuardPreventInteraction(guard, character) {
   }
   return false;
 }
+
+export function canPreventSteal(guard, character) {
+  if (guard
+   && !guard.unconscious
+   && guard.hasLineOfSight(character)) {
+    return true;
+  }
+  return false;
+}
