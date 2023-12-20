@@ -1,5 +1,5 @@
 export const QuestFlags = {
-  NormalQuest: 0, HiddenQuest: 1
+  NormalQuest: 1, HiddenQuest: 2
 };
 
 export function requireQuest(name, flags) {
