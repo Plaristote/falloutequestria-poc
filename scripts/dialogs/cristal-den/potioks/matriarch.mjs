@@ -96,6 +96,10 @@ class Dialog {
     return this.sneakJobQuest && this.sneakJobQuest.isObjectiveCompleted("findSpy");
   }
 
+  sneakJobHasFoundSpy() {
+    return this.sneakJobQuest.isObjectiveCompleted("findSpy");
+  }
+
   sneakJobSpyFoundAndAlive() {
     return this.sneakJobHasFoundSpy() && !this.sneakJobQuest.isObjectiveCompleted("solveSpy");
   }
