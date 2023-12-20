@@ -84,9 +84,6 @@ export class CharacterBehaviour extends SceneActorComponent {
     this.model.moveAway(game.player);
   }
 
-  onMovementEnded() {
-  }
-
   onDestinationReached() {
     console.log(this.model, "reached destination", this.model.position.x, this.model.position.y);
   }

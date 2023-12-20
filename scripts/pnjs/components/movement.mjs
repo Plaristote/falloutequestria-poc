@@ -8,6 +8,9 @@ export class MovementComponent {
       this.model.toggleSneaking(false);
   }
 
+  onMovementEnded() {
+  }
+
   followCharacter(character, distance = 3) {
     if (typeof level !== "undefined" && !level.combat) {
       const actions = this.model.actionQueue;
