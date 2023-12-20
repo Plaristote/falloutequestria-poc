@@ -44,6 +44,10 @@ export class Gym {
     return this.model.findGroup("training-appliances").objects;
   }
 
+  get inventoryStorage() {
+    return this.model.findObject("storage-chest");
+  }
+
   get ringCharacters() {
     const blacklist = [game.player, this.referee];
 
@@ -157,6 +161,15 @@ export class Gym {
     }
   }
 
+  stashPlayerInventory() {
+    game.player.inventory.unequipAllItems();
+    game.player.inventory.transferTo(this.inventoryStorage.inventory);
+  }
+
+  unstashPlayerInventory() {
+    this.inventoryStorage.inventory.transferTo(game.player.inventory);
+  }
+
   startPlayerCombat() {
     if (!this.combatOngoing) {
       const opponent = this.playerCurrentOpponent;
@@ -167,6 +180,7 @@ export class Gym {
       level.moveCharacterToZone(opponent,     "ring-entry-B", 2);
       level.moveCharacterToZone(this.referee, "ring-entry-C", 2);
       opponent.statistics.hitPoints = opponent.statistics.maxHitPoints;
+      this.stashPlayerInventory();
       this.combatPresentation(game.player, opponent);
       this.model.tasks.addTask("triggerPlayerCombat", this.presentationTime, 1);
       this.model.tasks.removeTask("startNpcCombat");
@@ -196,6 +210,7 @@ export class Gym {
     const self = this;
     const winnerName = this.combatWinner == game.player ? this.ringName : this.combatWinner.statistics.name;
 
+    this.unstashPlayerInventory();
     game.player.script.invulnerable = false;
     opponent.setAsFriendly(game.player);
     opponent.fieldOfView.reset();
