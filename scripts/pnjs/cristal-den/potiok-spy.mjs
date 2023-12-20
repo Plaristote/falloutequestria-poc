@@ -3,7 +3,16 @@ import {CharacterBehaviour} from "./../character.mjs";
 class PotiokSpy extends CharacterBehaviour {
   constructor(model) {
     super(model);
-    this.dialog = "cristal-den/bibins/potiok-spy";
+  }
+
+  get escapeQuest() {
+    return game.quests.getQuest("cristal-den/potioks-spy");
+  }
+
+  get dialog() {
+    if (this.escapeQuest && this.escapeQuest.hasObjective("escortSpy"))
+      return null;
+    return "cristal-den/bibins/potiok-spy";
   }
 }
 

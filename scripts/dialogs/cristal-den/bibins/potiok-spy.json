@@ -1,18 +1,29 @@
 {
     "answers": {
+        "ask-about-findings": {
+            "availableHook": "canProbeAboutSavageConnection",
+            "state": "about-findings",
+            "text": "ask-about-findings"
+        },
         "ask-for-potiok-leaks": {
             "availableHook": "canProbePotiokLeaks",
+            "state": "on-potiok-probing",
             "text": "ask-for-potiok-leaks"
         },
         "ask-whats-going-on": {
             "state": "start-explanations",
             "text": "ask-whats-going-on"
         },
+        "back-to-probing": {
+            "state": "on-potiok-probing",
+            "text": "back-to-probing"
+        },
         "cant-help-right-now": {
             "text": "cant-help-right-now"
         },
         "convince-confession": {
             "availableHook": "canConvinceToTellAboutConfession",
+            "state": "on-convinced-to-confess",
             "text": "convince-confession"
         },
         "end-probing-bluff": {
@@ -25,6 +36,11 @@
         "express-misunderstanding": {
             "state": "on-misunderstanding",
             "text": "express-misunderstanding"
+        },
+        "kill-after-confession": {
+            "availableHook": "murderAvailableAfterConfession",
+            "state": "murdered",
+            "text": "kill-after-confession"
         },
         "leave-alone": {
             "text": "leave-alone"
@@ -57,8 +73,17 @@
             "state": "on-probe-visitor-further",
             "text": "probe-visitor-further"
         },
+        "re-entry": {
+            "availableHook": "canReEnter",
+            "state": "on-misunderstanding",
+            "text": "re-entry"
+        },
         "refuse-to-help": {
             "text": "refuse-to-help"
+        },
+        "start-escape": {
+            "state": "on-escaping",
+            "text": "start-escape"
         },
         "start-probing": {
             "availableHook": "canPassForBibinBand",
@@ -72,7 +97,12 @@
         },
         "tell-sent-by-bibin-alt": {
             "availableHook": "wasSentByPotioks",
+            "state": "on-misunderstanding",
             "text": "tell-sent-by-bibin-alt"
+        },
+        "trigger-escape": {
+            "hook": "onStartEscape",
+            "text": "trigger-escape"
         },
         "trigger-murder": {
             "state": "murdered",
@@ -81,8 +111,17 @@
     },
     "entryPoint": "entry",
     "states": {
+        "about-findings": {
+            "answers": [
+                "back-to-probing"
+            ],
+            "hook": "onProbeVisitorFurther",
+            "mood": "",
+            "text": "about-findings"
+        },
         "entry": {
             "answers": [
+                "re-entry",
                 "ask-whats-going-on",
                 "leave-alone"
             ],
@@ -108,8 +147,26 @@
             "mood": "",
             "text": "on-confession"
         },
+        "on-convinced-to-confess": {
+            "answers": [
+                "back-to-probing"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "on-convinced-to-confess"
+        },
+        "on-escaping": {
+            "answers": [
+                "trigger-escape",
+                "cant-help-right-now"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "on-escaping"
+        },
         "on-misunderstanding": {
             "answers": [
+                "start-escape",
                 "tell-sent-by-bibin",
                 "cant-help-right-now",
                 "refuse-to-help"
@@ -120,10 +177,13 @@
         },
         "on-potiok-probing": {
             "answers": [
+                "start-escape",
                 "cant-help-right-now",
-                "convince-confession"
+                "kill-after-confession",
+                "convince-confession",
+                "ask-about-findings"
             ],
-            "hook": "",
+            "hook": "onPotiokProbing",
             "mood": "",
             "text": "on-potiok-probing"
         },
@@ -158,7 +218,7 @@
                 "probe-identity",
                 "tell-sent-by-bibin-alt"
             ],
-            "hook": "triggerFoundPotiokSpy",
+            "hook": "",
             "mood": "",
             "text": "on-probing"
         },
@@ -188,6 +248,7 @@
         },
         "potiok-escape": {
             "answers": [
+                "start-escape",
                 "cant-help-right-now",
                 "ask-for-potiok-leaks",
                 "trigger-murder"
@@ -202,7 +263,7 @@
                 "start-probing",
                 "leave-alone"
             ],
-            "hook": "",
+            "hook": "triggerFoundPotiokSpy",
             "mood": "",
             "text": "start-explanations"
         }

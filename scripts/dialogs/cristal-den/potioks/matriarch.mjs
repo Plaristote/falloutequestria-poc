@@ -5,7 +5,8 @@ import {
   wasSaboteurInterrogatedByBibin
 } from "../../../quests/hillburrow/sabotage.mjs";
 import {
-  hasPotiokSpyQuest
+  hasPotiokSpyQuest,
+  foundPotiokSpy
 } from "../../../quests/cristal-den/potioks-spy.mjs";
 import {skillContest} from "../../../cmap/helpers/checks.mjs";
 
@@ -88,11 +89,15 @@ class Dialog {
   }
 
   sneakJobSpyKilled() {
-    return this.sneakJobQuest.getVariable("killedSpy", 0) == 1;
+    return this.sneakJobQuest && this.sneakJobQuest.getVariable("killedSpy", 0) == 1;
+  }
+
+  sneakJobHasFoundSpy() {
+    return this.sneakJobQuest && this.sneakJobQuest.isObjectiveCompleted("findSpy");
   }
 
   sneakJobSpyFoundAndAlive() {
-    return this.sneakJobQuest.isObjectiveCompleted("findSpy") && !this.sneakJobQuest.isObjectiveCompleted("solveSpy");
+    return this.sneakJobHasFoundSpy() && !this.sneakJobQuest.isObjectiveCompleted("solveSpy");
   }
 
   sneakJobSpySolved() {

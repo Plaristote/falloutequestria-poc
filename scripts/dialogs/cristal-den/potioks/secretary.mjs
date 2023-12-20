@@ -1,8 +1,13 @@
 import {canWarnPotioksAboutBibin} from "../../../quests/hillburrow/sabotage.mjs";
+import {hasPotiokSpyQuest} from "../../../quests/cristal-den/potioks-spy.mjs";
 
 class Dialog {
   constructor(dialog) {
     this.dialog = dialog;
+  }
+
+  get matriarch() {
+    return game.getCharacter("cristal-den/potioks/matriarch");
   }
 
   wasSentByBitty() {
@@ -10,14 +15,23 @@ class Dialog {
   }
 
   matriarchWillReceiveAboutBitty() {
-    const character = game.getCharacter("cristal-den/potioks/matriarch");
+    const result = this.matriarchWillReceiveAboutJob();
 
-    console.log("WHAT THE ACTUAL FUCK", character);
-    if (!character || !character.isAlive())
-      return "on-matriarch-dead";
-    character.setVariable("sabotagePrompt", 1);
+    if (result != "on-matriarch-dead")
+      this.matriarch.setVariable("sabotagePrompt", 1);
     this.dialog.npc.script.accessGranted = true;
     return "on-sent-by-bitty";
+  }
+
+  matriarchWillReceiveAboutJob() {
+    if (!this.matriarch || !this.matriarch.isAlive())
+      return "on-matriarch-dead";
+    this.dialog.npc.script.accessGranted = true;
+    return "on-sent-by-bitty";
+  }
+
+  hasMatriarchQuest() {
+    return hasPotiokSpyQuest();
   }
 }
 

@@ -1,8 +1,11 @@
 {
     "dialogs": {
         "cristal-den/bibins/potiok-spy": {
+            "about-findings": "Yeah. Bibin has been receiving visits from an outsider. They were trying to blend in, but I was able to get a look. They're not from anywhere near around here. Weird tatoos and all. Nobody does that in these parts. They kinda looked like a savage to me.<br/>I'm positive Miss Potiok will want to hear about those visits.",
+            "ask-about-findings": "Before getting caught, did you find anything that would be of interest to Miss Potiok ?",
             "ask-for-potiok-leaks": "Before I do anything, I need to know exactly how much you told Bibin and his associates.",
             "ask-whats-going-on": "What's going on ? Who are you ?",
+            "back-to-probing": "[next]",
             "cant-help-right-now": "Alright. Hang in there, I'll find some way to get you out. I'll be back soon !",
             "confront-spy": "Given your sorry state, I assume you're the spy I was asked to look for.",
             "convince-confession": "Look, the Potioks don't care about you, they want you dead. I don't want to do that. I can help you out, and you'll never have to deal with either of them. But I need to know how much you told Bibin.",
@@ -10,9 +13,12 @@
             "end-probing-truth": "Alright, you can calm down now. I actually have no idea what's going on here. I've been pulling your leg all along.",
             "entry": "<i>A sorry figure sits in front of you. He looks and malnourished and exhausted. It seems like he barely noticed your presence, but doesn't say anything.</i>",
             "express-misunderstanding": "What do you mean ? We've never met before. What's going on in here ?",
+            "kill-after-confession": "Thank you. It's too bad I was told to get rid of you. Sorry pal. Time for you to die.",
             "leave-alone": "<i>Leave him alone.</i>",
             "murdered": "Wh... what ? No ! Please ! Don't do it ! You don't have to do this !",
             "on-confession": "Alright... I guess I have no choice but to trust you. I told them pretty much everything they asked for... they hurt me so bad... I told them the Potioks send me. I was weak. I wanted to live. I still want to live.",
+            "on-convinced-to-confess": "... well, I'd be deat meat without you, so I figure I owe you the truth. I did spill Potiok's name... you have no idea what they did to me. And it doesn't even matter anyway. Bibin and the Potiok already do not see eye to eye. They would've known even if I said nothing.",
+            "on-escaping": "You sure about that ? If the guards see me outside of the cells, they'll probably kill us both !",
             "on-misunderstanding": "<i>As he looks up to you, his demeanor suddenly changes as he starts whispering to you:</i><br/><br/>Wait, you're not one of them ? Quick, you need to get me out of here ! They've been hurting me for so long, they're going to kill me ! You have to help me out !",
             "on-potiok-probing": "I haven't said anything ! I swear ! I'd never betray the Potioks !",
             "on-probe-employer": "I told you before ! Please ! The Potioks paid me to find out what was going on with Mister Bibin !",
@@ -30,11 +36,14 @@
             "probe-identity": "Very good. And do you know why you're here ?",
             "probe-visitor": "And who did you see entering Mr. Bibin's office ? I want every little detail !",
             "probe-visitor-further": "Come on... spill the beans. There's got to be something else.",
+            "re-entry": "Heads up ! It's me, I came back !",
             "refuse-to-help": "Actually, I don't have to do anything. I doubt you'd be here if you didn't deserve it. Bye.",
+            "start-escape": "Follow me. We're getting out of here !",
             "start-explanations": "Please... no more... I've already told you everything I know.",
             "start-probing": "Have you now ? How about we go over it all once again, then ? Who are you ?",
             "tell-sent-by-bibin": "I've been sent to look for a disappeared spy who worked for Miss Potiok. Is that you ?",
             "tell-sent-by-bibin-alt": "Wait, aren't you the spy sent by the Potioks ? They sent me to find out what happened to you.",
+            "trigger-escape": "Let me worry about that. Come on, we need to scram !",
             "trigger-murder": "I'm afraid you don't understand your situation. I'm here to get rid of you. No loose ends."
         }
     }

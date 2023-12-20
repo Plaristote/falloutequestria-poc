@@ -1,6 +1,7 @@
 import {
-  hasPotiokSpyQuest, learnedAboutPotiokSpyConfession,
-  onFoundPotiokSpy, onLearnedAboutPotiokSpyConfession, onLearnedAboutSavageConnection
+  hasPotiokSpyQuest, learnedAboutPotiokSpyConfession, foundPotiokSpy, learnedAboutSavageConnection,
+  onFoundPotiokSpy, onLearnedAboutPotiokSpyConfession, onLearnedAboutSavageConnection,
+  onStartPotiokSpyEscape
 } from "../../../quests/cristal-den/potioks-spy.mjs";
 
 class Dialog {
@@ -12,6 +13,10 @@ class Dialog {
     return hasPotiokSpyQuest();
   }
 
+  canReEnter() {
+    return foundPotiokSpy();
+  }
+
   canPassForBibinBand() {
     return game.player.statistics.speech > 70 && game.player.statistics.intelligence >= 5;
   }
@@ -20,8 +25,16 @@ class Dialog {
     return !learnedAboutPotiokSpyConfession();
   }
 
+  canProbeAboutSavageConnection() {
+    return !learnedAboutSavageConnection();
+  }
+
+  murderAvailableAfterConfession() {
+    return !canProbeAboutSavageConnection();
+  }
+
   canConvinceToTellAboutConfession() {
-    return game.player.statistics.speech > 95;
+    return game.player.statistics.speech > 95 && !learnedAboutPotiokSpyConfession();
   }
 
   onProbing() {
@@ -46,6 +59,18 @@ class Dialog {
 
   murderNpc() {
     this.dialog.npc.takeDamage(this.dialog.npc.statistics.hitPoints + 1, game.player);
+  }
+
+  onStartEscape() {
+    onStartPotiokSpyEscape(this.dialog.npc);
+  }
+
+  onPotiokProbing() {
+    if (!this.backToPotiokProbing) {
+      this.backToPotiokProbing = true;
+      return null;
+    }
+    return "...";
   }
 }
 

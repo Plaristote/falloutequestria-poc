@@ -2,14 +2,26 @@ import {QuestHelper, QuestFlags, requireQuest} from "../helpers.mjs";
 
 const questName = "cristal-den/potioks-spy";
 
-export function hasPotiokSpyQuest() {
+export function potiokSpyQuestStarted() {
   return game.quests.hasQuest(questName);
+}
+
+export function hasPotiokSpyQuest() {
+  const quest = game.quests.getQuest(questName);
+
+  return quest && !quest.hidden;
 }
 
 export function onFoundPotiokSpy() {
   const quest = requireQuest(questName, QuestFlags.HiddenQuest);
 
   quest.completeObjective("findSpy");
+}
+
+export function foundPotiokSpy() {
+  const quest = requireQuest(questName, QuestFlags.HiddenQuest);
+
+  return quest.isObjectiveCompleted("findSpy");
 }
 
 export function onLearnedAboutPotiokSpyConfession() {
@@ -29,7 +41,46 @@ export function onLearnedAboutSavageConnection() {
 export function learnedAboutPotiokSpyConfession() {
   const quest = requireQuest(questName, QuestFlags.HiddenQuest);
 
-  return quest.isObjectiveComplete("learnAboutConfession");
+  return quest.isObjectiveCompleted("learnAboutConfession");
+}
+
+export function learnedAboutSavageConnection() {
+  const quest = requireQuest(questName, QuestFlags.HiddenQuest);
+
+  return quest.isObjectiveCompleted("learnAboutSavageConnection");
+}
+
+export function onStartPotiokSpyEscape(spy) {
+  const quest = requireQuest(questName, QuestFlags.HiddenQuest);
+
+  spy.tasks.addTask("followPlayer", 2142, 0);
+  game.playerParty.addCharacter(spy);
+  quest.addObjective("escortSpy", quest.tr("escortSpy"));
+}
+
+export function onEndPotiokSpyEscape(spy) {
+  const quest = requireQuest(questName, QuestFlags.HiddenQuest);
+
+  level.addTextBubble(spy, quest.tr("thanks-for-escape"), 3000, "lightgreen");
+  spy.tasks.removeTask("followPlayer");
+  spy.script.delayedRemoval(3250);
+  game.playerParty.removeCharacter(spy);
+  quest.completeObjective("escortSpy");
+}
+
+export function onExitPotiokSpyEscape() {
+  const quest = requireQuest(questName, QuestFlags.HiddenQuest);
+
+  if (quest.hasObjective("escortSpy")) {
+    const spy = level.findObject("hostel.cell-room.potiok-spy");
+
+    if (!quest.isObjectiveCompleted("escortSpy")) {
+      game.playerParty.removeCharacter(spy);
+      quest.failObjective("escortSpy");
+      quest.script.onSolvedSpyIssue();
+    }
+    level.deleteObject(spy);
+  }
 }
 
 export class PotioksSpy extends QuestHelper {
@@ -45,6 +96,8 @@ export class PotioksSpy extends QuestHelper {
       base += 275;
     if (this.model.isObjectiveCompleted("learnAboutSavageConnection"))
       base += 275;
+    if (this.model.isObjectiveCompleted("escortSpy"))
+      base += 315;
     return base;
   }
 
@@ -52,6 +105,9 @@ export class PotioksSpy extends QuestHelper {
     switch (name) {
       case "findSpy":
         this.model.addObjective("solveSpy", this.tr("solveSpy"));
+        break ;
+      case "escortSpy":
+        this.onSolvedSpyIssue();
         break ;
       case "solveSpy":
         this.model.addObjective("report", this.tr("report"));
@@ -68,14 +124,20 @@ export class PotioksSpy extends QuestHelper {
   }
 
   onCharacterKilled(character) {
+    if (this.model.hasObjective("escortSpy"))
+      this.model.failObjective("escortSpy");
     if (character.characterSheet === "cristal-den/bibins/potiok-spy")
       this.onKilledSpy();
   }
 
   onKilledSpy() {
-    if (this.model.hasObjective("solveSpy")) {
-      this.model.completeObjective("solveSpy");
-      this.model.setVariable("killedSpy", 1);
-    }
+    this.onSolvedSpyIssue();
+    this.model.setVariable("killedSpy", 1);
+  }
+
+  onSolvedSpyIssue() {
+    if (!this.model.hasObjective("solveSpy"))
+      this.model.addObjective("solveSpy", this.tr("solveSpy"));
+    this.model.completeObjective("solveSpy");
   }
 }

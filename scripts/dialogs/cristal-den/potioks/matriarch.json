@@ -206,6 +206,26 @@
             "state": "sneak-job/on-accepted",
             "text": "sneak-job/accept-reward"
         },
+        "sneak-job/already-done": {
+            "availableHook": "sneakJobHasFoundSpy",
+            "state": "sneak-job/on-already-found",
+            "text": "sneak-job/already-done"
+        },
+        "sneak-job/alreadyFound/died": {
+            "availableHook": "sneakJobSpySolved",
+            "state": "sneak-job/report-death-consolation",
+            "text": "sneak-job/alreadyFound/died"
+        },
+        "sneak-job/alreadyFound/escorted": {
+            "availableHook": "sneakJobSpySolved",
+            "state": "sneak-job/report-lived",
+            "text": "sneak-job/alreadyFound/escorted"
+        },
+        "sneak-job/alreadyFound/stillCaptive": {
+            "availableHook": "sneakJobSpyFoundAndAlive",
+            "state": "sneak-job/on-found",
+            "text": "sneak-job/alreadyFound/stillCaptive"
+        },
         "sneak-job/ask-more-reward": {
             "availableHook": "sneakJobCanNegociateReward",
             "hook": "sneakJobNegociateReward",
@@ -230,6 +250,10 @@
         "sneak-job/reject-reward": {
             "state": "sneak-job/on-rejected",
             "text": "sneak-job/reject-reward"
+        },
+        "sneak-job/report-saved": {
+            "state": "sneak-job/report-lived",
+            "text": "sneak-job/report-saved"
         },
         "was-sent-by-bibin": {
             "availableHook": "wasSentByBibin",
@@ -445,6 +469,7 @@
         },
         "sneak-job/entry": {
             "answers": [
+                "sneak-job/already-done",
                 "sneak-job/accept",
                 "sneak-job/ask-reward",
                 "sneak-job/reject"
@@ -468,6 +493,16 @@
             "hook": "sneakJobAccepted",
             "mood": "",
             "text": "sneak-job/on-accepted"
+        },
+        "sneak-job/on-already-found": {
+            "answers": [
+                "sneak-job/alreadyFound/stillCaptive",
+                "sneak-job/alreadyFound/died",
+                "sneak-job/alreadyFound/escorted"
+            ],
+            "hook": "sneakJobAccepted",
+            "mood": "",
+            "text": "sneak-job/on-already-found"
         },
         "sneak-job/on-found": {
             "answers": [
@@ -576,7 +611,8 @@
             "answers": [
                 "report-vague-killed",
                 "report-vague-saved",
-                "report-vague-died"
+                "report-vague-died",
+                "sneak-job/report-saved"
             ],
             "mood": "",
             "text": "sneak-job/report-vague"
