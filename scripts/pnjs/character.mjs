@@ -27,6 +27,14 @@ export class CharacterBehaviour extends SceneActorComponent {
       this.model.removeVariable("spell-casted");
   }
 
+  delayedRemoval(delay = 2500) {
+    this.model.tasks.addUniqueTask("triggerDelayedRemoval", delay);
+  }
+
+  triggerDelayedRemoval() {
+    level.deleteObject(this.model);
+  }
+
   reduceSpellExhaustion() {
     if (this.castCount > 0)
       this.castCount--;
