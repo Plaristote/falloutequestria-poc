@@ -52,6 +52,7 @@
                 "ask-about-gym",
                 "exit-questions"
             ],
+            "hook": "onSpeakAboutMeetingBibin",
             "mood": "",
             "text": "about-place/bibin-meeting"
         },

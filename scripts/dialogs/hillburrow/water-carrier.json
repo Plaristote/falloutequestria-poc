@@ -14,6 +14,7 @@
             "text": "ask-about-job"
         },
         "ask-about-npc": {
+            "hook": "onLearnedIdentity",
             "state": "about-npc",
             "text": "ask-about-npc"
         },
@@ -48,6 +49,27 @@
         "confession-exit": {
             "text": "confession-exit"
         },
+        "delivery-ask-details": {
+            "state": "delivery-contents-entry",
+            "text": "delivery-ask-details"
+        },
+        "delivery-ask-details-again": {
+            "hook": "deliveryTryToLearnSuitcaseContents",
+            "state": "delivery-contents-failure",
+            "text": "delivery-ask-details-again"
+        },
+        "delivery-ask-password": {
+            "availableHook": "canAskDeliveryPassword",
+            "state": "delivery-password",
+            "text": "delivery-ask-password"
+        },
+        "delivery-exit": {
+            "text": "delivery-exit"
+        },
+        "delivery-tell-message": {
+            "state": "delivery-message-received",
+            "text": "delivery-tell-message"
+        },
         "interrogate-sabotage-1": {
             "availableHook": "canConvinceToConfess",
             "state": "sabotage-confession",
@@ -79,6 +101,11 @@
         },
         "sabotage-let-go": {
             "text": "sabotage-let-go"
+        },
+        "start-bibin-delivery": {
+            "availableHook": "hasBibinDeliveryQuest",
+            "state": "delivery-entry",
+            "text": "start-bibin-delivery"
         }
     },
     "entryPoint": "entry",
@@ -112,6 +139,7 @@
         },
         "about-npc": {
             "answers": [
+                "start-bibin-delivery",
                 "ask-talkative-sarcasm",
                 "ask-about-job",
                 "back-to-entry"
@@ -145,8 +173,67 @@
             "mood": "",
             "text": "about-water-carrying"
         },
+        "delivery-contents-entry": {
+            "answers": [
+                "delivery-ask-details-again",
+                "delivery-ask-password",
+                "delivery-exit"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "delivery-contents-entry"
+        },
+        "delivery-contents-failure": {
+            "answers": [
+                "delivery-ask-password",
+                "delivery-exit"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "delivery-contents-failure"
+        },
+        "delivery-contents-success": {
+            "answers": [
+                "delivery-ask-password",
+                "delivery-exit"
+            ],
+            "hook": "onDeliveryLearnedSuitcaseContents",
+            "mood": "",
+            "text": "delivery-contents-success"
+        },
+        "delivery-entry": {
+            "answers": [
+                "delivery-tell-message",
+                "delivery-ask-password",
+                "delivery-ask-details",
+                "delivery-exit"
+            ],
+            "hook": "onDeliveryDone",
+            "mood": "smile",
+            "text": "delivery-entry"
+        },
+        "delivery-message-received": {
+            "answers": [
+                "delivery-ask-password",
+                "delivery-ask-details",
+                "delivery-exit"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "delivery-message-received"
+        },
+        "delivery-password": {
+            "answers": [
+                "delivery-ask-details",
+                "delivery-exit"
+            ],
+            "hook": "onDeliveryLearnedPassword",
+            "mood": "",
+            "text": "delivery-password"
+        },
         "entry": {
             "answers": [
+                "start-bibin-delivery",
                 "ask-about-npc",
                 "ask-about-home",
                 "bye"

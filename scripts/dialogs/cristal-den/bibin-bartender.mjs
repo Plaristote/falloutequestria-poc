@@ -1,4 +1,5 @@
 import {BarkeepHelper} from "../barkeep.mjs";
+import {requireQuest} from "../../quests/helpers.mjs";
 
 class Dialog extends BarkeepHelper {
   constructor(dialog) {
@@ -7,6 +8,10 @@ class Dialog extends BarkeepHelper {
       { name: "whiskey",      price: 5, onDrink: "drunk" },
       { name: "sparkeCola",   price: 6 }
     ]);
+  }
+
+  onSpeakAboutMeetingBibin() {
+    requireQuest("cristal-den/bibins-meeting");
   }
 }
 

@@ -10,6 +10,18 @@ class Dialog {
     return game.quests.getQuest("hillburrow/sabotage");
   }
 
+  get deliveryQuest() {
+    return game.quests.getQuest("cristal-den/bibins-sabotage-delivery");
+  }
+
+  get identityKnown() {
+    return this.dialog.npc.hasVariable("identity-known");
+  }
+
+  onLearnedIdentity() {
+    this.dialog.npc.setVariable("identity-known", 1);
+  }
+
   dynamiteHasBeenFound() {
     const quest = requireQuest("hillburrow/sabotage", QuestFlags.HiddenQuest);
     return quest.isObjectiveCompleted("findWaterCarrierDynamite");
@@ -49,6 +61,36 @@ class Dialog {
 
   takeToPotiokBoss() {
     this.sabotageQuest.script.startWaterCarrierScene();
+  }
+
+  hasBibinDeliveryQuest() {
+    return this.identityKnown && this.deliveryQuest && game.player.inventory.count("bibin-sabotage-suitcase") > 0;
+  }
+
+  onDeliveryDone() {
+    const suitcase = game.player.inventory.getItemOfType("bibin-sabotage-suitcase");
+
+    suitcase.script.useOn(this.dialog.npc);
+    game.player.inventory.destroyItem(suitcase);
+    this.deliveryQuest.completeObjective("delivery");
+  }
+
+  deliveryTryToLearnSuitcaseContents() {
+    const winner = Checks.skillContest(game.player, this.dialog.npc, "speech", 20);
+    return winner == game.player ? "delivery-contents-success" : "delivery-contents-failure";
+  }
+
+  onDeliveryLearnedSuitcaseContents() {
+    this.dynamiteHasBeenFound();
+    this.onLearnAboutBibinInvolvment();
+  }
+
+  canAskDeliveryPassword() {
+    return !this.deliveryQuest.isObjectiveCompleted("ask-password");
+  }
+
+  onDeliveryLearnedPassword() {
+    this.deliveryQuest.completeObjective("ask-password");
   }
 }
 

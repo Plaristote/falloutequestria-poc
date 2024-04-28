@@ -94,6 +94,8 @@ export class Gym {
 
   set playerWinCount(value) {
     this.model.setVariable("winCount", value);
+    if (value > 0 && value > this.boxers.length)
+      onCatchBibinAttention();
   }
 
   get playerCurrentOpponent() {
