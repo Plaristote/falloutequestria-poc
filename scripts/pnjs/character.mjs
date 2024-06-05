@@ -53,7 +53,7 @@ export class CharacterBehaviour extends SceneActorComponent {
       if (!level.combat) {
         if (this.canPush)
           interactions.unshift("push");
-        if (this.dialog || this.textBubbles)
+        if (this.canTalk())
           interactions.unshift("talk-to");
       }
       return interactions;

@@ -15,6 +15,10 @@ export class DialogComponent extends MetabolismComponent {
     super(model);
   }
 
+  canTalk() {
+    return this.dialog || this.textBubbles;
+  }
+
   onTalkTo() {
     const dialog = this._delayedDialog || this.dialog;
 

@@ -108,6 +108,19 @@ export class SceneManager {
       this.finalize();
   }
 
+  dialogLineStep(options) {
+    const actions = options.speaker.actionQueue;
+    const bubbleDuration = (options.bubbleDuration * 1000) || (options.duration * 1300);
+    const color = options.color || "white";
+
+    if (options.target)
+      actions.pushLookAt(options.target);
+    actions.pushSpeak(options.line, bubbleDuration, color);
+    actions.pushWait(options.duration);
+    actions.pushScript(this.triggerNextStep.bind(this));
+    actions.start();
+  }
+
   onCombatTurn(character) {
   }
   
