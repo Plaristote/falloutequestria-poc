@@ -82,7 +82,7 @@ export class SlaveRiot extends QuestHelper {
   }
 
   startRiot() {
-    const weaponInventory = level.findObject("slaves.rainy-purple").inventory;
+    const weaponInventory = game.getCharacter("hillburrow/rainy-purple").inventory;
     const slaves = level.find("slaves.*");
     const guards = level.find("guards.**.*");
 

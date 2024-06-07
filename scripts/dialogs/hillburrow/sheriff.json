@@ -1,8 +1,6 @@
 {
     "answers": {
         "": {
-            "hook": "",
-            "state": ""
         },
         "about-capital-ruins": {
             "state": "about-capital-ruins-",
@@ -25,26 +23,114 @@
         },
         "ask-about-work": {
             "hook": "onAskedForWork",
-            "state": "",
             "text": "ask-about-work"
         },
         "back-to-entry": {
-            "hook": "",
             "state": "entry",
             "text": "back-to-entry"
         },
         "exit-entry": {
-            "state": "",
             "text": "exit-entry"
+        },
+        "hobo-after-fight-ask-whats-next": {
+            "state": "quest-old-sheriff-arrestation/after-fight-whats-next",
+            "text": "hobo-after-fight-ask-whats-next"
+        },
+        "hobo-after-fight-exit": {
+            "text": "hobo-after-fight-exit"
+        },
+        "hobo-after-fight-exit-alt": {
+            "text": "hobo-after-fight-exit-alt"
+        },
+        "hobo-after-fight-vendetta": {
+            "availableHook": "canStartVendetta",
+            "state": "quest-old-sheriff-arrestation/after-fight-teamup",
+            "text": "hobo-after-fight-vendetta"
         },
         "introduce-player": {
             "hook": "onNameGiven",
             "state": "entry",
             "text": "introduce-player"
         },
+        "old-sherif-murder-not-solved": {
+            "state": "quest-old-sherif-report/complete",
+            "text": "old-sherif-murder-not-solved"
+        },
+        "old-sherif-report-cancel": {
+            "text": "old-sherif-report-cancel"
+        },
+        "old-sherif-report-drunken-master": {
+            "availableHook": "oldSheriffMurderCanReportDrunkenMaster",
+            "state": "quest-old-sherif-report/drunken-master",
+            "text": "old-sherif-report-drunken-master"
+        },
+        "old-sherif-report-mercenaries": {
+            "availableHook": "oldSheriffMurderCanReportMercenaries",
+            "state": "quest-old-sherif-report/mercenaries",
+            "text": "old-sherif-report-mercenaries"
+        },
+        "old-sherif-report-water-carrier": {
+            "availableHook": "oldSheriffMurderCanReportSheriffStar",
+            "state": "quest-old-sherif-report/sherif-star",
+            "text": "old-sherif-report-water-carrier"
+        },
+        "old-sherif-solve-murder": {
+            "availableHook": "oldSheriffMurderCanSolve",
+            "hook": "oldSheriffSolveMurder",
+            "state": "quest-old-sherif-report/complete",
+            "text": "old-sherif-solve-murder"
+        },
+        "old-sheriff-already-dead-conclusion": {
+            "text": "old-sheriff-already-dead-conclusion"
+        },
+        "old-sheriff-already-dead-start-vendetta": {
+            "availableHook": "canStartVendetta",
+            "state": "quest-old-sheriff-arrestation/vendetta-start",
+            "text": "old-sheriff-already-dead-start-vendetta"
+        },
+        "old-sheriff-closure-against-murder": {
+            "availableHook": "canStartVendetta",
+            "state": "quest-old-sheriff-arrestation/greater-plan",
+            "text": "old-sheriff-closure-against-murder"
+        },
+        "old-sheriff-closure-full-vendetta": {
+            "state": "quest-old-sheriff-arrestation/vendetta-start",
+            "text": "old-sheriff-closure-full-vendetta"
+        },
+        "old-sheriff-closure-give-up": {
+            "hook": "triggerOffscreenVengeance",
+            "text": "old-sheriff-closure-give-up"
+        },
+        "old-sheriff-closure-partner-up": {
+            "availableHook": "isWaterCarrierFightAvailable",
+            "state": "quest-old-sheriff-arrestation/vengeance-start",
+            "text": "old-sheriff-closure-partner-up"
+        },
+        "old-sheriff-completion-arrestation": {
+            "availableHook": "isWaterCarrierAlive",
+            "state": "quest-old-sheriff-arrestation/entry",
+            "text": "old-sheriff-completion-arrestation"
+        },
+        "old-sheriff-completion-arrestation-impossible": {
+            "availableHook": "isWaterCarrierDead",
+            "state": "quest-old-sheriff-arrestation/already-dead",
+            "text": "old-sheriff-completion-arrestation-impossible"
+        },
+        "old-sheriff-completion-business-exit": {
+            "hook": "triggerOffscreenVengeance",
+            "text": "old-sheriff-completion-business-exit"
+        },
+        "old-sheriff-completion-exit": {
+            "hook": "triggerOffscreenVengeance",
+            "text": "old-sheriff-completion-exit"
+        },
         "old-sheriff-quest-ask-reward": {
             "state": "quest-old-sheriff-reward-asked",
             "text": "old-sheriff-quest-ask-reward"
+        },
+        "old-sheriff-vendetta-come-with": {
+            "state": "quest-old-sheriff-arrestation/vendetta-confirmed",
+            "text": "old-sheriff-vendetta-come-with"
         },
         "quest-old-sheriff-asked-reward-accepted": {
             "state": "quest-old-sheriff-briefing",
@@ -62,7 +148,6 @@
             "text": "quest-old-sheriff-negociate"
         },
         "quest-old-sheriff-negociate-badly": {
-            "availableHook": "",
             "hook": "loseTownReputation",
             "state": "quest-old-sheriff-on-negociate-failure",
             "text": "quest-old-sheriff-negociate-badly"
@@ -77,12 +162,16 @@
             "text": "quest-old-sheriff-negociate-failed-reaction-alt"
         },
         "reject-old-sheriff-quest": {
-            "state": "",
             "text": "reject-old-sheriff-quest"
         },
         "reject-old-sheriff-quest-alt": {
             "state": "about-daring-do",
             "text": "reject-old-sheriff-quest-alt"
+        },
+        "report-quest-old-sherif": {
+            "availableHook": "isOldSheriffMurderQuestOngoing",
+            "state": "quest-old-sherif-report/entry",
+            "text": "report-quest-old-sherif"
         }
     },
     "entryPoint": "entry",
@@ -92,6 +181,7 @@
                 "about-crystal-den",
                 "back-to-entry"
             ],
+            "mood": "",
             "text": "about-capital-ruins-"
         },
         "about-crystal-den-": {
@@ -99,6 +189,7 @@
                 "about-capital-ruins",
                 "back-to-entry"
             ],
+            "mood": "",
             "text": "about-crystal-den-"
         },
         "about-daring-do": {
@@ -120,16 +211,20 @@
         },
         "entry": {
             "answers": [
+                "report-quest-old-sherif",
                 "ask-about-work",
                 "ask-about-npc",
                 "exit-entry"
             ],
+            "hook": "",
+            "mood": "",
             "text": "entry"
         },
         "name-already-known": {
             "answers": [
                 "back-to-entry"
             ],
+            "mood": "",
             "text": "name-already-known"
         },
         "no-more-work": {
@@ -138,6 +233,51 @@
             ],
             "mood": "",
             "text": "no-more-work"
+        },
+        "quest-old-sherif-report/complete": {
+            "answers": [
+                "old-sheriff-completion-arrestation",
+                "old-sheriff-completion-arrestation-impossible",
+                "old-sheriff-completion-exit",
+                "old-sheriff-completion-business-exit"
+            ],
+            "hook": "oldSheriffCompletion",
+            "mood": "angry",
+            "text": "quest-old-sherif-report/complete"
+        },
+        "quest-old-sherif-report/drunken-master": {
+            "answers": [
+                "old-sherif-report-cancel"
+            ],
+            "hook": "",
+            "mood": "dubious",
+            "text": "quest-old-sherif-report/drunken-master"
+        },
+        "quest-old-sherif-report/entry": {
+            "answers": [
+                "old-sherif-report-water-carrier",
+                "old-sherif-report-mercenaries",
+                "old-sherif-report-drunken-master",
+                "old-sherif-report-cancel"
+            ],
+            "hook": "",
+            "mood": "smile",
+            "text": "quest-old-sherif-report/entry"
+        },
+        "quest-old-sherif-report/mercenaries": {
+            "answers": [
+                "old-sherif-report-cancel"
+            ],
+            "mood": "dubious",
+            "text": "quest-old-sherif-report/mercenaries"
+        },
+        "quest-old-sherif-report/sherif-star": {
+            "answers": [
+                "old-sherif-solve-murder",
+                "old-sherif-murder-not-solved"
+            ],
+            "mood": "sad",
+            "text": "quest-old-sherif-report/sherif-star"
         },
         "quest-old-sheriff": {
             "answers": [
@@ -148,6 +288,85 @@
             ],
             "mood": "",
             "text": "quest-old-sheriff"
+        },
+        "quest-old-sheriff-arrestation/after-fight": {
+            "answers": [
+                "hobo-after-fight-ask-whats-next",
+                "hobo-after-fight-vendetta",
+                "hobo-after-fight-exit"
+            ],
+            "hook": "onAfterFightSpeech",
+            "mood": "sad",
+            "text": "quest-old-sheriff-arrestation/after-fight"
+        },
+        "quest-old-sheriff-arrestation/after-fight-teamup": {
+            "answers": [
+            ],
+            "hook": "startCompanionship",
+            "mood": "cocky",
+            "text": "quest-old-sheriff-arrestation/after-fight-teamup"
+        },
+        "quest-old-sheriff-arrestation/after-fight-whats-next": {
+            "answers": [
+                "hobo-after-fight-vendetta",
+                "hobo-after-fight-exit-alt"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "quest-old-sheriff-arrestation/after-fight-whats-next"
+        },
+        "quest-old-sheriff-arrestation/already-dead": {
+            "answers": [
+                "old-sheriff-already-dead-start-vendetta",
+                "old-sheriff-already-dead-conclusion"
+            ],
+            "hook": "",
+            "mood": "sad",
+            "text": "quest-old-sheriff-arrestation/already-dead"
+        },
+        "quest-old-sheriff-arrestation/entry": {
+            "answers": [
+                "old-sheriff-closure-against-murder",
+                "old-sheriff-closure-partner-up",
+                "old-sheriff-closure-give-up"
+            ],
+            "hook": "",
+            "mood": "angry",
+            "text": "quest-old-sheriff-arrestation/entry"
+        },
+        "quest-old-sheriff-arrestation/greater-plan": {
+            "answers": [
+                "old-sheriff-closure-full-vendetta",
+                "old-sheriff-closure-partner-up",
+                "old-sheriff-closure-give-up"
+            ],
+            "hook": "",
+            "mood": "angry",
+            "text": "quest-old-sheriff-arrestation/greater-plan"
+        },
+        "quest-old-sheriff-arrestation/vendetta-confirmed": {
+            "answers": [
+            ],
+            "hook": "startCompanionship",
+            "mood": "cocky",
+            "text": "quest-old-sheriff-arrestation/vendetta-confirmed"
+        },
+        "quest-old-sheriff-arrestation/vendetta-start": {
+            "answers": [
+                "old-sheriff-vendetta-come-with",
+                "old-sheriff-closure-partner-up",
+                "old-sheriff-closure-give-up"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "quest-old-sheriff-arrestation/vendetta-start"
+        },
+        "quest-old-sheriff-arrestation/vengeance-start": {
+            "answers": [
+            ],
+            "hook": "startWaterCarrierAmbush",
+            "mood": "",
+            "text": "quest-old-sheriff-arrestation/vengeance-start"
         },
         "quest-old-sheriff-briefing": {
             "answers": [

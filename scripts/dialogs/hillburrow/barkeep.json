@@ -93,6 +93,7 @@
             "answers": [
                 "quest-sheriff-back-to-entry"
             ],
+            "hook": "",
             "mood": "",
             "text": "quest-sheriff-about-mercenaries"
         },
@@ -100,6 +101,7 @@
             "answers": [
                 "quest-sheriff-back-to-entry"
             ],
+            "hook": "toldAboutDrunkenMasterDisputeWithSheriff",
             "mood": "",
             "text": "quest-sheriff-about-night-more"
         },

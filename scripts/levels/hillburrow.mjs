@@ -1,6 +1,7 @@
 import {LevelBase} from "./base.mjs";
 import {waterCarrierAppearences, waterCarrierPopPositions} from "../pnjs/hillburrow/water-carrier.mjs";
 import {saboteurShouldDisappear} from "../quests/hillburrow/sabotage.mjs";
+import {shouldMurdererDisappear} from "../quests/hillburrow/oldSheriffMurder.mjs";
 
 export class Hillburrow extends LevelBase {
   initialize() {
@@ -26,7 +27,7 @@ export class Hillburrow extends LevelBase {
   }
 
   currentWaterCarrierTask() {
-    if (!saboteurShouldDisappear()) {
+    if (!saboteurShouldDisappear() && !shouldMurdererDisappear()) {
       const schedule = waterCarrierAppearences[level.name];
       const hour     = game.timeManager.hour;
       const minute   = game.timeManager.second;
@@ -36,6 +37,8 @@ export class Hillburrow extends LevelBase {
           return appearence.task;
       }
     }
+    else
+      console.log("Hillburrow saboteur should disappear.");
     return "none";
   }
 

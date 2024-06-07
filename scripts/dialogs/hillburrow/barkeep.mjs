@@ -26,6 +26,11 @@ class Dialog extends BarkeepHelper {
     quest.setVariable("leadsSheriffWorkingCase", 1);
   }
 
+  toldAboutDrunkenMasterDisputeWithSheriff() {
+    const quest = game.quests.getQuest("hillburrow/oldSheriffMurder");
+    quest.setVariable("leadsDrunkenMaster", 1);
+  }
+
   onToldName() {
     this.dialog.npc.setVariable("knownsName", 1);
   }

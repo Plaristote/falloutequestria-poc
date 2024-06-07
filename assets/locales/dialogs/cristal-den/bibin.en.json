@@ -13,7 +13,12 @@
             "entry/caught-attention": "Ah, you're finally there ! I've been expecting you. Everypony's been talking about you lately. I want to know what the fuss is all about !",
             "entry/default": "Hey. What's up ? Anything you need from me ?",
             "entry/introduction": "I'm Bibin. Owner of this place and benevolant leader of the Cristal Den slums.",
+            "entry/intruder/intro": "Interesking skill you have. Alrgiht, you've got my attention. Would you like to work for me ? I think I might be able to put you to good use.",
             "entry/intruding": "Hey. I'm pretty sure you're not supposed to be there. How did you get past the guard ?",
+            "intruding-friendly-sneak": "I have a knack for getting by unnoticed.",
+            "intruding-murder-intent": "Who cares about your guard ? You should be worrying about yourself. En garde !",
+            "intruding-reject-job": "I'm sorry, I shouldn't even be there. I'll be on my way !",
+            "intruding-take-job": "Yeah, sure, I have some free time ahead of me. What do you need ?",
             "job-proposal": "Hmhm. I have big plans for this town. For the whole Cristal wasteland, actually. With your help, we can change this wasteland into a better, safer place... but it ain't gonna be easy, and nopony wants to take the necessary actions to reach that goal. Nopony but us.<br>We need ponies like you. Strong-willed. Competent. Trustworthy. I want you to work for us. And ultimately, I want you to become one of us. What do you say ?",
             "job-proposal-return": "Let's get back to the main topic, alright ? I have a job for you. Will you do it for me ?",
             "job-refusal": "Aw, you break my heart, buddy ! But I like the cut of your jib. Come back if you change your mind.",
@@ -50,8 +55,20 @@
             "sabotage/reporting-confirm-entry": "Good ! Not that I don't trust you of course, but you were supposed to get a password from Mighty. Care to tell me what it was ?",
             "sabotage/reporting-no-password": "Oh, buddy... I am so, so disappointed... I trusted you. I thought you were smarter than that. And you even came back, without the password ? Didn't you know what would happen ? Such a tragic ending...<br><br>Guard ! Come in and get rid of this fool. Definitively.",
             "sabotage/reporting-reward": "Of course, we did ! Here you go, {{sabotageReward}} caps, as we agreed. You deserved it.",
+            "sabotage/water-carrier-dead": "What ? You're shitting me, right ? He's dead ? How would you know that ? What happened ?",
+            "sabotage/water-carrier-death-by-player": "You ? You better have a damn good reason for this. This set back will cost me... and you. Explain yourself.",
+            "sabotage/water-carrier-death-evasive": "You heard about it ? From who ?",
+            "sabotage/water-carrier-death-insulted": "You come here to tell me my pony over there died, you don't want to tell me what happened, AND you play smart with me ? Are you fucking suicidal ? Because I'm about to grant your death wish. GUARDS !",
+            "sabotage/water-carrier-death-peaceful-end": "I see... thanks for bringing this to my attention. Forget about this job. I'll find something else for you to do... come back later.",
             "saboteur-accept-job": "Sure. I'll do it. <i>[Take the suitcase]</i>",
-            "saboteur-ask-money": "Look, if you're looking for free labor, there's a slave market a few blocks away. But if you want me to do the job, then you're gonna have to pull out some caps."
+            "saboteur-ask-money": "Look, if you're looking for free labor, there's a slave market a few blocks away. But if you want me to do the job, then you're gonna have to pull out some caps.",
+            "water-carrier-death-explained-cocky": "You know how tall he used to be. He was blocking my sun.",
+            "water-carrier-death/evasiv/confess": "From... no one. I guess I have to come clean. I killed him myself.",
+            "water-carrier-death/evasive": "I heard about it... the cristal wastes are truly unforgiving.",
+            "water-carrier-death/evasive/joke": "I think you meant \"from whom\".",
+            "water-carrier-death/evasive/lie": "<i>[Lie]</i> I overheard someponies talk about it at the tavern.",
+            "water-carrier-death/player-murder": "Because I did it myself. He was tough, but not tough enough.",
+            "water-carrier-death/potiok": "The Potioks had him killed. They believed he was responsible for sabotaging their work at the coal mine."
         }
     }
 }

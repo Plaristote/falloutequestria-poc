@@ -229,6 +229,15 @@
         "value": 9000,
         "weight": 50
     },
+    "quest-hillburrow-murder-evidence": {
+        "icon": "sherif-star.png",
+        "isGroupable": false,
+        "scriptName": "quest-hillburrow-murder-evidence.mjs",
+        "sprite": "misc",
+        "type": "misc",
+        "value": 125,
+        "weight": 1
+    },
     "scribe-armor": {
         "icon": "steel-ranger-scribe.png",
         "isGroupable": true,

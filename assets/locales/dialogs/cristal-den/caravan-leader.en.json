@@ -5,8 +5,15 @@
             "about-caravan-answer": "Who we are ? The blood and veins of the cristal wasteland, that's who we are ! We secure trade routes and bring goods from all over, and to wherever.",
             "about-joining": "How do I join the caravan ?",
             "about-joining-answer": "Nice ! We're always looking for new blood to replace the casualties ! We have an office downtown: find Brian Fargo and ask him about joining. He runs this operation... well, the backoffice part of this operation, at least. We're the ones sticking our neck out after all, ain't we ?",
+            "ask-join-caravan": "Yes. When's the next caravan ?",
+            "caravan-cancel": "Not right now.",
+            "caravan-later": "Next caravan will take off on Monday. We'll be going to {{destination}}.",
+            "caravan-start": "Let's go already !",
             "entry": "Hey. You here to join the caravan ?",
-            "entry-exit": "No, I'm not. Bye."
+            "entry-exit": "No, I'm not. Bye.",
+            "join-caravan": "Great ! We'll take off anytime now. We're going to {{caravanDestination}}. You're interested ?",
+            "reward": "Hey ! I'm glad you made it out alive ! Here's your reward ! Come back whenever you're ready for some more action !",
+            "way-back": "We're ready to make our way back. Give me a heads up whenever you want to go."
         }
     }
 }

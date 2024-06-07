@@ -1,5 +1,6 @@
 import * as Checks from "../../cmap/helpers/checks.mjs";
 import {QuestFlags} from "../../quests/helpers.mjs";
+import {saboteurShouldDisappear} from "../../quests/hillburrow/sabotage.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -176,7 +177,13 @@ class Dialog {
   }
 
   sabotageTakeWaterCarrierToBoss() {
-    this.sabotageQuest.script.startWaterCarrierScene();
+    if (!saboteurShouldDisappear())
+      this.sabotageQuest.script.startWaterCarrierScene();
+    else
+    {
+      game.asyncAdvanceTime(15);
+      return "sabotage/accusation/water-carrier/404ed";
+    }
   }
 
   giveSabotagePayment() {

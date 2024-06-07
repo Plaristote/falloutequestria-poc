@@ -118,7 +118,7 @@
                 "quest-sheriff-murder-confront",
                 "quest-seriff-murder-exit"
             ],
-            "hook": "",
+            "hook": "onSpokeAboutSheriffMurder",
             "mood": "cocky",
             "text": "quest-sheriff-murder"
         },

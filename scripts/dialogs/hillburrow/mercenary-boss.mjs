@@ -24,6 +24,11 @@ class Dialog {
     sheriffQuest.setVariable("leadsSabotage", 1);
   }
 
+  onSpokeAboutSheriffMurder() {
+    const quest = game.quests.getQuest("hillburrow/oldSheriffMurder");
+    quest.setVariable("spokeToMercenaryBoss", 1);
+  }
+
   canAskAboutSabotages() {
     const quest = game.quests.getQuest("hillburrow/sabotage");
     return quest && !quest.hidden && this.dialog.npc.hasVariable("knowsName");

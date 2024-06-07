@@ -40,7 +40,7 @@ export class Sabotage extends QuestHelper {
     this.model.addObjective("confrontBrother", this.tr("confrontBrother"));
   }
 
-  onTalkedWithmercenaryBoss() {
+  onTalkedWithMercenaryBoss() {
     this.onPointersGivenByBittyPotiok();
     this.model.completeObjective("talkToMercenaryBoss");
   }
@@ -112,6 +112,14 @@ export class Sabotage extends QuestHelper {
 
   get foughtWaterCarrier() {
     return this.model.getVariable("foughtHobo", 0) == 1;
+  }
+
+  set foughtWaterCarrier(value) {
+    this.model.setVariable("foughtHobo", value ? 1 : 0);
+  }
+
+  get potiokKilledWaterCarrier() {
+    return this.model.getVariable("bittyInterrogatedHobo");
   }
 
   completeWaterCarrierRoute() {

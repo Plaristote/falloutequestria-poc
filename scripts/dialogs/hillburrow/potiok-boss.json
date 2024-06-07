@@ -124,6 +124,10 @@
             "state": "sabotage/accusation/water-carrier/water-carrier-dead",
             "text": "sabotage-water-carrier-fought-back"
         },
+        "sabotage-water-carrier-tipped-off": {
+            "state": "sabotage/accusation/water-carrier/water-carrier-dead",
+            "text": "sabotage-water-carrier-tipped-off"
+        },
         "sabotage-water-carrier-whereabouts": {
             "hook": "sabotageTakeWaterCarrierToBoss",
             "text": "sabotage-water-carrier-whereabouts"
@@ -211,6 +215,15 @@
             "mood": "",
             "text": "sabotage/about-payment"
         },
+        "sabotage/accusation/water-carrier/404ed": {
+            "answers": [
+                "sabotage-end",
+                "sabotage-ask-payment"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "sabotage/accusation/water-carrier/404ed"
+        },
         "sabotage/accusation/water-carrier/abou-confession": {
             "answers": [
                 "sabotage-accusation-wc-confession-bibin",
@@ -255,6 +268,7 @@
         "sabotage/accusation/water-carrier/whereabouts": {
             "answers": [
                 "sabotage-water-carrier-whereabouts",
+                "sabotage-water-carrier-tipped-off",
                 "sabotage-water-carrier-fought-back"
             ],
             "hook": "",

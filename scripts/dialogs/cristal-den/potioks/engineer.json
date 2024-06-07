@@ -1,0 +1,183 @@
+{
+    "answers": {
+        "ask-about-celestial-device": {
+            "state": "about-celestial-device",
+            "text": "ask-about-celestial-device"
+        },
+        "ask-about-creations": {
+            "hook": "nextCreationDialog",
+            "text": "ask-about-creations"
+        },
+        "ask-about-place": {
+            "state": "about-place",
+            "text": "ask-about-place"
+        },
+        "celestial-device-ask-labs": {
+            "state": "celestial-device/about-labs",
+            "text": "celestial-device-ask-labs"
+        },
+        "celestial-device-ask-steel-rangers": {
+            "state": "celestial-device/about-steel-rangers",
+            "text": "celestial-device-ask-steel-rangers"
+        },
+        "do-not-give-details-about-celestial-device": {
+            "state": "celestial-device/no-details-given",
+            "text": "do-not-give-details-about-celestial-device"
+        },
+        "do-not-give-details-about-celestial-device-hostile": {
+            "text": "do-not-give-details-about-celestial-device-hostile"
+        },
+        "entry-exit": {
+            "text": "entry-exit"
+        },
+        "give-details-about-celestial-device": {
+            "hook": "onTalkedAboutDevice",
+            "state": "celestial-device/where-to-find-one",
+            "text": "give-details-about-celestial-device"
+        },
+        "leave-about-place": {
+            "text": "leave-about-place"
+        },
+        "leave-celestial-device-thanks": {
+            "text": "leave-celestial-device-thanks"
+        },
+        "powerhoof-intro-accept": {
+            "hook": "powerhoofStartTesting",
+            "text": "powerhoof-intro-accept"
+        },
+        "powerhoof-intro-ask-danger": {
+            "availableHook": "powerhoofRiskScienceCheck",
+            "state": "creations/powerhoof-risks",
+            "text": "powerhoof-intro-ask-danger"
+        },
+        "powerhoof-intro-leave": {
+            "state": "entry",
+            "text": "powerhoof-intro-leave"
+        },
+        "powerhoof-risk-accept": {
+            "hook": "powerhoofStartTesting",
+            "text": "powerhoof-risk-accept"
+        },
+        "powerhoof-risk-accept-reluctantly": {
+            "hook": "powerhoofStartTesting",
+            "text": "powerhoof-risk-accept-reluctantly"
+        },
+        "powerhoof-risk-accept-reward": {
+            "hook": "powerhoofStartTesting",
+            "text": "powerhoof-risk-accept-reward"
+        },
+        "powerhoof-risk-reject": {
+            "text": "powerhoof-risk-reject"
+        },
+        "powerhoof-risk-reject-reward": {
+            "text": "powerhoof-risk-reject-reward"
+        },
+        "powerhoof-risk-reward": {
+            "state": "creations/powerhoof-risk-reward-response",
+            "text": "powerhoof-risk-reward"
+        }
+    },
+    "entryPoint": "",
+    "states": {
+        "about-celestial-device": {
+            "answers": [
+                "give-details-about-celestial-device",
+                "do-not-give-details-about-celestial-device",
+                "do-not-give-details-about-celestial-device-hostile"
+            ],
+            "mood": "",
+            "text": "about-celestial-device"
+        },
+        "about-creations": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "about-creations"
+        },
+        "about-place": {
+            "answers": [
+                "ask-about-creations",
+                "ask-about-celestial-device",
+                "leave-about-place"
+            ],
+            "mood": "smile",
+            "text": "about-place"
+        },
+        "celestial-device/about-labs": {
+            "answers": [
+                "celestial-device-ask-steel-rangers",
+                "leave-celestial-device-thanks",
+                "leave-about-place"
+            ],
+            "mood": "",
+            "text": "celestial-device/about-labs"
+        },
+        "celestial-device/about-steel-rangers": {
+            "answers": [
+                "celestial-device-ask-labs",
+                "leave-celestial-device-thanks",
+                "leave-about-place"
+            ],
+            "mood": "",
+            "text": "celestial-device/about-steel-rangers"
+        },
+        "celestial-device/no-details-given": {
+            "answers": [
+                "give-details-about-celestial-device",
+                "leave-about-place"
+            ],
+            "mood": "",
+            "text": "celestial-device/no-details-given"
+        },
+        "celestial-device/where-to-find-one": {
+            "answers": [
+                "celestial-device-ask-labs",
+                "celestial-device-ask-steel-rangers",
+                "leave-about-place"
+            ],
+            "mood": "",
+            "text": "celestial-device/where-to-find-one"
+        },
+        "creations/finished": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "creations/finished"
+        },
+        "creations/powerhoof-intro": {
+            "answers": [
+                "powerhoof-intro-accept",
+                "powerhoof-intro-ask-danger",
+                "powerhoof-intro-leave"
+            ],
+            "mood": "",
+            "text": "creations/powerhoof-intro"
+        },
+        "creations/powerhoof-risk-reward-response": {
+            "answers": [
+                "powerhoof-risk-accept-reward",
+                "powerhoof-risk-reject-reward"
+            ],
+            "mood": "",
+            "text": "creations/powerhoof-risk-reward-response"
+        },
+        "creations/powerhoof-risks": {
+            "answers": [
+                "powerhoof-risk-accept",
+                "powerhoof-risk-accept-reluctantly",
+                "powerhoof-risk-reward",
+                "powerhoof-risk-reject"
+            ],
+            "mood": "",
+            "text": "creations/powerhoof-risks"
+        },
+        "entry": {
+            "answers": [
+                "ask-about-place",
+                "entry-exit"
+            ],
+            "mood": "",
+            "text": "entry"
+        }
+    }
+}

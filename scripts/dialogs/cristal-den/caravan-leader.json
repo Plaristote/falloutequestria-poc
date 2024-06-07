@@ -1,7 +1,6 @@
 {
     "answers": {
         "": {
-            "state": ""
         },
         "about-caravan": {
             "state": "about-caravan-answer",
@@ -11,8 +10,20 @@
             "state": "about-joining-answer",
             "text": "about-joining"
         },
+        "ask-join-caravan": {
+            "availableHook": "canJoinCaravan",
+            "hook": "onJoinCaravan",
+            "state": "join-caravan",
+            "text": "ask-join-caravan"
+        },
+        "caravan-cancel": {
+            "text": "caravan-cancel"
+        },
+        "caravan-start": {
+            "hook": "startCaravan",
+            "text": "caravan-start"
+        },
         "entry-exit": {
-            "state": "",
             "text": "entry-exit"
         }
     },
@@ -31,14 +42,46 @@
             "mood": "",
             "text": "about-joining-answer"
         },
+        "caravan-later": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "caravan-later"
+        },
         "entry": {
             "answers": [
+                "ask-join-caravan",
                 "about-caravan",
                 "about-joining",
                 "entry-exit"
             ],
+            "hook": "",
             "mood": "",
             "text": "entry"
+        },
+        "join-caravan": {
+            "answers": [
+                "caravan-start",
+                "caravan-cancel"
+            ],
+            "mood": "",
+            "text": "join-caravan"
+        },
+        "reward": {
+            "answers": [
+            ],
+            "hook": "giveReward",
+            "mood": "",
+            "text": "reward"
+        },
+        "way-back": {
+            "answers": [
+                "caravan-start",
+                "caravan-cancel"
+            ],
+            "hook": "",
+            "mood": "",
+            "text": "way-back"
         }
     }
 }

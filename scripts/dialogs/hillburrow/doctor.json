@@ -27,6 +27,7 @@
         },
         "ask-about-old-sheriff": {
             "availableHook": "canTalkAboutOldSheriffMurder",
+            "hook": "onTalkAboutOldSheriffMurder",
             "state": "about-old-sheriff",
             "text": "ask-about-old-sheriff"
         },

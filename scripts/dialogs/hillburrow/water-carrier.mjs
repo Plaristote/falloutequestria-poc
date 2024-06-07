@@ -55,7 +55,8 @@ class Dialog {
   }
 
   startFight() {
-    this.sabotageQuest.setVariable("foughtHobo", 1);
+    this.sabotageQuest.script.foughtWaterCarrier = true;
+    this.dialog.npc.statistics.faction = "";
     this.dialog.npc.setAsEnemy(game.player);
   }
 

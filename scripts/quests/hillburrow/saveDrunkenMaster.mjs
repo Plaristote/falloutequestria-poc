@@ -16,7 +16,7 @@ export function drunkenQuestSucceeded() {
 export function drunkenQuestDoctorBagNeeded() {
   if (!drunkenQuestOver()) {
     const quest = game.quests.getQuest(questName);
-    return !quest.isObjectiveCompleted("find-doctor-bag");
+    return quest && !quest.isObjectiveCompleted("find-doctor-bag");
   }
   return false;
 }
@@ -55,13 +55,8 @@ export function completeDrunkenQuest() {
 export class SaveDrunkenMaster extends QuestHelper {
   initialize() {
     this.model.location = "hillburrow";
-  }
-
-  getObjectives() {
-    return [
-      { label: this.tr("findDoctorBag"), success: this.isObjectiveCompleted("find-doctor-bag") },
-      { label: this.tr("saveDrunkenMaster"), success: this.isObjectiveCompleted("save-drunken-master") }
-    ];
+    this.model.addObjective("find-doctor-bag", this.tr("findDoctorBag"));
+    this.model.addObjective("save-drunken-master", this.tr("saveDrunkenMaster"));
   }
 
   onItemPicked(item) {

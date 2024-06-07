@@ -76,6 +76,16 @@ class Dialog {
     return this.sabotageDeliveryQuest.isObjectiveCompleted("ask-password");
   }
 
+  waterCarrierKilledByPotioks() {
+    const quest = game.quests.getQuest("hillburrow/sabotage");
+    return quest && (quest.script.foughtWaterCarrier || quest.script.potiokKilledWaterCarrier);
+  }
+
+  lieAboutWaterCarrierDeath() {
+    const winner = skillContest(game.player, this.dialog.npc, "speech", 15);
+    return winner == game.player ? "sabotage/water-carrier-death-peaceful-end" : "sabotage/water-carrier-death-insulted";
+  }
+
   canAskSabotageReward() {
     return this.sabotageReward > 0;
   }

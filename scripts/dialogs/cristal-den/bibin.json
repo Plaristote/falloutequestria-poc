@@ -26,10 +26,26 @@
             "text": "caught-attention-ask-who"
         },
         "caught-attention-curious": {
+            "state": "job-proposal",
             "text": "caught-attention-curious"
         },
         "entry-exit": {
             "text": "entry-exit"
+        },
+        "intruding-friendly-sneak": {
+            "state": "entry/intruder/intro",
+            "text": "intruding-friendly-sneak"
+        },
+        "intruding-murder-intent": {
+            "hook": "callGuards",
+            "text": "intruding-murder-intent"
+        },
+        "intruding-reject-job": {
+            "text": "intruding-reject-job"
+        },
+        "intruding-take-job": {
+            "state": "job-proposal",
+            "text": "intruding-take-job"
         },
         "necessary-action-bullshit-hostile": {
             "text": "necessary-action-bullshit-hostile"
@@ -105,6 +121,7 @@
         },
         "sabotage-saboteur-is-dead": {
             "availableHook": "isSaboteurDead",
+            "state": "sabotage/water-carrier-dead",
             "text": "sabotage-saboteur-is-dead"
         },
         "sabotage-trigger-report": {
@@ -121,6 +138,36 @@
             "hook": "onAskedRewardSabotageJob",
             "state": "sabotage/accept-payment",
             "text": "saboteur-ask-money"
+        },
+        "water-carrier-death-explained-cocky": {
+            "state": "sabotage/water-carrier-death-insulted",
+            "text": "water-carrier-death-explained-cocky"
+        },
+        "water-carrier-death/evasiv/confess": {
+            "state": "sabotage/water-carrier-death-by-player",
+            "text": "water-carrier-death/evasiv/confess"
+        },
+        "water-carrier-death/evasive": {
+            "state": "sabotage/water-carrier-death-evasive",
+            "text": "water-carrier-death/evasive"
+        },
+        "water-carrier-death/evasive/joke": {
+            "state": "sabotage/water-carrier-death-insulted",
+            "text": "water-carrier-death/evasive/joke"
+        },
+        "water-carrier-death/evasive/lie": {
+            "hook": "lieAboutWaterCarrierDeath",
+            "state": "sabotage/water-carrier-death-evasive",
+            "text": "water-carrier-death/evasive/lie"
+        },
+        "water-carrier-death/player-murder": {
+            "state": "sabotage/water-carrier-death-by-player",
+            "text": "water-carrier-death/player-murder"
+        },
+        "water-carrier-death/potiok": {
+            "availableHook": "waterCarrierKilledByPotioks",
+            "state": "sabotage/water-carrier-death-peaceful-end",
+            "text": "water-carrier-death/potiok"
         }
     },
     "entryPoint": "entry/default",
@@ -159,8 +206,18 @@
             "mood": "",
             "text": "entry/introduction"
         },
+        "entry/intruder/intro": {
+            "answers": [
+                "intruding-take-job",
+                "intruding-reject-job"
+            ],
+            "mood": "smile",
+            "text": "entry/intruder/intro"
+        },
         "entry/intruding": {
             "answers": [
+                "intruding-friendly-sneak",
+                "intruding-murder-intent"
             ],
             "mood": "",
             "text": "entry/intruding"
@@ -292,6 +349,7 @@
                 "sabotage-report-ask-reward",
                 "sabotage-report-exit"
             ],
+            "hook": "",
             "mood": "",
             "text": "sabotage/reporting-confirm-complete"
         },
@@ -317,6 +375,46 @@
             "hook": "onSabotageReceivedReward",
             "mood": "laugh",
             "text": "sabotage/reporting-reward"
+        },
+        "sabotage/water-carrier-dead": {
+            "answers": [
+                "water-carrier-death/potiok",
+                "water-carrier-death/player-murder",
+                "water-carrier-death/evasive"
+            ],
+            "mood": "dubious",
+            "text": "sabotage/water-carrier-dead"
+        },
+        "sabotage/water-carrier-death-by-player": {
+            "answers": [
+                "water-carrier-death-explained-cocky"
+            ],
+            "hook": "",
+            "mood": "angry",
+            "text": "sabotage/water-carrier-death-by-player"
+        },
+        "sabotage/water-carrier-death-evasive": {
+            "answers": [
+                "water-carrier-death/evasive/lie",
+                "water-carrier-death/evasiv/confess",
+                "water-carrier-death/evasive/joke"
+            ],
+            "hook": "",
+            "mood": "dubious",
+            "text": "sabotage/water-carrier-death-evasive"
+        },
+        "sabotage/water-carrier-death-insulted": {
+            "answers": [
+            ],
+            "hook": "callGuards",
+            "mood": "angry",
+            "text": "sabotage/water-carrier-death-insulted"
+        },
+        "sabotage/water-carrier-death-peaceful-end": {
+            "answers": [
+            ],
+            "mood": "",
+            "text": "sabotage/water-carrier-death-peaceful-end"
         }
     }
 }

@@ -1,12 +1,9 @@
 {
     "answers": {
         "": {
-            "hook": "",
-            "state": ""
         },
         "accept-work-negociator": {
             "hook": "acceptNegociatorQuest",
-            "state": "",
             "text": "accept-work-negociator"
         },
         "ask-about-bibin": {
@@ -22,7 +19,6 @@
             "text": "ask-for-work"
         },
         "ask-negociator-leads": {
-            "hook": "",
             "state": "work-negociator-leads",
             "text": "ask-negociator-leads"
         },
@@ -34,8 +30,6 @@
             "text": "exit-entry"
         },
         "reject-work-negociator": {
-            "hook": "",
-            "state": "",
             "text": "reject-work-negociator"
         },
         "work-caravan-accept": {
@@ -54,7 +48,6 @@
             "text": "work-caravan-reject"
         },
         "work-skills-cancel": {
-            "state": "",
             "text": "work-skills-cancel"
         },
         "work-skills-gunner": {
@@ -62,7 +55,7 @@
             "text": "work-skills-gunner"
         },
         "work-skills-talker": {
-            "state": "",
+            "state": "work-negociator",
             "text": "work-skills-talker"
         },
         "work-skills-wastelander": {
@@ -128,6 +121,7 @@
             "answers": [
                 "back-to-work-negociator"
             ],
+            "mood": "",
             "text": "work-negociator-bibin"
         },
         "work-negociator-leads": {
@@ -135,6 +129,7 @@
                 "ask-about-potioks",
                 "back-to-work-negociator"
             ],
+            "mood": "",
             "text": "work-negociator-leads"
         },
         "work-negociator-potioks": {
@@ -142,6 +137,7 @@
                 "ask-about-bibin",
                 "back-to-work-negociator"
             ],
+            "mood": "",
             "text": "work-negociator-potioks"
         }
     }
