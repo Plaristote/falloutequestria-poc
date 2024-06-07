@@ -62,7 +62,7 @@ export class SceneManager {
         actor.actionQueue.reset();
       }
       else
-        console.log("Scene", id, "has invalid an actor.");
+        console.log("Scene", this.id, "has invalid an actor.");
     });
     this.triggerCurrentStep();
   }
@@ -121,5 +121,9 @@ export class SceneManager {
   }
 
   onSceneTick() {
+  }
+
+  onLevelExit() {
+    this.finalize();
   }
 }

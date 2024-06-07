@@ -23,7 +23,7 @@ export class LevelBase {
 
   onExit() {
     this.scenes.forEach(sceneManager => {
-      sceneManager.finalize();
+      sceneManager.onLevelExit();
     });
   }
 }
