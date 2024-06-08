@@ -3,9 +3,13 @@ export const QuestFlags = {
 };
 
 export function requireQuest(name, flags) {
-  if (!game.quests.hasQuest(name))
-    game.quests.addQuest(name, QuestFlags.HiddenQuest);
-  return game.quests.getQuest(name);
+  let quest = game.quests.getQuest(name);
+
+  if (!quest)
+    quest = game.quests.addQuest(name, flags);
+  else if (quest.hidden && (flags & QuestFlags.NormalQuest) > 0)
+    quest.hidden = false;
+  return quest;
 }
 
 export class QuestHelper {
