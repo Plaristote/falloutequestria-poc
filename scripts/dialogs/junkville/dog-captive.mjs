@@ -1,5 +1,5 @@
 import {requireQuest} from "../../quests/helpers.mjs";
-import {captiveReleaseAuthorized} from "../../quests/junkvilleDumpsDisappeared.mjs";
+import {captiveReleaseAuthorized, areCaptorsDead} from "../../quests/junkvilleDumpsDisappeared.mjs";
 
 class Dialog {
   constructor(dialog) {
@@ -30,23 +30,20 @@ class Dialog {
   wasReleaseAccepted() { return captiveReleaseAuthorized(); }
 
   triggerGoToExit() {
-    level.getScriptObject().sendCaptivesToExit();
+    level.script.sendCaptivesToExit();
   }
-  
+
   onBreakout() {
-    this.dialog.mood = "angry";
+    if (game.player.level > 2 && (game.player.statistics.strength > 8 || game.player.statistics.traits.indexOf("bruiser") >= 0))
+    {
+      this.triggerGoToExit();
+      return "breakout";
+    }
     return "breakout-fail";
-    return "breakout";
   }
 
   dogsEradicated() {
-    const questName = "junkvilleNegociateWithDogs";
-    if (game.quests.hasQuest(questName))
-    {
-      this.dialog.mood = "smile";
-      return requireQuest(questName).getScriptObject().isObjectiveCompleted("win-battle");
-    }
-    return false;
+    return areCaptorsDead();
   }
 }
 

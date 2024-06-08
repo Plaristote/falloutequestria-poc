@@ -3,7 +3,8 @@ import {
   isLookingForDisappearedPonies,
   hasFoundDisappearedPonies,
   onDisappearedPoniesFound,
-  captiveReleaseAuthorized
+  captiveReleaseAuthorized,
+  areCaptorsDead
 } from "./junkvilleDumpsDisappeared.mjs";
 import {getValueFromRange} from "../behaviour/random.mjs";
 
@@ -108,9 +109,9 @@ export function initializeBattle() {
     cook.setScript("junkville/cook-underground-combat.mjs");
   }
   junkvilleNpcs.insertIntoZone(level, "battle-entry");
-  if (level.getScriptObject().liveCaptives.length > 0)
+  if (level.script.liveCaptives.length > 0)
     onDisappearedPoniesFound();
-  level.getScriptObject().liveCaptives.forEach(captive => {
+  level.script.liveCaptives.forEach(captive => {
     captive.tasks.addUniqueTask("reachExitZone", 1500, 0);
   });
 }
@@ -155,9 +156,9 @@ export function clearBattle(options) {
       survivors: options.survivors
     });
   }
-  if (quest.getScriptObject().isObjectiveCompleted("win-battle")) {
+  if (quest.isObjectiveCompleted("win-battle")) {
     survivors.captives.forEach(character => {
-      character.getScriptObject().onSaved();
+      character.script.onSaved();
     });
     survivors.junkville.forEach(character => {
       level.deleteObject(character);
@@ -167,10 +168,10 @@ export function clearBattle(options) {
 
 export function internalPackIssueDone() {
   if (hasQuest()) {
-    const script = getQuest().getScriptObject();
-    return script.isObjectiveCompleted("alt-leader-convinced")
-        || script.isObjectiveCompleted("alt-leader-dead")
-        || script.isObjectiveCompleted("alt-leader-took-over");
+    const quest = getQuest();
+    return quest.isObjectiveCompleted("alt-leader-convinced")
+        || quest.isObjectiveCompleted("alt-leader-dead")
+        || quest.isObjectiveCompleted("alt-leader-took-over");
   }
   return false;
 }
@@ -196,7 +197,7 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
   }
   
   get xpReward() {
-    if (this.isObjectiveCompleted("win-battle"))
+    if (this.model.isObjectiveCompleted("win-battle"))
       return 1450;
     return 750;
   }
@@ -206,39 +207,41 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
 
     objectives.push({
       label: this.tr("save-yourself-from-the-diamond-dogs"),
-      success: this.isObjectiveCompleted("safe")
+      success: this.model.isObjectiveCompleted("safe")
     });
     objectives.push({
       label: this.tr("warn-junkville-about-diamond-dogs"),
-      success: this.isObjectiveCompleted("junkville-warned"),
-      failure: !this.isObjectiveCompleted("junkville-warned") && hasBattleStarted()
+      success: this.model.isObjectiveCompleted("junkville-warned"),
+      failure: !this.model.isObjectiveCompleted("junkville-warned") && hasBattleStarted()
     });
     if (internalPackIssueDone()) {
       objectives.push({
         label: this.tr("solve-pack-unrest"),
-        success: this.isObjectiveCompleted("alt-leader-convinced") || this.isObjectiveCompleted("alt-leader-dead"),
-        failure: this.isObjectiveCompleted("alt-leader-took-over")
+        success: this.model.isObjectiveCompleted("alt-leader-convinced") || this.model.isObjectiveCompleted("alt-leader-dead"),
+        failure: this.model.isObjectiveCompleted("alt-leader-took-over")
       });
     }
     if (hasMediationStarted()) {
       objectives.push({
         label: this.model.getVariable("mediation") == "trade" ? this.tr("peaceful-resolve-trade") : this.tr("peaceful-resolve-zone"),
-        success: this.isObjectiveCompleted("peaceful-resolve"),
-        failure: !this.isObjectiveCompleted("peaceful-resolve") && hasBattleStarted()
+        success: this.model.isObjectiveCompleted("peaceful-resolve"),
+        failure: !this.model.isObjectiveCompleted("peaceful-resolve") && hasBattleStarted()
       });
     }
     if (hasBattleStarted()) {
       objectives.push({
         label: this.tr("win-battle"),
-        success: this.isObjectiveCompleted("win-battle"),
-        failure: this.isObjectiveCompleted("lose-battle")
+        success: this.model.isObjectiveCompleted("win-battle"),
+        failure: this.model.isObjectiveCompleted("lose-battle")
       });
+    } else if (areCaptorsDead()) {
+      objectives.push({ label: this.tr("wipe-out-dogs"), success: true });
     }
     return objectives;
   }
 
-  completeObjective(objective) {
-    super.completeObjective(objective);
+  completeObjective(objective, success) {
+    if (!success) return ;
     switch (objective) {
       case "safe":
         game.appendToConsole(i18n.t("junkville.escape-from-dogs-success"));
@@ -255,7 +258,7 @@ export class JunkvilleNegociateWithDogs extends QuestHelper {
   }
 
   onSuccess() {
-    if (this.isObjectiveCompleted("win-battle"))
+    if (this.model.isObjectiveCompleted("win-battle"))
       game.appendToConsole(i18n.t("junkville-dog-mediation.win-battle"));
     super.onSuccess();
   }

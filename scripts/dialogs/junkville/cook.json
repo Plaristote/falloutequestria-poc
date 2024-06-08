@@ -1,15 +1,10 @@
 {
     "answers": {
         "": {
-            "availableHook": "",
-            "hook": "",
-            "state": "",
-            "textHook": ""
         },
         "accept-find-helpful": {
             "availableHook": "isHelpfulQuestAvailable_",
             "hook": "acceptFindHelpfulQuest",
-            "state": "",
             "text": "accept-find-helpful"
         },
         "accept-haunting-heap": {
@@ -32,12 +27,10 @@
             "text": "ask-about-leader-insist"
         },
         "ask-job": {
-            "availableHook": "",
             "state": "jobs",
             "text": "ask-job"
         },
         "ask-meal": {
-            "availableHook": "",
             "state": "menu",
             "text": "ask-meal"
         },
@@ -62,68 +55,60 @@
             "state": "dogs-battle-ask-reward",
             "text": "battle-reward-negociate"
         },
+        "dogs-battle-impossible-all-dead": {
+            "availableHook": "dogsAlreadyDead",
+            "state": "dogs-battle-canceled",
+            "text": "dogs-battle-impossible-all-dead"
+        },
         "dogs-battle-join-gladly": {
             "hook": "startBattle",
-            "state": "",
             "text": "dogs-battle-join-gladly"
         },
         "dogs-battle-join-money": {
-            "hook": "",
             "state": "dogs-battle-ask-reward",
             "text": "dogs-battle-join-money"
         },
         "dogs-battle-join-reward": {
-            "availableHook": "",
             "hook": "startBattle",
-            "state": "",
             "text": "dogs-battle-join-reward"
         },
         "dogs-battle-peace": {
-            "hook": "",
             "state": "dogs-battle-peacemaking",
             "text": "dogs-battle-peace"
         },
         "dogs-battle-peacemaking-come": {
             "hook": "startBattle",
-            "state": "",
-            "text": "dogs-battle-peacemaking-come",
-            "textHook": ""
+            "text": "dogs-battle-peacemaking-come"
         },
         "dogs-battle-peacemaking-convince": {
             "hook": "onDogsBattlePeacemakingAppease",
             "state": "dogs-battle-peacemaking-not-appeased",
             "text": "dogs-battle-peacemaking-convince-success",
-            "textHook": "dogsBattlePeacemakingLine"
+            "textHook": "undefined"
         },
         "dogs-battle-peacemaking-exit": {
             "text": "dogs-battle-peacemaking-exit"
         },
         "dogs-battle-reject": {
             "hook": "startBattleWithoutPlayer",
-            "state": "",
             "text": "dogs-battle-reject"
         },
         "dogs-battle-reject-alt": {
             "hook": "startBattleWithoutPlayer",
-            "state": "",
             "text": "dogs-battle-reject-alt"
         },
         "dogs-mediate-trade": {
             "availableHook": "hasDogTradeRoute",
             "hook": "onMediationProposal",
-            "state": "",
             "text": "dogs-mediate-trade"
         },
         "dogs-mediate-war": {
-            "availableHook": "",
-            "hook": "",
             "state": "dogs-warpath",
             "text": "dogs-mediate-war"
         },
         "dogs-mediate-zone": {
             "availableHook": "hasDogZoneRoute",
             "hook": "onMediationProposal",
-            "state": "",
             "text": "dogs-mediate-zone"
         },
         "dogs-mediation-start": {
@@ -136,8 +121,7 @@
             "text": "dogs-negociation-trigger-ask-hostage-release"
         },
         "dogs-warpath-trigger": {
-            "availableHook": "",
-            "hook": "",
+            "availableHook": "dogsStillAlive",
             "state": "dogs-battle-start",
             "text": "dogs-warpath-trigger"
         },
@@ -145,9 +129,6 @@
             "text": "dogs-warpath-trigger-no-involvment"
         },
         "done-asking": {
-            "availableHook": "",
-            "hook": "",
-            "state": "",
             "text": "done-asking"
         },
         "get-battle-reward": {
@@ -179,16 +160,12 @@
             "text": "job-haunted-heap-tell-about-saved"
         },
         "just-passing-by": {
-            "availableHook": "",
-            "state": "",
             "text": "just-passing-by"
         },
         "meal-reject": {
             "text": "meal-reject"
         },
         "nothing-new": {
-            "availableHook": "",
-            "state": "",
             "text": "nothing-new"
         },
         "report-dog-captives": {
@@ -219,6 +196,13 @@
             ],
             "hook": "onAskReward",
             "text": "dogs-battle-ask-reward"
+        },
+        "dogs-battle-canceled": {
+            "answers": [
+            ],
+            "hook": "dogsCompleteNegociationQuest",
+            "mood": "smile",
+            "text": "dogs-battle-canceled"
         },
         "dogs-battle-peacemaking": {
             "answers": [
@@ -300,6 +284,7 @@
         "dogs-warpath": {
             "answers": [
                 "dogs-warpath-trigger",
+                "dogs-battle-impossible-all-dead",
                 "dogs-mediate-trade",
                 "dogs-mediate-zone"
             ],

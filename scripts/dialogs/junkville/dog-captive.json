@@ -1,21 +1,16 @@
 {
     "answers": {
         "": {
-            "availableHook": "",
-            "state": ""
         },
         "announce-release": {
             "availableHook": "wasReleaseAccepted",
-            "state": "",
             "text": "announce-release"
         },
         "ask-about-secrecy": {
-            "availableHook": "",
             "state": "secrecy",
             "text": "ask-about-secrecy"
         },
         "ask-situation": {
-            "availableHook": "",
             "state": "situation",
             "text": "ask-situation"
         },
@@ -25,21 +20,15 @@
             "text": "dogs-slained"
         },
         "leave": {
-            "state": "",
             "text": "leave"
         },
         "leave-sarcastic": {
-            "state": "",
             "text": "leave-sarcastic"
         },
         "let-them-rot": {
-            "availableHook": "",
-            "state": "",
             "text": "let-them-rot"
         },
         "let-them-rot-alt": {
-            "availableHook": "",
-            "state": "",
             "text": "let-them-rot-alt"
         },
         "missioned-by-junkville": {
@@ -51,12 +40,10 @@
             "text": "missionned-by-junkville"
         },
         "missionned-junkville": {
-            "availableHook": "",
             "text": "missionned-junkville"
         },
         "suggest-breakout": {
-            "availableHook": "",
-            "state": "breakout",
+            "hook": "onBreakout",
             "text": "suggest-breakout"
         },
         "tell-freedom": {
@@ -71,6 +58,13 @@
             "answers": [
             ],
             "hook": "",
+            "mood": "dubious",
+            "text": "breakout-fail"
+        },
+        "breakout-fail": {
+            "answers": [
+            ],
+            "mood": "angry",
             "text": "breakout-fail"
         },
         "entry": {
@@ -95,6 +89,7 @@
             "answers": [
             ],
             "hook": "triggerGoToExit",
+            "mood": "smile",
             "text": "released"
         },
         "secrecy": {

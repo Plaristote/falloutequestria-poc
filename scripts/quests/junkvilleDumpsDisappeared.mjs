@@ -8,7 +8,6 @@ function getQuest() { return game.quests.getQuest(questName); }
 
 export function isLookingForDisappearedPonies() {
   let result = false;
-console.log("toto1#1");
   if (hasQuest())
     result = !getQuest().getScriptObject().captiveFound();
   console.log(questName, "-> isLookingForDisappearedPonies?", result);
@@ -37,6 +36,10 @@ export function captiveReleaseAuthorized() {
   const result = quest && quest.getVariable("authorizeCaptiveRelease") === true;
   console.log(questName, "-> captiveReleaseAuthorized", result);
   return result;
+}
+
+export function areCaptorsDead() {
+  return game.hasVariable("junkvilleDogsWipedOut");
 }
 
 export class JunkvilleDumpsDisappeared extends QuestHelper {
@@ -71,22 +74,22 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
       label: this.tr("find-disappeared"),
       success: this.captiveFound()
     });
-    if (this.isObjectiveCompleted("find-disappeared")) {
+    if (this.model.isObjectiveCompleted("find-disappeared")) {
       objectives.push({
         label: this.tr("save-all-captives"),
-        success: this.captiveAlive() && this.isObjectiveCompleted("save-captives"),
+        success: this.captiveAlive() && this.model.isObjectiveCompleted("save-captives"),
         failed: !this.captiveAlive()
       });
       if (!this.captiveAlive()) {
         objectives.push({
           label: this.tr("save-some-captives"),
-          success: this.isObjectiveCompleted("save-captives"),
+          success: this.model.isObjectiveCompleted("save-captives"),
           failed: this.captiveAllDead()
         });
       }
       objectives.push({
         label: this.tr("report-success"),
-        success: this.isObjectiveCompleted("report-success")
+        success: this.model.isObjectiveCompleted("report-success")
       });
     }
     return objectives;
@@ -103,7 +106,7 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
   }
 
   captiveFound() {
-    return this.isObjectiveCompleted("find-disappeared");
+    return this.model.isObjectiveCompleted("find-disappeared");
   }
 
   captiveSaved() {
@@ -126,10 +129,11 @@ export class JunkvilleDumpsDisappeared extends QuestHelper {
     return this.model.getVariable("dogs-hostile") === true;
   }
 
-  completeObjective(name) {
-    super.completeObjective(name);
-    if (name === "save-captives")
+  completeObjective(name, success) {
+    if (name === "save-captives") {
       this.model.completed = true;
+      this.model.failed = !success;
+    }
   }
 
   onCompleted() {

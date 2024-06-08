@@ -1,5 +1,6 @@
 import {LevelBase} from "./base.mjs";
 import {
+  hasBattleStarted,
   initializeBattle,
   finalizeBattle,
   clearBattle,
@@ -8,6 +9,10 @@ import {
   makeAltLeaderTakeOver,
   prepareDiamondDogsOnCavernAccessTransgression
 } from "../quests/junkvilleNegociateWithDogs.mjs";
+import {
+  captiveReleaseAuthorized,
+  areCaptorsDead
+} from "../quests/junkvilleDumpsDisappeared.mjs";
 import {
   findHelpfulRescueRouteState
 } from "../quests/junkville/findHelpful.mjs";
@@ -34,8 +39,10 @@ export class JunkvilleUnderground extends LevelBase {
   }
 
   onExit() {
-    if (level.getVariable("captive-released") === true)
+    if (level.getVariable("captive-released") === true || (level.getVariable("captive-escaping") && areCaptorsDead()))
       this.clearLiveCaptives();
+    else if (level.getVariable("captive-escaping") && !areCaptorsDead())
+      this.killLiveCaptives();
     if (game.getVariable("ongoingJunkvilleUndergroundBattle"))
       this.clearBattle();
     if (shouldAltLeaderTakeOver())
@@ -99,22 +106,38 @@ export class JunkvilleUnderground extends LevelBase {
   }
 
   sendCaptivesToExit() {
-    level.setVariable("captive-released", true);
+    if (captiveReleaseAuthorized()) {
+      level.setVariable("captive-released", true);
+    } else {
+      level.setVariable("captive-escaping", true);
+      game.diplomacy.setAsEnemy(true, "junkville", "diamond-dogs");
+      game.diplomacy.setAsEnemy(true, "player", "diamond-dogs");
+    }
     this.liveCaptives.forEach(captive => {
       captive.tasks.addUniqueTask("reachExitZone", 1500, 0);
     });
   }
 
   clearLiveCaptives() {
+    level.unsetVariable("captive-escaping");
     this.liveCaptives.forEach(captive => {
-      captive.getScriptObject().onSaved();
+      captive.script.onSaved();
+    });
+  }
+
+  killLiveCaptives() {
+    this.liveCaptives.forEach(captive => {
+      captive.takeDamage(captive.statistics.hitPoints, null);
     });
   }
 
   onDogDied() {
     console.log("onDogDied", this.liveDiamondDogs.length);
-    if (this.liveDiamondDogs.length == 0)
-      this.onBattleEnded();
+    if (this.liveDiamondDogs.length == 0) {
+      game.setVariable("junkvilleDogsWipedOut", 1);
+      if (hasBattleStarted())
+        this.onBattleEnded();
+    }
   }
 
   onBattleEnded() {

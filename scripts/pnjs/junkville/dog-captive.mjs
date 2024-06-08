@@ -1,14 +1,14 @@
 import {CharacterBehaviour} from "../character.mjs";
 import {requireQuest} from "../../quests/helpers.mjs";
+import {hasBattleStarted} from "../../quests/junkvilleNegociateWithDogs.mjs";
 
 function getQuest() {
   return requireQuest("junkvilleDumpsDisappeared");
 }
 
 export class DogCaptive extends CharacterBehaviour {
-  constructor(model) {
-    super(model);
-    this.dialog = "junkville/dog-captive";
+  get dialog() {
+    return !hasBattleStarted() && !level.hasVariable("captive-escaping") ? "junkville/dog-captive" : null;
   }
 
   reachExitZone() {
@@ -25,13 +25,13 @@ export class DogCaptive extends CharacterBehaviour {
 
   onSaved() {
     const quest = getQuest();
-    quest.getScriptObject().captiveSaved();
+    quest.script.captiveSaved();
     level.deleteObject(this.model);
   }
 
   onDied() {
     const quest = getQuest();
-    quest.getScriptObject().onCaptiveKilled();
+    quest.script.onCaptiveKilled();
     super.onDied();
   }
 }

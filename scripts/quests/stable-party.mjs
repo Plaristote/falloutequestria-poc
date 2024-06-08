@@ -1,7 +1,7 @@
 import {QuestHelper} from "./helpers.mjs";
 
 function isAlcoholicItem(item) {
-  return item.script.alcoholic === true;
+  return item.script && item.script.alcoholic === true;
 }
 
 export class StableParty extends QuestHelper {

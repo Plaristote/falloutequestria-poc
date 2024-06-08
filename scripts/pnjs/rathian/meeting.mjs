@@ -7,7 +7,6 @@ function isDropOffLevel() {
 class Rathian extends CharacterBehaviour {
   constructor(model) {
     super(model);
-    this.shouldBeAtJunkville = true;
   }
 
   get dialog() {
@@ -20,6 +19,10 @@ class Rathian extends CharacterBehaviour {
     return [
       {content: "Hi !", duration: 1500, color: "lightgreen"}
     ];
+  }
+
+  get shouldBeAtJunkville() {
+    return this.model.isAlive();
   }
 
   isInPlayerParty() {

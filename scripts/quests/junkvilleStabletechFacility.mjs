@@ -53,16 +53,16 @@ export class JunkvilleStabletechFacility extends QuestHelper {
 
     objectives.push({
       label: this.tr("enter-facility"),
-      success: this.isObjectiveCompleted("enter-facility")
+      success: this.model.isObjectiveCompleted("enter-facility")
     });
     objectives.push({
       label: this.tr("explore-facility"),
-      success: this.isObjectiveCompleted("explore-facility")
+      success: this.model.isObjectiveCompleted("explore-facility")
     });
-    if (this.isObjectiveCompleted("explore-facility")) {
+    if (this.model.isObjectiveCompleted("explore-facility")) {
       objectives.push({
         label: this.tr("find-blueprints"),
-        success: this.isObjectiveCompleted("find-blueprints")
+        success: this.model.isObjectiveCompleted("find-blueprints")
       });
     }
     return objectives;

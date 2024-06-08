@@ -14,7 +14,7 @@ export class CookUndergroundCombat extends UndergroundCombattant {
 
   get dialog() {
     const quest = requireQuest("junkvilleNegociateWithDogs");
-    if (quest.getScriptObject().isObjectiveCompleted("win-battle"))
+    if (quest.isObjectiveCompleted("win-battle"))
       return "junkville/cook-battle-won";
     return null;
   }

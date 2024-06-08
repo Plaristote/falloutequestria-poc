@@ -1,8 +1,7 @@
 {
-  "dialogs": {
+    "dialogs": {
         "junkville/cook": {
             "accept-find-helpful": "Okay, I'll see what I can do about the missing foal.",
-            "job-find-helpful": "Actually, something came up lately. The little Helpful disappeared, and his parents are worried sick. Maybe you could reach out to them.",
             "accept-haunting-heap": "I can take care of the missing scavengers. Where should I look ?",
             "ask-about-leader": "So, who's in charge over here ?",
             "ask-about-leader-contest": "Funny thing about this. I asked the same question somewhere else, and I've been told <i>you</i> were the boss.",
@@ -17,6 +16,8 @@
             "dogs-battle-ask-reward": "I guess that's fair... you're just an outsider. I can round up a 100 caps.",
             "dogs-battle-ask-reward-fail": "No. I value my comrade's life above all else, but I seriously doubt your help will be worth that much caps. I'll pay you a hundred and that's final. So, are we going ?",
             "dogs-battle-ask-reward-improved": "Okay. 200 caps it is. But you better make yourself worth it.",
+            "dogs-battle-canceled": "Really ? That's good news, I guess... it's a pity for those diamond dogs. But at least we no longer face impending doom, so... thank you !",
+            "dogs-battle-impossible-all-dead": "Don't bother. You're fine. I already wiped out the diamond dogs.",
             "dogs-battle-join-gladly": "Sure ! I'd never miss an opportunity to kick some asses !",
             "dogs-battle-join-money": "I'm not putting my flank out there unless it pays the bills. How much are you ready to pay ?",
             "dogs-battle-join-reward": "You've got yourself a deal. Let's go already !",
@@ -51,6 +52,7 @@
             "entry": "Hi there ! What can I do you for ? Fancy a meal ?",
             "get-battle-reward": "We've chased away the diamond dogs. So, about that reward ?",
             "introduction": "Hi ! It's a pleasure seeing a new face around here ! The name's {{npc}}, and I'm the town's cook and innkeeper. What can I do you for ?",
+            "job-find-helpful": "Actually, something came up lately. The little Helpful disappeared, and his parents are worried sick. Maybe you could reach out to them.",
             "job-haunted-heap": "I might've a job for you. Lately, some of the scavengers who rented rooms in my inn have went in the dumps and haven't been coming back from there. This is unusual, and it'll be bad for the town's reputation if people just go missing.",
             "job-haunted-heap-accept-reward": "It's a pleasre doing business with you.",
             "job-haunted-heap-details": "There's this rumor about a part in the dump where you can sometimes hear weird noises... the local don't really go there : superstitions and all. But outsiders would probably go there, and as it happens, outsiders are the only ones disappearing. It's located somewhere in the south-western part of the dumps, which you will find north from here.",
@@ -78,6 +80,6 @@
             "town-leader-midnight-hint": "What ? And who the hell told you that ?<br>It was Midnight Facade, wasn't it ? <i>[He laughs]</i> Of course it was ! Who else ?<br>Look, Midnight hasn't been here for so long. She's a good fellow, and she's awesome at what she does for us. She doesn't really believe in our way of life... but we'll grow on her ! We already have, just a little bit ! You should've been here when we convinced her to open shop here ! Said she preferred growing old rather than dying along with a bunch of hopeless daydreamers.<br>Yet we're still here, and so is she. We grew on her. And we'll grow on her some more. And on you too, hopefully ! We have that kind of effect on people !",
             "town-leader-more": "Oh, come on... I'm being honest with you. Everyone's equal, and no one bosses anyone else around. I'm not trying to convince you that everything's always smooth and dandy, but we make it work.",
             "town-story": "Nothing much to say about it. This used to be a dump before the war. There's still plenty of scrap laying around. Ponies have come here looking for parts ever since the megaspells hit.<br>Then I came around. Built this house. It wasn't always this big but... the occasional scavengers started visiting me, stayed the night, tasted my cooking. So I made it bigger, turned my house into an inn. Then people started settling around. We shared our stuff, worked all day long, ate at the same table told each other stories at night.<br>Now, merchants regularly come trade with us, and we have an intendant to handle our supplies. There's even that steel ranger unicorn who fixes our stuff... when he's around !"
-	}
-  }
+        }
+    }
 }

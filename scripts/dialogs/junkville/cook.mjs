@@ -1,6 +1,7 @@
 import {DialogHelper} from "../helpers.mjs";
 import {skillContest} from "../../cmap/helpers/checks.mjs";
-import {requireQuest} from "../../quests/helpers.mjs";
+import {requireQuest, QuestFlags} from "../../quests/helpers.mjs";
+import {areCaptorsDead} from "../../quests/junkvilleDumpsDisappeared.mjs";
 import {
   startUndergroundBattle,
   hasAltLeaderTakenOver
@@ -42,12 +43,12 @@ class Dialog extends DialogHelper {
   isHelpfulQuestAvailable_() { return !this.availableHauntedHeapQuest() && isHelpfulQuestAvailable(); }
 
   acceptHauntedHeapQuest() {
-    const object = requireQuest("junkvilleDumpsDisappeared");
+    const object = requireQuest("junkvilleDumpsDisappeared", QuestFlags.NormalQuest);
     object.setVariable("initBy", this.dialog.npc.objectName);
   }
 
   acceptFindHelpfulQuest() {
-    const object = requireQuest("junkville/findHelpful");
+    const object = requireQuest("junkville/findHelpful", QuestFlags.NormalQuest);
     object.setVariable("initBy", this.dialog.npc.objectName);
   }
   
@@ -67,7 +68,7 @@ class Dialog extends DialogHelper {
   reportDisappearedLocation() {
     const quest = requireQuest("junkvilleNegociateWithDogs");
 
-    if (quest.getScriptObject().isObjectiveCompleted("junkville-warned"))
+    if (quest.isObjectiveCompleted("junkville-warned"))
       quest.completeObjective("junkville-warned");
   }
 
@@ -80,11 +81,11 @@ class Dialog extends DialogHelper {
   }
 
   hauntedDumpAreCaptiveAllDead() {
-    return this.junkvilleDumpsDisappeared.getScriptObject().captiveAllDead();
+    return this.junkvilleDumpsDisappeared.script.captiveAllDead();
   }
 
-  hautedDumpAreCaptiveAllAlive() {
-    return this.junkvilleDumpsDisappeared.getScriptObject().captiveAlive();
+  hauntedDumpAreCaptiveAllAlive() {
+    return this.junkvilleDumpsDisappeared.script.captiveAlive();
   }
   
   hauntedDumpOnReport() {
@@ -115,21 +116,34 @@ class Dialog extends DialogHelper {
   }
 
   hasDogTradeRoute() {
-    return requireQuest("junkvilleNegociateWithDogs").getVariable("mediation") == "trade";
+    return this.dogsStillAlive() && requireQuest("junkvilleNegociateWithDogs").getVariable("mediation") == "trade";
   }
 
   hasDogZoneRoute() {
-    return requireQuest("junkvilleNegociateWithDogs").getVariable("mediation") == "zone";
+    return this.dogsStillAlive() && requireQuest("junkvilleNegociateWithDogs").getVariable("mediation") == "zone";
   }
 
   dogsHoldingHostages() {
     const quest = requireQuest("junkvilleDumpsDisappeared");
-    return !quest.getScriptObject().isObjectiveCompleted("save-captives");
+    return !quest.isObjectiveCompleted("save-captives");
   }
 
   dogsKilledHostages() {
     const quest = requireQuest("junkvilleDumpsDisappeared");
     return quest.getScriptObject().captiveKilledByDogs();
+  }
+
+  dogsAlreadyDead() {
+    return areCaptorsDead();
+  }
+
+  dogsStillAlive() {
+    return !areCaptorsDead();
+  }
+
+  dogsCompleteNegociationQuest() {
+    const quest = requireQuest("junkvilleNegociateWithDogs", 1);
+    quest.completed = true;
   }
 
   onDogMediationEntry() {
@@ -204,7 +218,7 @@ class Dialog extends DialogHelper {
 
   canGetBattleReward() {
     const quest = game.quests.getQuest("junkvilleNegociateWithDogs");
-    if (quest && quest.getScriptObject().isObjectiveCompleted("win-battle"))
+    if (quest && quest.isObjectiveCompleted("win-battle"))
       return quest.getVariable("battleReward") > 0;
     return false;
   }
