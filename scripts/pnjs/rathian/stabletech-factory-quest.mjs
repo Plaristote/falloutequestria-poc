@@ -135,6 +135,7 @@ class Rathian extends CharacterBehaviour {
 
   arrivedAtFacility() {
     level.addTextBubble(this.model, i18n.t("junkville-stabletech.rathian-downstairs-arrival"), 10000);
+    this.model.attacksOnSight = false;
     this.model.movementMode = "running";
     this.model.statistics.faction = "player";
     this.state++;
@@ -142,10 +143,10 @@ class Rathian extends CharacterBehaviour {
 
   onPlayerGoesUpstairs() {
     if (this.state === States.Done) {
+      this.model.attacksOnSight = true;
       this.model.movementMode = "walking";
       this.model.statistics.faction = "rathian";
       game.setVariable("rathianGoingBackToJunkville", 1);
-      level.deleteObject(this.model);
     }
   }
 
@@ -179,9 +180,9 @@ class Rathian extends CharacterBehaviour {
 
   // Generator room
   onEnteredGeneratorRoom() {
-    const generator = level.findObject("generator-room.generator").getScriptObject();
+    const generator = level.findObject("generator-room.generator");
 
-    if (!generator.running) {
+    if (!generator.script.running) {
       level.addTextBubble(this.model, i18n.t("junkville-stabletech.rathian-will-fix-generator"), 7500);
       this.state = States.FixingGenerator;
     }
@@ -199,18 +200,23 @@ class Rathian extends CharacterBehaviour {
     this.model.actionQueue.pushSpeak(i18n.t("junkville-stabletech.rathian-fix-generator#2"), 2500, "yellow");
     this.model.actionQueue.pushWait(2);
     this.model.actionQueue.pushInteraction(generator, "use");
-    this.model.actionQueue.pushSpeak(i18n.t("junkville-stabletech.rathian-fix-generator#3"), 3000, "green");
-    this.model.actionQueue.pushScript(actionReached => {
-      if (generator.getScriptObject().running)
-        level.addTextBubble(this.model, i18n.t("junkville-stabletech.rathian-player-fixed-generator"), 5000, "green");
-      else if (actionReached)
-        generator.getScriptObject().running = true;
-      else
-        return ;
-      this.model.movementMode = "running";
-      this.state = States.FollowingPlayerInFacilty;
+    this.model.actionQueue.pushSpeak(i18n.t("junkville-stabletech.rathian-fix-generator#3"), 3000, "lightgreen");
+    this.model.actionQueue.pushScript({
+      onTrigger: this.fixGeneratorCallback.bind(this, generator, true),
+      onCancel: this.fixGeneratorCallback.bind(this, generator, false)
     });
     this.model.actionQueue.start();
+  }
+
+  fixGeneratorCallback(generator, actionReached) {
+    if (generator.script.running)
+      level.addTextBubble(this.model, i18n.t("junkville-stabletech.rathian-player-fixed-generator"), 5000, "lightgreen");
+    else if (actionReached)
+      generator.script.running = true;
+    else
+      return ;
+    this.model.movementMode = "running";
+    this.state = States.FollowingPlayerInFacilty;
   }
 
   // Stock room

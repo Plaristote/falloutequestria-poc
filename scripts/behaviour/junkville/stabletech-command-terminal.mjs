@@ -2,7 +2,7 @@ export class StabletechCommandTerminal {
   constructor(model) {
     this.model = model;
     this.sprite = "monitor-left";
-    this.dialog = "junkville-stabletech-terminal";
+    this.dialog = "junkville/stabletech-terminal";
   }
 
   initialize() {
