@@ -9,12 +9,14 @@ export const StalkingDistances = {
 export class CompanionCharacter extends CharacterBehaviour {
   startCompanionship() {
     game.playerParty.addCharacter(this.model);
+    this.model.attacksOnSight = false;
     this.model.statistics.faction = "player";
     this.playerStalking();
   }
 
   endCompanionship() {
     game.playerParty.removeCharacter(this.model);
+    this.model.attacksOnSight = true;
     this.model.statistics.faction = this.fallbackFaction || "";
     this.tasks.removeTask("playerStalking");
   }
