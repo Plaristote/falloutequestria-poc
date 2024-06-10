@@ -75,30 +75,30 @@ export class FindHelpful extends QuestHelper {
 
     objectives.push({
       label: this.tr("talk-to-parents"),
-      success: this.isObjectiveCompleted("talk-to-parents")
+      success: this.model.isObjectiveCompleted("talk-to-parents")
     });
     objectives.push({
       label: this.tr("find-helpful"),
-      success: this.isObjectiveCompleted("find-helpful")
+      success: this.model.isObjectiveCompleted("find-helpful")
     });
     if (findHelpfulRescueRouteState() > 0) {
       objectives.push({
         label: this.tr("escape-cavern"),
-        success: this.isObjectiveCompleted("escape-cavern"),
+        success: this.model.isObjectiveCompleted("escape-cavern"),
         failure: this.model.hasVariable("died")
       });
     }
     if (this.isObjectiveCompleted("find-helpful")) {
       objectives.push({
         label: this.tr("save-helpful"),
-        success: this.isObjectiveCompleted("save-helpful"),
+        success: this.model.isObjectiveCompleted("save-helpful"),
         failure: this.model.hasVariable("died")
       });
     }
     if (this.model.hasVariable("died")) {
       objectives.push({
         label: this.tr("tell-parents"),
-        success: this.isObjectiveCompleted("tell-parents")
+        success: this.model.isObjectiveCompleted("tell-parents")
       });
     }
     return objectives;
