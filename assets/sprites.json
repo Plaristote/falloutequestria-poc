@@ -1165,6 +1165,10 @@
             "width": 27
         }
     },
+    "changeling-evil": {
+      "cloneOf": "pony",
+      "defaultSource": "characters/changeling-evil.png"
+    },
     "coal-ore": {
         "A": {
             "frameCount": 1,
