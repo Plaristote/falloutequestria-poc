@@ -185,6 +185,293 @@
             "width": 72
         }
     },
+    "brahmin": {
+        "damaged-down": {
+            "frameCount": 5,
+            "frameInterval": 70,
+            "height": 77,
+            "offsetY": 196,
+            "width": 33
+        },
+        "damaged-left": {
+            "frameCount": 5,
+            "frameInterval": 70,
+            "height": 55,
+            "offsetY": -2,
+            "width": 95
+        },
+        "damaged-right": {
+            "frameCount": 5,
+            "frameInterval": 70,
+            "height": 55,
+            "offsetY": 53,
+            "width": 94
+        },
+        "damaged-up": {
+            "frameCount": 5,
+            "frameInterval": 70,
+            "height": 88,
+            "offsetY": 108,
+            "width": 32
+        },
+        "dead-down": {
+            "height": 78,
+            "offsetX": 371,
+            "offsetY": 2351,
+            "width": 53
+        },
+        "dead-left": {
+            "height": 64,
+            "offsetX": 672,
+            "offsetY": 2140,
+            "width": 96
+        },
+        "dead-right": {
+            "height": 58,
+            "offsetX": 658,
+            "offsetY": 2204,
+            "width": 94
+        },
+        "dead-up": {
+            "height": 89,
+            "offsetX": 350,
+            "offsetY": 2262,
+            "width": 50
+        },
+        "defaultSource": "characters/brahmin.png",
+        "fall-down-down": {
+            "frameCount": 8,
+            "frameInterval": 70,
+            "height": 78,
+            "offsetY": 2351,
+            "width": 53
+        },
+        "fall-down-left": {
+            "frameCount": 8,
+            "frameInterval": 70,
+            "height": 64,
+            "offsetY": 2140,
+            "width": 96
+        },
+        "fall-down-right": {
+            "frameCount": 8,
+            "frameInterval": 70,
+            "height": 58,
+            "offsetY": 2204,
+            "width": 94
+        },
+        "fall-down-up": {
+            "frameCount": 8,
+            "frameInterval": 70,
+            "height": 89,
+            "offsetY": 2262,
+            "width": 50
+        },
+        "get-up-down": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 78,
+            "offsetY": 2620,
+            "width": 47
+        },
+        "get-up-left": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 57,
+            "offsetY": 2428,
+            "width": 96
+        },
+        "get-up-right": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 52,
+            "offsetY": 2485,
+            "width": 97
+        },
+        "get-up-up": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 83,
+            "offsetY": 2537,
+            "width": 45
+        },
+        "idle-down": {
+            "frameCount": 1,
+            "frameInterval": 70,
+            "height": 76,
+            "offsetY": 1511,
+            "width": 34
+        },
+        "idle-left": {
+            "frameCount": 1,
+            "frameInterval": 70,
+            "height": 52,
+            "offsetY": 1327,
+            "width": 90
+        },
+        "idle-right": {
+            "frameCount": 1,
+            "frameInterval": 70,
+            "height": 51,
+            "offsetY": 1379,
+            "width": 89
+        },
+        "idle-up": {
+            "frameCount": 1,
+            "frameInterval": 70,
+            "height": 81,
+            "offsetY": 1430,
+            "width": 32
+        },
+        "melee-alt-down": {
+            "frameCount": 7,
+            "frameInterval": 70,
+            "height": 78,
+            "offsetY": 989,
+            "width": 34
+        },
+        "melee-alt-left": {
+            "frameCount": 7,
+            "frameInterval": 70,
+            "height": 50,
+            "offsetY": 803,
+            "width": 100
+        },
+        "melee-alt-right": {
+            "frameCount": 7,
+            "frameInterval": 70,
+            "height": 50,
+            "offsetY": 853,
+            "width": 103
+        },
+        "melee-alt-up": {
+            "frameCount": 7,
+            "frameInterval": 70,
+            "height": 86,
+            "offsetY": 903,
+            "width": 31
+        },
+        "melee-down": {
+            "frameCount": 7,
+            "frameInterval": 70,
+            "height": 78,
+            "offsetY": 2063,
+            "width": 34
+        },
+        "melee-left": {
+            "frameCount": 7,
+            "frameInterval": 70,
+            "height": 50,
+            "offsetY": 1877,
+            "width": 100
+        },
+        "melee-right": {
+            "frameCount": 7,
+            "frameInterval": 70,
+            "height": 50,
+            "offsetY": 1927,
+            "width": 103
+        },
+        "melee-up": {
+            "frameCount": 7,
+            "frameInterval": 70,
+            "height": 86,
+            "offsetY": 1977,
+            "width": 31
+        },
+        "running-down": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 81,
+            "offsetY": 1797,
+            "repeat": true,
+            "width": 34
+        },
+        "running-left": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 57,
+            "offsetY": 1586,
+            "repeat": true,
+            "width": 117
+        },
+        "running-right": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 57,
+            "offsetY": 1643,
+            "repeat": true,
+            "width": 117
+        },
+        "running-up": {
+            "frameCount": 10,
+            "frameInterval": 70,
+            "height": 97,
+            "offsetY": 1700,
+            "repeat": true,
+            "width": 33
+        },
+        "use-down": {
+            "frameCount": 11,
+            "frameInterval": 70,
+            "height": 75,
+            "offsetY": 729,
+            "width": 34
+        },
+        "use-left": {
+            "frameCount": 11,
+            "frameInterval": 70,
+            "height": 50,
+            "offsetY": 548,
+            "width": 88
+        },
+        "use-right": {
+            "frameCount": 11,
+            "frameInterval": 70,
+            "height": 51,
+            "offsetY": 598,
+            "width": 87
+        },
+        "use-up": {
+            "frameCount": 11,
+            "frameInterval": 70,
+            "height": 80,
+            "offsetY": 649,
+            "width": 33
+        },
+        "walking-down": {
+            "frameCount": 16,
+            "frameInterval": 70,
+            "height": 77,
+            "offsetY": 472,
+            "repeat": true,
+            "width": 34
+        },
+        "walking-left": {
+            "frameCount": 16,
+            "frameInterval": 70,
+            "height": 56,
+            "offsetY": 272,
+            "repeat": true,
+            "width": 97
+        },
+        "walking-right": {
+            "frameCount": 16,
+            "frameInterval": 70,
+            "height": 55,
+            "offsetY": 328,
+            "repeat": true,
+            "width": 98
+        },
+        "walking-up": {
+            "frameCount": 16,
+            "frameInterval": 70,
+            "height": 89,
+            "offsetY": 383,
+            "repeat": true,
+            "width": 34
+        }
+    },
     "car-wreck#0": {
         "defaultSource": "junk/car-wrecks.png",
         "down": {
