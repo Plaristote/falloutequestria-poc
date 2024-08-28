@@ -23,7 +23,7 @@ const defaultRoutine = [
   { hour: "8",  minute: "30", callback: "openShopRoutine"  },
   { hour: "19", minute: "30", callback: "closeShopRoutine" }
 ];
-        
+
 function displayRandomTextBubble(character, options) {
   character.getScriptObject().displayRandomTextBubble(options);
 }
@@ -48,6 +48,11 @@ export class Shop {
 
   get shopOwner() {
     return this.model.findObject("owner") || this.model.parent.findObject("owner");
+  }
+
+  get shopShelfs() {
+    const npc = this.shopOwner;
+    return npc && npc.script ? this.shopOwner.script.shopShelfs : [];
   }
 
   get stealAttemptCount() {
@@ -81,6 +86,17 @@ export class Shop {
       this.chaseCustomers();
     }
   }
+
+  initializeBarterController(barterController) {
+    const storages = this.shopShelfs;
+
+    if (storages && storages.length) {
+      barterController.removeInventory(this.shopOwner.inventory);
+      storages.forEach(function(storage) {
+        barterController.addInventory(storage.objectName, storage.inventory);
+      });
+    }
+  }
   
   chaseCustomers() {
     const occupants = this.shopOccupants();
@@ -101,8 +117,7 @@ export class Shop {
   isUnderSurveillance() {
     const shopOwner = this.shopOwner;
 
-    if (shopOwner)
-    {
+    if (shopOwner) {
       const occupants = this.model.getControlZoneOccupants();
 
       return occupants.indexOf(shopOwner) >= 0
