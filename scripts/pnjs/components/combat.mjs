@@ -41,7 +41,7 @@ export class CombatComponent extends SkillTargetComponent {
   }
 
   findCombatTarget() {
-    console.log(this.model.name, "looking for a combat target");
+    console.log(this.model, "looking for a combat target");
     let shouldLookForTarget = true;
     try { shouldLookForTarget = !(this.combatTarget && this.combatTarget.isAlive()); } catch (err) {}
     if (shouldLookForTarget) {
@@ -50,14 +50,13 @@ export class CombatComponent extends SkillTargetComponent {
       else
         this.combatTarget = this.defaultCombatTargetLookup();
     }
-    console.log(this.model.name, "found a combat target");
+    console.log(this.model, "found a combat target", this.combatTarget);
     return this.combatTarget != null;
   }
 
   onTurnStart() {
     console.log("on turn start", this.model, this.combatTarget);
-    this.findCombatTarget();
-    if (this.combatTarget) {
+    if (this.findCombatTarget()) {
       const result = this.model.morale > 0 ? this.fightCombatTarget() : this.runAwayFromCombatTarget();
 
       if (result != null)
