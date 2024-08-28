@@ -9,7 +9,7 @@ export function callGuards(guards, target, alarmLevel) {
   for (var i = 0 ; i < guards.groups.length ; ++i)
     callGuards(guards.groups[i], target, alarmLevel);
   for (var i = 0 ; i < guards.objects.length ; ++i) {
-    guards.objects[i].getScriptObject().receiveAlarmSignal(
+    guards.objects[i].script.receiveAlarmSignal(
       target.position.x, target.position.y, target.floor, target, alarmLevel
     );
   }
@@ -20,6 +20,7 @@ export class AlarmComponent {
     this.parent = parent;
     this.parent.alarmTask = this.alarmTask.bind(this);
     this.parent.receiveAlarmSignal = this.receiveAlarmSignal.bind(this);
+    this.parent.arrestDialogState = "town-guard";
   }
 
   get model() { return this.parent.model; }
@@ -78,6 +79,10 @@ export class AlarmComponent {
 
     this.model.actionQueue.reset();
     this.model.actionQueue.pushReachNear(target.x, target.y, target.z, 2);
+    this.model.actionQueue.pushScript({
+      onTrigger: function() { return true; },
+      onCancel: () => { if (level.combat) this.failedToReachAlarmSignal = true; }
+    });
     if (this.model.actionQueue.start())
       console.log(this.model, "going toward alarm", target.x, target.y, target.z);
     else
@@ -110,9 +115,9 @@ export class AlarmComponent {
   }
   
   onTargetFound() {
-    if (this.alarmLevel === AlarmLevel.Arrest && this.targetPath === "player")
-      level.initializeDialog(this.model, "town-guard");
-    else {
+    const shouldAttemptArrest = this.alarmLevel === AlarmLevel.Arrest && this.targetPath === "player";
+
+    if (!shouldAttemptArrest || !level.initializeDialog(this.model, this.parent.arrestDialogState)) {
       this.model.setAsEnemy(this.target);
       this.model.requireJoinCombat();
     }
@@ -128,7 +133,9 @@ export class AlarmComponent {
   }
   
   onTurnStart() {
-    if (!this.parent.findCombatTarget() && this.isActive) {
+    if (this.failedToReachAlarmSignal) {
+      this.failedToReachAlarmSignal = false;
+    } else if (!this.parent.findCombatTarget() && this.isActive) {
       this.goToAlarmSignal();
       return true;
     }
